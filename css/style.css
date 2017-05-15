@@ -91,11 +91,11 @@ a img {
 }
 /* custom Font*/
 @font-face {
-  font-family: font-custom-family;
+  font-family: "Noto_SANS_TC";
   font-weight: normal;
   font-style: normal;
-  src: url("../font/font-custom-filename.eot");
-  src: url("../font/font-custom-filename.eot?#iefix") format('embedded-opentype'), url("../font/font-custom-filename.svg#font-custom-family") format('svg'), url("../font/font-custom-filename.woff") format('woff'), url("../font/font-custom-filename.ttf") format('truetype');
+  src: url("../font/notosanstc-webfont.eot");
+  src: url("../font/notosanstc-webfont.eot?#iefix") format('embedded-opentype'), url("../font/notosanstc-webfont.svg#Noto_SANS_TC") format('svg'), url("../font/notosanstc-webfont.woff") format('woff'), url("../font/notosanstc-webfont.ttf") format('truetype');
 }
 /* icon Font */
 @font-face {
@@ -451,7 +451,7 @@ body >header a {
 }
 #textlogo h1.site-name {
   width: 86%;
-  font-family: font-custom-family;
+  font-family: "Noto_SANS_TC";
   font-size: 200%;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
@@ -1961,7 +1961,7 @@ footer {
   }
 }
 .info {
-  font-family: font-custom-family;
+  font-family: "Noto_SANS_TC";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-size: 150%;
@@ -2063,7 +2063,7 @@ footer {
 .copyright {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: font-custom-family;
+  font-family: "Noto_SANS_TC";
   width: 100%;
   color: #fff;
   text-align: center;
