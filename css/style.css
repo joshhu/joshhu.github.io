@@ -94,8 +94,8 @@ a img {
   font-family: "Noto Sans TC";
   font-weight: normal;
   font-style: normal;
-  src: url("../font/NotoSansTC-Regular.eot");
-  src: url("../font/NotoSansTC-Regular.eot?#iefix") format('embedded-opentype'), url("../font/NotoSansTC-Regular.svg#Noto Sans TC") format('svg'), url("../font/NotoSansTC-Regular.woff") format('woff'), url("../font/NotoSansTC-Regular.ttf") format('truetype');
+  src: url("../font/NotoSansTC-Regular.otf.eot");
+  src: url("../font/NotoSansTC-Regular.otf.eot?#iefix") format('embedded-opentype'), url("../font/NotoSansTC-Regular.otf.svg#Noto Sans TC") format('svg'), url("../font/NotoSansTC-Regular.otf.woff") format('woff'), url("../font/NotoSansTC-Regular.otf.ttf") format('truetype');
 }
 /* icon Font */
 @font-face {
