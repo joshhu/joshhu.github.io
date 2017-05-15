@@ -89,14 +89,13 @@ td {
 a img {
   border: none;
 }
-@import url("http://fonts.googleapis.com/earlyaccess/notosanstc.css");
 /* custom Font*/
 @font-face {
   font-family: "notosanstc";
   font-weight: normal;
   font-style: normal;
-  src: url("../font/font-custom-filename.eot");
-  src: url("../font/font-custom-filename.eot?#iefix") format('embedded-opentype'), url("../font/font-custom-filename.svg#notosanstc") format('svg'), url("../font/font-custom-filename.woff") format('woff'), url("../font/font-custom-filename.ttf") format('truetype');
+  src: url("../font/notosanstc-webfont.eot");
+  src: url("../font/notosanstc-webfont.eot?#iefix") format('embedded-opentype'), url("../font/notosanstc-webfont.svg#notosanstc") format('svg'), url("../font/notosanstc-webfont.woff") format('woff'), url("../font/notosanstc-webfont.ttf") format('truetype');
 }
 /* icon Font */
 @font-face {
@@ -120,7 +119,7 @@ a img {
 }
 body {
   background: #ddd;
-  font-family: "Helvetica Neue", "Helvetica", "Microsoft YaHei", "WenQuanYi Micro Hei", Arial, sans-serif;
+  font-family: "Microsoft JhengHei", "Helvetica Neue", "Helvetica", "Microsoft YaHei", "WenQuanYi Micro Hei", Arial, sans-serif;
   font-size: 100%;
   color: #817c7c;
   line-height: 1.5;
