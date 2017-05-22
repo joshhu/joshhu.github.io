@@ -18,7 +18,7 @@
 <meta property="og:site_name" content="胡嘉璽(Josh Hu)">
 <meta property="og:description" content="TL;DR:  你需要至少兩台實體機(開發機和伺服器)和一台雲端主機 開發機用筆電，伺服器用筆電或桌機都行   開發機：16GB記憶體、多核心CPU、三螢幕 伺服器： 16GB記憶體、多核心CPU 雲端主機用Google Compute Engine或阿里雲， 不要用Heroku">
 <meta property="og:image" content="http://josh.hu/2017/05/22/ComputerHardware/3.jpg">
-<meta property="og:updated_time" content="2017-05-22T09:16:29.000Z">
+<meta property="og:updated_time" content="2017-05-22T09:28:51.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="電腦的選擇(硬體篇)">
 <meta name="twitter:description" content="TL;DR:  你需要至少兩台實體機(開發機和伺服器)和一台雲端主機 開發機用筆電，伺服器用筆電或桌機都行   開發機：16GB記憶體、多核心CPU、三螢幕 伺服器： 16GB記憶體、多核心CPU 雲端主機用Google Compute Engine或阿里雲， 不要用Heroku">
@@ -93,7 +93,7 @@
 		
   <p class="article-time">
     <time datetime="2017-05-22T04:40:48.000Z" itemprop="datePublished"> 發表日期 2017-05-22</time> | 
-     <time datetime="2017-05-22T09:16:29.000Z" itemprop="dateUpdated"> 更新日期 2017-05-22</time>
+     <time datetime="2017-05-22T09:28:51.000Z" itemprop="dateUpdated"> 更新日期 2017-05-22</time>
     
   </p>
 </header>
@@ -149,9 +149,17 @@
 <p>速度快，容量大，又可以練習Linux下的mdadm，如果常常跑虛擬機或big data應用更能感受速度上優勢。</p>
 <p><strong> 5. 購買推薦排行 </strong></p>
 <p>(1) 一般的PC，32GB記憶體，4核心CPU，兩顆256GB SSD組合成的RAID 0。<br>(2) 一般的NB，16GB記憶體體，256GB SSD硬碟</p>
+<h2 id="雲端主機"><a href="#雲端主機" class="headerlink" title="雲端主機"></a>雲端主機</h2><p>為什麼要申請雲端主機是另一篇文章的重點，這邊只推薦大家適合的雲端主機廠商。</p>
+<p><strong> 1. Google Compute Engine </strong></p>
+<p>從中國大陸以外的地方進入速度快，售價合理，提供功能多，第一次使用有300美元的免費額度，怎麼看都方便。我最喜歡的地方就是提供了Linux或Mac下的指令。在全世界各地都有機房(台灣在彰濱工業區)，如果你所在的國家或地區能正常使用Google，這是第一選擇。</p>
+<p><strong> 2. 阿里雲 </strong></p>
+<p>如果你在中國大陸，無法正常使用Google的服務，阿里雲是我最推薦的服務。一個月幾十元就有一個公網主機，服務也多，網路速度快，提供的東西都很穩定，並且支援多個主流的Linux Distros，有意在中國大陸發展，阿里雲是你一定要熟悉的產品。</p>
+<p><strong> 3. 為什麼不要用Heroku? </strong></p>
+<p>網路上的教學最愛教大家把網站部署到Heroku上面，其重點不外乎是免費，有現成的DB，可以綁定自己的域名等等。但想想，你真的在乎那一個月幾百元的Google/阿里雲主機費用嗎？有一個完整的主機功能，能在上面佈署完整的服務，玩大數據，玩NoSQL有什麼不好？</p>
+<p>另外為了使用Heroku的免費功能，你要學習好多Heroku的專屬指令和工具，與其花時間在這專屬的平台上，為何不學習完整、開放，放諸任何平台皆可使用的功能呢？所以就一句老話：<strong> 不要花時間在Heroku上面！！ </strong></p>
+<p>不要申請Heroku，Heroku是一個PAAS平台，不是完整的雲端主機，它只能用來佈署程式，無法啟動Docker、無法讓你完整練習佈署、無法安裝真正的平台產品。如果你是在中國大陸，建議申請阿里雲，一個月才幾十元RMB，如果你是在可以存取Google的國家地區，申請一個Google Compute Engine，有300元美金的免費額度可以玩，就算真正使用了他的Instance，一個月才幾十元到幾百台幣，保證你不會後悔。</p>
 <h2 id="Mac或Linux-Mint"><a href="#Mac或Linux-Mint" class="headerlink" title="Mac或Linux Mint"></a>Mac或Linux Mint</h2><p>你會有95%的時間花在Terminal中，因此選擇只有Mac OS或是Linux。Mac就不多說了，可以參考這一篇。但只有安裝終端介面的Linux並不切實際，要安裝一個圖型介面的Linux來上網、查資料、寫信、寫文檔。目前評價最高，也最多人用，遇到問題也最多人解答的圖型介面Linux產品就是Linux Mint。Linux Mint使用了Ubuntu核心，相容性高。稍後會有設定Linux Mint的完整教學。</p>
 <h2 id="Linux-Server伺服器"><a href="#Linux-Server伺服器" class="headerlink" title="Linux Server伺服器"></a>Linux Server伺服器</h2><p>不要安裝虛擬機，找一台實體機安裝Linux Server。有時你需要在這台實體機上器執行虛擬環境(Docker, Vagrant, VirtualBox)，安裝虛擬機無法達到這要求。稍後會有設定這台機器的詳細文章</p>
-<h2 id="雲端主機"><a href="#雲端主機" class="headerlink" title="雲端主機"></a>雲端主機</h2><p>不要申請Heroku，Heroku是一個PAAS平台，不是完整的雲端主機，它只能用來佈署程式，無法啟動Docker、無法讓你完整練習佈署、無法安裝真正的平台產品。如果你是在中國大陸，建議申請阿里雲，一個月才幾十元RMB，如果你是在可以存取Google的國家地區，申請一個Google Compute Engine，有300元美金的免費額度可以玩，就算真正使用了他的Instance，一個月才幾十元到幾百台幣，保證你不會後悔。</p>
   
 	</div>
 		<footer class="article-footer clearfix">
@@ -202,7 +210,7 @@
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目錄</strong>
  
- <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#硬體的重要性"><span class="toc-number">1.</span> <span class="toc-text">硬體的重要性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#需要幾台電腦？"><span class="toc-number">2.</span> <span class="toc-text">需要幾台電腦？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#桌機或筆電？"><span class="toc-number">3.</span> <span class="toc-text">桌機或筆電？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Mac或PC？"><span class="toc-number">4.</span> <span class="toc-text">Mac或PC？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#開發機說明"><span class="toc-number">5.</span> <span class="toc-text">開發機說明</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#伺服器說明"><span class="toc-number">6.</span> <span class="toc-text">伺服器說明</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Mac或Linux-Mint"><span class="toc-number">7.</span> <span class="toc-text">Mac或Linux Mint</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Linux-Server伺服器"><span class="toc-number">8.</span> <span class="toc-text">Linux Server伺服器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#雲端主機"><span class="toc-number">9.</span> <span class="toc-text">雲端主機</span></a></li></ol>
+ <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#硬體的重要性"><span class="toc-number">1.</span> <span class="toc-text">硬體的重要性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#需要幾台電腦？"><span class="toc-number">2.</span> <span class="toc-text">需要幾台電腦？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#桌機或筆電？"><span class="toc-number">3.</span> <span class="toc-text">桌機或筆電？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Mac或PC？"><span class="toc-number">4.</span> <span class="toc-text">Mac或PC？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#開發機說明"><span class="toc-number">5.</span> <span class="toc-text">開發機說明</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#伺服器說明"><span class="toc-number">6.</span> <span class="toc-text">伺服器說明</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#雲端主機"><span class="toc-number">7.</span> <span class="toc-text">雲端主機</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Mac或Linux-Mint"><span class="toc-number">8.</span> <span class="toc-text">Mac或Linux Mint</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Linux-Server伺服器"><span class="toc-number">9.</span> <span class="toc-text">Linux Server伺服器</span></a></li></ol>
  
   </div>
 
