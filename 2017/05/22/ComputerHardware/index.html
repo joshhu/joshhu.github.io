@@ -18,8 +18,7 @@
 <meta property="og:site_name" content="胡嘉璽(Josh Hu)">
 <meta property="og:description" content="TL;DR:  你需要至少兩台實體機(開發機和伺服器)和一台雲端主機 開發機用筆電，伺服器用筆電或桌機都行   開發機：16GB記憶體、多核心CPU、三螢幕 伺服器： 16GB記憶體、多核心CPU 雲端主機用Google Compute Engine或阿里雲， 不要用Heroku">
 <meta property="og:image" content="http://josh.hu/2017/05/22/ComputerHardware/3.jpg">
-<meta property="og:image" content="http://josh.hu/2017/05/22/ComputerHardware/3.jpg">
-<meta property="og:updated_time" content="2017-05-22T07:51:03.000Z">
+<meta property="og:updated_time" content="2017-05-22T07:51:57.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="電腦的選擇(硬體篇)">
 <meta name="twitter:description" content="TL;DR:  你需要至少兩台實體機(開發機和伺服器)和一台雲端主機 開發機用筆電，伺服器用筆電或桌機都行   開發機：16GB記憶體、多核心CPU、三螢幕 伺服器： 16GB記憶體、多核心CPU 雲端主機用Google Compute Engine或阿里雲， 不要用Heroku">
@@ -94,7 +93,7 @@
 		
   <p class="article-time">
     <time datetime="2017-05-22T04:40:48.000Z" itemprop="datePublished"> 發表日期 2017-05-22</time> | 
-     <time datetime="2017-05-22T07:51:03.000Z" itemprop="dateUpdated"> 更新日期 2017-05-22</time>
+     <time datetime="2017-05-22T07:51:57.000Z" itemprop="dateUpdated"> 更新日期 2017-05-22</time>
     
   </p>
 </header>
@@ -139,7 +138,6 @@
 <p><img src="3.jpg" alt=""></p>
 <p><strong> 購買推薦排行 </strong></p>
 <p>(1) MacBook Pro 15吋 16GB<br>(2) Macbook Pro 13吋 16GB<br>(3) Intel i7 NB 15吋，16GB至少要有HDMI及一個VGA外接埠</p>
-<p>如果你是買Mac，那入門就是Mac Book Pro 13吋，別忘了加到16G的記憶體。由於Mac最多就是16G(2017年5月)，因此不夠也夠了。下一代的Mac聽說可擴充到32G，到時再說。</p>
 <h2 id="伺服器說明"><a href="#伺服器說明" class="headerlink" title="伺服器說明"></a>伺服器說明</h2><p>開發機是你寫程式的前端，伺服器則算是你的遊樂場或是實驗室。這個電腦不需要太好，因為隨時可能重裝，但如果你需要執行Big Data類的應用，如<code>vagrant</code>, <code>docker</code>, <code>hadoop</code>, <code>spark</code>，就需要多一點記憶體和快速的SSD硬碟。當然4核心的CPU是不可少的。</p>
 <p><strong> 用PC不要用Mac </strong></p>
 <p>因為要安裝Linux，因此用PC即可，用Mac有點浪費了。最好使用標準的硬體設備，例如不要用奇怪的顯示卡，以免Linux找不到驅動程式。</p>
@@ -149,11 +147,8 @@
 <p>理由同開發機。</p>
 <p><strong> 可以考慮用RAID0的SSD固態硬碟 </strong></p>
 <p>速度快，容量大，又可以練習Linux下的mdadm，如果常常跑虛擬機或big data應用更能感受速度上優勢。</p>
-<p><img src="3.jpg" alt=""></p>
 <p><strong> 購買推薦排行 </strong></p>
 <p>(1) 一般的PC，32GB記憶體，4核心CPU，兩顆256GB SSD組合成的RAID 0。<br>(2) 一般的NB，16GB記憶體體，256GB SSD硬碟</p>
-<p><strong> PC </strong></p>
-<p>如果是買PC就簡單了。買台有HDMI及VGA擴充介面的筆電(兩者都要有才能接三螢幕)，然後記憶體加到16G，能加到32GB最好，硬碟買SSD，最好是512GB以上。 </p>
 <h2 id="Mac或Linux-Mint"><a href="#Mac或Linux-Mint" class="headerlink" title="Mac或Linux Mint"></a>Mac或Linux Mint</h2><p>你會有95%的時間花在Terminal中，因此選擇只有Mac OS或是Linux。Mac就不多說了，可以參考這一篇。但只有安裝終端介面的Linux並不切實際，要安裝一個圖型介面的Linux來上網、查資料、寫信、寫文檔。目前評價最高，也最多人用，遇到問題也最多人解答的圖型介面Linux產品就是Linux Mint。Linux Mint使用了Ubuntu核心，相容性高。稍後會有設定Linux Mint的完整教學。</p>
 <h2 id="Linux-Server伺服器"><a href="#Linux-Server伺服器" class="headerlink" title="Linux Server伺服器"></a>Linux Server伺服器</h2><p>不要安裝虛擬機，找一台實體機安裝Linux Server。有時你需要在這台實體機上器執行虛擬環境(Docker, Vagrant, VirtualBox)，安裝虛擬機無法達到這要求。稍後會有設定這台機器的詳細文章</p>
 <h2 id="雲端主機"><a href="#雲端主機" class="headerlink" title="雲端主機"></a>雲端主機</h2><p>不要申請Heroku，Heroku是一個PAAS平台，不是完整的雲端主機，它只能用來佈署程式，無法啟動Docker、無法讓你完整練習佈署、無法安裝真正的平台產品。如果你是在中國大陸，建議申請阿里雲，一個月才幾十元RMB，如果你是在可以存取Google的國家地區，申請一個Google Compute Engine，有300元美金的免費額度可以玩，就算真正使用了他的Instance，一個月才幾十元到幾百台幣，保證你不會後悔。</p>
