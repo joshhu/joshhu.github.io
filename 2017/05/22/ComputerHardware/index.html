@@ -19,7 +19,7 @@
 <meta property="og:description" content="TL;DR:  你需要至少兩台實體機(開發機和伺服器)和一台雲端主機 開發機用筆電，伺服器用筆電或桌機都行   開發機：16GB記憶體、多核心CPU、三螢幕 伺服器：16GB記憶體、多核心CPU 雲端主機用Google Compute Engine或阿里雲， 不要用Heroku">
 <meta property="og:image" content="http://josh.hu/2017/05/22/ComputerHardware/3.jpg">
 <meta property="og:image" content="http://josh.hu/2017/05/22/ComputerHardware/3desktop.jpg">
-<meta property="og:updated_time" content="2017-05-23T15:14:33.000Z">
+<meta property="og:updated_time" content="2017-05-23T15:18:03.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="電腦的選擇(硬體篇)">
 <meta name="twitter:description" content="TL;DR:  你需要至少兩台實體機(開發機和伺服器)和一台雲端主機 開發機用筆電，伺服器用筆電或桌機都行   開發機：16GB記憶體、多核心CPU、三螢幕 伺服器：16GB記憶體、多核心CPU 雲端主機用Google Compute Engine或阿里雲， 不要用Heroku">
@@ -94,7 +94,7 @@
 		
   <p class="article-time">
     <time datetime="2017-05-22T04:40:48.000Z" itemprop="datePublished"> 發表日期 2017-05-22</time> | 
-     <time datetime="2017-05-23T15:14:33.000Z" itemprop="dateUpdated"> 更新日期 2017-05-23</time>
+     <time datetime="2017-05-23T15:18:03.000Z" itemprop="dateUpdated"> 更新日期 2017-05-23</time>
     
   </p>
 </header>
@@ -172,6 +172,10 @@
 <p>買兩顆3TB的一般SATA硬碟及RAID1備份重要資料即可，不用想什麼RAID0(沒意義，這是備份機不求速度)，不用想RAID5(個人RAID1很夠了，RAID5至少要三顆硬碟，不會省多少空間)。</p>
 <p><strong> 4. 用SAMBA給Windows，NFS給其它Linux </strong></p>
 <p>儘量用NFS分享，但你的工作環境如果有Windows，就要用SAMBA。本站之後會有詳細的文章說明這部分 </p>
+<p><strong> 5. 這台機器可用來執行常用的虛擬機工作 </strong></p>
+<p>筆者在這台機器上安裝了12GB的記憶體，使用雙核心的廉價CPU，啟動兩個VM，一個是4GB的Windows 7用來下載，另一個是256MB的Linux做為內網的DNS。</p>
+<p><strong> 6. 可做為ssh reverse tunnel的內網入口 </strong></p>
+<p>有時你需要從外面ssh回到家中的內網，此時可以用這台來做ssh反向通道的入口，再從這台連線到內網中其它的電腦，我們會在本站稍後有完整的說明文章。</p>
   
 	</div>
 		<footer class="article-footer clearfix">
