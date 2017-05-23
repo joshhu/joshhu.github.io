@@ -19,7 +19,7 @@
 <meta property="og:description" content="TL;DR:  你需要至少兩台實體機(開發機和伺服器)和一台雲端主機 開發機用筆電，伺服器用筆電或桌機都行   開發機：16GB記憶體、多核心CPU、三螢幕 伺服器：16GB記憶體、多核心CPU 雲端主機用Google Compute Engine或阿里雲， 不要用Heroku">
 <meta property="og:image" content="http://josh.hu/2017/05/22/ComputerHardware/3.jpg">
 <meta property="og:image" content="http://josh.hu/2017/05/22/ComputerHardware/3desktop.jpg">
-<meta property="og:updated_time" content="2017-05-23T05:09:55.000Z">
+<meta property="og:updated_time" content="2017-05-23T15:14:33.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="電腦的選擇(硬體篇)">
 <meta name="twitter:description" content="TL;DR:  你需要至少兩台實體機(開發機和伺服器)和一台雲端主機 開發機用筆電，伺服器用筆電或桌機都行   開發機：16GB記憶體、多核心CPU、三螢幕 伺服器：16GB記憶體、多核心CPU 雲端主機用Google Compute Engine或阿里雲， 不要用Heroku">
@@ -94,7 +94,7 @@
 		
   <p class="article-time">
     <time datetime="2017-05-22T04:40:48.000Z" itemprop="datePublished"> 發表日期 2017-05-22</time> | 
-     <time datetime="2017-05-23T05:09:55.000Z" itemprop="dateUpdated"> 更新日期 2017-05-23</time>
+     <time datetime="2017-05-23T15:14:33.000Z" itemprop="dateUpdated"> 更新日期 2017-05-23</time>
     
   </p>
 </header>
@@ -163,7 +163,15 @@
 <p><strong> 3. 為什麼不要用Heroku? </strong></p>
 <p>網路上的教學最愛教大家把網站部署到Heroku上面，其重點不外乎是免費，有現成的DB，可以綁定自己的域名等等，但Heroku最大的問題，就是他是一個PAAS，是只有提供網頁及資料庫服務的雲端供應商，不是一個完整的雲端運算平台提供商，你能學到的東西不但少，而且是Heroku專用的，花時間在這上面， 只是為了一個月幾百元的免費功能，想想實在是划不來。你真的在乎那一個月幾百元的Google/阿里雲主機費用嗎？有一個完整的主機功能，能在上面佈署完整的服務，玩大數據，玩NoSQL的完整雲端主機，怎麼樣都比只有其5%功能不到Heroku的主機有用。</p>
 <p>為了使用Heroku的免費功能，你要學習好多Heroku的專屬指令和工具，與其花時間在這專屬的平台上，為何不學習完整、開放，放諸任何平台皆可使用的功能呢？所以就一句老話：<strong> 不要花時間在Heroku上面！！ </strong></p>
-<h2 id="NAS主機說明"><a href="#NAS主機說明" class="headerlink" title="NAS主機說明"></a>NAS主機說明</h2><p>備份是非常重要的事。努力很久的東西就不見了，任誰都會x的要死。很多人會買專業的NAS來備份，但我不建議，因為他們用的硬體實在不怎麼樣，你花一半不到的價錢，自己安裝一個Linux就搞定所有的事，而且還能練習用Linux自建RAID、安裝多片網路卡做加速，省錢又可以搞懂Linux的儲存，何樂而不為？</p>
+<h2 id="NAS主機說明"><a href="#NAS主機說明" class="headerlink" title="NAS主機說明"></a>NAS主機說明</h2><p>備份是非常重要的事。努力很久的東西就不見了，任誰都會x的要死。</p>
+<p><strong> 1. 不要買現成的NAS產品 </strong></p>
+<p>很多人會買專業的NAS來備份，但我不建議，因為他們用的硬體實在不怎麼樣，你花一半不到的價錢，自己安裝一個Linux就搞定所有的事，而且還能練習用Linux自建RAID、安裝多片網路卡做加速，省錢又可以搞懂Linux的儲存，何樂而不為？</p>
+<p><strong> 2. 使用Linux內建的軟體RAID，不要用主機板上的RAID </strong></p>
+<p>主機板上的RAID是假的，和真正的RAID卡的效能和功能差很多。如果你用主機板內建的RAID功能，建立的磁碟陣列在轉移機器時很可能就不能用了。但使用Linux的軟體RAID，不管是換電腦，或是RAID硬碟壞了要重建，一個指令就搞定，方便又有相容性，速度也一樣快。</p>
+<p><strong> 3. 做RAID1即可 </strong></p>
+<p>買兩顆3TB的一般SATA硬碟及RAID1備份重要資料即可，不用想什麼RAID0(沒意義，這是備份機不求速度)，不用想RAID5(個人RAID1很夠了，RAID5至少要三顆硬碟，不會省多少空間)。</p>
+<p><strong> 4. 用SAMBA給Windows，NFS給其它Linux </strong></p>
+<p>儘量用NFS分享，但你的工作環境如果有Windows，就要用SAMBA。本站之後會有詳細的文章說明這部分 </p>
   
 	</div>
 		<footer class="article-footer clearfix">
