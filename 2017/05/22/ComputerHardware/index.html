@@ -18,13 +18,12 @@
 <meta property="og:url" content="http://josh.hu/2017/05/22/ComputerHardware/index.html">
 <meta property="og:site_name" content="胡嘉璽(Josh Hu)">
 <meta property="og:description" content="TL;DR:  你需要至少兩台實體機(開發機和伺服器)和一台雲端主機 開發機用筆電，伺服器用筆電或桌機都行   開發機：16GB記憶體、多核心CPU、三螢幕 伺服器：16GB記憶體、多核心CPU 雲端主機用Google Compute Engine或阿里雲， 不要用Heroku  預算夠可再組一台NAS機(RAID1)備份資料(12GB記憶體，雙核心CPU, 3TB RAID1)">
-<meta property="og:image" content="http://josh.hu/2017/05/22/ComputerHardware/3.jpg">
 <meta property="og:image" content="http://josh.hu/2017/05/22/ComputerHardware/3desktop.jpg">
-<meta property="og:updated_time" content="2017-05-25T08:16:25.000Z">
+<meta property="og:updated_time" content="2017-05-25T08:17:07.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="電腦的選擇(硬體篇)">
 <meta name="twitter:description" content="TL;DR:  你需要至少兩台實體機(開發機和伺服器)和一台雲端主機 開發機用筆電，伺服器用筆電或桌機都行   開發機：16GB記憶體、多核心CPU、三螢幕 伺服器：16GB記憶體、多核心CPU 雲端主機用Google Compute Engine或阿里雲， 不要用Heroku  預算夠可再組一台NAS機(RAID1)備份資料(12GB記憶體，雙核心CPU, 3TB RAID1)">
-<meta name="twitter:image" content="http://josh.hu/2017/05/22/ComputerHardware/3.jpg">
+<meta name="twitter:image" content="http://josh.hu/2017/05/22/ComputerHardware/3desktop.jpg">
 <meta name="twitter:creator" content="@https:&#x2F;&#x2F;twitter.com&#x2F;joshhu">
 
     
@@ -95,7 +94,7 @@
 		
   <p class="article-time">
     <time datetime="2017-05-22T04:40:48.000Z" itemprop="datePublished"> 發表日期 2017-05-22</time> | 
-     <time datetime="2017-05-25T08:16:25.000Z" itemprop="dateUpdated"> 更新日期 2017-05-25</time>
+     <time datetime="2017-05-25T08:17:07.000Z" itemprop="dateUpdated"> 更新日期 2017-05-25</time>
     
   </p>
 </header>
@@ -145,7 +144,12 @@
 <p>SSD主要是快，事實上電腦速度慢最大的元兇通常就是硬碟。不要想什麼TB的SATA機器硬碟，慢的要死，就直上SSD。至少要256GB，能買到512GB最好。不要想用什麼混合碟，就直接買SSD就行。如果你常跑<code>vagrant</code>或<code>docker</code>，最好是512GB以上。</p>
 <p><strong> 5. 能接至少兩個外接螢幕 </strong></p>
 <p>相信我，三個螢幕才是主流，一個NB的螢幕加兩個外接，是至少的，我常常用一個NB的螢幕加三個外接才覺得夠用。你不會想把時間花在到處尋找開啟的視窗上的。</p>
-<p><img src="3.jpg" alt=""><br><img src="3desktop.jpg" alt=""></p>
+{% imsize %}
+src: 3.jpg
+alt: 1台NB外接2個螢幕
+profile: thumbnail
+{% endimsize %}
+<p><img src="3desktop.jpg" alt=""></p>
 <p><strong> 6. 購買推薦排行 </strong></p>
 <p>(1) MacBook Pro 15吋 16GB<br>(2) Macbook Pro 13吋 16GB<br>(3) Intel i7 NB 15吋，16GB至少要有HDMI及一個VGA外接埠</p>
 <h2 id="伺服器說明"><a href="#伺服器說明" class="headerlink" title="伺服器說明"></a>伺服器說明</h2><p>開發機是你寫程式的前端，伺服器則算是你的遊樂場或是實驗室。這個電腦不需要太好，因為隨時可能重裝，但如果你需要執行Big Data類的應用，如<code>vagrant</code>, <code>docker</code>, <code>hadoop</code>, <code>spark</code>，就需要多一點記憶體和快速的SSD硬碟。當然4核心的CPU是不可少的。</p>
