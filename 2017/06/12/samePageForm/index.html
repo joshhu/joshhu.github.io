@@ -17,7 +17,7 @@
 <meta property="og:url" content="http://josh.hu/2017/06/12/samePageForm/index.html">
 <meta property="og:site_name" content="胡嘉璽(Josh Hu)">
 <meta property="og:description" content="所謂的單頁表單，就是在同一頁面中，上面有一個選單，下面則是選擇區。當你在選單中選擇項目時，下方的選擇區會根據你在選單中的選項而有所變動。目前單頁應用程式(Single Page    Appliation, SPA)非常流行，事實上製作SPA最棒的後端還是node.js，我們以後有機會會提到，在本篇文章中，我們使用rails來看看一個非常簡單的單頁表單作法，先用最簡單的http get的方法來完成">
-<meta property="og:updated_time" content="2017-06-12T15:14:04.000Z">
+<meta property="og:updated_time" content="2017-06-12T15:14:45.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Rails單頁顯示表單實作(一)">
 <meta name="twitter:description" content="所謂的單頁表單，就是在同一頁面中，上面有一個選單，下面則是選擇區。當你在選單中選擇項目時，下方的選擇區會根據你在選單中的選項而有所變動。目前單頁應用程式(Single Page    Appliation, SPA)非常流行，事實上製作SPA最棒的後端還是node.js，我們以後有機會會提到，在本篇文章中，我們使用rails來看看一個非常簡單的單頁表單作法，先用最簡單的http get的方法來完成">
@@ -102,7 +102,7 @@
 		
   <p class="article-time">
     <time datetime="2017-06-12T14:13:24.000Z" itemprop="datePublished"> 發表日期 2017-06-12</time> | 
-     <time datetime="2017-06-12T15:14:04.000Z" itemprop="dateUpdated"> 更新日期 2017-06-12</time>
+     <time datetime="2017-06-12T15:14:45.000Z" itemprop="dateUpdated"> 更新日期 2017-06-12</time>
     
   </p>
 </header>
@@ -140,7 +140,7 @@
 <p>說明</p>
 <p>第2行這邊不使用<code>form_for</code>而使用<code>form_tag</code>是為了簡化。首先要做的就是加上<code>method: :get</code>表示這個表單是要用<code>GET</code>，因此在<code>RestFUL</code>的動作中就還是會回到<code>cities#index</code>這個<code>action</code>中，因此我們的controller就沒有對應到<code>POST</code>的<code>create</code>這個<code>action</code>。</p>
 <p>第3行使用了標準的<code>select_tag</code>，並且使用了<code>options_from_collection</code>把<code>@countries</code>放入<code>collection</code>中成為選單，並且以<code>id</code>為<code>html</code>的<code>value</code>，<code>name</code>為顯示出來的值。最後第4行放上一個按鈕送出。<strong>注意</strong>：在rails中，輸入表單一定要有一個送出的機制，因此這邊一定要放入一個<code>button_tag</code>，才會產生RestFUL的GET或POST動作。</p>
-<p>接下來是第7行的<code>&lt;%= render @cities %&gt;</code>。這句敘述表示要將<code>@cities</code>這整個collection丟到一個叫做<code>_city.html.erb</code>的<code>partial</code>來顯示，而且在<code>_city.html.erb</code>中，你不需要使用<code>@cities.each do |city|</code>的迴圈來執行，這種型式的<code>partial</code>會自動把整個<code>@cities</code>iterate一遍。因此我們要建立這個<code>partial</code>，檔案為`app/view/cities/_city.html.erb’</p>
+<p>接下來是第7行的<code>&lt;%= render @cities %&gt;</code>。這句敘述表示要將<code>@cities</code>這整個collection丟到一個叫做<code>_city.html.erb</code>的<code>partial</code>來顯示，而且在<code>_city.html.erb</code>中，你不需要使用<code>@cities.each do |city|</code>的迴圈來執行，這種型式的<code>partial</code>會自動把整個<code>@cities</code>iterate一遍。因此我們要建立這個<code>partial</code>，檔案為<code>app/view/cities/_city.html.erb</code></p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">%=</span> <span class="attr">city.name</span> %&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div></pre></td></tr></table></figure>
   
 	</div>
