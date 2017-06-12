@@ -102,7 +102,7 @@
 		
   <p class="article-time">
     <time datetime="2017-06-12T14:13:24.000Z" itemprop="datePublished"> 發表日期 2017-06-12</time> | 
-     <time datetime="2017-06-12T15:41:28.000Z" itemprop="dateUpdated"> 更新日期 2017-06-12</time>
+     <time datetime="2017-06-12T15:43:01.000Z" itemprop="dateUpdated"> 更新日期 2017-06-12</time>
     
   </p>
 </header>
@@ -145,6 +145,7 @@
 <p>接下來是第7行的<code>&lt;%= render @cities %&gt;</code>。這句敘述表示要將<code>@cities</code>這整個collection丟到一個叫做<code>_city.html.erb</code>的<code>partial</code>來顯示，而且在<code>_city.html.erb</code>中，你不需要使用<code>@cities.each do |city|</code>的迴圈來執行，這種型式的<code>partial</code>會自動把整個<code>@cities</code>iterate一遍。因此我們要建立這個<code>partial</code>，檔案為<code>app/view/cities/_city.html.erb</code></p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">%=</span> <span class="attr">city.name</span> %&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div></pre></td></tr></table></figure>
 <p>接下來直接啟動，輸入<code>rails s -b 0.0.0.0 -p 3001</code>，就可以登入看結果，請到該主機上輸入<code>http://localhost:3001/cities/</code></p>
+<p><img src="result.gif" alt=""></p>
 
     
 
