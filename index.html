@@ -102,7 +102,7 @@
 		
   <p class="article-time">
     <time datetime="2017-06-12T14:13:24.000Z" itemprop="datePublished"> 發表日期 2017-06-12</time> | 
-     <time datetime="2017-06-12T16:17:52.000Z" itemprop="dateUpdated"> 更新日期 2017-06-13</time>
+     <time datetime="2017-06-12T16:20:25.000Z" itemprop="dateUpdated"> 更新日期 2017-06-13</time>
     
   </p>
 </header>
@@ -113,53 +113,23 @@
     
 
     
-    <p>所謂的單頁表單，就是在同一頁面中，上面有一個選單，下面則是選擇區。當你在選單中選擇項目時，下方的選擇區會根據你在選單中的選項而有所變動。目前單頁應用程式(Single Page<br>    Appliation, SPA)非常流行，事實上製作SPA最棒的後端還是node.js，我們以後有機會會提到，在本篇文章中，我們使用rails來看看一個非常簡單的單頁表單作法，先用最簡單的http get的方法來完成，這應該是最簡單的rails應用了。</p>
-<p>舉例來說，我們有三個國家，分別是美國、中國、日本，每個國家有自己城市如下：</p>
-<p>中國<br>–北京<br>–上海<br>–廣州</p>
-<p>日本<br>–東京<br>–北海道<br>–大阪</p>
-<p>美國<br>–洛杉磯<br>–紐約<br>–芝加哥</p>
-<p>我們要的效果就是在選單中選擇國家，同一頁下方的顯示區就會顯示對應的城市。</p>
-<p>準備環境</p>
-<p>作業系統：Mac OS或是Ubuntu 16.04<br>ruby版本：2.3.0<br>rails版本：4.2.6<br>請遵照前面文章安裝rvm來管理不同版本的ruby以及gem set。</p>
-<p>建立專案</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">mkdir updateForm</div><div class="line">cd updateForm</div><div class="line">echo 2.3.0 &gt; .ruby-version</div><div class="line">echo jobexam &gt; .ruby-gemset</div><div class="line">rails new .</div><div class="line">bundle install</div></pre></td></tr></table></figure>
-<p>其中<code>.ruby-version</code>和<code>.ruby-gemset</code>是<code>rvm</code>管理<code>ruby</code>以及<code>gem set</code>的專案資源檔，如果目錄中有這兩個檔案，只要進入該目錄，就會自動切換成這兩個檔案指定的<code>ruby</code>版本及<code>gemset</code>。讀者要注意的是<code>jobexam</code>這個<code>gemset</code>是之間我已經建立好的。讀者可以自行建立你的<code>gemset</code>，只要確定你的<code>rails</code>版本為<code>4.2.6</code>即可，之後用<code>rails new .</code>建立專案，<code>bundle install</code>安裝需要的<code>gem</code>。</p>
-<p>建立model及準備樣本資料</p>
-<p>我們需要兩個model，一個是國家，一個是城市，輸入下面指令建立</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">rails g model country name:string</div><div class="line">rails g model city name:string country:reference</div><div class="line">rake db:migrate</div></pre></td></tr></table></figure>
-<p>說明</p>
-<p>首先建立一個model名稱為<code>country</code>，只有一個自訂屬性<code>name</code>即國家名稱。接下來建立另一個model為<code>city</code>，有一個自訂屬性<code>name</code>為城市名稱之為，我們要讓系統知道這個model是<code>country</code>這個model的子類別，即<strong>一個<code>country</code>可以有多個<code>cities</code></strong>，因此加上<code>country:reference</code>。這句話的意思其實就是在<code>city</code>這個model中加上<code>belongs_to :country</code>。</p>
-<p>另外我們要到<code>country</code>這個model中手動加入擁有多個<code>cities</code>的敘述，打開<code>app/models/country.rb</code>輸入如下：<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># app/model/country.rb</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Country</span> &lt; ApplicationRecord</span></div><div class="line">  has_many <span class="symbol">:cities</span></div><div class="line"><span class="keyword">end</span></div></pre></td></tr></table></figure></p>
-<p>準備樣本資料</p>
-<p>開啟<code>db/seeds.rb</code>，並且輸入資料如下：<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># db/seeds.rb</span></div><div class="line"></div><div class="line">Country.delete_all</div><div class="line"></div><div class="line">Country.create!(</div><div class="line">  &#123; <span class="symbol">id:</span> <span class="number">1</span>,</div><div class="line">    <span class="symbol">name:</span> <span class="string">"美國"</span></div><div class="line">  &#125;</div><div class="line">)</div><div class="line">Country.create!(</div><div class="line">  &#123; <span class="symbol">id:</span> <span class="number">2</span>,</div><div class="line">    <span class="symbol">name:</span> <span class="string">"中國"</span></div><div class="line">  &#125;</div><div class="line">)</div><div class="line">Country.create!(</div><div class="line">  &#123; <span class="symbol">id:</span> <span class="number">3</span>,</div><div class="line">    <span class="symbol">name:</span> <span class="string">"日本"</span></div><div class="line">  &#125;</div><div class="line">)</div><div class="line"></div><div class="line">City.delete_all</div><div class="line"></div><div class="line">City.create!(</div><div class="line">  &#123; <span class="symbol">id:</span> <span class="number">1</span>,</div><div class="line">    <span class="symbol">name:</span> <span class="string">"洛杉磯"</span>,</div><div class="line">    <span class="symbol">country_id:</span> <span class="number">1</span></div><div class="line">  &#125;</div><div class="line">)</div><div class="line">City.create!(</div><div class="line">  &#123; <span class="symbol">id:</span> <span class="number">2</span>,</div><div class="line">    <span class="symbol">name:</span> <span class="string">"紐約"</span>,</div><div class="line">    <span class="symbol">country_id:</span> <span class="number">1</span></div><div class="line">  &#125;</div><div class="line">)</div><div class="line">City.create!(</div><div class="line">  &#123; <span class="symbol">id:</span> <span class="number">3</span>,</div><div class="line">    <span class="symbol">name:</span> <span class="string">"芝加哥"</span>,</div><div class="line">    <span class="symbol">country_id:</span> <span class="number">1</span></div><div class="line">  &#125;</div><div class="line">)</div><div class="line">City.create!(</div><div class="line">  &#123; <span class="symbol">id:</span> <span class="number">4</span>,</div><div class="line">    <span class="symbol">name:</span> <span class="string">"北京"</span>,</div><div class="line">    <span class="symbol">country_id:</span> <span class="number">2</span></div><div class="line">  &#125;</div><div class="line">)</div><div class="line">City.create!(</div><div class="line">  &#123; <span class="symbol">id:</span> <span class="number">5</span>,</div><div class="line">    <span class="symbol">name:</span> <span class="string">"上海"</span>,</div><div class="line">    <span class="symbol">country_id:</span> <span class="number">2</span></div><div class="line">  &#125;</div><div class="line">)</div><div class="line">City.create!(</div><div class="line">  &#123; <span class="symbol">id:</span> <span class="number">6</span>,</div><div class="line">    <span class="symbol">name:</span> <span class="string">"廣州"</span>,</div><div class="line">    <span class="symbol">country_id:</span> <span class="number">2</span></div><div class="line">  &#125;</div><div class="line">)</div><div class="line">City.create!(</div><div class="line">  &#123; <span class="symbol">id:</span> <span class="number">7</span>,</div><div class="line">    <span class="symbol">name:</span> <span class="string">"東京"</span>,</div><div class="line">    <span class="symbol">country_id:</span> <span class="number">3</span></div><div class="line">  &#125;</div><div class="line">)</div><div class="line">City.create!(</div><div class="line">  &#123; <span class="symbol">id:</span> <span class="number">8</span>,</div><div class="line">    <span class="symbol">name:</span> <span class="string">"北海道"</span>,</div><div class="line">    <span class="symbol">country_id:</span> <span class="number">3</span></div><div class="line">  &#125;</div><div class="line">)</div><div class="line">City.create!(</div><div class="line">  &#123; <span class="symbol">id:</span> <span class="number">9</span>,</div><div class="line">    <span class="symbol">name:</span> <span class="string">"大阪"</span>,</div><div class="line">    <span class="symbol">country_id:</span> <span class="number">3</span></div><div class="line">  &#125;</div><div class="line">)</div></pre></td></tr></table></figure></p>
-<p>建立Controllers</p>
-<p>接下來要建立Controllers。由於我們只要顯示城市，因此只要建立<code>cities controller</code>以及在<code>config/routes.rb</code>中對應的路由。先建立controller。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">rails g controller cities index create</div></pre></td></tr></table></figure></p>
-<p>接下來修改路由如下：<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># config/routes.rb</span></div><div class="line">Rails.application.routes.draw <span class="keyword">do</span></div><div class="line">  resources <span class="symbol">:cities</span>, <span class="symbol">only:</span> [<span class="symbol">:index</span>, <span class="symbol">:create</span>]</div><div class="line"><span class="keyword">end</span></div></pre></td></tr></table></figure></p>
-<p>上面的路由中，我們使用標準的RestFUL資源型式，但由於只需要用到<code>GET/POST cities</code>，因此只用兩個<code>actions</code>即可。接下來就可以編輯controller了，如下：<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># app/controllers/cities_controller.rb</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">CitiesController</span> &lt; ApplicationController</span></div><div class="line">  <span class="function"><span class="keyword">def</span> <span class="title">index</span></span></div><div class="line">    @countries = Country.all</div><div class="line">    @cities = City.where(<span class="symbol">country_id:</span> params[<span class="symbol">:country_id</span>])</div><div class="line">  <span class="keyword">end</span></div><div class="line"><span class="keyword">end</span></div></pre></td></tr></table></figure></p>
-<p>說明：</p>
-<p>其中先將所有的國家讀到<code>@countries</code>這個變數中給選單用，然後設定<code>@cities</code>則是使用者選取選單之後，把國家代碼傳回這個<code>action</code>，再去資料庫取出符合國家代碼的城市。</p>
-<p>view</p>
-<p>View有兩個部分，一個是<code>index</code>這個<code>action</code>對應的template，即<code>app/view/cities/index.html.erb</code>，另一個則是單獨要列出所有城市的<code>partial</code>。如下：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">h2</span>&gt;</span>選擇國家<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">%=</span> <span class="attr">form_tag</span> "/<span class="attr">cities</span>" ,<span class="attr">method:</span> <span class="attr">:get</span> <span class="attr">do</span> %&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">%=</span> <span class="attr">select_tag</span> <span class="attr">:country_id</span>, <span class="attr">options_from_collection_for_select</span>(@<span class="attr">countries</span>, "<span class="attr">id</span>","<span class="attr">name</span>")%&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">%=</span> <span class="attr">button_tag</span> "查詢" %&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">%</span> <span class="attr">end</span> %&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">ul</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">%=</span> <span class="attr">render</span> @<span class="attr">cities</span> %&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">%=</span> <span class="attr">debug</span>(<span class="attr">params</span>) <span class="attr">if</span> <span class="attr">Rails.env.development</span>? %&gt;</span></div></pre></td></tr></table></figure>
-<p>說明</p>
-<p>第2行這邊不使用<code>form_for</code>而使用<code>form_tag</code>是為了簡化。首先要做的就是加上<code>method: :get</code>表示這個表單是要用<code>GET</code>，因此在<code>RestFUL</code>的動作中就還是會回到<code>cities#index</code>這個<code>action</code>中，因此我們的controller就沒有對應到<code>POST</code>的<code>create</code>這個<code>action</code>。</p>
-<p>第3行使用了標準的<code>select_tag</code>，並且使用了<code>options_from_collection</code>把<code>@countries</code>放入<code>collection</code>中成為選單，並且以<code>id</code>為<code>html</code>的<code>value</code>，<code>name</code>為顯示出來的值。最後第4行放上一個按鈕送出。<strong>注意</strong>：在rails中，輸入表單一定要有一個送出的機制，因此這邊一定要放入一個<code>button_tag</code>，才會產生RestFUL的GET或POST動作。</p>
-<p>接下來是第7行的<code>&lt;%= render @cities %&gt;</code>。這句敘述表示要將<code>@cities</code>這整個collection丟到一個叫做<code>_city.html.erb</code>的<code>partial</code>來顯示，而且在<code>_city.html.erb</code>中，你不需要使用<code>@cities.each do |city|</code>的迴圈來執行，這種型式的<code>partial</code>會自動把整個<code>@cities</code>iterate一遍。因此我們要建立這個<code>partial</code>，檔案為<code>app/view/cities/_city.html.erb</code></p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">%=</span> <span class="attr">city.name</span> %&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div></pre></td></tr></table></figure>
-<p>接下來直接啟動，輸入<code>rails s -b 0.0.0.0 -p 3001</code>，就可以登入看結果，請到該主機上輸入<code>http://localhost:3001/cities/</code></p>
-<p><img src="/images/result.gif" alt=""></p>
-<p>待改進處：</p>
-<p>1.執行結果使用get到原方法，因此選單中的選項會回到最原始的預設值美國<br>2.使用get表單，因此雖然看起來是在同一頁，其實是有換頁，正確應該用ajax，就是只更新顯示城市的地方而不要換頁。<br>3.選擇國家後，應後就直接顯示城市，而不需要一個按鈕。</p>
-
+    目前流行的單頁應用程式(SPA)大部分時間我是用node.js來做，但Rails也可以，只是做法不太一樣，這一篇先從最簡單的rails form做起。
     
 
     <p class="article-more-link">
+      
+      <a href="/2017/06/12/samePageForm/#more">展開全文</a>
       
     </p>
   </div>
   <footer class="article-footer clearfix">
 <div class="article-catetags">
 
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/Rails/">Rails</a><a href="/tags/ajax/">ajax</a><a href="/tags/javascript/">javascript</a>
+  </div>
 
 </div>
 
@@ -463,6 +433,10 @@
 			
 		
 			
+				<li><a href="/tags/ssh/" title="ssh">ssh<sup>1</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/PC/" title="PC">PC<sup>1</sup></a></li>
 			
 		
@@ -471,7 +445,15 @@
 			
 		
 			
-				<li><a href="/tags/ssh/" title="ssh">ssh<sup>1</sup></a></li>
+				<li><a href="/tags/Rails/" title="Rails">Rails<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/ajax/" title="ajax">ajax<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/javascript/" title="javascript">javascript<sup>1</sup></a></li>
 			
 		
 		</ul>
@@ -515,7 +497,7 @@
   <div class="tagcloudlist">
     <p class="asidetitle">標籤雲</p>
     <div class="tagcloudlist clearfix">
-      <a href="/tags/Linux/" style="font-size: 20px;">Linux</a> <a href="/tags/Mac/" style="font-size: 20px;">Mac</a> <a href="/tags/PC/" style="font-size: 10px;">PC</a> <a href="/tags/Windows/" style="font-size: 10px;">Windows</a> <a href="/tags/ssh/" style="font-size: 10px;">ssh</a>
+      <a href="/tags/Linux/" style="font-size: 20px;">Linux</a> <a href="/tags/Mac/" style="font-size: 20px;">Mac</a> <a href="/tags/PC/" style="font-size: 10px;">PC</a> <a href="/tags/Rails/" style="font-size: 10px;">Rails</a> <a href="/tags/Windows/" style="font-size: 10px;">Windows</a> <a href="/tags/ajax/" style="font-size: 10px;">ajax</a> <a href="/tags/javascript/" style="font-size: 10px;">javascript</a> <a href="/tags/ssh/" style="font-size: 10px;">ssh</a>
     </div>
   </div>
 
