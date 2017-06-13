@@ -19,7 +19,7 @@
 <meta property="og:site_name" content="胡嘉璽(Josh Hu)">
 <meta property="og:description" content="前一篇我們用標準的HTTP GET更新表單，取代了傳統的HTTP POST，因此只需要一個action。 但這個方法問題很多，因此在這一篇中，我們使用了rails的ajax。只要在表單中放在remote true的參數，就會用rails的ajax call，不但程式碼變簡單，也更符合一般網頁的使用習慣，當然，這還不是最好的做法。">
 <meta property="og:image" content="http://josh.hu/images/remotetrue.gif">
-<meta property="og:updated_time" content="2017-06-13T04:12:37.000Z">
+<meta property="og:updated_time" content="2017-06-13T04:13:26.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Rails單頁選單顯示表單實作(二)">
 <meta name="twitter:description" content="前一篇我們用標準的HTTP GET更新表單，取代了傳統的HTTP POST，因此只需要一個action。 但這個方法問題很多，因此在這一篇中，我們使用了rails的ajax。只要在表單中放在remote true的參數，就會用rails的ajax call，不但程式碼變簡單，也更符合一般網頁的使用習慣，當然，這還不是最好的做法。">
@@ -105,7 +105,7 @@
 		
   <p class="article-time">
     <time datetime="2017-06-12T16:32:10.000Z" itemprop="datePublished"> 發表日期 2017-06-13</time> | 
-     <time datetime="2017-06-13T04:12:37.000Z" itemprop="dateUpdated"> 更新日期 2017-06-13</time>
+     <time datetime="2017-06-13T04:13:26.000Z" itemprop="dateUpdated"> 更新日期 2017-06-13</time>
     
   </p>
 </header>
@@ -147,7 +147,7 @@
 <li>把變數代表的值在<code>create.js.erb</code>中換成正常值，生成<code>create.js</code>。</li>
 <li>把<code>create.js</code>傳回使用者的瀏覽器。</li>
 <li>使用者瀏覽器接收到<code>create.js</code>，並且在瀏覽器中執行。</li>
-<li>執行的程式碼是<code>$(&#39;#show_items&#39;).html(&#39;&lt;li&gt;北京&lt;/li&gt;&lt;li&gt;上海&lt;/li&gt;&lt;li&gt;廣州&lt;/li&gt;&#39;);```。因此就直接更新</code><ul id="show_items">`這個部分。</ul></li>
+<li>執行的程式碼是<code>$(&#39;#show_items&#39;).html(&#39;&lt;li&gt;北京&lt;/li&gt;&lt;li&gt;上海&lt;/li&gt;&lt;li&gt;廣州&lt;/li&gt;&#39;);</code>。因此就直接更新<code>&lt;ul id=&quot;show_items&quot;&gt;</code>這個部分。</li>
 </ol>
 <p><img src="/images/remotetrue.gif" alt=""></p>
   
