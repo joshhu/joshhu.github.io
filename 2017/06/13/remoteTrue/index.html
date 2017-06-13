@@ -4,23 +4,24 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>重作博主 | 胡嘉璽(Josh Hu)</title>
+    <title>Rails單頁選單顯示表單實作(二) | 胡嘉璽(Josh Hu)</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="Josh Hu">
     
 
     
-    <meta name="description" content="TL;DR: 分享Google、FB、Yahoo!頂尖工程師的馬步及思路 重作博主這次重新寫博，花了五年時間積累，還是想和大家分享技術之路，也請大家繼續指教。 虛擬先生的中斷我在2011年寫了一本VMware的書的前後，也開了一個blog叫做「虛擬先生」。中間記錄了許多和VMware相關的知識。當時除了記錄使用的過程之外，也想讓讀者和我之間有一個溝通的管道。「虛擬先生」使用的是標準的Wordpre">
+    <meta name="description" content="前一篇我們用標準的HTTP GET更新表單，取代了傳統的HTTP POST，因此只需要一個action。 但這個方法問題很多，因此在這一篇中">
+<meta name="keywords" content="Rails,ajax,javascript">
 <meta property="og:type" content="article">
-<meta property="og:title" content="重作博主">
-<meta property="og:url" content="http://josh.hu/2017/05/18/untitled-1495038454953/index.html">
+<meta property="og:title" content="Rails單頁選單顯示表單實作(二)">
+<meta property="og:url" content="http://josh.hu/2017/06/13/remoteTrue/index.html">
 <meta property="og:site_name" content="胡嘉璽(Josh Hu)">
-<meta property="og:description" content="TL;DR: 分享Google、FB、Yahoo!頂尖工程師的馬步及思路 重作博主這次重新寫博，花了五年時間積累，還是想和大家分享技術之路，也請大家繼續指教。 虛擬先生的中斷我在2011年寫了一本VMware的書的前後，也開了一個blog叫做「虛擬先生」。中間記錄了許多和VMware相關的知識。當時除了記錄使用的過程之外，也想讓讀者和我之間有一個溝通的管道。「虛擬先生」使用的是標準的Wordpre">
-<meta property="og:updated_time" content="2017-05-24T09:11:37.000Z">
+<meta property="og:description" content="前一篇我們用標準的HTTP GET更新表單，取代了傳統的HTTP POST，因此只需要一個action。 但這個方法問題很多，因此在這一篇中">
+<meta property="og:updated_time" content="2017-06-13T01:48:48.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="重作博主">
-<meta name="twitter:description" content="TL;DR: 分享Google、FB、Yahoo!頂尖工程師的馬步及思路 重作博主這次重新寫博，花了五年時間積累，還是想和大家分享技術之路，也請大家繼續指教。 虛擬先生的中斷我在2011年寫了一本VMware的書的前後，也開了一個blog叫做「虛擬先生」。中間記錄了許多和VMware相關的知識。當時除了記錄使用的過程之外，也想讓讀者和我之間有一個溝通的管道。「虛擬先生」使用的是標準的Wordpre">
+<meta name="twitter:title" content="Rails單頁選單顯示表單實作(二)">
+<meta name="twitter:description" content="前一篇我們用標準的HTTP GET更新表單，取代了傳統的HTTP POST，因此只需要一個action。 但這個方法問題很多，因此在這一篇中">
 <meta name="twitter:creator" content="@joshhu">
 
     
@@ -94,40 +95,31 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2017/05/18/untitled-1495038454953/" title="重作博主" itemprop="url">重作博主</a>
+      <a href="/2017/06/13/remoteTrue/" title="Rails單頁選單顯示表單實作(二)" itemprop="url">Rails單頁選單顯示表單實作(二)</a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="Josh Hu" target="_blank" itemprop="author">Josh Hu</a>
 		
   <p class="article-time">
-    <time datetime="2017-05-17T16:27:34.000Z" itemprop="datePublished"> 發表日期 2017-05-18</time> | 
-     <time datetime="2017-05-24T09:11:37.000Z" itemprop="dateUpdated"> 更新日期 2017-05-24</time>
+    <time datetime="2017-06-12T16:32:10.000Z" itemprop="datePublished"> 發表日期 2017-06-13</time> | 
+     <time datetime="2017-06-13T01:48:48.000Z" itemprop="dateUpdated"> 更新日期 2017-06-13</time>
     
   </p>
 </header>
 
 	<div class="article-content">
 		
-		<p>TL;DR: 分享Google、FB、Yahoo!頂尖工程師的馬步及思路</p>
-<h2 id="重作博主"><a href="#重作博主" class="headerlink" title="重作博主"></a>重作博主</h2><p>這次重新寫博，花了五年時間積累，還是想和大家分享技術之路，也請大家繼續指教。</p>
-<h3 id="虛擬先生的中斷"><a href="#虛擬先生的中斷" class="headerlink" title="虛擬先生的中斷"></a>虛擬先生的中斷</h3><p>我在2011年寫了一本VMware的書的前後，也開了一個blog叫做「虛擬先生」。中間記錄了許多和VMware相關的知識。當時除了記錄使用的過程之外，也想讓讀者和我之間有一個溝通的管道。「虛擬先生」使用的是標準的Wordpress，也租了雲端主機安裝，算是第一次寫blog。</p>
-<a id="more"></a>
-<p>但隨著使用開源項目的機會越來越多，相對VMware也就越來越少接觸，再加上重心幾乎都投入雲端、Big Data等技術，這幾年工作也轉到DevOps上，虛擬先生在2013年後就完全沒更新，2014年也就關站了。</p>
-<h3 id="為什麼又要寫？"><a href="#為什麼又要寫？" class="headerlink" title="為什麼又要寫？"></a>為什麼又要寫？</h3><p>由於工作的關係，這幾年來慢慢和一些新創公司的頂尖工程師有越來越多的合作機會。除了他們絕頂聰明的腦袋讓我常常覺得跟不上之外，我發現這些頂尖的工程師和普通工程師最大的不同，就是他們<strong>基本功夫紮實地讓人汗顏</strong>。他們所做的所有事情，每一個細節，每一個步驟，都是穩紮穩打，並且有絕對正確的道理，在日積月累之後，和一般工程師的差距自然就拉開了。</p>
-<p>在從頭開始培養工程師，一直到能獨立作業，甚至是帶領團隊的完整cycle中，我慢慢發現這是一個可以re-produce的過程。雖然知識面又廣又深，但點點滴滴開始未嚐不可。</p>
-<p>這個新開的blog，目的就是想把這整個步驟付諸實現。</p>
-<p>這個blog，將會是從最基礎的面向探討電腦工程的學習之路，會有哲學思想(例如：學習電腦從卡關開始)、有最基礎，但卻沒有人認真探討過的問題(例如：為什麼要用蘋果而不用Windows)；有語言的選擇(例如：選一個最適合你的電腦程式語言)；有工具(例如：ansible的使用大全)等等。林林總總，大大小小的事都會最詳細說明。</p>
-<h3 id="寫的方式"><a href="#寫的方式" class="headerlink" title="寫的方式"></a>寫的方式</h3><p>學電腦最怕就是找不到資料，但更怕就是找到的資料照著做，根本做不出來！我搞不懂為什麼會有人寫這種教程，浪費自己的時間寫一些沒用的東西不說，浪費更多人的時間照著做一些永遠做不出來的事！</p>
-<p>我不想當這種人，因此會儘量把過程寫的一清二楚。但每個人的環境不一樣，因此我會列出最完整的環境，並且會附上完整的程式碼放到github上，至少保證用我的環境是一定做的出來的。因此力求完整清楚，會是一貫的寫作風格。</p>
-<h3 id="當某個內容夠多時"><a href="#當某個內容夠多時" class="headerlink" title="當某個內容夠多時"></a>當某個內容夠多時</h3><p>當某一個主題的內容經過系統化整理，並且有一定的份量時，我會把這些內容用gitbook的方式發佈，這樣是希望大家可以專心地、系統化地學習一個完整的領域。</p>
-<h3 id="這個blog的樣式"><a href="#這個blog的樣式" class="headerlink" title="這個blog的樣式"></a>這個blog的樣式</h3><p>這個blog使用hexo+github的靜態網頁製作，因此速度快，容易維護，但因為我對hexo不熟，因此會花一段時間研究，隨著我文章的不斷更新，這個blog也會越來越好用，越來越漂亮。</p>
-<p>至於其它常常會提到的重點，我會放到一個專門的about來說明。</p>
-  
+		  
 	</div>
 		<footer class="article-footer clearfix">
 <div class="article-catetags">
 
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/Rails/">Rails</a><a href="/tags/ajax/">ajax</a><a href="/tags/javascript/">javascript</a>
+  </div>
 
 </div>
 
@@ -135,7 +127,7 @@
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://josh.hu/2017/05/18/untitled-1495038454953/" data-title="重作博主 | 胡嘉璽(Josh Hu)" data-tsina="null" class="share clearfix">
+	  <div data-url="http://josh.hu/2017/06/13/remoteTrue/" data-title="Rails單頁選單顯示表單實作(二) | 胡嘉璽(Josh Hu)" data-tsina="null" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -148,14 +140,14 @@
 	
 <nav class="article-nav clearfix">
  
- <div class="prev" >
- <a href="/2017/05/18/untitled-1495120237176/" title="Windows？Mac？Linux？我要用什麼電腦？">
-  <strong>上一篇：</strong><br/>
-  <span>
-  Windows？Mac？Linux？我要用什麼電腦？</span>
+
+<div class="next">
+<a href="/2017/06/12/samePageForm/"  title="Rails單頁選單顯示表單實作(一)">
+ <strong>下一篇：</strong><br/> 
+ <span>Rails單頁選單顯示表單實作(一)
+</span>
 </a>
 </div>
-
 
 </nav>
 
@@ -173,7 +165,7 @@
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目錄</strong>
  
- <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#重作博主"><span class="toc-number">1.</span> <span class="toc-text">重作博主</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#虛擬先生的中斷"><span class="toc-number">1.1.</span> <span class="toc-text">虛擬先生的中斷</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#為什麼又要寫？"><span class="toc-number">1.2.</span> <span class="toc-text">為什麼又要寫？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#寫的方式"><span class="toc-number">1.3.</span> <span class="toc-text">寫的方式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#當某個內容夠多時"><span class="toc-number">1.4.</span> <span class="toc-text">當某個內容夠多時</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#這個blog的樣式"><span class="toc-number">1.5.</span> <span class="toc-text">這個blog的樣式</span></a></li></ol></li></ol>
+ 
  
   </div>
 
