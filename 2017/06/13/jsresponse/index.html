@@ -18,7 +18,7 @@
 <meta property="og:url" content="http://josh.hu/2017/06/13/jsresponse/index.html">
 <meta property="og:site_name" content="胡嘉璽(Josh Hu)">
 <meta property="og:description" content="繼上一篇使用了標準rails的remote true選項，來完成HTTP POST的ajax call。但我總覺得那個按下「查詢」按鈕的動作是多此一舉的。能不能只有選單，當你在選單中選擇了國家之後，自動就會更新下方的城市列表。在這個系列的第三篇，我們就來看看怎麼做，重點選是ajax call，只是這次我們自己寫，不用rails的。這篇文章著重javascript。">
-<meta property="og:updated_time" content="2017-06-13T04:53:40.000Z">
+<meta property="og:updated_time" content="2017-06-13T04:59:24.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Rails單頁選單顯示表單實作(三)">
 <meta name="twitter:description" content="繼上一篇使用了標準rails的remote true選項，來完成HTTP POST的ajax call。但我總覺得那個按下「查詢」按鈕的動作是多此一舉的。能不能只有選單，當你在選單中選擇了國家之後，自動就會更新下方的城市列表。在這個系列的第三篇，我們就來看看怎麼做，重點選是ajax call，只是這次我們自己寫，不用rails的。這篇文章著重javascript。">
@@ -103,14 +103,16 @@
 		
   <p class="article-time">
     <time datetime="2017-06-13T04:20:43.000Z" itemprop="datePublished"> 發表日期 2017-06-13</time> | 
-     <time datetime="2017-06-13T04:53:40.000Z" itemprop="dateUpdated"> 更新日期 2017-06-13</time>
+     <time datetime="2017-06-13T04:59:24.000Z" itemprop="dateUpdated"> 更新日期 2017-06-13</time>
     
   </p>
 </header>
 
 	<div class="article-content">
 		
-		<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>雖然在上一篇<a href="http://josh.hu/2017/06/13/remoteTrue/">Rails單頁選單顯示表單實作(二)</a></p>
+		<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>雖然在上一篇<a href="http://josh.hu/2017/06/13/remoteTrue/">Rails單頁選單顯示表單實作(二)</a>中我們用了rails提供的ajax call直接更新<code>index.html</code>這個網頁上<code>&lt;ul div=&quot;show_items&quot;&gt;</code>這個元素，但是筆者一直覺得那個查詢按鈕很多餘。應該是我們選擇了國家之後，自動就要列出這個國家的城市，可以少移動一個滑鼠及少按一個按鈕，也比較直覺，我們就來看看怎麼做。</p>
+<h1 id="準備工作"><a href="#準備工作" class="headerlink" title="準備工作"></a>準備工作</h1><p>你只要有這一篇<a href="http://josh.hu/2017/06/12/samePageForm/">Rails單頁選單顯示表單實作(一)</a>中準備好的project即可，我們就先切換到新的git branch。<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git checkout -b jsresponse</div></pre></td></tr></table></figure></p>
+<h1 id="要修改的地方"><a href="#要修改的地方" class="headerlink" title="要修改的地方"></a>要修改的地方</h1><p>這邊要修改的地方有幾個，首先就是<code>index.html.erb</code>這個view。因為我們要監測選單變更的事件，並且把選單變更的事件綁定到一個jquery的函數，因此需要給這個選單一個id。此外我們當然要把按鈕拿掉，因此<code>index.html.erb</code>就變的非常簡單了，程式如下：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">h2</span>&gt;</span>選擇國家<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">%=</span> <span class="attr">select_tag</span> <span class="attr">:country_id</span>, <span class="attr">options_from_collection_for_select</span>(@<span class="attr">countries</span>, "<span class="attr">id</span>","<span class="attr">name</span>"), <span class="attr">id:</span> "<span class="attr">filter</span>" %&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">ul</span> <span class="attr">id</span>=<span class="string">"show_items"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">%=</span> <span class="attr">render</span> @<span class="attr">cities</span> %&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">%=</span> <span class="attr">debug</span>(<span class="attr">params</span>) <span class="attr">if</span> <span class="attr">Rails.env.development</span>? %&gt;</span></div></pre></td></tr></table></figure></p>
   
 	</div>
 		<footer class="article-footer clearfix">
@@ -166,7 +168,7 @@
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目錄</strong>
  
- <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li></ol>
+ <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#準備工作"><span class="toc-number">2.</span> <span class="toc-text">準備工作</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#要修改的地方"><span class="toc-number">3.</span> <span class="toc-text">要修改的地方</span></a></li></ol>
  
   </div>
 
@@ -202,15 +204,15 @@
 			
 		
 			
-				<li><a href="/tags/ssh/" title="ssh">ssh<sup>1</sup></a></li>
-			
-		
-			
 				<li><a href="/tags/PC/" title="PC">PC<sup>1</sup></a></li>
 			
 		
 			
 				<li><a href="/tags/Windows/" title="Windows">Windows<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/ssh/" title="ssh">ssh<sup>1</sup></a></li>
 			
 		
 		</ul>
