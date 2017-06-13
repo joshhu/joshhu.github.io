@@ -18,7 +18,7 @@
 <meta property="og:url" content="http://josh.hu/2017/06/13/jsresponse/index.html">
 <meta property="og:site_name" content="胡嘉璽(Josh Hu)">
 <meta property="og:description" content="繼上一篇使用了標準rails的remote true選項，來完成HTTP POST的ajax call。但我總覺得那個按下「查詢」按鈕的動作是多此一舉的。能不能只有選單，當你在選單中選擇了國家之後，自動就會更新下方的城市列表。在這個系列的第三篇，我們就來看看怎麼做，重點選是ajax call，只是這次我們自己寫，不用rails的。這篇文章著重javascript。">
-<meta property="og:updated_time" content="2017-06-13T05:11:45.000Z">
+<meta property="og:updated_time" content="2017-06-13T05:15:43.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Rails單頁選單顯示表單實作(三)">
 <meta name="twitter:description" content="繼上一篇使用了標準rails的remote true選項，來完成HTTP POST的ajax call。但我總覺得那個按下「查詢」按鈕的動作是多此一舉的。能不能只有選單，當你在選單中選擇了國家之後，自動就會更新下方的城市列表。在這個系列的第三篇，我們就來看看怎麼做，重點選是ajax call，只是這次我們自己寫，不用rails的。這篇文章著重javascript。">
@@ -103,7 +103,7 @@
 		
   <p class="article-time">
     <time datetime="2017-06-13T04:20:43.000Z" itemprop="datePublished"> 發表日期 2017-06-13</time> | 
-     <time datetime="2017-06-13T05:11:45.000Z" itemprop="dateUpdated"> 更新日期 2017-06-13</time>
+     <time datetime="2017-06-13T05:15:43.000Z" itemprop="dateUpdated"> 更新日期 2017-06-13</time>
     
   </p>
 </header>
@@ -119,7 +119,14 @@
 <p><strong> 說明 </strong></p>
 <p>第9到21行是標準的javascript，用來綁定選單變動時執行的事件函數。第11到17行是這個函數的本身。</p>
 <p>首先是10行，當<code>#filter</code>這個id的選單(即第2行)有變動時，即執行第11到17行的ajax呼叫。</p>
-<p>第11到17行的是標準jquery呼叫ajax的語法，包括了幾個參數：<br><code>url</code>: 當發生ajax call時，請求的頁面。這邊使用了絕對網址，如果是變數的話，就要寫成eruby參數的格式，如<code>&quot;&lt;%= cities_path(:js) %&gt;&quot;</code>。</p>
+<p>第11到17行的是標準jquery呼叫ajax的語法，包括了幾個參數：</p>
+<ul>
+<li><code>url</code>: 當發生ajax call時，請求的頁面。這邊使用了絕對網址，如果是變數的話，就要寫成eruby參數的格式，如<code>&quot;&lt;%= cities_path(:js) %&gt;&quot;</code>。</li>
+<li><code>type</code>: <code>&#39;POST&#39;</code>，表示是用POST。</li>
+<li><code>datatype</code>: 我們要求伺服器傳回javascript執行，因此這邊寫<code>&quot;script&quot;</code>。如果是要資料的話，可以是<code>&quot;json&quot;</code>。</li>
+<li><code>data</code>: 這就是我們要傳回伺服器的資料，也就是rails中的<code>params</code>。這邊指定<code>country_id</code>這個值為<code>$(this).val()</code>，表示取這個選單中選中的值。</li>
+<li><code>success</code>: 這是執行ajax call成功之後的執行函數，通常就會把從伺服器傳回來的資料一起傳到這函數。我們可以用一個<code>console.log</code>來印出傳回來的資料。</li>
+</ul>
   
 	</div>
 		<footer class="article-footer clearfix">
