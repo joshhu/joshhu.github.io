@@ -18,7 +18,7 @@
 <meta property="og:url" content="http://josh.hu/2017/06/13/jsresponse/index.html">
 <meta property="og:site_name" content="胡嘉璽(Josh Hu)">
 <meta property="og:description" content="繼上一篇使用了標準rails的remote true選項，來完成HTTP POST的ajax call。但我總覺得那個按下「查詢」按鈕的動作是多此一舉的。能不能只有選單，當你在選單中選擇了國家之後，自動就會更新下方的城市列表。在這個系列的第三篇，我們就來看看怎麼做，重點選是ajax call，只是這次我們自己寫，不用rails的。這篇文章著重javascript。">
-<meta property="og:updated_time" content="2017-06-13T05:24:26.000Z">
+<meta property="og:updated_time" content="2017-06-13T05:26:54.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Rails單頁選單顯示表單實作(三)">
 <meta name="twitter:description" content="繼上一篇使用了標準rails的remote true選項，來完成HTTP POST的ajax call。但我總覺得那個按下「查詢」按鈕的動作是多此一舉的。能不能只有選單，當你在選單中選擇了國家之後，自動就會更新下方的城市列表。在這個系列的第三篇，我們就來看看怎麼做，重點選是ajax call，只是這次我們自己寫，不用rails的。這篇文章著重javascript。">
@@ -103,7 +103,7 @@
 		
   <p class="article-time">
     <time datetime="2017-06-13T04:20:43.000Z" itemprop="datePublished"> 發表日期 2017-06-13</time> | 
-     <time datetime="2017-06-13T05:24:26.000Z" itemprop="dateUpdated"> 更新日期 2017-06-13</time>
+     <time datetime="2017-06-13T05:26:54.000Z" itemprop="dateUpdated"> 更新日期 2017-06-13</time>
     
   </p>
 </header>
@@ -121,13 +121,14 @@
 <p>首先是10行，當<code>#filter</code>這個id的選單(即第2行)有變動時，即執行第11到17行的ajax呼叫。</p>
 <p>第11到17行的是標準jquery呼叫ajax的語法，包括了幾個參數：</p>
 <ul>
-<li><code>url</code>: 當發生ajax call時，請求的頁面。這邊使用了絕對網址，如果是變數的話，就要寫成eruby參數的格式，如<code>&quot;&lt;%= cities_path(:js) %&gt;&quot;</code>。</li>
+<li><code>url</code>: 當發生ajax call時，這邊請求的頁面寫成eruby參數的格式，如<code>&quot;&lt;%= cities_path(:js) %&gt;&quot;</code>。</li>
 <li><code>type</code>: <code>&#39;POST&#39;</code>，表示是用POST。</li>
 <li><code>datatype</code>: 我們要求伺服器傳回javascript執行，因此這邊寫<code>&quot;script&quot;</code>。如果是要資料的話，可以是<code>&quot;json&quot;</code>。</li>
 <li><code>data</code>: 這就是我們要傳回伺服器的資料，也就是rails中的<code>params</code>。這邊指定<code>country_id</code>這個值為<code>$(this).val()</code>，表示取這個選單中選中的值。</li>
 <li><code>success</code>: 這是執行ajax call成功之後的執行函數，通常就會把從伺服器傳回來的資料一起傳到這函數。我們可以用一個<code>console.log</code>來印出傳回來的資料。</li>
 </ul>
 <p>因此我們在選單變動時就直接執行ajax call，用HTTP POST去<code>/cities</code>所代表controller中的action來執行(也就是<code>create</code>這個action)。由於我們指定了<code>datatype</code>是script，因此<code>create</code>這個action對應到的template就會是javascript，因此就會去執行<code>create.js.erb</code>，之後就和上一篇的動作一樣了。</p>
+<h2 id="create的回應"><a href="#create的回應" class="headerlink" title="create的回應"></a><code>create</code>的回應</h2><p>因為我們在上面的<code>datatype</code>已經指定了<code>script</code>，因此controller中的action自動會回應javascript，當然正確的寫法還是要在action中指定回應的格式，如下<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># app/controller/cities_controller.rb</span></div><div class="line"> <span class="class"><span class="keyword">class</span> <span class="title">CitiesController</span> &lt; ApplicationController</span></div><div class="line">   <span class="function"><span class="keyword">def</span> <span class="title">index</span></span></div><div class="line">     @countries = Country.all</div><div class="line">     @cities = City.where(<span class="symbol">country_id:</span> params[<span class="symbol">:country_id</span>])</div><div class="line">   <span class="keyword">end</span></div><div class="line">   <span class="function"><span class="keyword">def</span> <span class="title">create</span></span></div><div class="line">     @cities = City.where(<span class="symbol">country_id:</span> params[<span class="symbol">:country_id</span>])</div><div class="line">     respond_to <span class="symbol">:js</span></div><div class="line">   <span class="keyword">end</span></div><div class="line"> <span class="keyword">end</span></div></pre></td></tr></table></figure></p>
   
 	</div>
 		<footer class="article-footer clearfix">
@@ -183,7 +184,7 @@
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目錄</strong>
  
- <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#準備工作"><span class="toc-number">2.</span> <span class="toc-text">準備工作</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#要修改的地方"><span class="toc-number">3.</span> <span class="toc-text">要修改的地方</span></a></li></ol>
+ <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#準備工作"><span class="toc-number">2.</span> <span class="toc-text">準備工作</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#要修改的地方"><span class="toc-number">3.</span> <span class="toc-text">要修改的地方</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#create的回應"><span class="toc-number">3.1.</span> <span class="toc-text">create的回應</span></a></li></ol></li></ol>
  
   </div>
 
@@ -219,15 +220,15 @@
 			
 		
 			
+				<li><a href="/tags/ssh/" title="ssh">ssh<sup>1</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/PC/" title="PC">PC<sup>1</sup></a></li>
 			
 		
 			
 				<li><a href="/tags/Windows/" title="Windows">Windows<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/ssh/" title="ssh">ssh<sup>1</sup></a></li>
 			
 		
 		</ul>
