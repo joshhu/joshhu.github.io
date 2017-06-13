@@ -19,7 +19,7 @@
 <meta property="og:site_name" content="胡嘉璽(Josh Hu)">
 <meta property="og:description" content="目前流行的單頁應用程式(SPA)大部分時間我是用node.js來做，但Rails也可以，只是做法不太一樣，這一篇先從最簡單的rails form做起。">
 <meta property="og:image" content="http://josh.hu/images/result.gif">
-<meta property="og:updated_time" content="2017-06-12T16:37:49.000Z">
+<meta property="og:updated_time" content="2017-06-13T04:04:02.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Rails單頁選單顯示表單實作(一)">
 <meta name="twitter:description" content="目前流行的單頁應用程式(SPA)大部分時間我是用node.js來做，但Rails也可以，只是做法不太一樣，這一篇先從最簡單的rails form做起。">
@@ -105,7 +105,7 @@
 		
   <p class="article-time">
     <time datetime="2017-06-12T14:13:24.000Z" itemprop="datePublished"> 發表日期 2017-06-12</time> | 
-     <time datetime="2017-06-12T16:37:49.000Z" itemprop="dateUpdated"> 更新日期 2017-06-13</time>
+     <time datetime="2017-06-13T04:04:02.000Z" itemprop="dateUpdated"> 更新日期 2017-06-13</time>
     
   </p>
 </header>
@@ -140,6 +140,17 @@
 <p>接下來先將這個版本的程式commit，輸入<code>git add .</code>以及<code>git commit -am &quot;init&quot;</code>，然後直接啟動，輸入<code>rails s -b 0.0.0.0 -p 3001</code>，就可以登入看結果，請到該主機上輸入<code>http://localhost:3001/cities/</code></p>
 <p><img src="/images/result.gif" alt=""></p>
 <h1 id="待改進處："><a href="#待改進處：" class="headerlink" title="待改進處："></a>待改進處：</h1><p>1.執行結果使用get到原方法，因此選單中的選項會回到最原始的預設值美國<br>2.使用get表單，因此雖然看起來是在同一頁，其實是有換頁，正確應該用ajax，就是只更新顯示城市的地方而不要換頁。<br>3.選擇國家後，應後就直接顯示城市，而不需要一個按鈕。</p>
+<h1 id="整個完整流程"><a href="#整個完整流程" class="headerlink" title="整個完整流程"></a>整個完整流程</h1><p>接下來是整個完整流程</p>
+<ol>
+<li>使用者在瀏覽器中輸入<code>http://192.168.1.105:4000/cities</code>，就是在向後端的伺服器發出GET HTTP。</li>
+<li>伺服器檢查使用者的請求，去查routes是否存在這個請求。</li>
+<li>伺服器發現這個請求對應的是’cities#index`這個action，因此執行這個action中的動作。</li>
+<li>執行<code>index</code>這個action之後，把變數代表的值丟到對應的template <code>index.html.erb</code>中</li>
+<li><code>index.html.erb</code>把變數代表的值換掉其中的變數，成為<code>index.html</code>。</li>
+<li><code>index.html</code>傳回使用者瀏覽器執行。</li>
+<li>使用者從<code>index.html</code>中的選單選擇，並且按下按鈕。</li>
+<li>重複2-6的動作。</li>
+</ol>
   
 	</div>
 		<footer class="article-footer clearfix">
@@ -203,7 +214,7 @@
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目錄</strong>
  
- <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#準備環境"><span class="toc-number">2.</span> <span class="toc-text">準備環境</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#建立專案"><span class="toc-number">3.</span> <span class="toc-text">建立專案</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#建立model及準備樣本資料"><span class="toc-number">4.</span> <span class="toc-text">建立model及準備樣本資料</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#說明"><span class="toc-number">4.1.</span> <span class="toc-text">說明</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#準備樣本資料"><span class="toc-number">4.2.</span> <span class="toc-text">準備樣本資料</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#建立Controllers"><span class="toc-number">5.</span> <span class="toc-text">建立Controllers</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#說明："><span class="toc-number">5.1.</span> <span class="toc-text">說明：</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#view"><span class="toc-number">6.</span> <span class="toc-text">view</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#說明-1"><span class="toc-number">6.1.</span> <span class="toc-text">說明</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#待改進處："><span class="toc-number">7.</span> <span class="toc-text">待改進處：</span></a></li></ol>
+ <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#準備環境"><span class="toc-number">2.</span> <span class="toc-text">準備環境</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#建立專案"><span class="toc-number">3.</span> <span class="toc-text">建立專案</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#建立model及準備樣本資料"><span class="toc-number">4.</span> <span class="toc-text">建立model及準備樣本資料</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#說明"><span class="toc-number">4.1.</span> <span class="toc-text">說明</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#準備樣本資料"><span class="toc-number">4.2.</span> <span class="toc-text">準備樣本資料</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#建立Controllers"><span class="toc-number">5.</span> <span class="toc-text">建立Controllers</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#說明："><span class="toc-number">5.1.</span> <span class="toc-text">說明：</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#view"><span class="toc-number">6.</span> <span class="toc-text">view</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#說明-1"><span class="toc-number">6.1.</span> <span class="toc-text">說明</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#待改進處："><span class="toc-number">7.</span> <span class="toc-text">待改進處：</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#整個完整流程"><span class="toc-number">8.</span> <span class="toc-text">整個完整流程</span></a></li></ol>
  
   </div>
 
@@ -239,15 +250,15 @@
 			
 		
 			
+				<li><a href="/tags/ssh/" title="ssh">ssh<sup>1</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/PC/" title="PC">PC<sup>1</sup></a></li>
 			
 		
 			
 				<li><a href="/tags/Windows/" title="Windows">Windows<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/ssh/" title="ssh">ssh<sup>1</sup></a></li>
 			
 		
 		</ul>
