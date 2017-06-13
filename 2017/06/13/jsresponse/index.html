@@ -18,10 +18,12 @@
 <meta property="og:url" content="http://josh.hu/2017/06/13/jsresponse/index.html">
 <meta property="og:site_name" content="胡嘉璽(Josh Hu)">
 <meta property="og:description" content="繼上一篇使用了標準rails的remote true選項，來完成HTTP POST的ajax call。但我總覺得那個按下「查詢」按鈕的動作是多此一舉的。能不能只有選單，當你在選單中選擇了國家之後，自動就會更新下方的城市列表。在這個系列的第三篇，我們就來看看怎麼做，重點選是ajax call，只是這次我們自己寫，不用rails的。這篇文章著重javascript。">
-<meta property="og:updated_time" content="2017-06-13T05:26:54.000Z">
+<meta property="og:image" content="http://josh.hu/images/jsresponse.gif">
+<meta property="og:updated_time" content="2017-06-13T05:33:24.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Rails單頁選單顯示表單實作(三)">
 <meta name="twitter:description" content="繼上一篇使用了標準rails的remote true選項，來完成HTTP POST的ajax call。但我總覺得那個按下「查詢」按鈕的動作是多此一舉的。能不能只有選單，當你在選單中選擇了國家之後，自動就會更新下方的城市列表。在這個系列的第三篇，我們就來看看怎麼做，重點選是ajax call，只是這次我們自己寫，不用rails的。這篇文章著重javascript。">
+<meta name="twitter:image" content="http://josh.hu/images/jsresponse.gif">
 <meta name="twitter:creator" content="@joshhu">
 
     
@@ -103,7 +105,7 @@
 		
   <p class="article-time">
     <time datetime="2017-06-13T04:20:43.000Z" itemprop="datePublished"> 發表日期 2017-06-13</time> | 
-     <time datetime="2017-06-13T05:26:54.000Z" itemprop="dateUpdated"> 更新日期 2017-06-13</time>
+     <time datetime="2017-06-13T05:33:24.000Z" itemprop="dateUpdated"> 更新日期 2017-06-13</time>
     
   </p>
 </header>
@@ -129,6 +131,25 @@
 </ul>
 <p>因此我們在選單變動時就直接執行ajax call，用HTTP POST去<code>/cities</code>所代表controller中的action來執行(也就是<code>create</code>這個action)。由於我們指定了<code>datatype</code>是script，因此<code>create</code>這個action對應到的template就會是javascript，因此就會去執行<code>create.js.erb</code>，之後就和上一篇的動作一樣了。</p>
 <h2 id="create的回應"><a href="#create的回應" class="headerlink" title="create的回應"></a><code>create</code>的回應</h2><p>因為我們在上面的<code>datatype</code>已經指定了<code>script</code>，因此controller中的action自動會回應javascript，當然正確的寫法還是要在action中指定回應的格式，如下<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># app/controller/cities_controller.rb</span></div><div class="line"> <span class="class"><span class="keyword">class</span> <span class="title">CitiesController</span> &lt; ApplicationController</span></div><div class="line">   <span class="function"><span class="keyword">def</span> <span class="title">index</span></span></div><div class="line">     @countries = Country.all</div><div class="line">     @cities = City.where(<span class="symbol">country_id:</span> params[<span class="symbol">:country_id</span>])</div><div class="line">   <span class="keyword">end</span></div><div class="line">   <span class="function"><span class="keyword">def</span> <span class="title">create</span></span></div><div class="line">     @cities = City.where(<span class="symbol">country_id:</span> params[<span class="symbol">:country_id</span>])</div><div class="line">     respond_to <span class="symbol">:js</span></div><div class="line">   <span class="keyword">end</span></div><div class="line"> <span class="keyword">end</span></div></pre></td></tr></table></figure></p>
+<p>其中第9行可寫可不寫，他自己會知道要去找<code>create.js.erb</code>。</p>
+<h1 id="整個完整流程"><a href="#整個完整流程" class="headerlink" title="整個完整流程"></a>整個完整流程</h1><p>接下來是整個完整流程</p>
+<ol>
+<li>使用者在瀏覽器中輸入<code>http://192.168.1.105:4000/cities</code>，就是在向後端的伺服器發出GET HTTP。</li>
+<li>伺服器檢查使用者的請求，去查routes是否存在這個請求。</li>
+<li>伺服器發現這個請求對應的是’cities#index`這個action，因此執行這個action中的動作。</li>
+<li>執行<code>index</code>這個action之後，把變數代表的值丟到對應的template <code>index.html.erb</code>中</li>
+<li><code>index.html.erb</code>把變數代表的值換掉其中的變數，成為<code>index.html</code>。</li>
+<li><code>index.html</code>傳回使用者瀏覽器執行。</li>
+<li>使用者在瀏覽器中從選單選擇國家。</li>
+<li>此時觸發了<code>&#39;#filter&#39;</code>這個id的change事件，在使用者的瀏覽器上執行ajax call</li>
+<li>根據ajax call的參數，發現是一個POST事件，因此根據參數值去伺服器端</li>
+<li>伺服器端接到ajax POST的要求，去routes找，發現是<code>cities_controller.rb</code>中的<code>create</code>這個action。</li>
+<li>此action接收了ajax參數中的<code>country_id</code>值，找到城市。</li>
+<li>接下個因為ajax call是要求<code>script</code>型態，因此就去找<code>create.js.erb</code>，並且把其中的變數換成正常值。</li>
+<li>換完之後，就傳回<code>create.js</code>到使用者瀏覽器。</li>
+<li>使用者瀏覽器接收到資料，就執行這個javascript，就是更新<code>&lt;ul id=&quot;show_items&quot;&gt;</code>這個元素內的值。</li>
+</ol>
+<p><img src="/images/jsresponse.gif" alt=""></p>
   
 	</div>
 		<footer class="article-footer clearfix">
@@ -184,7 +205,7 @@
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目錄</strong>
  
- <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#準備工作"><span class="toc-number">2.</span> <span class="toc-text">準備工作</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#要修改的地方"><span class="toc-number">3.</span> <span class="toc-text">要修改的地方</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#create的回應"><span class="toc-number">3.1.</span> <span class="toc-text">create的回應</span></a></li></ol></li></ol>
+ <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#準備工作"><span class="toc-number">2.</span> <span class="toc-text">準備工作</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#要修改的地方"><span class="toc-number">3.</span> <span class="toc-text">要修改的地方</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#create的回應"><span class="toc-number">3.1.</span> <span class="toc-text">create的回應</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#整個完整流程"><span class="toc-number">4.</span> <span class="toc-text">整個完整流程</span></a></li></ol>
  
   </div>
 
