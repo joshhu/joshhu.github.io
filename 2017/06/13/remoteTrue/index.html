@@ -19,7 +19,7 @@
 <meta property="og:site_name" content="胡嘉璽(Josh Hu)">
 <meta property="og:description" content="前一篇我們用標準的HTTP GET更新表單，取代了傳統的HTTP POST，因此只需要一個action。 但這個方法問題很多，因此在這一篇中，我們使用了rails的ajax。只要在表單中放在remote true的參數，就會用rails的ajax call，不但程式碼變簡單，也更符合一般網頁的使用習慣，當然，這還不是最好的做法。">
 <meta property="og:image" content="http://josh.hu/images/remotetrue.gif">
-<meta property="og:updated_time" content="2017-06-14T03:40:50.000Z">
+<meta property="og:updated_time" content="2017-06-14T08:34:42.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Rails單頁選單顯示表單實作(二)">
 <meta name="twitter:description" content="前一篇我們用標準的HTTP GET更新表單，取代了傳統的HTTP POST，因此只需要一個action。 但這個方法問題很多，因此在這一篇中，我們使用了rails的ajax。只要在表單中放在remote true的參數，就會用rails的ajax call，不但程式碼變簡單，也更符合一般網頁的使用習慣，當然，這還不是最好的做法。">
@@ -106,7 +106,7 @@
 		
   <p class="article-time">
     <time datetime="2017-06-12T16:32:10.000Z" itemprop="datePublished"> 發表日期 2017-06-13</time> | 
-     <time datetime="2017-06-14T03:40:50.000Z" itemprop="dateUpdated"> 更新日期 2017-06-14</time>
+     <time datetime="2017-06-14T08:34:42.000Z" itemprop="dateUpdated"> 更新日期 2017-06-14</time>
     
   </p>
 </header>
@@ -143,7 +143,7 @@
 <p><code>create</code>很簡單，就是從使用者的選單中讀取選中的<code>country_id</code>，然後再到model中尋找對應該國家碼的城市。</p>
 <h2 id="修改index這個view"><a href="#修改index這個view" class="headerlink" title="修改index這個view"></a>修改index這個view</h2><p>我們要修改的檔案為<code>app/view/cities/index.html.erb</code>，程式碼如下：</p>
 <pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token operator">&lt;</span>h2<span class="token operator">></span>選擇國家<span class="token operator">&lt;</span><span class="token operator">/</span>h2<span class="token operator">></span>
-<span class="token operator">&lt;</span><span class="token operator">%</span><span class="token operator">=</span> form_tag <span class="token string">"/cities"</span> <span class="token punctuation">,</span>remote<span class="token punctuation">:</span> <span class="token boolean">true</span> <span class="token keyword">do</span> <span class="token operator">%</span><span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">%</span><span class="token operator">=</span> form_tag <span class="token string">"/cities"</span><span class="token punctuation">,</span> remote<span class="token punctuation">:</span> <span class="token boolean">true</span> <span class="token keyword">do</span> <span class="token operator">%</span><span class="token operator">></span>
   <span class="token operator">&lt;</span><span class="token operator">%</span><span class="token operator">=</span> select_tag <span class="token punctuation">:</span>country_id<span class="token punctuation">,</span> <span class="token function">options_from_collection_for_select</span><span class="token punctuation">(</span>@countries<span class="token punctuation">,</span> <span class="token string">"id"</span><span class="token punctuation">,</span><span class="token string">"name"</span><span class="token punctuation">)</span> <span class="token operator">%</span><span class="token operator">></span>
   <span class="token operator">&lt;</span><span class="token operator">%</span><span class="token operator">=</span> button_tag <span class="token string">"查詢"</span> <span class="token operator">%</span><span class="token operator">></span>
 <span class="token operator">&lt;</span><span class="token operator">%</span> end <span class="token operator">%</span><span class="token operator">></span>
