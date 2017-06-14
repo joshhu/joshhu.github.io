@@ -37,7 +37,8 @@
     <link rel="apple-touch-icon-precomposed" href="/img/author.jpg">
     
     <link rel="stylesheet" href="/css/style.css">
-</head>
+<link rel="stylesheet" href="/css/prism.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
   <body>
     <header>
@@ -113,7 +114,9 @@
 	<div class="article-content">
 		
 		<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>在選擇網頁後端語言時，我不斷強調，只要不選擇某些過時的語言都可以，因為網頁語言最重的是在前端，而前端當然就是javascript。不過如果你有幸身在一個大的團隊，前端有人處理了，只要進行後端的開發，那你使用rails提供的jquery library也就夠了。延續上一篇<a href="http://josh.hu/2017/06/12/samePageForm/">Rails單頁選單顯示表單實作(一)</a>中的作法，當使用者選擇選單中的項目，並且按下送出時，我們把回應action的原來HTTP GET反應，換成HTTP POST，並且把原來回應對應的Template從html換成javascript，再讓這個javascript來更新div而不是整個網頁，直接使用rails內建的ajax call即可。</p>
-<h1 id="準備工作"><a href="#準備工作" class="headerlink" title="準備工作"></a>準備工作</h1><p>你只要有上一篇<a href="http://josh.hu/2017/06/12/samePageForm/">Rails單頁選單顯示表單實作(一)</a>中準備好的project即可，我們就先切換到新的git branch。<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git checkout -b remotetrue</div></pre></td></tr></table></figure></p>
+<h1 id="準備工作"><a href="#準備工作" class="headerlink" title="準備工作"></a>準備工作</h1><p>你只要有上一篇<a href="http://josh.hu/2017/06/12/samePageForm/">Rails單頁選單顯示表單實作(一)</a>中準備好的project即可，我們就先切換到新的git branch。</p>
+<pre class="line-numbers language-shell"><code class="language-shell">git checkout -b remotetrue
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <h1 id="要修改的地方"><a href="#要修改的地方" class="headerlink" title="要修改的地方"></a>要修改的地方</h1><p>這邊要修改的地方有幾個</p>
 <ul>
 <li>原來<code>index</code>這個action的view。</li>
@@ -122,14 +125,39 @@
 </ul>
 <p>我們就來看看：</p>
 <h2 id="修改cities-controller"><a href="#修改cities-controller" class="headerlink" title="修改cities controller"></a>修改cities controller</h2><p>這邊主要是增加一個<code>create</code>的action，因為我們使用了標準的RestFUL的語法，因此對應到<code>/cities</code>的POST方法名稱就是<code>create</code>。</p>
-<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># app/controllers/cities_controller.rb</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">CitiesController</span> &lt; ApplicationController</span></div><div class="line"></div><div class="line">  <span class="function"><span class="keyword">def</span> <span class="title">index</span></span></div><div class="line">    @countries = Country.all</div><div class="line">    @cities = City.where(<span class="symbol">country_id:</span> params[<span class="symbol">:country_id</span>])</div><div class="line">  <span class="keyword">end</span></div><div class="line"></div><div class="line">  <span class="function"><span class="keyword">def</span> <span class="title">create</span></span></div><div class="line">    @cities = City.where(<span class="symbol">country_id:</span> params[<span class="symbol">:country_id</span>])</div><div class="line">  <span class="keyword">end</span></div><div class="line"></div><div class="line"><span class="keyword">end</span></div></pre></td></tr></table></figure>
+<pre class="line-numbers language-ruby"><code class="language-ruby"><span class="token comment" spellcheck="true"># app/controllers/cities_controller.rb</span>
+<span class="token keyword">class</span> <span class="token class-name">CitiesController</span> <span class="token operator">&lt;</span> <span class="token constant">ApplicationController</span>
+
+  <span class="token keyword">def</span> index
+    <span class="token variable">@countries</span> <span class="token operator">=</span> <span class="token constant">Country</span><span class="token punctuation">.</span>all
+    <span class="token variable">@cities</span> <span class="token operator">=</span> <span class="token constant">City</span><span class="token punctuation">.</span><span class="token function">where</span><span class="token punctuation">(</span>country_id<span class="token punctuation">:</span> params<span class="token punctuation">[</span><span class="token symbol">:country_id</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+  <span class="token keyword">end</span>
+
+  <span class="token keyword">def</span> create
+    <span class="token variable">@cities</span> <span class="token operator">=</span> <span class="token constant">City</span><span class="token punctuation">.</span><span class="token function">where</span><span class="token punctuation">(</span>country_id<span class="token punctuation">:</span> params<span class="token punctuation">[</span><span class="token symbol">:country_id</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+  <span class="token keyword">end</span>
+
+<span class="token keyword">end</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p><strong> 說明</strong></p>
 <p><code>create</code>很簡單，就是從使用者的選單中讀取選中的<code>country_id</code>，然後再到model中尋找對應該國家碼的城市。</p>
-<h2 id="修改index這個view"><a href="#修改index這個view" class="headerlink" title="修改index這個view"></a>修改index這個view</h2><p>我們要修改的檔案為<code>app/view/cities/index.html.erb</code>，程式碼如下：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">h2</span>&gt;</span>選擇國家<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">%=</span> <span class="attr">form_tag</span> "/<span class="attr">cities</span>" ,<span class="attr">remote:</span> <span class="attr">true</span> <span class="attr">do</span> %&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">%=</span> <span class="attr">select_tag</span> <span class="attr">:country_id</span>, <span class="attr">options_from_collection_for_select</span>(@<span class="attr">countries</span>, "<span class="attr">id</span>","<span class="attr">name</span>") %&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">%=</span> <span class="attr">button_tag</span> "查詢" %&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">%</span> <span class="attr">end</span> %&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">ul</span> <span class="attr">id</span>=<span class="string">"show_items"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">%=</span> <span class="attr">render</span> @<span class="attr">cities</span> %&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">%=</span> <span class="attr">debug</span>(<span class="attr">params</span>) <span class="attr">if</span> <span class="attr">Rails.env.development</span>? %&gt;</span></div></pre></td></tr></table></figure></p>
+<h2 id="修改index這個view"><a href="#修改index這個view" class="headerlink" title="修改index這個view"></a>修改index這個view</h2><p>我們要修改的檔案為<code>app/view/cities/index.html.erb</code>，程式碼如下：</p>
+<pre class="line-numbers language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h2</span><span class="token punctuation">></span></span>選擇國家<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h2</span><span class="token punctuation">></span></span>
+&lt;%= form_tag "/cities" ,remote: true do %>
+  &lt;%= select_tag :country_id, options_from_collection_for_select(@countries, "id","name") %>
+  &lt;%= button_tag "查詢" %>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>%</span> <span class="token attr-name">end</span> <span class="token attr-name">%</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>show_items<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  &lt;%= render @cities %>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">></span></span>
+&lt;%= debug(params) if Rails.env.development? %>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p><strong> 說明</strong></p>
 <p>這邊最主要的就是第2行中的<code>remote: true</code>這個敘述。在rails中，當我們在表單中放入<code>remote: true</code>之後，rails就會自動把這個表單在controller中所對應到的action(本例為cities_controller的create)，其所<code>respond_to</code>的檔案類型設定為javascript。本來這個action的template應該是<code>create.html.erb</code>，但有了<code>remote: true</code>之後，對應到的template就變成了<code>create.js.erb</code>了。</p>
 <p>你當然可以在<code>create.js.erb</code>中再度指定新的html，但這就多此一舉了。使用這種機制最常見的作法就是更新原來view中的某一HTML元件。因此我們在上面的程式碼第6行，幫顯示城市的地方加了一個ul的id<code>show_items</code>，然後我們只要到<code>create.js.erb</code>這個javscript中更新<code>index.html</code>中<code>show_items</code>這個<code>&lt;ul&gt;</code>，你只要記得，我們通常使用javascript啟動ajax call去伺服器端要資料(data)，而不是要頁面(page)，載入速度就會很快，並且可以做到很多動態的效果。</p>
-<h2 id="新增create-js-erb"><a href="#新增create-js-erb" class="headerlink" title="新增create.js.erb"></a>新增<code>create.js.erb</code></h2><p>接下來就是新增一個對應到<code>create</code>這個action的template，這邊就是<code>app/view/cities/create.js.erb</code>。程式碼如下：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$(<span class="string">'#show_items'</span>).html(<span class="string">"&lt;%= j render @cities %&gt;"</span>);</div></pre></td></tr></table></figure></p>
+<h2 id="新增create-js-erb"><a href="#新增create-js-erb" class="headerlink" title="新增create.js.erb"></a>新增<code>create.js.erb</code></h2><p>接下來就是新增一個對應到<code>create</code>這個action的template，這邊就是<code>app/view/cities/create.js.erb</code>。程式碼如下：</p>
+<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token function">$</span><span class="token punctuation">(</span><span class="token string">'#show_items'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">html</span><span class="token punctuation">(</span><span class="token string">"&lt;%= j render @cities %>"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p><strong> 說明 </strong><br>這是一個標準的javascript內嵌rails指令，短短一行，使用了jquery的html函數，而更新的內容，正是我們要求的<code>render @cities</code>原來這一塊。</p>
 <h1 id="整個完整流程"><a href="#整個完整流程" class="headerlink" title="整個完整流程"></a>整個完整流程</h1><p>接下來是整個完整流程</p>
 <ol>

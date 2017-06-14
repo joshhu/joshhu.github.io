@@ -37,7 +37,8 @@
     <link rel="apple-touch-icon-precomposed" href="/img/author.jpg">
     
     <link rel="stylesheet" href="/css/style.css">
-</head>
+<link rel="stylesheet" href="/css/prism.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
   <body>
     <header>
@@ -113,11 +114,43 @@
 	<div class="article-content">
 		
 		<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>雖然在上一篇<a href="http://josh.hu/2017/06/13/remoteTrue/">Rails單頁選單顯示表單實作(二)</a>中我們用了rails提供的ajax call直接更新<code>index.html</code>這個網頁上<code>&lt;ul div=&quot;show_items&quot;&gt;</code>這個元素，但是筆者一直覺得那個查詢按鈕很多餘。應該是我們選擇了國家之後，自動就要列出這個國家的城市，可以少移動一個滑鼠及少按一個按鈕，也比較直覺，我們就來看看怎麼做。</p>
-<h1 id="準備工作"><a href="#準備工作" class="headerlink" title="準備工作"></a>準備工作</h1><p>你只要有這一篇<a href="http://josh.hu/2017/06/12/samePageForm/">Rails單頁選單顯示表單實作(一)</a>中準備好的project即可，我們就先切換到新的git branch。<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git checkout -b jsresponse</div></pre></td></tr></table></figure></p>
-<h1 id="要修改的地方"><a href="#要修改的地方" class="headerlink" title="要修改的地方"></a>要修改的地方</h1><p>這邊要修改的地方有幾個，首先就是<code>index.html.erb</code>這個view。因為我們要監測選單變更的事件，並且把選單變更的事件綁定到一個jquery的函數，因此需要給這個選單一個id。此外我們當然要把按鈕拿掉，因此<code>index.html.erb</code>就變的非常簡單了，<code>app/view/cities/index.html.erb</code>的程式如下：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">h2</span>&gt;</span>選擇國家<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">%=</span> <span class="attr">select_tag</span> <span class="attr">:country_id</span>, <span class="attr">options_from_collection_for_select</span>(@<span class="attr">countries</span>, "<span class="attr">id</span>","<span class="attr">name</span>"), <span class="attr">id:</span> "<span class="attr">filter</span>" %&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">ul</span> <span class="attr">id</span>=<span class="string">"show_items"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">%=</span> <span class="attr">render</span> @<span class="attr">cities</span> %&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">%=</span> <span class="attr">debug</span>(<span class="attr">params</span>) <span class="attr">if</span> <span class="attr">Rails.env.development</span>? %&gt;</span></div></pre></td></tr></table></figure></p>
+<h1 id="準備工作"><a href="#準備工作" class="headerlink" title="準備工作"></a>準備工作</h1><p>你只要有這一篇<a href="http://josh.hu/2017/06/12/samePageForm/">Rails單頁選單顯示表單實作(一)</a>中準備好的project即可，我們就先切換到新的git branch。</p>
+<pre class="line-numbers language-shell"><code class="language-shell">git checkout -b jsresponse
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h1 id="要修改的地方"><a href="#要修改的地方" class="headerlink" title="要修改的地方"></a>要修改的地方</h1><p>這邊要修改的地方有幾個，首先就是<code>index.html.erb</code>這個view。因為我們要監測選單變更的事件，並且把選單變更的事件綁定到一個jquery的函數，因此需要給這個選單一個id。此外我們當然要把按鈕拿掉，因此<code>index.html.erb</code>就變的非常簡單了，<code>app/view/cities/index.html.erb</code>的程式如下：</p>
+<pre class="line-numbers language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h2</span><span class="token punctuation">></span></span>選擇國家<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h2</span><span class="token punctuation">></span></span>
+&lt;%= select_tag :country_id, options_from_collection_for_select(@countries, "id","name"), id: "filter" %>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>show_items<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  &lt;%= render @cities %>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">></span></span>
+&lt;%= debug(params) if Rails.env.development? %>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p><strong>說明</strong></p>
 <p>首先就在第2行，多了一個<code>id: &quot;filter&quot;</code>，這是等一下要更動的地方，其它則維持不變。</p>
-<p>接下來我們在這個程式的最下方先暫時加一段javascript，如下：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">h2</span>&gt;</span>選擇國家<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">%=</span> <span class="attr">select_tag</span> <span class="attr">:country_id</span>, <span class="attr">options_from_collection_for_select</span>(@<span class="attr">countries</span>, "<span class="attr">id</span>","<span class="attr">name</span>"), <span class="attr">id:</span> "<span class="attr">filter</span>" %&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">ul</span> <span class="attr">id</span>=<span class="string">"show_items"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">%=</span> <span class="attr">render</span> @<span class="attr">cities</span> %&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">%=</span> <span class="attr">debug</span>(<span class="attr">params</span>) <span class="attr">if</span> <span class="attr">Rails.env.development</span>? %&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="xml"></span></div><div class="line"> $("#filter").change(function()&#123;</div><div class="line">   $.ajax(&#123;</div><div class="line">     url: "<span class="tag">&lt;<span class="name">%=</span> <span class="attr">cities_path</span>(<span class="attr">:js</span>) %&gt;</span>",</div><div class="line">     type: 'POST',</div><div class="line">     datatype: "script",</div><div class="line">     data: &#123;country_id: $(this).val() &#125;,</div><div class="line">     success: function(data)&#123;</div><div class="line">       console.log(data);</div><div class="line">     &#125;</div><div class="line">   &#125;);</div><div class="line"> &#125;);</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>接下來我們在這個程式的最下方先暫時加一段javascript，如下：</p>
+<pre class="line-numbers language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h2</span><span class="token punctuation">></span></span>選擇國家<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h2</span><span class="token punctuation">></span></span>
+&lt;%= select_tag :country_id, options_from_collection_for_select(@countries, "id","name"), id: "filter" %>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>show_items<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  &lt;%= render @cities %>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">></span></span>
+&lt;%= debug(params) if Rails.env.development? %>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span>
+ $("#filter").change(function(){
+   $.ajax({
+     url: "&lt;%= cities_path(:js) %>",
+     type: 'POST',
+     datatype: "script",
+     data: {country_id: $(this).val() },
+     success: function(data){
+       console.log(data);
+     }
+   });
+ });
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p><strong>說明</strong></p>
 <p>第9到21行是標準的javascript，用來綁定選單變動時執行的事件函數。第11到17行是這個函數的本身。</p>
 <p>首先是10行，當<code>#filter</code>這個id的選單(即第2行)有變動時，即執行第11到17行的ajax呼叫。</p>
@@ -130,7 +163,19 @@
 <li><code>success</code>: 這是執行ajax call成功之後的執行函數，通常就會把從伺服器傳回來的資料一起傳到這函數。我們可以用一個<code>console.log</code>來印出傳回來的資料。</li>
 </ul>
 <p>因此我們在選單變動時就直接執行ajax call，用HTTP POST去<code>/cities</code>所代表controller中的action來執行(也就是<code>create</code>這個action)。由於我們指定了<code>datatype</code>是script，因此<code>create</code>這個action對應到的template就會是javascript，因此就會去執行<code>create.js.erb</code>，之後就和上一篇的動作一樣了。</p>
-<h2 id="create的回應"><a href="#create的回應" class="headerlink" title="create的回應"></a><code>create</code>的回應</h2><p>因為我們在上面的<code>datatype</code>已經指定了<code>script</code>，因此controller中的action自動會回應javascript，當然正確的寫法還是要在action中指定回應的格式，如下<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># app/controller/cities_controller.rb</span></div><div class="line"> <span class="class"><span class="keyword">class</span> <span class="title">CitiesController</span> &lt; ApplicationController</span></div><div class="line">   <span class="function"><span class="keyword">def</span> <span class="title">index</span></span></div><div class="line">     @countries = Country.all</div><div class="line">     @cities = City.where(<span class="symbol">country_id:</span> params[<span class="symbol">:country_id</span>])</div><div class="line">   <span class="keyword">end</span></div><div class="line">   <span class="function"><span class="keyword">def</span> <span class="title">create</span></span></div><div class="line">     @cities = City.where(<span class="symbol">country_id:</span> params[<span class="symbol">:country_id</span>])</div><div class="line">     respond_to <span class="symbol">:js</span></div><div class="line">   <span class="keyword">end</span></div><div class="line"> <span class="keyword">end</span></div></pre></td></tr></table></figure></p>
+<h2 id="create的回應"><a href="#create的回應" class="headerlink" title="create的回應"></a><code>create</code>的回應</h2><p>因為我們在上面的<code>datatype</code>已經指定了<code>script</code>，因此controller中的action自動會回應javascript，當然正確的寫法還是要在action中指定回應的格式，如下</p>
+<pre class="line-numbers language-ruby"><code class="language-ruby"><span class="token comment" spellcheck="true"># app/controller/cities_controller.rb</span>
+ <span class="token keyword">class</span> <span class="token class-name">CitiesController</span> <span class="token operator">&lt;</span> <span class="token constant">ApplicationController</span>
+   <span class="token keyword">def</span> index
+     <span class="token variable">@countries</span> <span class="token operator">=</span> <span class="token constant">Country</span><span class="token punctuation">.</span>all
+     <span class="token variable">@cities</span> <span class="token operator">=</span> <span class="token constant">City</span><span class="token punctuation">.</span><span class="token function">where</span><span class="token punctuation">(</span>country_id<span class="token punctuation">:</span> params<span class="token punctuation">[</span><span class="token symbol">:country_id</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+   <span class="token keyword">end</span>
+   <span class="token keyword">def</span> create
+     <span class="token variable">@cities</span> <span class="token operator">=</span> <span class="token constant">City</span><span class="token punctuation">.</span><span class="token function">where</span><span class="token punctuation">(</span>country_id<span class="token punctuation">:</span> params<span class="token punctuation">[</span><span class="token symbol">:country_id</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+     respond_to <span class="token symbol">:js</span>
+   <span class="token keyword">end</span>
+ <span class="token keyword">end</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>其中第9行可寫可不寫，他自己會知道要去找<code>create.js.erb</code>。</p>
 <h1 id="整個完整流程"><a href="#整個完整流程" class="headerlink" title="整個完整流程"></a>整個完整流程</h1><p>接下來是整個完整流程</p>
 <ol>
