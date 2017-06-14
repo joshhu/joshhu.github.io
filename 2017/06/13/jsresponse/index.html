@@ -19,7 +19,7 @@
 <meta property="og:site_name" content="胡嘉璽(Josh Hu)">
 <meta property="og:description" content="繼上一篇使用了標準rails的remote true選項，來完成HTTP POST的ajax call。但我總覺得那個按下「查詢」按鈕的動作是多此一舉的。能不能只有選單，當你在選單中選擇了國家之後，自動就會更新下方的城市列表。在這個系列的第三篇，我們就來看看怎麼做，重點選是ajax call，只是這次我們自己寫，不用rails的。這篇文章著重javascript。">
 <meta property="og:image" content="http://josh.hu/images/jsresponse.gif">
-<meta property="og:updated_time" content="2017-06-14T03:06:32.000Z">
+<meta property="og:updated_time" content="2017-06-14T03:25:44.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Rails單頁選單顯示表單實作(三)">
 <meta name="twitter:description" content="繼上一篇使用了標準rails的remote true選項，來完成HTTP POST的ajax call。但我總覺得那個按下「查詢」按鈕的動作是多此一舉的。能不能只有選單，當你在選單中選擇了國家之後，自動就會更新下方的城市列表。在這個系列的第三篇，我們就來看看怎麼做，重點選是ajax call，只是這次我們自己寫，不用rails的。這篇文章著重javascript。">
@@ -106,7 +106,7 @@
 		
   <p class="article-time">
     <time datetime="2017-06-13T04:20:43.000Z" itemprop="datePublished"> 發表日期 2017-06-13</time> | 
-     <time datetime="2017-06-14T03:06:32.000Z" itemprop="dateUpdated"> 更新日期 2017-06-14</time>
+     <time datetime="2017-06-14T03:25:44.000Z" itemprop="dateUpdated"> 更新日期 2017-06-14</time>
     
   </p>
 </header>
@@ -118,13 +118,13 @@
 <pre class="line-numbers language-shell"><code class="language-shell">git checkout -b jsresponse
 <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <h1 id="要修改的地方"><a href="#要修改的地方" class="headerlink" title="要修改的地方"></a>要修改的地方</h1><p>這邊要修改的地方有幾個，首先就是<code>index.html.erb</code>這個view。因為我們要監測選單變更的事件，並且把選單變更的事件綁定到一個jquery的函數，因此需要給這個選單一個id。此外我們當然要把按鈕拿掉，因此<code>index.html.erb</code>就變的非常簡單了，<code>app/view/cities/index.html.erb</code>的程式如下：</p>
-<pre class="line-numbers language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h2</span><span class="token punctuation">></span></span>選擇國家<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h2</span><span class="token punctuation">></span></span>
-&lt;%= select_tag :country_id, options_from_collection_for_select(@countries, "id","name"), id: "filter" %>
+<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token operator">&lt;</span>h2<span class="token operator">></span>選擇國家<span class="token operator">&lt;</span><span class="token operator">/</span>h2<span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">%</span><span class="token operator">=</span> select_tag <span class="token punctuation">:</span>country_id<span class="token punctuation">,</span> <span class="token function">options_from_collection_for_select</span><span class="token punctuation">(</span>@countries<span class="token punctuation">,</span> <span class="token string">"id"</span><span class="token punctuation">,</span><span class="token string">"name"</span><span class="token punctuation">)</span><span class="token punctuation">,</span> id<span class="token punctuation">:</span> <span class="token string">"filter"</span> <span class="token operator">%</span><span class="token operator">></span>
 
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>show_items<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-  &lt;%= render @cities %>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">></span></span>
-&lt;%= debug(params) if Rails.env.development? %>
+<span class="token operator">&lt;</span>ul id<span class="token operator">=</span><span class="token string">"show_items"</span><span class="token operator">></span>
+  <span class="token operator">&lt;</span><span class="token operator">%</span><span class="token operator">=</span> render @cities <span class="token operator">%</span><span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>ul<span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">%</span><span class="token operator">=</span> <span class="token function">debug</span><span class="token punctuation">(</span>params<span class="token punctuation">)</span> <span class="token keyword">if</span> Rails<span class="token punctuation">.</span>env<span class="token punctuation">.</span>development<span class="token operator">?</span> <span class="token operator">%</span><span class="token operator">></span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p><strong>說明</strong></p>
 <p>首先就在第2行，多了一個<code>id: &quot;filter&quot;</code>，這是等一下要更動的地方，其它則維持不變。</p>
