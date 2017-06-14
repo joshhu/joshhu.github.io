@@ -19,7 +19,7 @@
 <meta property="og:site_name" content="胡嘉璽(Josh Hu)">
 <meta property="og:description" content="前一篇我們用標準的HTTP GET更新表單，取代了傳統的HTTP POST，因此只需要一個action。 但這個方法問題很多，因此在這一篇中，我們使用了rails的ajax。只要在表單中放在remote true的參數，就會用rails的ajax call，不但程式碼變簡單，也更符合一般網頁的使用習慣，當然，這還不是最好的做法。">
 <meta property="og:image" content="http://josh.hu/images/remotetrue.gif">
-<meta property="og:updated_time" content="2017-06-14T03:39:27.000Z">
+<meta property="og:updated_time" content="2017-06-14T03:40:17.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Rails單頁選單顯示表單實作(二)">
 <meta name="twitter:description" content="前一篇我們用標準的HTTP GET更新表單，取代了傳統的HTTP POST，因此只需要一個action。 但這個方法問題很多，因此在這一篇中，我們使用了rails的ajax。只要在表單中放在remote true的參數，就會用rails的ajax call，不但程式碼變簡單，也更符合一般網頁的使用習慣，當然，這還不是最好的做法。">
@@ -106,7 +106,7 @@
 		
   <p class="article-time">
     <time datetime="2017-06-12T16:32:10.000Z" itemprop="datePublished"> 發表日期 2017-06-13</time> | 
-     <time datetime="2017-06-14T03:39:27.000Z" itemprop="dateUpdated"> 更新日期 2017-06-14</time>
+     <time datetime="2017-06-14T03:40:17.000Z" itemprop="dateUpdated"> 更新日期 2017-06-14</time>
     
   </p>
 </header>
@@ -142,15 +142,15 @@
 <p><strong> 說明</strong></p>
 <p><code>create</code>很簡單，就是從使用者的選單中讀取選中的<code>country_id</code>，然後再到model中尋找對應該國家碼的城市。</p>
 <h2 id="修改index這個view"><a href="#修改index這個view" class="headerlink" title="修改index這個view"></a>修改index這個view</h2><p>我們要修改的檔案為<code>app/view/cities/index.html.erb</code>，程式碼如下：</p>
-<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token operator">&lt;</span>h2<span class="token operator">></span>選擇國家<span class="token operator">&lt;</span><span class="token operator">/</span>h2<span class="token operator">></span>
-<span class="token operator">&lt;</span><span class="token operator">%</span><span class="token operator">=</span> form_tag <span class="token string">"/cities"</span> <span class="token punctuation">,</span>remote<span class="token punctuation">:</span> <span class="token boolean">true</span> <span class="token keyword">do</span> <span class="token operator">%</span><span class="token operator">></span>
-  <span class="token operator">&lt;</span><span class="token operator">%</span><span class="token operator">=</span> select_tag <span class="token punctuation">:</span>country_id<span class="token punctuation">,</span> <span class="token function">options_from_collection_for_select</span><span class="token punctuation">(</span>@countries<span class="token punctuation">,</span> <span class="token string">"id"</span><span class="token punctuation">,</span><span class="token string">"name"</span><span class="token punctuation">)</span> <span class="token operator">%</span><span class="token operator">></span>
-  <span class="token operator">&lt;</span><span class="token operator">%</span><span class="token operator">=</span> button_tag <span class="token string">"查詢"</span> <span class="token operator">%</span><span class="token operator">></span>
-<span class="token operator">&lt;</span><span class="token operator">%</span> end <span class="token operator">%</span><span class="token operator">></span>
-<span class="token operator">&lt;</span>ul id<span class="token operator">=</span><span class="token string">"show_items"</span><span class="token operator">></span>
-  <span class="token operator">&lt;</span><span class="token operator">%</span><span class="token operator">=</span> render @cities <span class="token operator">%</span><span class="token operator">></span>
-<span class="token operator">&lt;</span><span class="token operator">/</span>ul<span class="token operator">></span>
-<span class="token operator">&lt;</span><span class="token operator">%</span><span class="token operator">=</span> <span class="token function">debug</span><span class="token punctuation">(</span>params<span class="token punctuation">)</span> <span class="token keyword">if</span> Rails<span class="token punctuation">.</span>env<span class="token punctuation">.</span>development<span class="token operator">?</span> <span class="token operator">%</span><span class="token operator">></span>
+<pre class="line-numbers language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h2</span><span class="token punctuation">></span></span>選擇國家<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h2</span><span class="token punctuation">></span></span>
+&lt;%= form_tag "/cities" ,remote: true do %>
+  &lt;%= select_tag :country_id, options_from_collection_for_select(@countries, "id","name") %>
+  &lt;%= button_tag "查詢" %>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>%</span> <span class="token attr-name">end</span> <span class="token attr-name">%</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>show_items<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  &lt;%= render @cities %>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">></span></span>
+&lt;%= debug(params) if Rails.env.development? %>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p><strong> 說明</strong></p>
 <p>這邊最主要的就是第2行中的<code>remote: true</code>這個敘述。在rails中，當我們在表單中放入<code>remote: true</code>之後，rails就會自動把這個表單在controller中所對應到的action(本例為cities_controller的create)，其所<code>respond_to</code>的檔案類型設定為javascript。本來這個action的template應該是<code>create.html.erb</code>，但有了<code>remote: true</code>之後，對應到的template就變成了<code>create.js.erb</code>了。</p>
