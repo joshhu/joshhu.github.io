@@ -19,7 +19,7 @@
 <meta property="og:site_name" content="胡嘉璽(Josh Hu)">
 <meta property="og:description" content="我們在網路上註冊時，常常在輸入名稱之後，但還沒按下「送出」之前，系統會傳回「使用者名稱已存在」這種提示，通常這種「即時驗證」的功能都是透過ajax call去後端資料庫檢查，用起來十分方便，本篇文章就用一個非常簡單的例子來看這個功能怎麼實現">
 <meta property="og:image" content="http://josh.hu/2017/06/20/jsonResponse/notexist.jpg">
-<meta property="og:updated_time" content="2017-06-20T06:30:15.000Z">
+<meta property="og:updated_time" content="2017-06-20T06:44:48.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Rails用ajax call作表單即時驗證(ajax and json)">
 <meta name="twitter:description" content="我們在網路上註冊時，常常在輸入名稱之後，但還沒按下「送出」之前，系統會傳回「使用者名稱已存在」這種提示，通常這種「即時驗證」的功能都是透過ajax call去後端資料庫檢查，用起來十分方便，本篇文章就用一個非常簡單的例子來看這個功能怎麼實現">
@@ -106,7 +106,7 @@
 		
   <p class="article-time">
     <time datetime="2017-06-20T05:50:55.000Z" itemprop="datePublished"> 發表日期 2017-06-20</time> | 
-     <time datetime="2017-06-20T06:30:15.000Z" itemprop="dateUpdated"> 更新日期 2017-06-20</time>
+     <time datetime="2017-06-20T06:44:48.000Z" itemprop="dateUpdated"> 更新日期 2017-06-20</time>
     
   </p>
 </header>
@@ -139,7 +139,7 @@
 <span class="token keyword">end</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p><strong> 說明 </strong></p>
-<p>程式很簡單，就只有<code>check</code>這個action而已。第4行就是讀取使用者輸入的使用者id，如果是一開始載入頁面，自然就沒有這個id。</p>
+<p>程式很簡單，就只有<code>check</code>這個action而已。第4行就是讀取使用者輸入的使用者id，使用<code>params[:uid]</code>來讀取使用者的輸入。如果是一開始載入頁面，自然就沒有這個id。</p>
 <p>第5-7行非常重要，這邊用到<code>respond_to</code>這個rails的指令。</p>
 <p>首先如果系統是正常進來，就是使用者打了<code>http://192.168.1.105:3000/users/check</code>的話，則伺服器應該就會傳回html，也就是我們看到的頁面, 你可以試著輸入<code>http://192.168.1.105:3000/users/check.html</code>，可以發現是指到同一個頁面，這是因為rails在伺服器端丟一個check.html回去給瀏覽器。</p>
 <p>第二個情況就是瀏覽器(不是使用者)利用ajax call要求json資料時，我們必須也要有所回應，因此就有第7行的程式碼，針對要求ajax call的回應，等一下會在view中詳細說明。</p>
@@ -178,7 +178,15 @@
    <span class="token punctuation">}</span><span class="token punctuation">)</span>
 <span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-  
+<p><strong> 說明</strong></p>
+<p>第3行使用了rails的<code>text_field_tag</code>這個helper來讓使用者輸入，輸入的值放在<code>uid</code>中。我們在這邊要定義一個DOM的id值<code>&quot;input_user&quot;</code>，因為這個值會改變。</p>
+<p>第4行我們定義了一個顯示訊息的部分，等一下會在輸入欄下方有訊息顯示使用者是否存在。</p>
+<p>接下來就是主程式。這邊使用了一個javascript的<code>blur</code>function。表示如果使用者輸入完離開這個文字框，就會綁定一個事件，綁定的事件就是7到26行。首先我們先用第8行排除使用者輸入的空格，重點就是第9號開始。如果使用者輸入後，我們在第7行取得輸入資料，呼叫伺服器器上的<code>userCheck_path</code>(第10行)，並且規定用json格式，這樣子controller才會去render json格式的資料。使用的RestFUL方法為<code>GET</code>(第11行的type), 使用的資料格式為json(第12行)，傳回的值為使用者輸入的<code>uid</code>(第13行)。</p>
+<p>如果ajax call錯誤就在console印出”error”(第15行)。如果成功，就執行17-21行。</p>
+<p>在第18行判斷是否有找到，如果找到了，表示這個使用者存在，因此我們在第19行把輸入的文字欄清空，並且在20行，在文字欄下方顯示「使用者xx已存在」。其中<code>xx</code>正是伺服器傳回來的<code>@user.lcname</code>的json格式姓名。</p>
+<p>第22行是列出使用者姓名或是”Not exist”方便偵錯，第27-29行則是當使用者再度回到輸入欄時，會把輸入欄下方原來「使用者xx已存在」的訊息清掉。</p>
+<p>這樣一來，我們就可以透過ajax call+json，在真正送出資料到後端伺服器之前就檢查使用者是否存在，讓表單的驗證更方便也更人性化：</p>
+<h1 id="完整流程"><a href="#完整流程" class="headerlink" title="完整流程"></a>完整流程</h1>  
 	</div>
 		<footer class="article-footer clearfix">
 <div class="article-catetags">
@@ -233,7 +241,7 @@
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目錄</strong>
  
- <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#環境設定"><span class="toc-number">2.</span> <span class="toc-text">環境設定</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#系統設定"><span class="toc-number">2.1.</span> <span class="toc-text">系統設定</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Rails設定"><span class="toc-number">2.2.</span> <span class="toc-text">Rails設定</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#程式說明"><span class="toc-number">3.</span> <span class="toc-text">程式說明</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#路由設定"><span class="toc-number">3.1.</span> <span class="toc-text">路由設定</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Controller"><span class="toc-number">3.2.</span> <span class="toc-text">Controller</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#View"><span class="toc-number">3.3.</span> <span class="toc-text">View</span></a></li></ol></li></ol>
+ <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#環境設定"><span class="toc-number">2.</span> <span class="toc-text">環境設定</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#系統設定"><span class="toc-number">2.1.</span> <span class="toc-text">系統設定</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Rails設定"><span class="toc-number">2.2.</span> <span class="toc-text">Rails設定</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#程式說明"><span class="toc-number">3.</span> <span class="toc-text">程式說明</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#路由設定"><span class="toc-number">3.1.</span> <span class="toc-text">路由設定</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Controller"><span class="toc-number">3.2.</span> <span class="toc-text">Controller</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#View"><span class="toc-number">3.3.</span> <span class="toc-text">View</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#完整流程"><span class="toc-number">4.</span> <span class="toc-text">完整流程</span></a></li></ol>
  
   </div>
 
