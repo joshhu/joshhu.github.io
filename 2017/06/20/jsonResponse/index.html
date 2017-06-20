@@ -4,27 +4,24 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>電腦的選擇(硬體篇) | 胡嘉璽(Josh Hu)</title>
+    <title>Rails ajax call 使用json作為傳回值 | 胡嘉璽(Josh Hu)</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="Josh Hu">
     
 
     
-    <meta name="description" content="TL;DR:  你需要至少兩台實體機(開發機和伺服器)和一台雲端主機 開發機用筆電，伺服器用筆電或桌機都行   開發機：16GB記憶體、多核心CPU、三螢幕 伺服器：16GB記憶體、多核心CPU 雲端主機用Google Compute Engine或阿里雲， 不要用Heroku  預算夠可再組一台NAS機(RAID1)備份資料(12GB記憶體，雙核心CPU, 3TB RAID1)">
-<meta name="keywords" content="Mac,Linux,ssh">
+    <meta name="description" content="How to make yourself a Googler caliber">
+<meta name="keywords" content="ajax, json Rails">
 <meta property="og:type" content="article">
-<meta property="og:title" content="電腦的選擇(硬體篇)">
-<meta property="og:url" content="http://josh.hu/2017/05/22/ComputerHardware/index.html">
+<meta property="og:title" content="Rails ajax call 使用json作為傳回值">
+<meta property="og:url" content="http://josh.hu/2017/06/20/jsonResponse/index.html">
 <meta property="og:site_name" content="胡嘉璽(Josh Hu)">
-<meta property="og:description" content="TL;DR:  你需要至少兩台實體機(開發機和伺服器)和一台雲端主機 開發機用筆電，伺服器用筆電或桌機都行   開發機：16GB記憶體、多核心CPU、三螢幕 伺服器：16GB記憶體、多核心CPU 雲端主機用Google Compute Engine或阿里雲， 不要用Heroku  預算夠可再組一台NAS機(RAID1)備份資料(12GB記憶體，雙核心CPU, 3TB RAID1)">
-<meta property="og:image" content="http://josh.hu/2017/05/22/ComputerHardware/3.jpg">
-<meta property="og:image" content="http://josh.hu/2017/05/22/ComputerHardware/3desktop.jpg">
-<meta property="og:updated_time" content="2017-05-25T16:25:11.000Z">
+<meta property="og:description" content="How to make yourself a Googler caliber">
+<meta property="og:updated_time" content="2017-06-20T05:56:56.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="電腦的選擇(硬體篇)">
-<meta name="twitter:description" content="TL;DR:  你需要至少兩台實體機(開發機和伺服器)和一台雲端主機 開發機用筆電，伺服器用筆電或桌機都行   開發機：16GB記憶體、多核心CPU、三螢幕 伺服器：16GB記憶體、多核心CPU 雲端主機用Google Compute Engine或阿里雲， 不要用Heroku  預算夠可再組一台NAS機(RAID1)備份資料(12GB記憶體，雙核心CPU, 3TB RAID1)">
-<meta name="twitter:image" content="http://josh.hu/2017/05/22/ComputerHardware/3.jpg">
+<meta name="twitter:title" content="Rails ajax call 使用json作為傳回值">
+<meta name="twitter:description" content="How to make yourself a Googler caliber">
 <meta name="twitter:creator" content="@joshhu">
 
     
@@ -99,100 +96,22 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2017/05/22/ComputerHardware/" title="電腦的選擇(硬體篇)" itemprop="url">電腦的選擇(硬體篇)</a>
+      <a href="/2017/06/20/jsonResponse/" title="Rails ajax call 使用json作為傳回值" itemprop="url">Rails ajax call 使用json作為傳回值</a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="Josh Hu" target="_blank" itemprop="author">Josh Hu</a>
 		
   <p class="article-time">
-    <time datetime="2017-05-22T04:40:48.000Z" itemprop="datePublished"> 發表日期 2017-05-22</time> | 
-     <time datetime="2017-05-25T16:25:11.000Z" itemprop="dateUpdated"> 更新日期 2017-05-26</time>
+    <time datetime="2017-06-20T05:50:55.000Z" itemprop="datePublished"> 發表日期 2017-06-20</time> | 
+     <time datetime="2017-06-20T05:56:56.000Z" itemprop="dateUpdated"> 更新日期 2017-06-20</time>
     
   </p>
 </header>
 
 	<div class="article-content">
 		
-		<p>TL;DR:</p>
-<ul>
-<li>你需要至少兩台實體機(開發機和伺服器)和一台雲端主機</li>
-<li>開發機用筆電，伺服器用筆電或桌機都行  </li>
-<li>開發機：16GB記憶體、多核心CPU、三螢幕</li>
-<li>伺服器：16GB記憶體、多核心CPU</li>
-<li>雲端主機用Google Compute Engine或阿里雲，<strong> 不要用Heroku </strong></li>
-<li>預算夠可再組一台NAS機(RAID1)備份資料(12GB記憶體，雙核心CPU, 3TB RAID1)<a id="more"></a>
-</li>
-</ul>
-<h2 id="硬體的重要性"><a href="#硬體的重要性" class="headerlink" title="硬體的重要性"></a>硬體的重要性</h2><p>很多人覺得隨便挑一台電腦就可以開始學習IT，這個觀念對初學者看似沒什麼大問題。但隨著學習東西越來越多，需要的軟體、工具、套件越來越複雜，你的環境的嚴謹性就越來越重要了。 很少有文章探討電腦選擇的問題，我們就來看看。</p>
-<h2 id="需要幾台電腦？"><a href="#需要幾台電腦？" class="headerlink" title="需要幾台電腦？"></a>需要幾台電腦？</h2><p><strong> 至少三台 </strong></p>
-<ul>
-<li>開發機</li>
-<li>伺服器</li>
-<li>雲端主機</li>
-</ul>
-<p><strong> 如果預算足夠 </strong></p>
-<ul>
-<li>Linux NAS來當儲存伺服器</li>
-<li>一般的PC作為Bare Metal虛擬化主機</li>
-</ul>
-<h2 id="桌機或筆電？"><a href="#桌機或筆電？" class="headerlink" title="桌機或筆電？"></a>桌機或筆電？</h2><ul>
-<li>開發機用筆電，因為需要DEMO給客戶看，用Mac為主</li>
-<li>伺服器用筆電或桌機都行，用PC</li>
-<li>雲端主機選擇Google Compute Engine或阿里雲，<strong> 不要用Heroku </strong></li>
-</ul>
-<h2 id="Mac或PC？"><a href="#Mac或PC？" class="headerlink" title="Mac或PC？"></a>Mac或PC？</h2><ul>
-<li>開發機最好用Mac，次要選擇為PC安裝Linux Mint</li>
-<li>伺服器用PC安裝Ubuntu 16.04(或下一個LTS版本)</li>
-<li>雲端主機安裝Ubuntu 16.04(或下一個LTS版本)</li>
-</ul>
-<h2 id="開發機說明"><a href="#開發機說明" class="headerlink" title="開發機說明"></a>開發機說明</h2><p>開發機非常重要，和你日夜相伴，多花一點錢在這台機器上面，會給你帶來更大的回報！選擇開發機的重點如下：</p>
-<p><strong> 1. 首選Mac，次選Linux Minx </strong></p>
-<p>Mac買來就直接可以開工了，Linux一定是安裝在PC上，視你購買的硬體，可能會有驅動程式或相容性、多螢幕顯示的問題。</p>
-<p><strong> 2. 16G以上的記憶體 </strong></p>
-<p>目前記憶體便宜的要死，不差這幾百元。有了16GB以上的記憶體，你可以大方開好幾個虛擬機來測試<code>Hadoop</code>、<code>Spark</code>、<code>ElasticSearch</code>等需要叢集的環境。這個錢別省。目前Mac的筆電最多只有16GB(2017年5月)，聽說下一代就可以加到32GB，到時我一定加上去！</p>
-<p><strong> 3. 多核心CPU </strong></p>
-<p>只要你買正常電腦，不要特別去挑很便宜的配備，都會是多核心CPU。</p>
-<p><strong> 4. SSD固態硬碟 </strong></p>
-<p>SSD主要是快，事實上電腦速度慢最大的元兇通常就是硬碟。不要想什麼TB的SATA機器硬碟，慢的要死，就直上SSD。至少要256GB，能買到512GB最好。不要想用什麼混合碟，就直接買SSD就行。如果你常跑<code>vagrant</code>或<code>docker</code>，最好是512GB以上。</p>
-<p><strong> 5. 能接至少兩個外接螢幕 </strong></p>
-<p>相信我，三個螢幕才是主流，一個NB的螢幕加兩個外接，是至少的，我常常用一個NB的螢幕加三個外接才覺得夠用。你不會想把時間花在到處尋找開啟的視窗上的。</p>
-<p><img src="3.jpg" alt=""><br><img src="3desktop.jpg" alt=""></p>
-<p><strong> 6. 購買推薦排行 </strong></p>
-<p>(1) MacBook Pro 15吋 16GB<br>(2) Macbook Pro 13吋 16GB<br>(3) Dell Precision M5510_8 15吋，16GB至少要有HDMI及一個VGA外接埠</p>
-<h2 id="伺服器說明"><a href="#伺服器說明" class="headerlink" title="伺服器說明"></a>伺服器說明</h2><p>開發機是你寫程式的前端，伺服器則算是你的遊樂場或是實驗室。這個電腦不需要太好，因為隨時可能重裝，但如果你需要執行Big Data類的應用，如<code>vagrant</code>, <code>docker</code>, <code>hadoop</code>, <code>spark</code>，就需要多一點記憶體和快速的SSD硬碟。當然4核心的CPU是不可少的。</p>
-<p><strong> 1. 用PC不要用Mac </strong></p>
-<p>因為要安裝Linux，因此用PC即可，用Mac有點浪費了。最好使用標準的硬體設備，例如不要用奇怪的顯示卡，以免Linux找不到驅動程式。</p>
-<p><strong> 2. 非必要可用桌機 </strong></p>
-<p>如果不需要常常帶到客戶那邊做多機器DEMO，這台電腦應該是放在的工作場所的，因此不需要是筆電。另外用桌機的好處就是可以較便宜，安裝更多的記憶體，多片網路卡做trunking加速等等。</p>
-<p><strong> 3. 多核心CPU </strong></p>
-<p>理由同開發機。</p>
-<p><strong> 4. 可以考慮用RAID0的SSD固態硬碟 </strong></p>
-<p>速度快，容量大，又可以練習Linux下的mdadm，如果常常跑虛擬機或big data應用更能感受速度上優勢。</p>
-<p><strong> 5. 購買推薦排行 </strong></p>
-<p>(1) 一般的PC，32GB記憶體，4核心CPU，兩顆256GB SSD組合成的RAID 0。<br>(2) 一般的NB，16GB記憶體體，256GB SSD硬碟</p>
-<h2 id="雲端主機說明"><a href="#雲端主機說明" class="headerlink" title="雲端主機說明"></a>雲端主機說明</h2><p>為什麼要申請雲端主機是另一篇文章的重點，這邊只推薦大家適合的雲端主機廠商。</p>
-<p><strong> 1. Google Compute Engine </strong></p>
-<p>從中國大陸以外的地方進入速度快，售價合理，提供功能多，第一次使用有300美元的免費額度，怎麼看都方便。我最喜歡的地方就是提供了Linux或Mac下的指令。在全世界各地都有機房(台灣在彰濱工業區)，如果你所在的國家或地區能正常使用Google，這是第一選擇。</p>
-<p><strong> 2. 阿里雲 </strong></p>
-<p>如果你在中國大陸，無法正常使用Google的服務，阿里雲是我最推薦的服務。一個月幾十元就有一個公網主機，服務也多，網路速度快，提供的東西都很穩定，並且支援多個主流的Linux Distros，有意在中國大陸發展，阿里雲是你一定要熟悉的產品。</p>
-<p><strong> 3. 為什麼不要用Heroku? </strong></p>
-<p>網路上的教學最愛教大家把網站部署到Heroku上面，其重點不外乎是免費，有現成的DB，可以綁定自己的域名等等，但Heroku最大的問題，就是他是一個PAAS，是只有提供網頁及資料庫服務的雲端供應商，不是一個完整的雲端運算平台提供商，你能學到的東西不但少，而且是Heroku專用的，花時間在這上面， 只是為了一個月幾百元的免費功能，想想實在是划不來。你真的在乎那一個月幾百元的Google/阿里雲主機費用嗎？有一個完整的主機功能，能在上面佈署完整的服務，玩大數據，玩NoSQL的完整雲端主機，怎麼樣都比只有其5%功能不到Heroku的主機有用。</p>
-<p>為了使用Heroku的免費功能，你要學習好多Heroku的專屬指令和工具，與其花時間在這專屬的平台上，為何不學習完整、開放，放諸任何平台皆可使用的功能呢？所以就一句老話：<strong> 不要花時間在Heroku上面！！ </strong></p>
-<h2 id="NAS主機說明"><a href="#NAS主機說明" class="headerlink" title="NAS主機說明"></a>NAS主機說明</h2><p>備份是非常重要的事。努力很久的東西就不見了，任誰都會x的要死。</p>
-<p><strong> 1. 不要買現成的NAS產品 </strong></p>
-<p>很多人會買專業的NAS來備份，但我不建議，因為他們用的硬體實在不怎麼樣，你花一半不到的價錢，自己安裝一個Linux就搞定所有的事，而且還能練習用Linux自建RAID、安裝多片網路卡做加速，省錢又可以搞懂Linux的儲存，何樂而不為？</p>
-<p><strong> 2. 使用Linux內建的軟體RAID，不要用主機板上的RAID </strong></p>
-<p>主機板上的RAID是假的，和真正的RAID卡的效能和功能差很多。如果你用主機板內建的RAID功能，建立的磁碟陣列在轉移機器時很可能就不能用了。但使用Linux的軟體RAID，不管是換電腦，或是RAID硬碟壞了要重建，一個指令就搞定，方便又有相容性，速度也一樣快。</p>
-<p><strong> 3. 做RAID1即可 </strong></p>
-<p>買兩顆3TB的一般SATA硬碟及RAID1備份重要資料即可，不用想什麼RAID0(沒意義，這是備份機不求速度)，不用想RAID5(個人RAID1很夠了，RAID5至少要三顆硬碟，不會省多少空間)。</p>
-<p><strong> 4. 用SAMBA給Windows，NFS給其它Linux </strong></p>
-<p>儘量用NFS分享，但你的工作環境如果有Windows，就要用SAMBA。本站之後會有詳細的文章說明這部分 </p>
-<p><strong> 5. 這台機器可用來執行常用的虛擬機工作 </strong></p>
-<p>筆者在這台機器上安裝了12GB的記憶體，使用雙核心的廉價CPU，啟動兩個VM，一個是4GB的Windows 7用來下載，另一個是256MB的Linux做為內網的DNS。</p>
-<p><strong> 6. 可做為ssh reverse tunnel的內網入口 </strong></p>
-<p>有時你需要從外面ssh回到家中的內網，此時可以用這台來做ssh反向通道的入口，再從這台連線到內網中其它的電腦，我們會在本站稍後有完整的說明文章。</p>
-  
+		  
 	</div>
 		<footer class="article-footer clearfix">
 <div class="article-catetags">
@@ -200,7 +119,7 @@
 
   <div class="article-tags">
   
-  <span></span> <a href="/tags/Mac/">Mac</a><a href="/tags/Linux/">Linux</a><a href="/tags/ssh/">ssh</a>
+  <span></span> <a href="/tags/ajax-json-Rails/">ajax, json Rails</a>
   </div>
 
 </div>
@@ -209,7 +128,7 @@
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://josh.hu/2017/05/22/ComputerHardware/" data-title="電腦的選擇(硬體篇) | 胡嘉璽(Josh Hu)" data-tsina="null" class="share clearfix">
+	  <div data-url="http://josh.hu/2017/06/20/jsonResponse/" data-title="Rails ajax call 使用json作為傳回值 | 胡嘉璽(Josh Hu)" data-tsina="null" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -222,19 +141,11 @@
 	
 <nav class="article-nav clearfix">
  
- <div class="prev" >
- <a href="/2017/05/23/MacCheaper/" title="對Mac的誤解之一：Mac比PC貴？">
-  <strong>上一篇：</strong><br/>
-  <span>
-  對Mac的誤解之一：Mac比PC貴？</span>
-</a>
-</div>
-
 
 <div class="next">
-<a href="/2017/05/18/untitled-1495120237176/"  title="Windows？Mac？Linux？我要用什麼電腦？">
+<a href="/2017/06/19/learnToCode1/"  title="為什麼要學程式設計(一）？">
  <strong>下一篇：</strong><br/> 
- <span>Windows？Mac？Linux？我要用什麼電腦？
+ <span>為什麼要學程式設計(一）？
 </span>
 </a>
 </div>
@@ -255,7 +166,7 @@
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目錄</strong>
  
- <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#硬體的重要性"><span class="toc-number">1.</span> <span class="toc-text">硬體的重要性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#需要幾台電腦？"><span class="toc-number">2.</span> <span class="toc-text">需要幾台電腦？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#桌機或筆電？"><span class="toc-number">3.</span> <span class="toc-text">桌機或筆電？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Mac或PC？"><span class="toc-number">4.</span> <span class="toc-text">Mac或PC？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#開發機說明"><span class="toc-number">5.</span> <span class="toc-text">開發機說明</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#伺服器說明"><span class="toc-number">6.</span> <span class="toc-text">伺服器說明</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#雲端主機說明"><span class="toc-number">7.</span> <span class="toc-text">雲端主機說明</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#NAS主機說明"><span class="toc-number">8.</span> <span class="toc-text">NAS主機說明</span></a></li></ol>
+ 
  
   </div>
 
