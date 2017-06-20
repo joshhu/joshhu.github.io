@@ -18,7 +18,7 @@
 <meta property="og:url" content="http://josh.hu/2017/06/20/jsonResponse/index.html">
 <meta property="og:site_name" content="胡嘉璽(Josh Hu)">
 <meta property="og:description" content="我們在網路上註冊時，常常在輸入名稱之後，但還沒按下「送出」之前，系統會傳回「使用者名稱已存在」這種提示，通常這種「即時驗證」的功能都是透過ajax call去後端資料庫檢查，用起來十分方便，本篇文章就用一個非常簡單的例子來看這個功能怎麼實現">
-<meta property="og:updated_time" content="2017-06-20T05:59:22.000Z">
+<meta property="og:updated_time" content="2017-06-20T06:06:07.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Rails用ajax call作表單即時驗證(ajax and json)">
 <meta name="twitter:description" content="我們在網路上註冊時，常常在輸入名稱之後，但還沒按下「送出」之前，系統會傳回「使用者名稱已存在」這種提示，通常這種「即時驗證」的功能都是透過ajax call去後端資料庫檢查，用起來十分方便，本篇文章就用一個非常簡單的例子來看這個功能怎麼實現">
@@ -104,14 +104,35 @@
 		
   <p class="article-time">
     <time datetime="2017-06-20T05:50:55.000Z" itemprop="datePublished"> 發表日期 2017-06-20</time> | 
-     <time datetime="2017-06-20T05:59:22.000Z" itemprop="dateUpdated"> 更新日期 2017-06-20</time>
+     <time datetime="2017-06-20T06:06:07.000Z" itemprop="dateUpdated"> 更新日期 2017-06-20</time>
     
   </p>
 </header>
 
 	<div class="article-content">
 		
-		  
+		<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>在許多網站註冊時，你會發現如果輸入「使用者名稱」或「電子郵件」時，不需要按下「送出」按鍵，只要你離開該輸入欄位時，就會自動跳出「使用者已存在」之類的提示。這個功能可以即時檢查，速度快又夠體貼，一樣也是用ajax call來做，我們就來看看詳細作法。</p>
+<h1 id="環境設定"><a href="#環境設定" class="headerlink" title="環境設定"></a>環境設定</h1><h2 id="系統設定"><a href="#系統設定" class="headerlink" title="系統設定"></a>系統設定</h2><ul>
+<li>Rails 4.2.6</li>
+<li>Ruby 2.3.0</li>
+<li>Mac OS Sierra</li>
+</ul>
+<h2 id="Rails設定"><a href="#Rails設定" class="headerlink" title="Rails設定"></a>Rails設定</h2><ul>
+<li>有一個User model, 其中有一個id欄位。</li>
+</ul>
+<h1 id="程式說明"><a href="#程式說明" class="headerlink" title="程式說明"></a>程式說明</h1><p>首先我們來看看controller。</p>
+<pre class="line-numbers language-ruby"><code class="language-ruby"><span class="token comment" spellcheck="true"># app/controller/users_controller.rb</span>
+<span class="token keyword">class</span> <span class="token class-name">UsersController</span> <span class="token operator">&lt;</span> <span class="token constant">ApplicationController</span>
+  <span class="token keyword">def</span> check
+    <span class="token variable">@user</span> <span class="token operator">=</span> <span class="token constant">User</span><span class="token punctuation">.</span><span class="token function">find_by</span><span class="token punctuation">(</span>uid<span class="token punctuation">:</span> params<span class="token punctuation">[</span><span class="token symbol">:uid</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+    respond_to <span class="token keyword">do</span> <span class="token operator">|</span>f<span class="token operator">|</span>
+      f<span class="token punctuation">.</span>html
+      f<span class="token punctuation">.</span>json <span class="token punctuation">{</span>render json<span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token variable">@user</span><span class="token punctuation">.</span>present<span class="token operator">?</span><span class="token punctuation">)</span><span class="token operator">?</span> <span class="token variable">@user</span><span class="token punctuation">.</span>lcname<span class="token punctuation">.</span>to_json <span class="token punctuation">:</span> <span class="token string">"Not exist"</span><span class="token punctuation">.</span>to_json<span class="token punctuation">}</span>
+    <span class="token keyword">end</span>
+  <span class="token keyword">end</span>
+<span class="token keyword">end</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+  
 	</div>
 		<footer class="article-footer clearfix">
 <div class="article-catetags">
@@ -166,7 +187,7 @@
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目錄</strong>
  
- 
+ <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#環境設定"><span class="toc-number">2.</span> <span class="toc-text">環境設定</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#系統設定"><span class="toc-number">2.1.</span> <span class="toc-text">系統設定</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Rails設定"><span class="toc-number">2.2.</span> <span class="toc-text">Rails設定</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#程式說明"><span class="toc-number">3.</span> <span class="toc-text">程式說明</span></a></li></ol>
  
   </div>
 
