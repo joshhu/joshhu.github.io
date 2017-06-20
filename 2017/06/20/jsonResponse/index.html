@@ -18,7 +18,7 @@
 <meta property="og:url" content="http://josh.hu/2017/06/20/jsonResponse/index.html">
 <meta property="og:site_name" content="胡嘉璽(Josh Hu)">
 <meta property="og:description" content="我們在網路上註冊時，常常在輸入名稱之後，但還沒按下「送出」之前，系統會傳回「使用者名稱已存在」這種提示，通常這種「即時驗證」的功能都是透過ajax call去後端資料庫檢查，用起來十分方便，本篇文章就用一個非常簡單的例子來看這個功能怎麼實現">
-<meta property="og:updated_time" content="2017-06-20T06:09:48.000Z">
+<meta property="og:updated_time" content="2017-06-20T06:18:22.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Rails用ajax call作表單即時驗證(ajax and json)">
 <meta name="twitter:description" content="我們在網路上註冊時，常常在輸入名稱之後，但還沒按下「送出」之前，系統會傳回「使用者名稱已存在」這種提示，通常這種「即時驗證」的功能都是透過ajax call去後端資料庫檢查，用起來十分方便，本篇文章就用一個非常簡單的例子來看這個功能怎麼實現">
@@ -104,7 +104,7 @@
 		
   <p class="article-time">
     <time datetime="2017-06-20T05:50:55.000Z" itemprop="datePublished"> 發表日期 2017-06-20</time> | 
-     <time datetime="2017-06-20T06:09:48.000Z" itemprop="dateUpdated"> 更新日期 2017-06-20</time>
+     <time datetime="2017-06-20T06:18:22.000Z" itemprop="dateUpdated"> 更新日期 2017-06-20</time>
     
   </p>
 </header>
@@ -136,6 +136,11 @@
   <span class="token keyword">end</span>
 <span class="token keyword">end</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><strong> 說明 </strong></p>
+<p>程式很簡單，就只有<code>check</code>這個action而已。第4行就是讀取使用者輸入的使用者id，如果是一開始載入頁面，自然就沒有這個id。<br>第5-7行非常重要，這邊用到<code>respond_to</code>這個rails的指令。</p>
+<p>首先如果系統是正常進來，就是使用者打了<code>http://192.168.1.105:3000/users/check</code>的話，則伺服器應該就會傳回html，也就是我們看到的頁面, 你可以試著輸入<code>http://192.168.1.105:3000/users/check.html</code>，可以發現是指到同一個頁面，這是因為rails在伺服器端丟一個check.html回去給瀏覽器。</p>
+<p>第二個情況就是使用者利用ajax call要求json資料時，我們必須也要有所回應，因此就有第7行的程式碼，針對要求ajax call的回應，等一下會在view中詳細說明。</p>
+<p>這邊第7行很簡單，表示，如果碰到了ajax call並且要求json，則傳回json格式的資料(即<code>render json</code>)。這也就是為什麼後面的<code>@user.lcname</code>和單純的字串<code>&quot;Not exist&quot;</code>都要利用<code>.to_json</code>的方法先轉換成json格式才能傳回使用者的瀏覽器。這個轉換的過程稱之為「序列化」(Serlization)。</p>
   
 	</div>
 		<footer class="article-footer clearfix">
