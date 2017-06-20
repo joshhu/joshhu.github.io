@@ -19,7 +19,7 @@
 <meta property="og:site_name" content="胡嘉璽(Josh Hu)">
 <meta property="og:description" content="我們在網路上註冊時，常常在輸入名稱之後，但還沒按下「送出」之前，系統會傳回「使用者名稱已存在」這種提示，通常這種「即時驗證」的功能都是透過ajax call去後端資料庫檢查，用起來十分方便，本篇文章就用一個非常簡單的例子來看這個功能怎麼實現">
 <meta property="og:image" content="http://josh.hu/2017/06/20/jsonResponse/notexist.jpg">
-<meta property="og:updated_time" content="2017-06-20T06:26:10.000Z">
+<meta property="og:updated_time" content="2017-06-20T06:29:26.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Rails用ajax call作表單即時驗證(ajax and json)">
 <meta name="twitter:description" content="我們在網路上註冊時，常常在輸入名稱之後，但還沒按下「送出」之前，系統會傳回「使用者名稱已存在」這種提示，通常這種「即時驗證」的功能都是透過ajax call去後端資料庫檢查，用起來十分方便，本篇文章就用一個非常簡單的例子來看這個功能怎麼實現">
@@ -106,7 +106,7 @@
 		
   <p class="article-time">
     <time datetime="2017-06-20T05:50:55.000Z" itemprop="datePublished"> 發表日期 2017-06-20</time> | 
-     <time datetime="2017-06-20T06:26:10.000Z" itemprop="dateUpdated"> 更新日期 2017-06-20</time>
+     <time datetime="2017-06-20T06:29:26.000Z" itemprop="dateUpdated"> 更新日期 2017-06-20</time>
     
   </p>
 </header>
@@ -122,11 +122,11 @@
 <h2 id="Rails設定"><a href="#Rails設定" class="headerlink" title="Rails設定"></a>Rails設定</h2><ul>
 <li>有一個User model, 其中有一個id欄位。</li>
 </ul>
-<h1 id="程式說明"><a href="#程式說明" class="headerlink" title="程式說明"></a>程式說明</h1><p>首先我們在<code>routes.rb</code>中先定義好<code>user</code>的路由，主要是這一行：</p>
+<h1 id="程式說明"><a href="#程式說明" class="headerlink" title="程式說明"></a>程式說明</h1><h2 id="路由設定"><a href="#路由設定" class="headerlink" title="路由設定"></a>路由設定</h2><p>首先我們在<code>routes.rb</code>中先定義好<code>user</code>的路由，主要是這一行：</p>
 <pre class="line-numbers language-ruby"><code class="language-ruby">get <span class="token string">'users/check'</span><span class="token punctuation">,</span> to<span class="token punctuation">:</span> <span class="token string">'users#check'</span><span class="token punctuation">,</span> as<span class="token punctuation">:</span> <span class="token string">'userCheck'</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>這一行主要的目的就是把userCheck這個路徑導到<code>users_controller.rb</code>中的<code>check</code>這個action，這可以讓controller更加簡單，只要一有個action就行。</p>
-<p>接下來看controller。</p>
+<h2 id="Controller"><a href="#Controller" class="headerlink" title="Controller"></a>Controller</h2><p>接下來看controller。</p>
 <pre class="line-numbers language-ruby"><code class="language-ruby"><span class="token comment" spellcheck="true"># app/controller/users_controller.rb</span>
 <span class="token keyword">class</span> <span class="token class-name">UsersController</span> <span class="token operator">&lt;</span> <span class="token constant">ApplicationController</span>
   <span class="token keyword">def</span> check
@@ -144,7 +144,41 @@
 <p>首先如果系統是正常進來，就是使用者打了<code>http://192.168.1.105:3000/users/check</code>的話，則伺服器應該就會傳回html，也就是我們看到的頁面, 你可以試著輸入<code>http://192.168.1.105:3000/users/check.html</code>，可以發現是指到同一個頁面，這是因為rails在伺服器端丟一個check.html回去給瀏覽器。</p>
 <p>第二個情況就是瀏覽器(不是使用者)利用ajax call要求json資料時，我們必須也要有所回應，因此就有第7行的程式碼，針對要求ajax call的回應，等一下會在view中詳細說明。</p>
 <p>這邊第7行很簡單，表示，如果碰到了ajax call並且要求json，則傳回json格式的資料(即<code>render json</code>)。這也就是為什麼後面的<code>@user.lcname</code>和單純的字串<code>&quot;Not exist&quot;</code>都要利用<code>.to_json</code>的方法先轉換成json格式才能傳回使用者的瀏覽器。這個轉換的過程稱之為<strong>「序列化」(Serlization)</strong>。</p>
-<p>你可以試著輸入<code>http://192.168.1.105:3000/users/check.json</code>，就會發現下圖的畫面，表示我們要求了json的資料，但是因為找不到對應的<code>@user</code>，所以就會走到第7行程式後面的<code>&quot;Not exist&quot;</code>。第7行程式碼後端是一個三元運算子，利用<code>@usser.present?</code>這個方法來檢查資料庫中這個使用者是否存在。如果存在就傳回使用者的名稱<code>@user.lcname</code>，不存在就傳回一個<code>&quot;Not exist&quot;</code>的字串。<br><img src="notexist.jpg" alt=""></p>
+<p>你可以試著輸入<code>http://192.168.1.105:3000/users/check.json</code>，就會發現下圖的畫面，表示我們要求了json的資料，但是因為找不到對應的<code>@user</code>，所以就會走到第7行程式後面的<code>&quot;Not exist&quot;</code>。第7行程式碼後端是一個三元運算子，利用<code>@user.present?</code>這個方法來檢查資料庫中這個使用者是否存在。如果存在就傳回使用者的名稱<code>@user.lcname</code>，不存在就傳回一個<code>&quot;Not exist&quot;</code>的字串。<br><img src="notexist.jpg" alt=""></p>
+<h2 id="View"><a href="#View" class="headerlink" title="View"></a>View</h2><p>程式的重點在view，我們就來看看</p>
+<pre class="line-numbers language-javascript"><code class="language-javascript"># app<span class="token operator">/</span>views<span class="token operator">/</span>users<span class="token operator">/</span>check<span class="token punctuation">.</span>html<span class="token punctuation">.</span>erb
+<span class="token operator">&lt;</span>h1<span class="token operator">></span>Users#check<span class="token operator">&lt;</span><span class="token operator">/</span>h1<span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">%</span><span class="token operator">=</span>text_field_tag <span class="token punctuation">:</span>uid<span class="token punctuation">,</span> nil<span class="token punctuation">,</span> id<span class="token punctuation">:</span> <span class="token string">"input_user"</span> <span class="token operator">%</span><span class="token operator">></span><span class="token operator">&lt;</span>br<span class="token operator">></span><span class="token operator">&lt;</span>br<span class="token operator">></span>
+<span class="token operator">&lt;</span>div id<span class="token operator">=</span><span class="token string">'warningMessage'</span><span class="token operator">></span><span class="token operator">&lt;</span>div<span class="token operator">></span>
+<span class="token operator">&lt;</span>script<span class="token operator">></span>
+  <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"#input_user"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">blur</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token function">onInputBlur</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    value <span class="token operator">=</span> <span class="token function">$</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">val</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>value<span class="token punctuation">.</span><span class="token function">trim</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>length <span class="token operator">></span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+      $<span class="token punctuation">.</span><span class="token function">ajax</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+        url<span class="token punctuation">:</span> <span class="token string">"&lt;%= userCheck_path(:json) %>"</span><span class="token punctuation">,</span>
+        type<span class="token punctuation">:</span> <span class="token string">'GET'</span><span class="token punctuation">,</span>
+        datatype<span class="token punctuation">:</span> <span class="token string">"json"</span><span class="token punctuation">,</span>
+        data<span class="token punctuation">:</span> <span class="token punctuation">{</span>uid<span class="token punctuation">:</span> <span class="token function">$</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">val</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        error<span class="token punctuation">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+          console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"error"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        success<span class="token punctuation">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">{</span>
+          <span class="token keyword">if</span><span class="token punctuation">(</span>data <span class="token operator">!=</span> <span class="token string">"Not exist"</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"#input_user"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">val</span><span class="token punctuation">(</span><span class="token string">""</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"#warningMessage"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">html</span><span class="token punctuation">(</span><span class="token string">"使用者"</span><span class="token operator">+</span>data<span class="token operator">+</span><span class="token string">"已存在"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+          console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"#input_user"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">focus</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token function">onInputFocus</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">//this.value="";</span>
+      <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"#warningMessage"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">html</span><span class="token punctuation">(</span><span class="token string">""</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+   <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
   
 	</div>
 		<footer class="article-footer clearfix">
@@ -200,7 +234,7 @@
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目錄</strong>
  
- <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#環境設定"><span class="toc-number">2.</span> <span class="toc-text">環境設定</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#系統設定"><span class="toc-number">2.1.</span> <span class="toc-text">系統設定</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Rails設定"><span class="toc-number">2.2.</span> <span class="toc-text">Rails設定</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#程式說明"><span class="toc-number">3.</span> <span class="toc-text">程式說明</span></a></li></ol>
+ <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#環境設定"><span class="toc-number">2.</span> <span class="toc-text">環境設定</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#系統設定"><span class="toc-number">2.1.</span> <span class="toc-text">系統設定</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Rails設定"><span class="toc-number">2.2.</span> <span class="toc-text">Rails設定</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#程式說明"><span class="toc-number">3.</span> <span class="toc-text">程式說明</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#路由設定"><span class="toc-number">3.1.</span> <span class="toc-text">路由設定</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Controller"><span class="toc-number">3.2.</span> <span class="toc-text">Controller</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#View"><span class="toc-number">3.3.</span> <span class="toc-text">View</span></a></li></ol></li></ol>
  
   </div>
 
@@ -240,15 +274,15 @@
 			
 		
 			
-				<li><a href="/tags/ajax-json-Rails-javascript/" title="ajax, json, Rails, javascript">ajax, json, Rails, javascript<sup>1</sup></a></li>
-			
-		
-			
 				<li><a href="/tags/PC/" title="PC">PC<sup>1</sup></a></li>
 			
 		
 			
 				<li><a href="/tags/Windows/" title="Windows">Windows<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/ajax-json-Rails-javascript/" title="ajax, json, Rails, javascript">ajax, json, Rails, javascript<sup>1</sup></a></li>
 			
 		
 		</ul>
