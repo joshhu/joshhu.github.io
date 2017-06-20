@@ -20,7 +20,7 @@
 <meta property="og:description" content="我們在網路上註冊時，常常在輸入名稱之後，但還沒按下「送出」之前，系統會傳回「使用者名稱已存在」這種提示，通常這種「即時驗證」的功能都是透過ajax call去後端資料庫檢查，用起來十分方便，本篇文章就用一個非常簡單的例子來看這個功能怎麼實現">
 <meta property="og:image" content="http://josh.hu/2017/06/20/jsonResponse/notexist.jpg">
 <meta property="og:image" content="http://josh.hu/images/jsresponse.gif">
-<meta property="og:updated_time" content="2017-06-20T06:59:44.000Z">
+<meta property="og:updated_time" content="2017-06-20T07:03:01.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Rails用ajax call作表單即時驗證(ajax and json)">
 <meta name="twitter:description" content="我們在網路上註冊時，常常在輸入名稱之後，但還沒按下「送出」之前，系統會傳回「使用者名稱已存在」這種提示，通常這種「即時驗證」的功能都是透過ajax call去後端資料庫檢查，用起來十分方便，本篇文章就用一個非常簡單的例子來看這個功能怎麼實現">
@@ -107,7 +107,7 @@
 		
   <p class="article-time">
     <time datetime="2017-06-20T05:50:55.000Z" itemprop="datePublished"> 發表日期 2017-06-20</time> | 
-     <time datetime="2017-06-20T06:59:44.000Z" itemprop="dateUpdated"> 更新日期 2017-06-20</time>
+     <time datetime="2017-06-20T07:03:01.000Z" itemprop="dateUpdated"> 更新日期 2017-06-20</time>
     
   </p>
 </header>
@@ -191,12 +191,12 @@
 <ol>
 <li>使用者在瀏覽器中輸入<code>http://192.168.1.105:3000/users/check</code>，就是在向後端的伺服器發出GET HTTP。</li>
 <li>伺服器檢查使用者的請求，去查routes是否存在這個請求。</li>
-<li>伺服器發現這個請求對應的是’cities#index`這個action，因此執行這個action中的動作。</li>
-<li>執行<code>index</code>這個action之後，把變數代表的值丟到對應的template <code>index.html.erb</code>中</li>
-<li><code>index.html.erb</code>把變數代表的值換掉其中的變數，成為<code>index.html</code>。</li>
-<li><code>index.html</code>傳回使用者瀏覽器執行。</li>
-<li>使用者在瀏覽器中從選單選擇國家。</li>
-<li>此時觸發了<code>&#39;#filter&#39;</code>這個id的change事件，在使用者的瀏覽器上執行ajax call</li>
+<li>伺服器發現這個請求對應的是<code>users#check</code>這個action，因此執行這個action中的動作。</li>
+<li>執行<code>check</code>這個action之後，把變數代表的值丟到對應的template <code>check.html.erb</code>中</li>
+<li><code>check.html.erb</code>把變數代表的值換掉其中的變數，成為<code>check.html</code>。</li>
+<li><code>check.html</code>傳回使用者瀏覽器執行。一開始使用者沒有輸入，因此<code>@user</code>是不存在。</li>
+<li>使用者在瀏覽器中輸入一個id，並且離開輸入欄位(用滑鼠或是按下tab鍵)</li>
+<li>此時觸發了<code>&#39;#input_user&#39;</code>這個id的blur事件，在使用者的瀏覽器上執行ajax call</li>
 <li>根據ajax call的參數，發現是一個POST事件，因此根據參數值去伺服器端</li>
 <li>伺服器端接到ajax POST的要求，去routes找，發現是<code>cities_controller.rb</code>中的<code>create</code>這個action。</li>
 <li>此action接收了ajax參數中的<code>country_id</code>值，找到城市。</li>
