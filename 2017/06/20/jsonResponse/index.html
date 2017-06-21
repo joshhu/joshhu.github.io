@@ -115,7 +115,6 @@
 	<div class="article-content">
 		
 		<div id="toc" class="toc-article">
-      <h1>nbmg8bgg</h1>
 			<strong class="toc-title">文章目錄</strong>
 		
 			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#環境設定"><span class="toc-number">2.</span> <span class="toc-text">環境設定</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#系統設定"><span class="toc-number">2.1.</span> <span class="toc-text">系統設定</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Rails設定"><span class="toc-number">2.2.</span> <span class="toc-text">Rails設定</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#程式說明"><span class="toc-number">3.</span> <span class="toc-text">程式說明</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#路由設定"><span class="toc-number">3.1.</span> <span class="toc-text">路由設定</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Controller"><span class="toc-number">3.2.</span> <span class="toc-text">Controller</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#View"><span class="toc-number">3.3.</span> <span class="toc-text">View</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#整個完整流程"><span class="toc-number">4.</span> <span class="toc-text">整個完整流程</span></a></li></ol>
@@ -379,6 +378,7 @@
 
 </aside>
 </div>
+
     </div>
     <footer><div id="footer" >
 	
@@ -460,11 +460,6 @@ $(document).ready(function(){
   $(window).scroll(function(){
     o.css("top",Math.max(80,260-$(this).scrollTop()));
   });
-  
-        getSize();
-        if (myWidth >= 1024) {
-          c.click();
-        }
   
   $(window).resize(function(){
     getSize(); 

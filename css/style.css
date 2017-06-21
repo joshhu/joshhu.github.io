@@ -966,9 +966,15 @@ article .article-content .kb {
   line-height: 1.5;
   white-space: nowrap;
 }
-article .article-content h1,
-article .article-content h2 {
+article .article-content h1 {
   font-size: 180%;
+  line-height: 1.2em;
+  padding-bottom: 0.3em;
+  margin-top: 1.5em;
+  border-bottom: 2px solid #dbdbdb;
+}
+article .article-content h2 {
+  font-size: 155%;
   line-height: 1.2em;
   padding-bottom: 0.3em;
   margin-top: 1.5em;
@@ -1513,7 +1519,7 @@ section.comment {
 }
 #toc.toc-aside {
   display: none;
-  width: 13%;
+  width: 15%;
   position: fixed;
   right: 2%;
   top: 320px;
