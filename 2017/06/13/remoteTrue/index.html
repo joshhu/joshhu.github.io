@@ -113,6 +113,13 @@
 
 	<div class="article-content">
 		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">文章目錄</strong>
+		
+			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#準備工作"><span class="toc-number">2.</span> <span class="toc-text">準備工作</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#要修改的地方"><span class="toc-number">3.</span> <span class="toc-text">要修改的地方</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#修改cities-controller"><span class="toc-number">3.1.</span> <span class="toc-text">修改cities controller</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#修改index這個view"><span class="toc-number">3.2.</span> <span class="toc-text">修改index這個view</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#新增create-js-erb"><span class="toc-number">3.3.</span> <span class="toc-text">新增create.js.erb</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#整個完整流程"><span class="toc-number">4.</span> <span class="toc-text">整個完整流程</span></a></li></ol>
+		
+		</div>
+		
 		<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>在選擇網頁後端語言時，我不斷強調，只要不選擇某些過時的語言都可以，因為網頁語言最重的是在前端，而前端當然就是javascript。不過如果你有幸身在一個大的團隊，前端有人處理了，只要進行後端的開發，那你使用rails提供的jquery library也就夠了。延續上一篇<a href="http://josh.hu/2017/06/12/samePageForm/">Rails單頁選單顯示表單實作(一)</a>中的作法，當使用者選擇選單中的項目，並且按下送出時，我們把回應action的原來HTTP GET反應，換成HTTP POST，並且把原來回應對應的Template從html換成javascript，再讓這個javascript來更新div而不是整個網頁，直接使用rails內建的ajax call即可。</p>
 <h1 id="準備工作"><a href="#準備工作" class="headerlink" title="準備工作"></a>準備工作</h1><p>你只要有上一篇<a href="http://josh.hu/2017/06/12/samePageForm/">Rails單頁選單顯示表單實作(一)</a>中準備好的project即可，我們就先切換到新的git branch。</p>
 <pre class="line-numbers language-shell"><code class="language-shell">git checkout -b remotetrue
@@ -277,15 +284,15 @@
 			
 		
 			
+				<li><a href="/tags/ssh/" title="ssh">ssh<sup>1</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/PC/" title="PC">PC<sup>1</sup></a></li>
 			
 		
 			
 				<li><a href="/tags/Windows/" title="Windows">Windows<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/ssh/" title="ssh">ssh<sup>1</sup></a></li>
 			
 		
 			

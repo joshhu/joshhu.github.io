@@ -113,6 +113,13 @@
 
 	<div class="article-content">
 		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">文章目錄</strong>
+		
+			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#準備工作"><span class="toc-number">2.</span> <span class="toc-text">準備工作</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#要修改的地方"><span class="toc-number">3.</span> <span class="toc-text">要修改的地方</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#create的回應"><span class="toc-number">3.1.</span> <span class="toc-text">create的回應</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#整個完整流程"><span class="toc-number">4.</span> <span class="toc-text">整個完整流程</span></a></li></ol>
+		
+		</div>
+		
 		<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>雖然在上一篇<a href="http://josh.hu/2017/06/13/remoteTrue/">Rails單頁選單顯示表單實作(二)</a>中我們用了rails提供的ajax call直接更新<code>index.html</code>這個網頁上<code>&lt;ul div=&quot;show_items&quot;&gt;</code>這個元素，但是筆者一直覺得那個查詢按鈕很多餘。應該是我們選擇了國家之後，自動就要列出這個國家的城市，可以少移動一個滑鼠及少按一個按鈕，也比較直覺，我們就來看看怎麼做。</p>
 <h1 id="準備工作"><a href="#準備工作" class="headerlink" title="準備工作"></a>準備工作</h1><p>你只要有這一篇<a href="http://josh.hu/2017/06/12/samePageForm/">Rails單頁選單顯示表單實作(一)</a>中準備好的project即可，我們就先切換到新的git branch。</p>
 <pre class="line-numbers language-shell"><code class="language-shell">git checkout -b jsresponse
@@ -295,15 +302,15 @@
 			
 		
 			
+				<li><a href="/tags/ssh/" title="ssh">ssh<sup>1</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/PC/" title="PC">PC<sup>1</sup></a></li>
 			
 		
 			
 				<li><a href="/tags/Windows/" title="Windows">Windows<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/ssh/" title="ssh">ssh<sup>1</sup></a></li>
 			
 		
 			

@@ -113,6 +113,13 @@
 
 	<div class="article-content">
 		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">文章目錄</strong>
+		
+			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#準備環境"><span class="toc-number">2.</span> <span class="toc-text">準備環境</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#建立專案"><span class="toc-number">3.</span> <span class="toc-text">建立專案</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#建立model及準備樣本資料"><span class="toc-number">4.</span> <span class="toc-text">建立model及準備樣本資料</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#說明"><span class="toc-number">4.1.</span> <span class="toc-text">說明</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#準備樣本資料"><span class="toc-number">4.2.</span> <span class="toc-text">準備樣本資料</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#建立Controllers"><span class="toc-number">5.</span> <span class="toc-text">建立Controllers</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#說明："><span class="toc-number">5.1.</span> <span class="toc-text">說明：</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#view"><span class="toc-number">6.</span> <span class="toc-text">view</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#說明-1"><span class="toc-number">6.1.</span> <span class="toc-text">說明</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#待改進處："><span class="toc-number">7.</span> <span class="toc-text">待改進處：</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#整個完整流程"><span class="toc-number">8.</span> <span class="toc-text">整個完整流程</span></a></li></ol>
+		
+		</div>
+		
 		<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>所謂的單頁表單，就是在同一頁面中，上面有一個選單，下面則是選擇區。當你在選單中選擇項目時，下方的選擇區會根據你在選單中的選項而有所變動。目前單頁應用程式(Single Page Appliation, SPA)非常流行，事實上製作SPA最棒的後端還是node.js，我們以後有機會會提到，在本篇文章中，我們使用rails來看看一個非常簡單的單頁表單作法，先用最簡單的http get的方法來完成，這應該是最簡單的rails應用了。</p>
 <p>舉例來說，我們有三個國家，分別是美國、中國、日本，每個國家有自己城市如下：</p>
 <p>中國<br>  –北京<br>  –上海<br>  –廣州</p>
@@ -372,15 +379,15 @@ rake db:migrate
 			
 		
 			
+				<li><a href="/tags/ssh/" title="ssh">ssh<sup>1</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/PC/" title="PC">PC<sup>1</sup></a></li>
 			
 		
 			
 				<li><a href="/tags/Windows/" title="Windows">Windows<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/ssh/" title="ssh">ssh<sup>1</sup></a></li>
 			
 		
 			
