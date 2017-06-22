@@ -17,7 +17,7 @@
 <meta property="og:url" content="http://josh.hu/search/index.html">
 <meta property="og:site_name" content="胡嘉璽(Josh Hu)">
 <meta property="og:description" content="How to make yourself a Googler caliber">
-<meta property="og:updated_time" content="2017-06-22T04:19:30.000Z">
+<meta property="og:updated_time" content="2017-06-22T05:18:51.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="search">
 <meta name="twitter:description" content="How to make yourself a Googler caliber">
@@ -90,6 +90,26 @@
       </header>
       <div id="container">
         
+<div  id="main" class="page">
+  <div id='cse' style='width:100%;text-align:center'>Loading, Please wait.....</div>
+</div>
+<script src="http://www.google.com.tw/jsapi" type="text/javascript"></script>
+<script type="text/javascript">
+google.load('search', '1', {language : 'zh-TW',style: google.loader.themes.MINIMALIST});
+google.setOnLoadCallback(function(){
+  var customSearchControl = new google.search.CustomSearchControl('011669084661304120196:mzvues54z2q');
+  customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);
+  var options = new google.search.DrawOptions();
+  options.setAutoComplete(true);
+  customSearchControl.draw('cse', options);
+  var match = location.search.match(/q=([^&]*)(&|$)/);
+  if(match && match[1]){
+    var search = decodeURIComponent(match[1]); 
+    customSearchControl.execute(search);
+  }
+},true);
+</script>
+
 
       </div>
       <footer><div id="footer" >
