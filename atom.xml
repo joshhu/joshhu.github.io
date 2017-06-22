@@ -1,0 +1,1002 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>胡嘉璽(Josh Hu)</title>
+  <subtitle>The best way to learn is to struggle</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://josh.hu/"/>
+  <updated>2017-06-21T16:31:12.000Z</updated>
+  <id>http://josh.hu/</id>
+  
+  <author>
+    <name>Josh Hu</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>李開復先生的世代說有何問題？</title>
+    <link href="http://josh.hu/2017/06/20/lkf/"/>
+    <id>http://josh.hu/2017/06/20/lkf/</id>
+    <published>2017-06-20T10:13:15.000Z</published>
+    <updated>2017-06-21T16:31:12.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>李開復博士在他的fb上有<a href="https://www.facebook.com/kaifulee/posts/1670663686294276" target="_blank" rel="external">一篇探論人工智慧在台灣發展的文章</a>，談到ICT(Information and Communication Technology)的世代交替分別如下：</p>
+<blockquote>
+<p>ICT高科技朝代迭代是快速，有週期，有連續性。從<strong>半導體-&gt;PC-&gt;軟體-&gt;Internet-&gt;社交-&gt;行動-&gt;大數據-&gt;AI</strong></p>
+</blockquote>
+<p>我個人覺得這個分法有點不倫不類，把世代和服務混為一談的確有點<strong>張飛打岳飛</strong>。</p>
+<p>根據Jim Gray 2003年在<a href="http://www.immagic.com/eLibrary/ARCHIVES/EBOOKS/M091000H.pdf" target="_blank" rel="external">The Fourth Paradigm: Data-Intensive Scientific Discovery</a>這本書中的說法，ICT工業的出現不過就這幾十年，而這幾十年間，ICT工業向前進的動力就是運算(Computation)。</p>
+<p>根據Jim Gray的說法，Computation是第三代範式，運算就是這個範式的基礎。當然運算一直是以半導體(硬體)的運算能力為代表，因此從半導體開始的世代交替，是離不開硬體的。<br><img src="https://static01.nyt.com/images/2009/12/15/science/15books-1/popup.jpg" alt=""></p>
+<h1 id="第三代範式中的世代"><a href="#第三代範式中的世代" class="headerlink" title="第三代範式中的世代"></a>第三代範式中的世代</h1><p>然而李博士所提到的軟體、社交等，充其量只是附隨在運算這個範式中，每一個世代所伴隨而來的無形服務而已。我覺得在第三範式中，世代交替應該以運算為主軸，因此我個人的看法是：</p>
+<p><strong> 半導體-&gt;PC-&gt;網際網路-&gt;行動-&gt;雲端</strong></p>
+<p>而在這些不同的世代中，伴隨「運算」核心而產生的服務應該就是：</p>
+<p><strong> 專屬軟體(半導體)-&gt;軟體(PC)-&gt;網站(網際網路)-&gt;APP(行動)-&gt;O2O(雲端)</strong></p>
+<p>整理如下表：</p>
+<table>
+<thead>
+<tr>
+<th>世代</th>
+<th>運算(硬體，有形)</th>
+<th>服務(軟體，無形)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>半導體</td>
+<td>半導體</td>
+<td>專屬軟體</td>
+</tr>
+<tr>
+<td>PC</td>
+<td>PC</td>
+<td>軟體</td>
+</tr>
+<tr>
+<td>網際網路</td>
+<td>路由器/伺服器</td>
+<td>網站</td>
+</tr>
+<tr>
+<td>行動</td>
+<td>行動裝置</td>
+<td>APP</td>
+</tr>
+<tr>
+<td>雲端</td>
+<td>集群運算能力及終端</td>
+<td>O2O</td>
+</tr>
+</tbody>
+</table>
+<p>世代交替並非取代而是包容，新的世代當然包容了舊的世代，這和新的範式包容舊範式的意義完全一樣。</p>
+<p>PC世代將專屬軟體吃掉，成為開放軟體平台，PC並非讓半導體消失，而是更發揚了半導體的功能。</p>
+<p>網際網路並非讓PC消失，而是讓PC成為網路終端的一部分，網站當然也沒有讓軟體消失，而是讓軟體成為HTTP或其它協議交匯的一個點。</p>
+<p>當然行動世代也沒有讓網際網路世代消失，而是讓固定在機房中的網站和伺服器，成為行動網路中的一個「不行動」的點。</p>
+<p>雲端世代當然包括了行動世代，所對應的就是O2O的服務充斥。君不見UBER、TURO這種將有形無形資源平均到每一個角落的新式服務，當然就是靠線上的伺服器(雲端)以及線上的行動裝置及人類合理完成的。</p>
+<h1 id="回到李開復先生的論點"><a href="#回到李開復先生的論點" class="headerlink" title="回到李開復先生的論點"></a>回到李開復先生的論點</h1><p>軟體是PC產業所創造出來的無形服務，他並沒有取代或包容PC成為一個新的世代，沒有PC軟體怎麼可能存活？當時的Wintel說法，再再證明PC和軟體互為依附生存。</p>
+<p>另外社交當然是網際網路世代所產生的服務之一(網站)。早在行動裝置出來之前，FB就開始流行了，FB當然是依附在HTTP協定上的一個服務(就算行動裝置出來也一樣)，他並沒有取代網際網路世代。</p>
+<p>另外從行動跳到大數據，也有點唐突，因為中間還有一個世代就是雲端。雲端代表著虛擬化的極緻，當軟體離開硬體可在任意機器上運行(軟體的虛擬化)；當作業系統離開硬體可在任意機器上運行，並且透過網路傳回運算結果時，我們可以說硬體本身已經離開硬體本身了，而硬體竟然具有加減乘除出現消失的特性(Amazon EC2, Google Compute Engine)時，雲端的概念才逐漸成形。</p>
+<p>而Hadoop MR或YARN的出現，再再告訴我們叢集運算(可加疊運算)，正是為了處理下一代大數據在作準備，只是，這次不再是在範式間的世代交替，而是正式進入了範式轉換(Paradigm Shift)。我們即將從第三範式的運算，正式進入了第四範式的Data exploration。</p>
+<h1 id="即將進入第四代範式的第一世代"><a href="#即將進入第四代範式的第一世代" class="headerlink" title="即將進入第四代範式的第一世代"></a>即將進入第四代範式的第一世代</h1><p><img src="paradigm.jpg" alt=""><br>此時，李開復先生所謂的ICT將不復存在，取而代之的則是所謂的DT( Data Technology)，而在第四代範式中，所出現的第一個世代，就是大數據世代。那麼伴隨大數據世代的第一個無形服務，自然就是李先生所提的人工智慧。</p>
+<table>
+<thead>
+<tr>
+<th>世代</th>
+<th>運算(硬體，有形)</th>
+<th>服務(軟體，無形)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>大數據</td>
+<td>雲端及叢集</td>
+<td>人工智慧</td>
+</tr>
+</tbody>
+</table>
+<p>因此我覺得正確的分法，應該是</p>
+<p><strong>第三代範式</strong></p>
+<table>
+<thead>
+<tr>
+<th>世代</th>
+<th>運算(硬體，有形)</th>
+<th>服務(軟體，無形)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>半導體</td>
+<td>半導體</td>
+<td>專屬軟體</td>
+</tr>
+<tr>
+<td>PC</td>
+<td>PC</td>
+<td>軟體</td>
+</tr>
+<tr>
+<td>網際網路</td>
+<td>路由器/伺服器</td>
+<td>網站</td>
+</tr>
+<tr>
+<td>行動</td>
+<td>行動裝置</td>
+<td>APP</td>
+</tr>
+<tr>
+<td>雲端</td>
+<td>集群運算能力及終端</td>
+<td>O2O</td>
+</tr>
+</tbody>
+</table>
+<p><strong>第四代範式</strong></p>
+<table>
+<thead>
+<tr>
+<th>世代</th>
+<th>運算(硬體，有形)</th>
+<th>服務(軟體，無形)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>大數據</td>
+<td>雲端及叢集</td>
+<td>人工智慧</td>
+</tr>
+</tbody>
+</table>
+]]></content>
+    
+    <summary type="html">
+    
+      李開復先生ICT高科技的朝代迭代(即世代交換)是有問題的，首先這些朝代並無取代而是包容。另外他所認為的大數據和AI並非世代而是同一世代的兩面，當然最重要的，大數據已經離開了第三代範式，而成為第四代範式的第一世代。
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Rails用ajax call作表單即時驗證(ajax and json)</title>
+    <link href="http://josh.hu/2017/06/20/jsonResponse/"/>
+    <id>http://josh.hu/2017/06/20/jsonResponse/</id>
+    <published>2017-06-20T05:50:55.000Z</published>
+    <updated>2017-06-20T08:35:03.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>在許多網站註冊時，你會發現如果輸入「使用者名稱」或「電子郵件」時，不需要按下「送出」按鍵，只要你離開該輸入欄位時，就會自動跳出「使用者已存在」之類的提示。這個功能可以即時檢查，速度快又夠體貼，一樣也是用ajax call來做，我們就來看看詳細作法。</p>
+<h1 id="環境設定"><a href="#環境設定" class="headerlink" title="環境設定"></a>環境設定</h1><h2 id="系統設定"><a href="#系統設定" class="headerlink" title="系統設定"></a>系統設定</h2><ul>
+<li>Rails 4.2.6</li>
+<li>Ruby 2.3.0</li>
+<li>Mac OS Sierra</li>
+</ul>
+<h2 id="Rails設定"><a href="#Rails設定" class="headerlink" title="Rails設定"></a>Rails設定</h2><ul>
+<li>有一個User model, 其中有一個id欄位。</li>
+</ul>
+<h1 id="程式說明"><a href="#程式說明" class="headerlink" title="程式說明"></a>程式說明</h1><h2 id="路由設定"><a href="#路由設定" class="headerlink" title="路由設定"></a>路由設定</h2><p>首先我們在<code>routes.rb</code>中先定義好<code>user</code>的路由，主要是這一行：</p>
+<pre class="line-numbers language-ruby"><code class="language-ruby">get <span class="token string">'users/check'</span><span class="token punctuation">,</span> to<span class="token punctuation">:</span> <span class="token string">'users#check'</span><span class="token punctuation">,</span> as<span class="token punctuation">:</span> <span class="token string">'userCheck'</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>這一行主要的目的就是把userCheck這個路徑導到<code>users_controller.rb</code>中的<code>check</code>這個action，這可以讓controller更加簡單，只要一有個action就行。</p>
+<h2 id="Controller"><a href="#Controller" class="headerlink" title="Controller"></a>Controller</h2><p>接下來看controller。</p>
+<pre class="line-numbers language-ruby"><code class="language-ruby"><span class="token comment" spellcheck="true"># app/controller/users_controller.rb</span>
+<span class="token keyword">class</span> <span class="token class-name">UsersController</span> <span class="token operator">&lt;</span> <span class="token constant">ApplicationController</span>
+  <span class="token keyword">def</span> check
+    <span class="token variable">@user</span> <span class="token operator">=</span> <span class="token constant">User</span><span class="token punctuation">.</span><span class="token function">find_by</span><span class="token punctuation">(</span>uid<span class="token punctuation">:</span> params<span class="token punctuation">[</span><span class="token symbol">:uid</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+    respond_to <span class="token keyword">do</span> <span class="token operator">|</span>f<span class="token operator">|</span>
+      f<span class="token punctuation">.</span>html
+      f<span class="token punctuation">.</span>json <span class="token punctuation">{</span>render json<span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token variable">@user</span><span class="token punctuation">.</span>present<span class="token operator">?</span><span class="token punctuation">)</span><span class="token operator">?</span> <span class="token variable">@user</span><span class="token punctuation">.</span>lcname<span class="token punctuation">.</span>to_json <span class="token punctuation">:</span> <span class="token string">"Not exist"</span><span class="token punctuation">.</span>to_json<span class="token punctuation">}</span>
+    <span class="token keyword">end</span>
+  <span class="token keyword">end</span>
+<span class="token keyword">end</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><strong> 說明 </strong></p>
+<p>程式很簡單，就只有<code>check</code>這個action而已。第4行就是讀取使用者輸入的使用者id，使用<code>params[:uid]</code>來讀取使用者的輸入。如果是一開始載入頁面，自然就沒有這個id。</p>
+<p>第5-7行非常重要，這邊用到<code>respond_to</code>這個rails的指令。</p>
+<p>首先如果系統是正常進來，就是使用者打了<code>http://192.168.1.105:3000/users/check</code>的話，則伺服器應該就會傳回html，也就是我們看到的頁面, 你可以試著輸入<code>http://192.168.1.105:3000/users/check.html</code>，可以發現是指到同一個頁面，這是因為rails在伺服器端丟一個check.html回去給瀏覽器。</p>
+<p>第二個情況就是瀏覽器(不是使用者)利用ajax call要求json資料時，我們必須也要有所回應，因此就有第7行的程式碼，針對要求ajax call的回應，等一下會在view中詳細說明。</p>
+<p>這邊第7行很簡單，表示，如果碰到了ajax call並且要求json，則傳回json格式的資料(即<code>render json</code>)。這也就是為什麼後面的<code>@user.lcname</code>和單純的字串<code>&quot;Not exist&quot;</code>都要利用<code>.to_json</code>的方法先轉換成json格式才能傳回使用者的瀏覽器。這個轉換的過程稱之為<strong>「序列化」(Serlization)</strong>。</p>
+<p>你可以試著輸入<code>http://192.168.1.105:3000/users/check.json</code>，就會發現下圖的畫面，表示我們要求了json的資料，但是因為找不到對應的<code>@user</code>，所以就會走到第7行程式後面的<code>&quot;Not exist&quot;</code>。第7行程式碼後端是一個三元運算子，利用<code>@user.present?</code>這個方法來檢查資料庫中這個使用者是否存在。如果存在就傳回使用者的名稱<code>@user.lcname</code>，不存在就傳回一個<code>&quot;Not exist&quot;</code>的字串。<br><img src="notexist.jpg" alt=""></p>
+<h2 id="View"><a href="#View" class="headerlink" title="View"></a>View</h2><p>程式的重點在view，我們就來看看</p>
+<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">// app/views/users/check.html.erb</span>
+<span class="token operator">&lt;</span>h1<span class="token operator">></span>Users#check<span class="token operator">&lt;</span><span class="token operator">/</span>h1<span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">%</span><span class="token operator">=</span>text_field_tag <span class="token punctuation">:</span>uid<span class="token punctuation">,</span> nil<span class="token punctuation">,</span> id<span class="token punctuation">:</span> <span class="token string">"input_user"</span> <span class="token operator">%</span><span class="token operator">></span><span class="token operator">&lt;</span>br<span class="token operator">></span><span class="token operator">&lt;</span>br<span class="token operator">></span>
+<span class="token operator">&lt;</span>div id<span class="token operator">=</span><span class="token string">'warningMessage'</span><span class="token operator">></span><span class="token operator">&lt;</span>div<span class="token operator">></span>
+<span class="token operator">&lt;</span>script<span class="token operator">></span>
+  <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"#input_user"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">blur</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token function">onInputBlur</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    value <span class="token operator">=</span> <span class="token function">$</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">val</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>value<span class="token punctuation">.</span><span class="token function">trim</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>length <span class="token operator">></span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+      $<span class="token punctuation">.</span><span class="token function">ajax</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+        url<span class="token punctuation">:</span> <span class="token string">"&lt;%= userCheck_path(:json) %>"</span><span class="token punctuation">,</span>
+        type<span class="token punctuation">:</span> <span class="token string">'GET'</span><span class="token punctuation">,</span>
+        datatype<span class="token punctuation">:</span> <span class="token string">"json"</span><span class="token punctuation">,</span>
+        data<span class="token punctuation">:</span> <span class="token punctuation">{</span>uid<span class="token punctuation">:</span> <span class="token function">$</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">val</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        error<span class="token punctuation">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+          console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"error"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        success<span class="token punctuation">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">{</span>
+          <span class="token keyword">if</span><span class="token punctuation">(</span>data <span class="token operator">!=</span> <span class="token string">"Not exist"</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"#input_user"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">val</span><span class="token punctuation">(</span><span class="token string">""</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"#warningMessage"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">html</span><span class="token punctuation">(</span><span class="token string">"使用者"</span><span class="token operator">+</span>data<span class="token operator">+</span><span class="token string">"已存在"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+          console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"#input_user"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">focus</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token function">onInputFocus</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">//this.value="";</span>
+      <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"#warningMessage"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">html</span><span class="token punctuation">(</span><span class="token string">""</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+   <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><strong> 說明</strong></p>
+<p>第3行使用了rails的<code>text_field_tag</code>這個helper來讓使用者輸入，輸入的值放在<code>uid</code>中。我們在這邊要定義一個DOM的id值<code>&quot;input_user&quot;</code>，因為這個值會改變。</p>
+<p>第4行我們定義了一個顯示訊息的部分，等一下會在輸入欄下方有訊息顯示使用者是否存在。</p>
+<p>接下來就是主程式。這邊使用了一個javascript的<code>blur</code>function。表示如果使用者輸入完離開這個文字框，就會綁定一個事件，綁定的事件就是7到26行。首先我們先用第8行排除使用者輸入的空格，重點就是第9號開始。如果使用者輸入後，我們在第7行取得輸入資料，呼叫伺服器器上的<code>userCheck_path</code>(第10行)，並且規定用json格式，這樣子controller才會去render json格式的資料。使用的RestFUL方法為<code>GET</code>(第11行的type), 使用的資料格式為json(第12行)，傳回的值為使用者輸入的<code>uid</code>(第13行)。</p>
+<p>如果ajax call錯誤就在console印出”error”(第15行)。如果成功，就執行17-21行。</p>
+<p>在第18行判斷是否有找到，如果找到了，表示這個使用者存在，因此我們在第19行把輸入的文字欄清空，並且在20行，在文字欄下方顯示「使用者xx已存在」。其中<code>xx</code>正是伺服器傳回來的<code>@user.lcname</code>的json格式姓名。</p>
+<p>第22行是列出使用者姓名或是”Not exist”方便偵錯，第27-29行則是當使用者再度回到輸入欄時，會把輸入欄下方原來「使用者xx已存在」的訊息清掉。</p>
+<p>這樣一來，我們就可以透過ajax call+json，在真正送出資料到後端伺服器之前就檢查使用者是否存在，讓表單的驗證更方便也更人性化：</p>
+<h1 id="整個完整流程"><a href="#整個完整流程" class="headerlink" title="整個完整流程"></a>整個完整流程</h1><p>接下來是整個完整流程</p>
+<ol>
+<li>使用者在瀏覽器中輸入<code>http://192.168.1.105:3000/users/check</code>，就是在向後端的伺服器發出GET HTTP。</li>
+<li>伺服器檢查使用者的請求，去查routes是否存在這個請求。</li>
+<li>伺服器發現這個請求對應的是<code>users#check</code>這個action，因此執行這個action中的動作。</li>
+<li>執行<code>check</code>這個action之後，把變數代表的值丟到對應的template <code>check.html.erb</code>中</li>
+<li><code>check.html.erb</code>把變數代表的值換掉其中的變數，成為<code>check.html</code>。</li>
+<li><code>check.html</code>傳回使用者瀏覽器執行。一開始使用者沒有輸入，因此<code>@user</code>是不存在。</li>
+<li>使用者在瀏覽器中輸入一個id，並且離開輸入欄位(用滑鼠或是按下tab鍵)</li>
+<li>此時觸發了<code>&#39;#input_user&#39;</code>這個id的blur事件，在使用者的瀏覽器上執行ajax call</li>
+<li>根據ajax call的參數，發現是一個GET事件，因此根據參數值去伺服器端</li>
+<li>伺服器端接到ajax GET的要求，去routes找，發現是<code>users_controller</code>中的<code>check</code>這個action。</li>
+<li>此action接收了ajax參數中的<code>uid</code>值，找到使用者<code>@user</code>。</li>
+<li>找到的話，就取出<code>@user.lcname</code>，並且把這個字串轉換成json，傳回瀏覽器。</li>
+<li>找不到，就把”Not exist”這個字串轉換成json傳回瀏覽器。</li>
+<li>使用者瀏覽器接收到資料，如果是找到，就在一個div中顯示使用者已存在，並且將原來的輸入欄清空。</li>
+<li>如果沒找到，就不顯示任何訊息，讓使用者繼續。</li>
+</ol>
+<p><img src="jsonresponse.gif" alt=""></p>
+<p>我們可以從上圖中看到從伺服器傳回來的值，就是完整的一段script，並且把其中的html都更新成城市了。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      我們在網路上註冊時，常常在輸入名稱之後，但還沒按下「送出」之前，系統會傳回「使用者名稱已存在」這種提示，通常這種「即時驗證」的功能都是透過ajax call去後端資料庫檢查，用起來十分方便，本篇文章就用一個非常簡單的例子來看這個功能怎麼實現。
+    
+    </summary>
+    
+    
+      <category term="ajax" scheme="http://josh.hu/tags/ajax/"/>
+    
+      <category term="Rails" scheme="http://josh.hu/tags/Rails/"/>
+    
+      <category term="json" scheme="http://josh.hu/tags/json/"/>
+    
+      <category term="javascript" scheme="http://josh.hu/tags/javascript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>為什麼要學程式設計(一）？</title>
+    <link href="http://josh.hu/2017/06/19/learnToCode1/"/>
+    <id>http://josh.hu/2017/06/19/learnToCode1/</id>
+    <published>2017-06-19T13:03:18.000Z</published>
+    <updated>2017-06-21T16:37:21.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>TL;DR: 變更聰明，更加方便，機會更多，賺更多錢，更多朋友</strong></p>
+<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>Jobs說過：「每個人都必須學程式設計，它可以幫助你思考」。大多數人覺得程式設計(Programming)是程式設計師的專業，這個觀念是完全錯誤的，8成以上的程式設計師在大學不是學程式設計的，4成以上的程式設計師大學讀的根本不是理工。那麼程式設計到底有什麼用？難不難？怎麼學？學哪一種？怎麼開始？這些看起來很麻煩的議題，其實一點也不難，你只要找到入口點，接下來就很容易了。</p>
+<h1 id="是一個專業嗎？"><a href="#是一個專業嗎？" class="headerlink" title="是一個專業嗎？"></a>是一個專業嗎？</h1><p>程式設計就像修車、木工、拉小提琴一樣，它可以是一個興趣，也可以是一個專業，從而讓你獲得快樂，賺些零用錢或發大財，視你下的功夫有多深而定。但程式設計和修車、木工、拉小提琴不同的是，其上手容易，學習簡單，而且前面的路非常寬廣。</p>
+<p>你可以自己設計一個資料庫來管理硬碟中下載的電影(興趣)，也可以設計網頁讓自己一個月多個兩三萬的零用錢(兼差)，也可成為專業的Freelancer開發人員，這個收入絕對比22K多上好幾倍，前題是你要接得到案子(收入)；當然如果你功力夠，英文又好，你可以到矽谷找工作，年收入十幾萬美金起跳是常有的事(職業)。當然你如果心中有很棒的創業點子，你也不需要到處找人幫你設計網站或APP，你自己就可以設計出一個原型去找投資人，當然完整的產品可能需要一個團隊(發財)。</p>
+<p>數位時代造就了許多富翁，耳熟能詳的微軟Bill Gates、臉書Mark Zuckerberg、Google的Larry Page和Sergie Brin、亞馬遜的Jeff Bezos、甲骨文的Larry Ellison都是程式設計師出身，除了軟體業，真實版鋼鐵人Elon Musk也是程式設計師出身，如果你志比天高，你也可以和他們一樣，他們這輩子的第一個產品，絕對不是外包出去，而是自己一行一行開發出來的，更不要說上述的名人大部分從高中開始就在寫程式賺零用錢了。</p>
+<h1 id="有哪些出路"><a href="#有哪些出路" class="headerlink" title="有哪些出路"></a>有哪些出路</h1><h2 id="生活上的便利"><a href="#生活上的便利" class="headerlink" title="生活上的便利"></a>生活上的便利</h2><p>就像前面說的，如果你只是興趣，你可以解決很多生活上的不便利。當別人還守在電腦前準備搶購最新的iPhone時，你早就寫好程式在睡大頭覺，用電腦幫你搶了；當別人還在用複製/貼上去交友網站留言時，你早就用程式把全交友網站所有介於18-24歲，身高150-170的女生全部都發了一封信。你用程式可以免人工做到很多重複性高、需要消耗大量輸入及計算的事情，何樂而不為？省時方便又快樂。</p>
+<h2 id="網頁-前端-網站-後端-工程師"><a href="#網頁-前端-網站-後端-工程師" class="headerlink" title="網頁(前端)/網站(後端)工程師"></a>網頁(前端)/網站(後端)工程師</h2><p>如果你想賺點小錢，你可以設計網頁前端，只要熟悉HTML，CSS3、Javascript就行(除了Javascript外這些都是非常入門的語言)。</p>
+<p>如果你想設計整個網站架構，學習Rails、Node.js，Python以及對應的Framework，再加上MySQL資料庫等，就連後端也沒問題了。</p>
+<p>如你想自己架設主機，那就多學一個Amazon EC2、Google Cloud Engine、阿里雲。</p>
+<p>會了上面全部，你就成為一個全端工程師，只要和網頁、網站有關的東西你都不會有問題(當然還不會是高手)。</p>
+<h2 id="app工程師"><a href="#app工程師" class="headerlink" title="app工程師"></a>app工程師</h2><p>當然你也可以學習Java和Swift來開發Android和蘋果的手機/平板軟體，你就成為一個App的開發工程師。</p>
+<h2 id="大數據"><a href="#大數據" class="headerlink" title="大數據"></a>大數據</h2><p>大數據？沒問題，學習Python、Spark、Hadoop，再加上一些工具及演算法，你立即晉昇為新時代的大數據工程師/架構師。</p>
+<h2 id="硬體工程師"><a href="#硬體工程師" class="headerlink" title="硬體工程師"></a>硬體工程師</h2><p>如果你對機器人，無人機、物聯網等設計有興趣，學習C/C++，JAVA，你可以幫設計IC、或是撰寫硬體的驅動程式或控制程式。</p>
+<p>上面所有的出路，目前全世界都極缺人，你真的就算做的只有中上水平，都能找到不錯的工作，更棒的是，如果你願意花功夫更上一層樓(和智商無關)，你的薪水當然就隨著努力增加(可能是倍增)，這種花時間學東西，就能越賺越多，為什麼不做？</p>
+<h1 id="我會不會太-老小笨嫩……-？"><a href="#我會不會太-老小笨嫩……-？" class="headerlink" title="我會不會太(老小笨嫩……)？"></a>我會不會太(老小笨嫩……)？</h1><h2 id="太老？"><a href="#太老？" class="headerlink" title="太老？"></a>太老？</h2><p>我公司一個45歲大叔，年輕時開發過DOS及Windows應用程式，後來轉行房地產賣車什麼都做過。近年來到公司當業務，在最前線接觸客戶，深刻了解客戶的需求，發現和公司內部宅男工程師的想法天差地別，他就想說自己幹吧！從前年開始自學Rails以及前端設計，兩年來，已經幫公司完成大約20個大大小小的案子，現在自己創業去了。</p>
+<p>我爸爸八十幾歲，我大約半年前開始教他寫程式，太難的不說，至少搜尋出他自己硬碟上的資料，檢查下載的東西是否存在，設計一個網頁表單給朋友填寫是否要參加聚會，這種簡單的他都沒問題。</p>
+<h2 id="太小？"><a href="#太小？" class="headerlink" title="太小？"></a>太小？</h2><p>你應該知道歐巴馬總統早就在推行從小開始學程式；很多美國的幼稚園已經開始用玩樂的方式教導(四歲)，大部分的高等小學在一年級(七歲)已經開始教迴圈及條件判斷了。</p>
+<p>目前全世界在推STEAM(Science, Technology, Engineering, Agriculture, Mathematics，但台灣把Agriculture拿掉，改成STEM)，而要完成STEAM教學，第一件事就是程式設計。和學習自然語言一樣，學習程式語言的年紀越小越好，讓小朋友從小就有邏輯觀念，養成思考的好習慣，頭腦內部活動越頻繁的小孩一定比較聰明，這已經經過科學證實了。</p>
+<h2 id="太笨？"><a href="#太笨？" class="headerlink" title="太笨？"></a>太笨？</h2><p>行天宮有一個很有名的算命攤的命相師是小學畢業程度，他使用自己開發紫微斗數的命盤解盤程式，我有一個修車朋友，是一個國中畢業的修車師傅搞通了整個BMW的E-SYS幫別人修改行車電腦，甚至這位修車師傅目前在台灣有很多家分店，他常常用TeamViewer連線到BMW原廠客戶的車輛上，幫原廠工程師解決他們都無法搞定的問題。</p>
+<p>從主觀的教育體制來說，他們是被歸類為「笨」的，但他們的成就，不會比名校資工系畢業差太多。</p>
+<p>很多人說學程式設計要天份，這句話也對也錯。程式設計是一門非常成熟的學科，你只要要按部就班一步一步來，就會達到一定的成就，聰明與否，只是到達這個成就時間的快慢而已，並不會永遠到不了。更棒的是，現在的程式語言都很直覺，你再聰明或再笨，到達這個時成就的時間都不會差太多，有什麼好怕的？全世界籃球天份最高的的人不出Michael Jordan、Kobe Bryant或是現役的LeBron James吧！告訴大家，這三個人的練球時間比NBA球員的平均練球間多一倍！聰明與否不重要，有沒有下功夫才是重點。</p>
+<h2 id="太嫩？"><a href="#太嫩？" class="headerlink" title="太嫩？"></a>太嫩？</h2><p>完全沒有基礎怎麼辦？誰一開始就有基礎的？但只要你願意花時間，下功夫，不怕難，不怕卡關，卡關一定要破關的決心，上手之後就快了。</p>
+<p>我之前在當Team Leader時，來了兩個新手，一個是北京理工學院的Benson，一個是生物系畢業的Yale。Benson基礎好，上手快，一下子就變成公司的主力，最後也昇到Team Leader。Yale只會簡單的C#，什麼都從頭來，動作也比較慢，但他也很用功，最後雖然沒有成為Team Leader，但他一直不斷自學，也自己花錢去上課，最後聽到他的消息是在微軟當工程師，現在移民到日本也是做程式設計師。反而是Benson一直用他當時的技術在做事，反而就陷在一些很瑣碎的程式設計細節上，浪費太多時間。</p>
+<p>程式設計這行業最棒的地方，就是你可以零基礎起步。前面提到的幾個名人，很多不是程式設計師科班出身，只要你識字，有一點英文及數學基礎，加上一台能上網的電腦就可以開始了。</p>
+<p>現在要學程式設計連課都不用上，甚至連書都不用買，有許多免費的課程，甚至是大學都有MOOC(免費線上課程)可上，只要你想開始，隨時都可以開始。</p>
+<h1 id="會很難嗎？"><a href="#會很難嗎？" class="headerlink" title="會很難嗎？"></a>會很難嗎？</h1><p>當然難，除了吃飯睡覺什麼不難？當木匠難嗎？拍電影難嗎？玩電動難嗎？學修車難嗎？但學程式設計你唯一要做的，就是坐在電腦前面把很多事情的脈略找出來，你不需要上街，不需要用力，你唯一要用的就是腦和手，和很多同酬的事情比較起來，程式設計反而相對簡單。</p>
+<h2 id="痛苦嗎？"><a href="#痛苦嗎？" class="headerlink" title="痛苦嗎？"></a>痛苦嗎？</h2><p>程設計就像從河的這岸架橋到另一岸上。你知道目標是什麼，達成目標的方法也有很多種，但是你需要知道河中哪裏可以打椿，打好椿之後怎麼樣開始架龍骨，龍骨架好後怎麼鋪路，一點一點開始，一點一點進步，一點一點完成，失敗就退回上一次成功的地方，成功就繼續向下走，中間百分之一萬會出問題，出問題是常態，解決問題才是整個過程的重點。</p>
+<p>一開始寸步難行，什麼都做不出來。照著書上或網上的做，噴出一大堆錯誤訊息，旁邊的人一下就出來的東西，你就是做不出來。是網上的寫錯了還是我做錯了？為什麼我的環境就是不行？你會氣自己，氣網站，甚至砸東西(我砸過鍵盤)，然後氣的發誓再也不學了。</p>
+<h2 id="不放棄的禮物"><a href="#不放棄的禮物" class="headerlink" title="不放棄的禮物"></a>不放棄的禮物</h2><p>小心小心！這就是99%的人放棄的點。你在這邊放棄，就永遠放棄了。程式設計當然難，不難的話誰都會，撐過去的就是你的，這一個坎過了就是過了。沒有過不了的關，沒有解決不了的問題，有時得退回原點重新設計，但最終，只要你一心一意要完成，一定會完成的。當你過了一關，就是輕鬆的下坡了(當然馬上就會遇到另一個上坡)。</p>
+<p>你會常常卡關想放棄，但有時靈機一動又破關繼續向前走。你會利用腦中現存的知識來做出你沒做過的事，當你發現新知識時，你腦中的工具又多了一樣。發現新知識的方法很多，你只有不斷讓自己一直學新東西，你手上的武器才會越來越多，當你手上的武器夠多時，很多簡單的問題用一樣武器就攻克，而不需要多樣武器，你會覺得速度越來越快，東西越做越好，很多原來很難的地方都迎刃而解，學一個新技術就兩三小時，學一個新的語言就兩三週，這時你還是會重複一樣的步驟，卡關，破關，不斷前進，不斷進步，最後發現大家都來找你問問題，都來找你幫他做事，儘管你還是覺得自己很爛。</p>
+<h2 id="過程和結果很快樂"><a href="#過程和結果很快樂" class="headerlink" title="過程和結果很快樂"></a>過程和結果很快樂</h2><p>你永遠不會覺得自己很厲害，永遠都覺得什麼都不懂，這時你才發現Jobs說的「Stay hungry, stay foolish」不是刻意保持低調，而是一種真實的感受。但是當你發現自己愚笨的頭腦竟然也做出了漂亮的結果時，不經意的拍手叫好，歡呼震天是常有的事。</p>
+<p>所以難才好玩，不難有什麼意思？越難越好玩，我每次學一個新東西，就希望他越難越好，難表示世界上會的人少，我的機會才多；難表示挑戰大，成就感才大；難表示門檻高，要進來和我競爭的人不會多，我才顯得更有價值。所以程式設計當然很難，但當你了解箇中奧秒時，你會發現難才是好事。</p>
+<p>再難再苦，你再沒興趣，卡關再想殺人，但是……</p>
+<ul>
+<li>當大家在求職網站上拼命找個22K的工作時，是工作拼命找上你</li>
+<li>當你每個月比同時畢業的同學多賺好幾倍</li>
+<li>當大家開Toyota時你開BMW</li>
+<li>當大家在東南亞跟團跑行程時你在歐美自駕遊</li>
+<li>當大家每天打卡上班時你才準備起床去健身房</li>
+<li>當大家在辦公室勾心鬥角時你在海邊的星巴克用Mac工作</li>
+<li>當大家到處求人幫忙開發創意時，你已經做出原型在和投資人談股份分配</li>
+</ul>
+<p>這時候，再難再苦再累，一切都值得了，而且，你會很快樂。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      當你可以賺更多錢，變得更聰明，交更多朋友，省下更多時間，比別人更多機會時，你會退縮嗎？我們現在正逢這個時機，就是學習程式設計可以讓你達成以上的目的，這在人類文明史上從來沒有這麼爽過。Thmoas Fredman說過，PC的出現造成蘇聯計劃經濟的瓦解，正是因為人類有史以來，單人+PC就具有工廠的生產力，有這麼好的機會，我們要怎麼把握呢？
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Rails單頁選單顯示表單實作(三)</title>
+    <link href="http://josh.hu/2017/06/13/jsresponse/"/>
+    <id>http://josh.hu/2017/06/13/jsresponse/</id>
+    <published>2017-06-13T04:20:43.000Z</published>
+    <updated>2017-06-20T07:00:17.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>雖然在上一篇<a href="http://josh.hu/2017/06/13/remoteTrue/">Rails單頁選單顯示表單實作(二)</a>中我們用了rails提供的ajax call直接更新<code>index.html</code>這個網頁上<code>&lt;ul div=&quot;show_items&quot;&gt;</code>這個元素，但是筆者一直覺得那個查詢按鈕很多餘。應該是我們選擇了國家之後，自動就要列出這個國家的城市，可以少移動一個滑鼠及少按一個按鈕，也比較直覺，我們就來看看怎麼做。</p>
+<h1 id="準備工作"><a href="#準備工作" class="headerlink" title="準備工作"></a>準備工作</h1><p>你只要有這一篇<a href="http://josh.hu/2017/06/12/samePageForm/">Rails單頁選單顯示表單實作(一)</a>中準備好的project即可，我們就先切換到新的git branch。</p>
+<pre class="line-numbers language-shell"><code class="language-shell">git checkout -b jsresponse
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h1 id="要修改的地方"><a href="#要修改的地方" class="headerlink" title="要修改的地方"></a>要修改的地方</h1><p>這邊要修改的地方有幾個，首先就是<code>index.html.erb</code>這個view。因為我們要監測選單變更的事件，並且把選單變更的事件綁定到一個jquery的函數，因此需要給這個選單一個id。此外我們當然要把按鈕拿掉，因此<code>index.html.erb</code>就變的非常簡單了，<code>app/view/cities/index.html.erb</code>的程式如下：</p>
+<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token operator">&lt;</span>h2<span class="token operator">></span>選擇國家<span class="token operator">&lt;</span><span class="token operator">/</span>h2<span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">%</span><span class="token operator">=</span> select_tag <span class="token punctuation">:</span>country_id<span class="token punctuation">,</span> <span class="token function">options_from_collection_for_select</span><span class="token punctuation">(</span>@countries<span class="token punctuation">,</span> <span class="token string">"id"</span><span class="token punctuation">,</span><span class="token string">"name"</span><span class="token punctuation">)</span><span class="token punctuation">,</span> id<span class="token punctuation">:</span> <span class="token string">"filter"</span> <span class="token operator">%</span><span class="token operator">></span>
+
+<span class="token operator">&lt;</span>ul id<span class="token operator">=</span><span class="token string">"show_items"</span><span class="token operator">></span>
+  <span class="token operator">&lt;</span><span class="token operator">%</span><span class="token operator">=</span> render @cities <span class="token operator">%</span><span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>ul<span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">%</span><span class="token operator">=</span> <span class="token function">debug</span><span class="token punctuation">(</span>params<span class="token punctuation">)</span> <span class="token keyword">if</span> Rails<span class="token punctuation">.</span>env<span class="token punctuation">.</span>development<span class="token operator">?</span> <span class="token operator">%</span><span class="token operator">></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><strong>說明</strong></p>
+<p>首先就在第2行，多了一個<code>id: &quot;filter&quot;</code>，這是等一下要更動的地方，其它則維持不變。</p>
+<p>接下來我們在這個程式的最下方先暫時加一段javascript，如下：</p>
+<pre class="line-numbers language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h2</span><span class="token punctuation">></span></span>選擇國家<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h2</span><span class="token punctuation">></span></span>
+&lt;%= select_tag :country_id, options_from_collection_for_select(@countries, "id","name"), id: "filter" %>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>show_items<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  &lt;%= render @cities %>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">></span></span>
+&lt;%= debug(params) if Rails.env.development? %>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span>
+ $("#filter").change(function(){
+   $.ajax({
+     url: "&lt;%= cities_path(:js) %>",
+     type: 'POST',
+     datatype: "script",
+     data: {country_id: $(this).val() },
+     success: function(data){
+       console.log(data);
+     }
+   });
+ });
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><strong>說明</strong></p>
+<p>第9到21行是標準的javascript，用來綁定選單變動時執行的事件函數。第11到17行是這個函數的本身。</p>
+<p>首先是10行，當<code>#filter</code>這個id的選單(即第2行)有變動時，即執行第11到17行的ajax呼叫。</p>
+<p>第11到17行的是標準jquery呼叫ajax的語法，包括了幾個參數：</p>
+<ul>
+<li><code>url</code>: 當發生ajax call時，這邊請求的頁面寫成eruby參數的格式，如<code>&quot;&lt;%= cities_path(:js) %&gt;&quot;</code>。</li>
+<li><code>type</code>: <code>&#39;POST&#39;</code>，表示是用POST。</li>
+<li><code>datatype</code>: 我們要求伺服器傳回javascript執行，因此這邊寫<code>&quot;script&quot;</code>。如果是要資料的話，可以是<code>&quot;json&quot;</code>。</li>
+<li><code>data</code>: 這就是我們要傳回伺服器的資料，也就是rails中的<code>params</code>。這邊指定<code>country_id</code>這個值為<code>$(this).val()</code>，表示取這個選單中選中的值。</li>
+<li><code>success</code>: 這是執行ajax call成功之後的執行函數，通常就會把從伺服器傳回來的資料一起傳到這函數。我們可以用一個<code>console.log</code>來印出傳回來的資料。</li>
+</ul>
+<p>因此我們在選單變動時就直接執行ajax call，用HTTP POST去<code>/cities</code>所代表controller中的action來執行(也就是<code>create</code>這個action)。由於我們指定了<code>datatype</code>是script，因此<code>create</code>這個action對應到的template就會是javascript，因此就會去執行<code>create.js.erb</code>，之後就和上一篇的動作一樣了。</p>
+<h2 id="create的回應"><a href="#create的回應" class="headerlink" title="create的回應"></a><code>create</code>的回應</h2><p>因為我們在上面的<code>datatype</code>已經指定了<code>script</code>，因此controller中的action自動會回應javascript，當然正確的寫法還是要在action中指定回應的格式，如下</p>
+<pre class="line-numbers language-ruby"><code class="language-ruby"><span class="token comment" spellcheck="true"># app/controller/cities_controller.rb</span>
+ <span class="token keyword">class</span> <span class="token class-name">CitiesController</span> <span class="token operator">&lt;</span> <span class="token constant">ApplicationController</span>
+   <span class="token keyword">def</span> index
+     <span class="token variable">@countries</span> <span class="token operator">=</span> <span class="token constant">Country</span><span class="token punctuation">.</span>all
+     <span class="token variable">@cities</span> <span class="token operator">=</span> <span class="token constant">City</span><span class="token punctuation">.</span><span class="token function">where</span><span class="token punctuation">(</span>country_id<span class="token punctuation">:</span> params<span class="token punctuation">[</span><span class="token symbol">:country_id</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+   <span class="token keyword">end</span>
+   <span class="token keyword">def</span> create
+     <span class="token variable">@cities</span> <span class="token operator">=</span> <span class="token constant">City</span><span class="token punctuation">.</span><span class="token function">where</span><span class="token punctuation">(</span>country_id<span class="token punctuation">:</span> params<span class="token punctuation">[</span><span class="token symbol">:country_id</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+     respond_to <span class="token symbol">:js</span>
+   <span class="token keyword">end</span>
+ <span class="token keyword">end</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>其中第9行可寫可不寫，他自己會知道要去找<code>create.js.erb</code>。</p>
+<h1 id="整個完整流程"><a href="#整個完整流程" class="headerlink" title="整個完整流程"></a>整個完整流程</h1><p>接下來是整個完整流程</p>
+<ol>
+<li>使用者在瀏覽器中輸入<code>http://192.168.1.105:4000/cities</code>，就是在向後端的伺服器發出GET HTTP。</li>
+<li>伺服器檢查使用者的請求，去查routes是否存在這個請求。</li>
+<li>伺服器發現這個請求對應的是<code>cities#index</code>這個action，因此執行這個action中的動作。</li>
+<li>執行<code>index</code>這個action之後，把變數代表的值丟到對應的template <code>index.html.erb</code>中</li>
+<li><code>index.html.erb</code>把變數代表的值換掉其中的變數，成為<code>index.html</code>。</li>
+<li><code>index.html</code>傳回使用者瀏覽器執行。</li>
+<li>使用者在瀏覽器中從選單選擇國家。</li>
+<li>此時觸發了<code>&#39;#filter&#39;</code>這個id的change事件，在使用者的瀏覽器上執行ajax call</li>
+<li>根據ajax call的參數，發現是一個POST事件，因此根據參數值去伺服器端</li>
+<li>伺服器端接到ajax POST的要求，去routes找，發現是<code>cities_controller.rb</code>中的<code>create</code>這個action。</li>
+<li>此action接收了ajax參數中的<code>country_id</code>值，找到城市。</li>
+<li>接下個因為ajax call是要求<code>script</code>型態，因此就去找<code>create.js.erb</code>，並且把其中的變數換成正常值。</li>
+<li>換完之後，就傳回<code>create.js</code>到使用者瀏覽器。</li>
+<li>使用者瀏覽器接收到資料，就執行這個javascript，就是更新<code>&lt;ul id=&quot;show_items&quot;&gt;</code>這個元素內的值。</li>
+</ol>
+<p><img src="/images/jsresponse.gif" alt=""></p>
+<p>我們可以從上圖中看到從伺服器傳回來的值，就是完整的一段script，並且把其中的html都更新成城市了。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      繼上一篇使用了標準rails的remote true選項，來完成HTTP POST的ajax call。但我總覺得那個按下「查詢」按鈕的動作是多此一舉的。能不能只有選單，當你在選單中選擇了國家之後，自動就會更新下方的城市列表。在這個系列的第三篇，我們就來看看怎麼做，重點選是ajax call，只是這次我們自己寫，不用rails的。這篇文章著重javascript。
+    
+    </summary>
+    
+    
+      <category term="ajax" scheme="http://josh.hu/tags/ajax/"/>
+    
+      <category term="Rails" scheme="http://josh.hu/tags/Rails/"/>
+    
+      <category term="javascript" scheme="http://josh.hu/tags/javascript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Rails單頁選單顯示表單實作(二)</title>
+    <link href="http://josh.hu/2017/06/13/remoteTrue/"/>
+    <id>http://josh.hu/2017/06/13/remoteTrue/</id>
+    <published>2017-06-12T16:32:10.000Z</published>
+    <updated>2017-06-14T08:34:42.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>在選擇網頁後端語言時，我不斷強調，只要不選擇某些過時的語言都可以，因為網頁語言最重的是在前端，而前端當然就是javascript。不過如果你有幸身在一個大的團隊，前端有人處理了，只要進行後端的開發，那你使用rails提供的jquery library也就夠了。延續上一篇<a href="http://josh.hu/2017/06/12/samePageForm/">Rails單頁選單顯示表單實作(一)</a>中的作法，當使用者選擇選單中的項目，並且按下送出時，我們把回應action的原來HTTP GET反應，換成HTTP POST，並且把原來回應對應的Template從html換成javascript，再讓這個javascript來更新div而不是整個網頁，直接使用rails內建的ajax call即可。</p>
+<h1 id="準備工作"><a href="#準備工作" class="headerlink" title="準備工作"></a>準備工作</h1><p>你只要有上一篇<a href="http://josh.hu/2017/06/12/samePageForm/">Rails單頁選單顯示表單實作(一)</a>中準備好的project即可，我們就先切換到新的git branch。</p>
+<pre class="line-numbers language-shell"><code class="language-shell">git checkout -b remotetrue
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h1 id="要修改的地方"><a href="#要修改的地方" class="headerlink" title="要修改的地方"></a>要修改的地方</h1><p>這邊要修改的地方有幾個</p>
+<ul>
+<li>原來<code>index</code>這個action的view。</li>
+<li>在controller中新增一POST的action。</li>
+<li>對應到這個POST action的Template本來應該是html，換成javascript。</li>
+</ul>
+<p>我們就來看看：</p>
+<h2 id="修改cities-controller"><a href="#修改cities-controller" class="headerlink" title="修改cities controller"></a>修改cities controller</h2><p>這邊主要是增加一個<code>create</code>的action，因為我們使用了標準的RestFUL的語法，因此對應到<code>/cities</code>的POST方法名稱就是<code>create</code>。</p>
+<pre class="line-numbers language-ruby"><code class="language-ruby"><span class="token comment" spellcheck="true"># app/controllers/cities_controller.rb</span>
+<span class="token keyword">class</span> <span class="token class-name">CitiesController</span> <span class="token operator">&lt;</span> <span class="token constant">ApplicationController</span>
+
+  <span class="token keyword">def</span> index
+    <span class="token variable">@countries</span> <span class="token operator">=</span> <span class="token constant">Country</span><span class="token punctuation">.</span>all
+    <span class="token variable">@cities</span> <span class="token operator">=</span> <span class="token constant">City</span><span class="token punctuation">.</span><span class="token function">where</span><span class="token punctuation">(</span>country_id<span class="token punctuation">:</span> params<span class="token punctuation">[</span><span class="token symbol">:country_id</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+  <span class="token keyword">end</span>
+
+  <span class="token keyword">def</span> create
+    <span class="token variable">@cities</span> <span class="token operator">=</span> <span class="token constant">City</span><span class="token punctuation">.</span><span class="token function">where</span><span class="token punctuation">(</span>country_id<span class="token punctuation">:</span> params<span class="token punctuation">[</span><span class="token symbol">:country_id</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+  <span class="token keyword">end</span>
+
+<span class="token keyword">end</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><strong> 說明</strong></p>
+<p><code>create</code>很簡單，就是從使用者的選單中讀取選中的<code>country_id</code>，然後再到model中尋找對應該國家碼的城市。</p>
+<h2 id="修改index這個view"><a href="#修改index這個view" class="headerlink" title="修改index這個view"></a>修改index這個view</h2><p>我們要修改的檔案為<code>app/view/cities/index.html.erb</code>，程式碼如下：</p>
+<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token operator">&lt;</span>h2<span class="token operator">></span>選擇國家<span class="token operator">&lt;</span><span class="token operator">/</span>h2<span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">%</span><span class="token operator">=</span> form_tag <span class="token string">"/cities"</span><span class="token punctuation">,</span> remote<span class="token punctuation">:</span> <span class="token boolean">true</span> <span class="token keyword">do</span> <span class="token operator">%</span><span class="token operator">></span>
+  <span class="token operator">&lt;</span><span class="token operator">%</span><span class="token operator">=</span> select_tag <span class="token punctuation">:</span>country_id<span class="token punctuation">,</span> <span class="token function">options_from_collection_for_select</span><span class="token punctuation">(</span>@countries<span class="token punctuation">,</span> <span class="token string">"id"</span><span class="token punctuation">,</span><span class="token string">"name"</span><span class="token punctuation">)</span> <span class="token operator">%</span><span class="token operator">></span>
+  <span class="token operator">&lt;</span><span class="token operator">%</span><span class="token operator">=</span> button_tag <span class="token string">"查詢"</span> <span class="token operator">%</span><span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">%</span> end <span class="token operator">%</span><span class="token operator">></span>
+<span class="token operator">&lt;</span>ul id<span class="token operator">=</span><span class="token string">"show_items"</span><span class="token operator">></span>
+  <span class="token operator">&lt;</span><span class="token operator">%</span><span class="token operator">=</span> render @cities <span class="token operator">%</span><span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>ul<span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">%</span><span class="token operator">=</span> <span class="token function">debug</span><span class="token punctuation">(</span>params<span class="token punctuation">)</span> <span class="token keyword">if</span> Rails<span class="token punctuation">.</span>env<span class="token punctuation">.</span>development<span class="token operator">?</span> <span class="token operator">%</span><span class="token operator">></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><strong> 說明</strong></p>
+<p>這邊最主要的就是第2行中的<code>remote: true</code>這個敘述。在rails中，當我們在表單中放入<code>remote: true</code>之後，rails就會自動把這個表單在controller中所對應到的action(本例為cities_controller的create)，其所<code>respond_to</code>的檔案類型設定為javascript。本來這個action的template應該是<code>create.html.erb</code>，但有了<code>remote: true</code>之後，對應到的template就變成了<code>create.js.erb</code>了。</p>
+<p>你當然可以在<code>create.js.erb</code>中再度指定新的html，但這就多此一舉了。使用這種機制最常見的作法就是更新原來view中的某一HTML元件。因此我們在上面的程式碼第6行，幫顯示城市的地方加了一個ul的id<code>show_items</code>，然後我們只要到<code>create.js.erb</code>這個javscript中更新<code>index.html</code>中<code>show_items</code>這個<code>&lt;ul&gt;</code>，你只要記得，我們通常使用javascript啟動ajax call去伺服器端要資料(data)，而不是要頁面(page)，載入速度就會很快，並且可以做到很多動態的效果。</p>
+<h2 id="新增create-js-erb"><a href="#新增create-js-erb" class="headerlink" title="新增create.js.erb"></a>新增<code>create.js.erb</code></h2><p>接下來就是新增一個對應到<code>create</code>這個action的template，這邊就是<code>app/view/cities/create.js.erb</code>。程式碼如下：</p>
+<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token function">$</span><span class="token punctuation">(</span><span class="token string">'#show_items'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">html</span><span class="token punctuation">(</span><span class="token string">"&lt;%= j render @cities %>"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p><strong> 說明 </strong><br>這是一個標準的javascript內嵌rails指令，短短一行，使用了jquery的html函數，而更新的內容，正是我們要求的<code>render @cities</code>原來這一塊。</p>
+<h1 id="整個完整流程"><a href="#整個完整流程" class="headerlink" title="整個完整流程"></a>整個完整流程</h1><p>接下來是整個完整流程</p>
+<ol>
+<li>使用者在瀏覽器中輸入<code>http://192.168.1.105:4000/cities</code>，就是在向後端的伺服器發出GET HTTP。</li>
+<li>伺服器檢查使用者的請求，去查routes是否存在這個請求。</li>
+<li>伺服器發現這個請求對應的是’cities#index`這個action，因此執行這個action中的動作。</li>
+<li>執行<code>index</code>這個action之後，把變數代表的值丟到對應的template <code>index.html.erb</code>中</li>
+<li><code>index.html.erb</code>把變數代表的值換掉其中的變數，成為<code>index.html</code>。</li>
+<li><code>index.html</code>傳回使用者瀏覽器執行。</li>
+<li>使用者在瀏覽器中從選單選擇國家，並且按下傳送按鈕。</li>
+<li>此時瀏覽器發現使用者發出了HTTP POST的請求，並且因為有<code>data-remote</code>這個選項，因此認定這是一個ajax call。</li>
+<li>伺服器端查路由，找HTTP POST對應到的是<code>cities#create</code>這個action。</li>
+<li>去執行<code>cities_controller</code>中的’create` action。執行之後，把變數代表的值丟到對應的template</li>
+<li>由於是ajax call，因此template不再是html，而是javascript，就是<code>create.js.erb</code>。</li>
+<li>把變數代表的值在<code>create.js.erb</code>中換成正常值，生成<code>create.js</code>。</li>
+<li>把<code>create.js</code>傳回使用者的瀏覽器。</li>
+<li>使用者瀏覽器接收到<code>create.js</code>，並且在瀏覽器中執行。</li>
+<li>執行的程式碼是<code>$(&#39;#show_items&#39;).html(&#39;&lt;li&gt;北京&lt;/li&gt;&lt;li&gt;上海&lt;/li&gt;&lt;li&gt;廣州&lt;/li&gt;&#39;);</code>。因此就直接更新<code>&lt;ul id=&quot;show_items&quot;&gt;</code>這個部分。</li>
+</ol>
+<p><img src="/images/remotetrue.gif" alt=""></p>
+]]></content>
+    
+    <summary type="html">
+    
+      前一篇我們用標準的HTTP GET更新表單，取代了傳統的HTTP POST，因此只需要一個action。 但這個方法問題很多，因此在這一篇中，我們使用了rails的ajax。只要在表單中放在remote true的參數，就會用rails的ajax call，不但程式碼變簡單，也更符合一般網頁的使用習慣，當然，這還不是最好的做法。
+    
+    </summary>
+    
+    
+      <category term="ajax" scheme="http://josh.hu/tags/ajax/"/>
+    
+      <category term="Rails" scheme="http://josh.hu/tags/Rails/"/>
+    
+      <category term="javascript" scheme="http://josh.hu/tags/javascript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Rails單頁選單顯示表單實作(一)</title>
+    <link href="http://josh.hu/2017/06/12/samePageForm/"/>
+    <id>http://josh.hu/2017/06/12/samePageForm/</id>
+    <published>2017-06-12T14:13:24.000Z</published>
+    <updated>2017-06-13T04:04:02.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>所謂的單頁表單，就是在同一頁面中，上面有一個選單，下面則是選擇區。當你在選單中選擇項目時，下方的選擇區會根據你在選單中的選項而有所變動。目前單頁應用程式(Single Page Appliation, SPA)非常流行，事實上製作SPA最棒的後端還是node.js，我們以後有機會會提到，在本篇文章中，我們使用rails來看看一個非常簡單的單頁表單作法，先用最簡單的http get的方法來完成，這應該是最簡單的rails應用了。</p>
+<p>舉例來說，我們有三個國家，分別是美國、中國、日本，每個國家有自己城市如下：</p>
+<p>中國<br>  –北京<br>  –上海<br>  –廣州</p>
+<p>日本<br>  –東京<br>  –北海道<br>  –大阪</p>
+<p>美國<br>  –洛杉磯<br>  –紐約<br>  –芝加哥</p>
+<p>我們要的效果就是在選單中選擇國家，同一頁下方的顯示區就會顯示對應的城市。</p>
+<h1 id="準備環境"><a href="#準備環境" class="headerlink" title="準備環境"></a>準備環境</h1><p>作業系統：Mac OS或是Ubuntu 16.04<br>ruby版本：2.3.0<br>rails版本：4.2.6<br>請遵照前面文章安裝rvm來管理不同版本的ruby以及gem set。</p>
+<h1 id="建立專案"><a href="#建立專案" class="headerlink" title="建立專案"></a>建立專案</h1><pre class="line-numbers language-shell"><code class="language-shell">mkdir updateForm
+cd updateForm
+echo 2.3.0 > .ruby-version
+echo jobexam > .ruby-gemset
+rails new .
+bundle install
+git init
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>其中<code>.ruby-version</code>和<code>.ruby-gemset</code>是<code>rvm</code>管理<code>ruby</code>以及<code>gem set</code>的專案資源檔，如果目錄中有這兩個檔案，只要進入該目錄，就會自動切換成這兩個檔案指定的<code>ruby</code>版本及<code>gemset</code>。讀者要注意的是<code>jobexam</code>這個<code>gemset</code>是之間我已經建立好的。讀者可以自行建立你的<code>gemset</code>，只要確定你的<code>rails</code>版本為<code>4.2.6</code>即可，之後用<code>rails new .</code>建立專案，<code>bundle install</code>安裝需要的<code>gem</code>。</p>
+<h1 id="建立model及準備樣本資料"><a href="#建立model及準備樣本資料" class="headerlink" title="建立model及準備樣本資料"></a>建立model及準備樣本資料</h1><p>我們需要兩個model，一個是國家，一個是城市，輸入下面指令建立</p>
+<pre class="line-numbers language-shell"><code class="language-shell">rails g model country name:string
+rails g model city name:string country:reference
+rake db:migrate
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<h2 id="說明"><a href="#說明" class="headerlink" title="說明"></a>說明</h2><p>首先建立一個model名稱為<code>country</code>，只有一個自訂屬性<code>name</code>即國家名稱。接下來建立另一個model為<code>city</code>，有一個自訂屬性<code>name</code>為城市名稱之為，我們要讓系統知道這個model是<code>country</code>這個model的子類別，即<strong>一個<code>country</code>可以有多個<code>cities</code></strong>，因此加上<code>country:reference</code>。這句話的意思其實就是在<code>city</code>這個model中加上<code>belongs_to :country</code>。</p>
+<p>另外我們要到<code>country</code>這個model中手動加入擁有多個<code>cities</code>的敘述，打開<code>app/models/country.rb</code>輸入如下：</p>
+<pre class="line-numbers language-ruby"><code class="language-ruby"><span class="token comment" spellcheck="true"># app/model/country.rb</span>
+<span class="token keyword">class</span> <span class="token class-name">Country</span> <span class="token operator">&lt;</span> <span class="token constant">ApplicationRecord</span>
+  has_many <span class="token symbol">:cities</span>
+<span class="token keyword">end</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<p>你也可以打開<code>app/models/city.rb</code>來看，由於使用了<code>country:reference</code>的參數來建立model，因此已經會預設有<code>belongs_to :country</code>了。</p>
+<pre class="line-numbers language-ruby"><code class="language-ruby"><span class="token comment" spellcheck="true"># app/model/city.rb</span>
+<span class="token keyword">class</span> <span class="token class-name">City</span> <span class="token operator">&lt;</span> <span class="token constant">ApplicationRecord</span>
+  belongs_to <span class="token symbol">:country</span>
+<span class="token keyword">end</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="準備樣本資料"><a href="#準備樣本資料" class="headerlink" title="準備樣本資料"></a>準備樣本資料</h2><p>開啟<code>db/seeds.rb</code>，並且輸入資料如下：</p>
+<pre class="line-numbers language-ruby"><code class="language-ruby"><span class="token comment" spellcheck="true"># db/seeds.rb</span>
+
+<span class="token constant">Country</span><span class="token punctuation">.</span>delete_all
+
+<span class="token constant">Country</span><span class="token punctuation">.</span>create<span class="token operator">!</span><span class="token punctuation">(</span>
+  <span class="token punctuation">{</span> id<span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+    name<span class="token punctuation">:</span> <span class="token string">"美國"</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">)</span>
+<span class="token constant">Country</span><span class="token punctuation">.</span>create<span class="token operator">!</span><span class="token punctuation">(</span>
+  <span class="token punctuation">{</span> id<span class="token punctuation">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+    name<span class="token punctuation">:</span> <span class="token string">"中國"</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">)</span>
+<span class="token constant">Country</span><span class="token punctuation">.</span>create<span class="token operator">!</span><span class="token punctuation">(</span>
+  <span class="token punctuation">{</span> id<span class="token punctuation">:</span> <span class="token number">3</span><span class="token punctuation">,</span>
+    name<span class="token punctuation">:</span> <span class="token string">"日本"</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">)</span>
+
+<span class="token constant">City</span><span class="token punctuation">.</span>delete_all
+
+<span class="token constant">City</span><span class="token punctuation">.</span>create<span class="token operator">!</span><span class="token punctuation">(</span>
+  <span class="token punctuation">{</span> id<span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+    name<span class="token punctuation">:</span> <span class="token string">"洛杉磯"</span><span class="token punctuation">,</span>
+    country_id<span class="token punctuation">:</span> <span class="token number">1</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">)</span>
+<span class="token constant">City</span><span class="token punctuation">.</span>create<span class="token operator">!</span><span class="token punctuation">(</span>
+  <span class="token punctuation">{</span> id<span class="token punctuation">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+    name<span class="token punctuation">:</span> <span class="token string">"紐約"</span><span class="token punctuation">,</span>
+    country_id<span class="token punctuation">:</span> <span class="token number">1</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">)</span>
+<span class="token constant">City</span><span class="token punctuation">.</span>create<span class="token operator">!</span><span class="token punctuation">(</span>
+  <span class="token punctuation">{</span> id<span class="token punctuation">:</span> <span class="token number">3</span><span class="token punctuation">,</span>
+    name<span class="token punctuation">:</span> <span class="token string">"芝加哥"</span><span class="token punctuation">,</span>
+    country_id<span class="token punctuation">:</span> <span class="token number">1</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">)</span>
+<span class="token constant">City</span><span class="token punctuation">.</span>create<span class="token operator">!</span><span class="token punctuation">(</span>
+  <span class="token punctuation">{</span> id<span class="token punctuation">:</span> <span class="token number">4</span><span class="token punctuation">,</span>
+    name<span class="token punctuation">:</span> <span class="token string">"北京"</span><span class="token punctuation">,</span>
+    country_id<span class="token punctuation">:</span> <span class="token number">2</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">)</span>
+<span class="token constant">City</span><span class="token punctuation">.</span>create<span class="token operator">!</span><span class="token punctuation">(</span>
+  <span class="token punctuation">{</span> id<span class="token punctuation">:</span> <span class="token number">5</span><span class="token punctuation">,</span>
+    name<span class="token punctuation">:</span> <span class="token string">"上海"</span><span class="token punctuation">,</span>
+    country_id<span class="token punctuation">:</span> <span class="token number">2</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">)</span>
+<span class="token constant">City</span><span class="token punctuation">.</span>create<span class="token operator">!</span><span class="token punctuation">(</span>
+  <span class="token punctuation">{</span> id<span class="token punctuation">:</span> <span class="token number">6</span><span class="token punctuation">,</span>
+    name<span class="token punctuation">:</span> <span class="token string">"廣州"</span><span class="token punctuation">,</span>
+    country_id<span class="token punctuation">:</span> <span class="token number">2</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">)</span>
+<span class="token constant">City</span><span class="token punctuation">.</span>create<span class="token operator">!</span><span class="token punctuation">(</span>
+  <span class="token punctuation">{</span> id<span class="token punctuation">:</span> <span class="token number">7</span><span class="token punctuation">,</span>
+    name<span class="token punctuation">:</span> <span class="token string">"東京"</span><span class="token punctuation">,</span>
+    country_id<span class="token punctuation">:</span> <span class="token number">3</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">)</span>
+<span class="token constant">City</span><span class="token punctuation">.</span>create<span class="token operator">!</span><span class="token punctuation">(</span>
+  <span class="token punctuation">{</span> id<span class="token punctuation">:</span> <span class="token number">8</span><span class="token punctuation">,</span>
+    name<span class="token punctuation">:</span> <span class="token string">"北海道"</span><span class="token punctuation">,</span>
+    country_id<span class="token punctuation">:</span> <span class="token number">3</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">)</span>
+<span class="token constant">City</span><span class="token punctuation">.</span>create<span class="token operator">!</span><span class="token punctuation">(</span>
+  <span class="token punctuation">{</span> id<span class="token punctuation">:</span> <span class="token number">9</span><span class="token punctuation">,</span>
+    name<span class="token punctuation">:</span> <span class="token string">"大阪"</span><span class="token punctuation">,</span>
+    country_id<span class="token punctuation">:</span> <span class="token number">3</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h1 id="建立Controllers"><a href="#建立Controllers" class="headerlink" title="建立Controllers"></a>建立Controllers</h1><p>接下來要建立Controllers。由於我們只要顯示城市，因此只要建立<code>cities controller</code>以及在<code>config/routes.rb</code>中對應的路由。先建立controller。</p>
+<pre><code>rails g controller cities index create
+</code></pre><p>接下來修改路由如下：</p>
+<pre class="line-numbers language-ruby"><code class="language-ruby"><span class="token comment" spellcheck="true"># config/routes.rb</span>
+<span class="token constant">Rails</span><span class="token punctuation">.</span>application<span class="token punctuation">.</span>routes<span class="token punctuation">.</span>draw <span class="token keyword">do</span>
+  resources <span class="token symbol">:cities</span><span class="token punctuation">,</span> only<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token symbol">:index</span><span class="token punctuation">,</span> <span class="token symbol">:create</span><span class="token punctuation">]</span>
+<span class="token keyword">end</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<p>上面的路由中，我們使用標準的RestFUL資源型式，但由於只需要用到<code>GET/POST cities</code>，因此只用兩個<code>actions</code>即可。接下來就可以編輯controller了，如下：</p>
+<pre class="line-numbers language-ruby"><code class="language-ruby"><span class="token comment" spellcheck="true"># app/controllers/cities_controller.rb</span>
+<span class="token keyword">class</span> <span class="token class-name">CitiesController</span> <span class="token operator">&lt;</span> <span class="token constant">ApplicationController</span>
+  <span class="token keyword">def</span> index
+    <span class="token variable">@countries</span> <span class="token operator">=</span> <span class="token constant">Country</span><span class="token punctuation">.</span>all
+    <span class="token variable">@cities</span> <span class="token operator">=</span> <span class="token constant">City</span><span class="token punctuation">.</span><span class="token function">where</span><span class="token punctuation">(</span>country_id<span class="token punctuation">:</span> params<span class="token punctuation">[</span><span class="token symbol">:country_id</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+  <span class="token keyword">end</span>
+<span class="token keyword">end</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="說明："><a href="#說明：" class="headerlink" title="說明："></a>說明：</h2><p>其中先將所有的國家讀到<code>@countries</code>這個變數中給選單用，然後設定<code>@cities</code>則是使用者選取選單之後，把國家代碼傳回這個<code>action</code>，再去資料庫取出符合國家代碼的城市。</p>
+<h1 id="view"><a href="#view" class="headerlink" title="view"></a>view</h1><p>View有兩個部分，一個是<code>index</code>這個<code>action</code>對應的template，即<code>app/view/cities/index.html.erb</code>，另一個則是單獨要列出所有城市的<code>partial</code>。如下：</p>
+<pre class="line-numbers language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h2</span><span class="token punctuation">></span></span>選擇國家<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h2</span><span class="token punctuation">></span></span>
+&lt;%= form_tag "/cities" ,method: :get do %>
+  &lt;%= select_tag :country_id, options_from_collection_for_select(@countries, "id","name")%>
+  &lt;%= button_tag "查詢" %>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>%</span> <span class="token attr-name">end</span> <span class="token attr-name">%</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span><span class="token punctuation">></span></span>
+  &lt;%= render @cities %>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">></span></span>
+&lt;%= debug(params) if Rails.env.development? %>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="說明-1"><a href="#說明-1" class="headerlink" title="說明"></a>說明</h2><p>第2行這邊不使用<code>form_for</code>而使用<code>form_tag</code>是為了簡化。首先要做的就是加上<code>method: :get</code>表示這個表單是要用<code>GET</code>，因此在<code>RestFUL</code>的動作中就還是會回到<code>cities#index</code>這個<code>action</code>中，因此我們的controller就沒有對應到<code>POST</code>的<code>create</code>這個<code>action</code>。</p>
+<p>第3行使用了標準的<code>select_tag</code>，並且使用了<code>options_from_collection</code>把<code>@countries</code>放入<code>collection</code>中成為選單，並且以<code>id</code>為<code>html</code>的<code>value</code>，<code>name</code>為顯示出來的值。最後第4行放上一個按鈕送出。<strong>注意</strong>：在rails中，輸入表單一定要有一個送出的機制，因此這邊一定要放入一個<code>button_tag</code>，才會產生RestFUL的GET或POST動作。</p>
+<p>接下來是第7行的<code>&lt;%= render @cities %&gt;</code>。這句敘述表示要將<code>@cities</code>這整個collection丟到一個叫做<code>_city.html.erb</code>的<code>partial</code>來顯示，而且在<code>_city.html.erb</code>中，你不需要使用<code>@cities.each do |city|</code>的迴圈來執行，這種型式的<code>partial</code>會自動把整個<code>@cities</code>iterate一遍。因此我們要建立這個<code>partial</code>，檔案為<code>app/view/cities/_city.html.erb</code></p>
+<pre class="line-numbers language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span>&lt;%= city.name %><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>接下來先將這個版本的程式commit，輸入<code>git add .</code>以及<code>git commit -am &quot;init&quot;</code>，然後直接啟動，輸入<code>rails s -b 0.0.0.0 -p 3001</code>，就可以登入看結果，請到該主機上輸入<code>http://localhost:3001/cities/</code></p>
+<p><img src="/images/result.gif" alt=""></p>
+<h1 id="待改進處："><a href="#待改進處：" class="headerlink" title="待改進處："></a>待改進處：</h1><p>1.執行結果使用get到原方法，因此選單中的選項會回到最原始的預設值美國<br>2.使用get表單，因此雖然看起來是在同一頁，其實是有換頁，正確應該用ajax，就是只更新顯示城市的地方而不要換頁。<br>3.選擇國家後，應後就直接顯示城市，而不需要一個按鈕。</p>
+<h1 id="整個完整流程"><a href="#整個完整流程" class="headerlink" title="整個完整流程"></a>整個完整流程</h1><p>接下來是整個完整流程</p>
+<ol>
+<li>使用者在瀏覽器中輸入<code>http://192.168.1.105:4000/cities</code>，就是在向後端的伺服器發出GET HTTP。</li>
+<li>伺服器檢查使用者的請求，去查routes是否存在這個請求。</li>
+<li>伺服器發現這個請求對應的是’cities#index`這個action，因此執行這個action中的動作。</li>
+<li>執行<code>index</code>這個action之後，把變數代表的值丟到對應的template <code>index.html.erb</code>中</li>
+<li><code>index.html.erb</code>把變數代表的值換掉其中的變數，成為<code>index.html</code>。</li>
+<li><code>index.html</code>傳回使用者瀏覽器執行。</li>
+<li>使用者從<code>index.html</code>中的選單選擇，並且按下按鈕。</li>
+<li>重複2-6的動作。</li>
+</ol>
+]]></content>
+    
+    <summary type="html">
+    
+      目前流行的單頁應用程式(SPA)大部分時間我是用node.js來做，但Rails也可以，只是做法不太一樣，這一篇先從最簡單的rails form做起。
+    
+    </summary>
+    
+    
+      <category term="ajax" scheme="http://josh.hu/tags/ajax/"/>
+    
+      <category term="Rails" scheme="http://josh.hu/tags/Rails/"/>
+    
+      <category term="javascript" scheme="http://josh.hu/tags/javascript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>對Mac的誤解之一：Mac比PC貴？</title>
+    <link href="http://josh.hu/2017/05/23/MacCheaper/"/>
+    <id>http://josh.hu/2017/05/23/MacCheaper/</id>
+    <published>2017-05-22T16:34:10.000Z</published>
+    <updated>2017-05-25T15:36:22.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Mac比PC貴"><a href="#Mac比PC貴" class="headerlink" title="Mac比PC貴"></a>Mac比PC貴</h2><p>在購買電腦時，大家都覺得Mac很酷，很潮，但也比PC貴，因此一般預算買家會直接選擇安裝Windows的PC。事實上，Mac早就使用和PC一樣的x86架構，照道理說，硬體成本應該是和一般的PC差不多的。</p>
+<p>Mac真的比PC貴嗎？這句話正確的說法，應該是<strong>「PC使用的硬體價格範圍較廣」</strong>。換句話說，你可以用很便宜的價格買到規格很爛的PC，但對應到Mac卻沒有廉價的版本。因為Mac的硬體再爛也是從相當不錯的規格起跳，如SSD、較高階的CPU, 因此比較最入門的PC和Mac，感覺似乎Mac比較貴，但事實上是如此嗎？</p>
+<h3 id="低價版產品"><a href="#低價版產品" class="headerlink" title="低價版產品"></a>低價版產品</h3><p>你可以隨便找一台14吋的PC，售價2萬出頭，規格如下：</p>
+<blockquote>
+<p>處理器：Intel Core i5-6200U<br>記憶體：4GB DDR4 2133<br>硬碟：500GB (7200rpm)<br>顯示晶片：NVIDIA GeForce 920M 2G獨顯<br><strong> NT$22,900 </strong></p>
+</blockquote>
+<p><img src="asuscheap.jpg" alt=""></p>
+<p>但是最便宜的Mac也有8G的記憶體，128GB的SSD硬碟，起跳就3萬多，</p>
+<blockquote>
+<p>1.6GHz 雙核心 Intel Core i5 處理器<br>Turbo Boost 可達 2.7GHz<br>Intel HD Graphics 6000<br>8GB 記憶體<br>128GB PCIe 快閃儲存<br><strong>  NT$31,900 </strong></p>
+</blockquote>
+<p><img src="mbacheap.jpg" alt=""></p>
+<p>並不是PC比較便宜，而是Mac沒有這麼低階的產品，因為蘋果根本不在乎低階市場，要提供讓人基本滿意的使用體驗，蘋果認為4GB的記憶體和500GB的普通硬碟根本做不到。</p>
+<h3 id="正常版產品"><a href="#正常版產品" class="headerlink" title="正常版產品"></a>正常版產品</h3><p>一台較好用的PC，基本上規格如下：</p>
+<blockquote>
+<p>Intel Core i5-7200U , 3.1GHz<br>LPDDR3 8G(on board) 無法擴充<br>512G M.2 SSD<br>Intel® HD graphics 620<br><strong> NT$37,900 </strong></p>
+</blockquote>
+<p><img src="asus.jpg" alt=""></p>
+<p>對應到蘋果產品的Mac，基本上就是MacBook Air了。我們就以可以流暢用來寫程式、做3D，影音轉檔的規格來說，那就是13吋的MacBook Air，其規格如下：</p>
+<blockquote>
+<p>1.6GHz 雙核心 Intel Core i5 處理器<br>Turbo Boost 可達 2.7GHz<br>Intel HD Graphics 6000<br>8GB 記憶體<br>256GB PCIe 快閃儲存<br><strong> NT$38,900 </strong></p>
+</blockquote>
+<p><img src="macbookair.jpg" alt=""></p>
+<p>可以看到當規格拉到稍好(就是用起來較順暢的正常使用)，Mac和PC之間的價格就<strong>差不多一樣了</strong>，當然前題是上述兩款電腦的基本硬體是差不多的。</p>
+<h3 id="高階版產品"><a href="#高階版產品" class="headerlink" title="高階版產品"></a>高階版產品</h3><p>最高階的Mac就是MacBook Pro 15，目前售價是92990台幣，對應到的PC是Dell Precision M5510_8，售價是92000台幣。PC多了一台1TB的傳統硬碟，但SSD比較小，是256GB(Mac是512GB)，另外PC的解析度是4K，Mac是3K，其它規格大同小異(圖型加速卡的速度差距不大，參考這篇<a href="https://hardrealm.com/en/video/Radeon-Pro-455-vs-Quadro-M1000M" target="_blank" rel="external">https://hardrealm.com/en/video/Radeon-Pro-455-vs-Quadro-M1000M</a>)</p>
+<p>因此看起來當PC和Mac的規格越來越好時，價格就差不多了。<br><img src="macexpensive.jpg" alt=""><br><img src="dellexpensive.jpg" alt=""></p>
+<h3 id="看不到的成本"><a href="#看不到的成本" class="headerlink" title="看不到的成本"></a>看不到的成本</h3><p>PC有很多隱藏成本，隨便列出兩個你就知道了。</p>
+<ul>
+<li>Microsoft Office：4000元(家用版)或7700元(中小企業版)</li>
+<li>防毒軟體：約2000元</li>
+</ul>
+<p>在Mac上，有現成的Apple的Office類軟體，是免費的，另外Mac上是不需要防毒軟體的。這樣算一下，一套可用又安全的Windows 10，在同樣的硬體規格下，是比Mac貴上5000-8000元。當然如果你說不用安裝防毒軟體，也不需要買Office，那我也就不多說了。</p>
+<h3 id="結論"><a href="#結論" class="headerlink" title="結論"></a>結論</h3><p>很多人在購買電腦時，總覺得PC物超所值，Mac比較貴。但就不算擁有成本了，購買成本的PC也沒有比較便宜。事實上硬體工業目前製作成本已經大同小異了，再加上Mac早就使用了x86架構，兩者硬體元件差不多，當然成本也會一樣。下次當你要買電腦時，如果目標是中高階的產品，可以考慮買台Mac(也可以安裝Windows)。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      Mac比PC貴嗎？這是很多人對Mac的第一印象，覺得用同樣的錢買PC，可以得到更好的硬體，本文就為你打破這個迷思。
+    
+    </summary>
+    
+    
+      <category term="Mac" scheme="http://josh.hu/tags/Mac/"/>
+    
+      <category term="Linux" scheme="http://josh.hu/tags/Linux/"/>
+    
+      <category term="PC" scheme="http://josh.hu/tags/PC/"/>
+    
+      <category term="Windows" scheme="http://josh.hu/tags/Windows/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>電腦的選擇(硬體篇)</title>
+    <link href="http://josh.hu/2017/05/22/ComputerHardware/"/>
+    <id>http://josh.hu/2017/05/22/ComputerHardware/</id>
+    <published>2017-05-22T04:40:48.000Z</published>
+    <updated>2017-05-25T16:25:11.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>TL;DR:</p>
+<ul>
+<li>你需要至少兩台實體機(開發機和伺服器)和一台雲端主機</li>
+<li>開發機用筆電，伺服器用筆電或桌機都行  </li>
+<li>開發機：16GB記憶體、多核心CPU、三螢幕</li>
+<li>伺服器：16GB記憶體、多核心CPU</li>
+<li>雲端主機用Google Compute Engine或阿里雲，<strong> 不要用Heroku </strong></li>
+<li>預算夠可再組一台NAS機(RAID1)備份資料(12GB記憶體，雙核心CPU, 3TB RAID1)<a id="more"></a>
+</li>
+</ul>
+<h2 id="硬體的重要性"><a href="#硬體的重要性" class="headerlink" title="硬體的重要性"></a>硬體的重要性</h2><p>很多人覺得隨便挑一台電腦就可以開始學習IT，這個觀念對初學者看似沒什麼大問題。但隨著學習東西越來越多，需要的軟體、工具、套件越來越複雜，你的環境的嚴謹性就越來越重要了。 很少有文章探討電腦選擇的問題，我們就來看看。</p>
+<h2 id="需要幾台電腦？"><a href="#需要幾台電腦？" class="headerlink" title="需要幾台電腦？"></a>需要幾台電腦？</h2><p><strong> 至少三台 </strong></p>
+<ul>
+<li>開發機</li>
+<li>伺服器</li>
+<li>雲端主機</li>
+</ul>
+<p><strong> 如果預算足夠 </strong></p>
+<ul>
+<li>Linux NAS來當儲存伺服器</li>
+<li>一般的PC作為Bare Metal虛擬化主機</li>
+</ul>
+<h2 id="桌機或筆電？"><a href="#桌機或筆電？" class="headerlink" title="桌機或筆電？"></a>桌機或筆電？</h2><ul>
+<li>開發機用筆電，因為需要DEMO給客戶看，用Mac為主</li>
+<li>伺服器用筆電或桌機都行，用PC</li>
+<li>雲端主機選擇Google Compute Engine或阿里雲，<strong> 不要用Heroku </strong></li>
+</ul>
+<h2 id="Mac或PC？"><a href="#Mac或PC？" class="headerlink" title="Mac或PC？"></a>Mac或PC？</h2><ul>
+<li>開發機最好用Mac，次要選擇為PC安裝Linux Mint</li>
+<li>伺服器用PC安裝Ubuntu 16.04(或下一個LTS版本)</li>
+<li>雲端主機安裝Ubuntu 16.04(或下一個LTS版本)</li>
+</ul>
+<h2 id="開發機說明"><a href="#開發機說明" class="headerlink" title="開發機說明"></a>開發機說明</h2><p>開發機非常重要，和你日夜相伴，多花一點錢在這台機器上面，會給你帶來更大的回報！選擇開發機的重點如下：</p>
+<p><strong> 1. 首選Mac，次選Linux Minx </strong></p>
+<p>Mac買來就直接可以開工了，Linux一定是安裝在PC上，視你購買的硬體，可能會有驅動程式或相容性、多螢幕顯示的問題。</p>
+<p><strong> 2. 16G以上的記憶體 </strong></p>
+<p>目前記憶體便宜的要死，不差這幾百元。有了16GB以上的記憶體，你可以大方開好幾個虛擬機來測試<code>Hadoop</code>、<code>Spark</code>、<code>ElasticSearch</code>等需要叢集的環境。這個錢別省。目前Mac的筆電最多只有16GB(2017年5月)，聽說下一代就可以加到32GB，到時我一定加上去！</p>
+<p><strong> 3. 多核心CPU </strong></p>
+<p>只要你買正常電腦，不要特別去挑很便宜的配備，都會是多核心CPU。</p>
+<p><strong> 4. SSD固態硬碟 </strong></p>
+<p>SSD主要是快，事實上電腦速度慢最大的元兇通常就是硬碟。不要想什麼TB的SATA機器硬碟，慢的要死，就直上SSD。至少要256GB，能買到512GB最好。不要想用什麼混合碟，就直接買SSD就行。如果你常跑<code>vagrant</code>或<code>docker</code>，最好是512GB以上。</p>
+<p><strong> 5. 能接至少兩個外接螢幕 </strong></p>
+<p>相信我，三個螢幕才是主流，一個NB的螢幕加兩個外接，是至少的，我常常用一個NB的螢幕加三個外接才覺得夠用。你不會想把時間花在到處尋找開啟的視窗上的。</p>
+<p><img src="3.jpg" alt=""><br><img src="3desktop.jpg" alt=""></p>
+<p><strong> 6. 購買推薦排行 </strong></p>
+<p>(1) MacBook Pro 15吋 16GB<br>(2) Macbook Pro 13吋 16GB<br>(3) Dell Precision M5510_8 15吋，16GB至少要有HDMI及一個VGA外接埠</p>
+<h2 id="伺服器說明"><a href="#伺服器說明" class="headerlink" title="伺服器說明"></a>伺服器說明</h2><p>開發機是你寫程式的前端，伺服器則算是你的遊樂場或是實驗室。這個電腦不需要太好，因為隨時可能重裝，但如果你需要執行Big Data類的應用，如<code>vagrant</code>, <code>docker</code>, <code>hadoop</code>, <code>spark</code>，就需要多一點記憶體和快速的SSD硬碟。當然4核心的CPU是不可少的。</p>
+<p><strong> 1. 用PC不要用Mac </strong></p>
+<p>因為要安裝Linux，因此用PC即可，用Mac有點浪費了。最好使用標準的硬體設備，例如不要用奇怪的顯示卡，以免Linux找不到驅動程式。</p>
+<p><strong> 2. 非必要可用桌機 </strong></p>
+<p>如果不需要常常帶到客戶那邊做多機器DEMO，這台電腦應該是放在的工作場所的，因此不需要是筆電。另外用桌機的好處就是可以較便宜，安裝更多的記憶體，多片網路卡做trunking加速等等。</p>
+<p><strong> 3. 多核心CPU </strong></p>
+<p>理由同開發機。</p>
+<p><strong> 4. 可以考慮用RAID0的SSD固態硬碟 </strong></p>
+<p>速度快，容量大，又可以練習Linux下的mdadm，如果常常跑虛擬機或big data應用更能感受速度上優勢。</p>
+<p><strong> 5. 購買推薦排行 </strong></p>
+<p>(1) 一般的PC，32GB記憶體，4核心CPU，兩顆256GB SSD組合成的RAID 0。<br>(2) 一般的NB，16GB記憶體體，256GB SSD硬碟</p>
+<h2 id="雲端主機說明"><a href="#雲端主機說明" class="headerlink" title="雲端主機說明"></a>雲端主機說明</h2><p>為什麼要申請雲端主機是另一篇文章的重點，這邊只推薦大家適合的雲端主機廠商。</p>
+<p><strong> 1. Google Compute Engine </strong></p>
+<p>從中國大陸以外的地方進入速度快，售價合理，提供功能多，第一次使用有300美元的免費額度，怎麼看都方便。我最喜歡的地方就是提供了Linux或Mac下的指令。在全世界各地都有機房(台灣在彰濱工業區)，如果你所在的國家或地區能正常使用Google，這是第一選擇。</p>
+<p><strong> 2. 阿里雲 </strong></p>
+<p>如果你在中國大陸，無法正常使用Google的服務，阿里雲是我最推薦的服務。一個月幾十元就有一個公網主機，服務也多，網路速度快，提供的東西都很穩定，並且支援多個主流的Linux Distros，有意在中國大陸發展，阿里雲是你一定要熟悉的產品。</p>
+<p><strong> 3. 為什麼不要用Heroku? </strong></p>
+<p>網路上的教學最愛教大家把網站部署到Heroku上面，其重點不外乎是免費，有現成的DB，可以綁定自己的域名等等，但Heroku最大的問題，就是他是一個PAAS，是只有提供網頁及資料庫服務的雲端供應商，不是一個完整的雲端運算平台提供商，你能學到的東西不但少，而且是Heroku專用的，花時間在這上面， 只是為了一個月幾百元的免費功能，想想實在是划不來。你真的在乎那一個月幾百元的Google/阿里雲主機費用嗎？有一個完整的主機功能，能在上面佈署完整的服務，玩大數據，玩NoSQL的完整雲端主機，怎麼樣都比只有其5%功能不到Heroku的主機有用。</p>
+<p>為了使用Heroku的免費功能，你要學習好多Heroku的專屬指令和工具，與其花時間在這專屬的平台上，為何不學習完整、開放，放諸任何平台皆可使用的功能呢？所以就一句老話：<strong> 不要花時間在Heroku上面！！ </strong></p>
+<h2 id="NAS主機說明"><a href="#NAS主機說明" class="headerlink" title="NAS主機說明"></a>NAS主機說明</h2><p>備份是非常重要的事。努力很久的東西就不見了，任誰都會x的要死。</p>
+<p><strong> 1. 不要買現成的NAS產品 </strong></p>
+<p>很多人會買專業的NAS來備份，但我不建議，因為他們用的硬體實在不怎麼樣，你花一半不到的價錢，自己安裝一個Linux就搞定所有的事，而且還能練習用Linux自建RAID、安裝多片網路卡做加速，省錢又可以搞懂Linux的儲存，何樂而不為？</p>
+<p><strong> 2. 使用Linux內建的軟體RAID，不要用主機板上的RAID </strong></p>
+<p>主機板上的RAID是假的，和真正的RAID卡的效能和功能差很多。如果你用主機板內建的RAID功能，建立的磁碟陣列在轉移機器時很可能就不能用了。但使用Linux的軟體RAID，不管是換電腦，或是RAID硬碟壞了要重建，一個指令就搞定，方便又有相容性，速度也一樣快。</p>
+<p><strong> 3. 做RAID1即可 </strong></p>
+<p>買兩顆3TB的一般SATA硬碟及RAID1備份重要資料即可，不用想什麼RAID0(沒意義，這是備份機不求速度)，不用想RAID5(個人RAID1很夠了，RAID5至少要三顆硬碟，不會省多少空間)。</p>
+<p><strong> 4. 用SAMBA給Windows，NFS給其它Linux </strong></p>
+<p>儘量用NFS分享，但你的工作環境如果有Windows，就要用SAMBA。本站之後會有詳細的文章說明這部分 </p>
+<p><strong> 5. 這台機器可用來執行常用的虛擬機工作 </strong></p>
+<p>筆者在這台機器上安裝了12GB的記憶體，使用雙核心的廉價CPU，啟動兩個VM，一個是4GB的Windows 7用來下載，另一個是256MB的Linux做為內網的DNS。</p>
+<p><strong> 6. 可做為ssh reverse tunnel的內網入口 </strong></p>
+<p>有時你需要從外面ssh回到家中的內網，此時可以用這台來做ssh反向通道的入口，再從這台連線到內網中其它的電腦，我們會在本站稍後有完整的說明文章。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;TL;DR:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;你需要至少兩台實體機(開發機和伺服器)和一台雲端主機&lt;/li&gt;
+&lt;li&gt;開發機用筆電，伺服器用筆電或桌機都行  &lt;/li&gt;
+&lt;li&gt;開發機：16GB記憶體、多核心CPU、三螢幕&lt;/li&gt;
+&lt;li&gt;伺服器：16GB記憶體、多核心CPU&lt;/li&gt;
+&lt;li&gt;雲端主機用Google Compute Engine或阿里雲，&lt;strong&gt; 不要用Heroku &lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;預算夠可再組一台NAS機(RAID1)備份資料(12GB記憶體，雙核心CPU, 3TB RAID1)
+    
+    </summary>
+    
+    
+      <category term="Mac" scheme="http://josh.hu/tags/Mac/"/>
+    
+      <category term="Linux" scheme="http://josh.hu/tags/Linux/"/>
+    
+      <category term="ssh" scheme="http://josh.hu/tags/ssh/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Windows？Mac？Linux？我要用什麼電腦？</title>
+    <link href="http://josh.hu/2017/05/18/untitled-1495120237176/"/>
+    <id>http://josh.hu/2017/05/18/untitled-1495120237176/</id>
+    <published>2017-05-17T16:36:44.000Z</published>
+    <updated>2017-05-20T08:57:11.000Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="TL-DR"><a href="#TL-DR" class="headerlink" title="TL;DR:"></a>TL;DR:</h3><p>第一志願選擇MacBook Pro，第二志願選擇一般筆電裝Linux Mint</p>
+<h2 id="用什麼電腦重要嗎？"><a href="#用什麼電腦重要嗎？" class="headerlink" title="用什麼電腦重要嗎？"></a>用什麼電腦重要嗎？</h2><p>一個專業IT人的電腦重要嗎？好像沒人認真討論過這個問題，似乎從小就用Windows，也習慣在Windows上做所有的事情，當一切都這麼理所當然時，我卻必須在這邊鄭重的說：</p>
+<p> <strong>要成為專業的IT高手，儘早離開Windows！</strong>。</p>
+<p>有這麼嚴重嗎？下面是我的說明：</p>
+<a id="more"></a>
+<h2 id="你的世界應該都是指令"><a href="#你的世界應該都是指令" class="headerlink" title="你的世界應該都是指令"></a>你的世界應該都是指令</h2><p>從DOS開始學電腦的人應該無法忘記那麻煩的指令。</p>
+<h2 id="使用指令的好處"><a href="#使用指令的好處" class="headerlink" title="使用指令的好處"></a>使用指令的好處</h2><ul>
+<li>遠端操作(SSH)</li>
+<li>可自動化</li>
+<li>可串接多個指令</li>
+<li>效率高速度快</li>
+<li>能100%控制電腦</li>
+<li>能做到GUI做不到的事</li>
+<li>能用程式語言控制</li>
+<li>能編輯</li>
+<li>能成為服務</li>
+<li>能讓你控制最底層的硬體到最上層的介面</li>
+<li>省去滑鼠移來移去的麻煩及人為介入</li>
+</ul>
+<h2 id="使用圖型介面的必要性"><a href="#使用圖型介面的必要性" class="headerlink" title="使用圖型介面的必要性"></a>使用圖型介面的必要性</h2><h2 id="為什麼不能用圖型介面的Linux？"><a href="#為什麼不能用圖型介面的Linux？" class="headerlink" title="為什麼不能用圖型介面的Linux？"></a>為什麼不能用圖型介面的Linux？</h2><h2 id="用Mac有什麼好處？"><a href="#用Mac有什麼好處？" class="headerlink" title="用Mac有什麼好處？"></a>用Mac有什麼好處？</h2><h2 id="對Windows的誤思"><a href="#對Windows的誤思" class="headerlink" title="對Windows的誤思"></a>對Windows的誤思</h2><p>前面說過，越早離開Windows，你的IT專業人之路會越好走。很多人一定不以為然，想說都用了Windows一輩子了，整個Windows系統都摸的滾瓜爛熟，什麼軟體都裝的上去，什麼程式也開發過，憑什麼說Windows不好？</p>
+<h3 id="Windows並沒有比較好用"><a href="#Windows並沒有比較好用" class="headerlink" title="Windows並沒有比較好用"></a>Windows並沒有比較好用</h3><p>Windows好用是你習慣了而已，而且你也一直在為了它，不斷改變你的使用習慣。</p>
+<p>事實上Windows從95到7，這20年在介面上根本沒有變化，但是當Windows 7變成Windows 8時，只是把一個開始功能表拿掉了，你就氣的哀哀叫對吧。當時的你只有兩個選擇，一個是繼續用Windows 7(和我一樣)，另一個就是改變自己的使用習慣來適應Windows 8。</p>
+<p>我就是無法從Windows 7變成Windows 8，所以就一直用Windows 7，當然我就得忍受</p>
+<ol>
+<li>不支援的新硬體</li>
+<li>慢的要死的USB 3.0</li>
+<li>隨時會入侵的病毒</li>
+<li>隨時會中止的微軟更新</li>
+</ol>
+<p>說實話，新一代作業系統的視窗介面都來自於Palo Alto，就滑鼠點，拖拉視窗，x〇-的圖案，用起來都一樣，沒有習不習慣的問題。既然你能改變使用習慣去適應新的作業系統(7到8)，如果能讓你成長，變成更強的高手，你何苦不改變使用習慣到一個更適合IT專業人士的作業系統(Linux或Mac)呢？</p>
+<p>所以如果覺得換到Mac或Linux是Windows比較好用的原因，那麼下次Windows再改版時，你再考慮覺得值不值得，因為Windows根本沒有比較好用。</p>
+<h3 id="在虛擬機中安裝Linux"><a href="#在虛擬機中安裝Linux" class="headerlink" title="在虛擬機中安裝Linux"></a>在虛擬機中安裝Linux</h3><p>我相信有90%需要使用Linux的人，會在Windows中安裝VMware Workstation或Virtual Box，再在裏面安裝Linux。設定好分享資料夾之後，照樣可以操作需要的Linux功能。</p>
+<p>不，並不好。有一個叫<code>vagrant</code>的東西，會讓你自動化的功力向上提升三個檔次。<code>vagrant</code>使用指令直接管理虛擬機，我們會有一系列的教學範例。</p>
+<p>你如果在虛擬機中安裝Linux，再在這個Linux中安裝<code>vagrant</code>，就得在這個虛擬機中安裝Virtual Box，這樣稱之為巢狀的虛擬化(Nested Virtualization)，就是”虛擬機中的虛擬機”，有點像Inception電影中的”夢中夢”。</p>
+<p>這樣的架構，速度慢到死人就不說了，事實上很多功能本就無法執行。</p>
+<p>另外如果你還在用VMware Workstation手動安裝虛擬機，那你離自動化的腳步應該是越來越遠了。</p>
+<h3 id="Windows並沒有比較便宜"><a href="#Windows並沒有比較便宜" class="headerlink" title="Windows並沒有比較便宜"></a>Windows並沒有比較便宜</h3><p>是的，一台PC的筆電大約兩萬多就有了，Mac同配備的要快四萬，大約是一倍半的價錢。聽起來是PC便宜多了，是嗎？我們來算算帳。</p>
+<p>作業系統：Windows 10                 Mac OS<br>防毒軟體：2000元上下                  不用<br>防火牆：    2000元上下                    不用<br>office：        5、6千元                        不用(或800元)<br>售後服務    </p>
+<h4 id="作業系統"><a href="#作業系統" class="headerlink" title="作業系統"></a>作業系統</h4><p>Windows 10當然要錢，如果你想要遠端桌面連入的功能，你就要買專業版，如果你需要加入AD，你也要買企業版，當然你用盜版的話，就要小心病毒，或是有人檢舉你賺獎金。</p>
+<p>mac os不用錢</p>
+<h4 id="防毒軟體-防火牆軟體"><a href="#防毒軟體-防火牆軟體" class="headerlink" title="防毒軟體/防火牆軟體"></a>防毒軟體/防火牆軟體</h4><p>WannaCry還記得吧？你當然可以用免費的Windows Defender，問題是你放心嗎？至少買個卡巴斯基，小紅傘，avast等防毒軟體吧？1千到5千不等。</p>
+<p>別忘了除了病毒還有一堆想衝到你電腦中，啟動你的WebCam偷看你私生活的駭客們。別忘了裝一個防火牆軟體。是有Windows防火牆，但已經證明不安全的東西少用。</p>
+<p>mac os上沒有病毒，防火牆也是內建的</p>
+<h4 id="office軟體"><a href="#office軟體" class="headerlink" title="office軟體"></a>office軟體</h4><p>office是微軟的搖錢樹，你一定要買，不買就失去買電腦的意義了。</p>
+<p>mac上的辦公軟體是免費的，如果你要用微軟的office，900元。</p>
+<h4 id="總結"><a href="#總結" class="headerlink" title="總結"></a>總結</h4><p>mac的持有成本加購入成本比Windows低，不要以為一開始付出的錢才是錢。這只是中階的pc和mac的對比，高階的pc和mac對比，同樣配備的兩者，pc購入成本甚至比mac還要高。</p>
+<h3 id="Mac和Windows大車拼"><a href="#Mac和Windows大車拼" class="headerlink" title="Mac和Windows大車拼"></a>Mac和Windows大車拼</h3><h5 id="安裝原生Mac-OS"><a href="#安裝原生Mac-OS" class="headerlink" title="安裝原生Mac OS"></a>安裝原生Mac OS</h5><p>蘋果：YES<br>PC：NO</p>
+<p>不要和我說黑蘋果，先不談合法性，黑蘋果光驅動程式就搞死你。另外多螢幕、USB裝置、網路卡，顯示介面卡，會讓你氣的不要不要的。你與其花這些時間，不如買一台真正的Mac。</p>
+<h5 id="安裝原生Windows-10"><a href="#安裝原生Windows-10" class="headerlink" title="安裝原生Windows 10"></a>安裝原生Windows 10</h5><p>蘋果：YES<br>PC：YES</p>
+<p>兩個都可以，當然你要擁有合法的Windows 10授權。</p>
+<h5 id="安裝Windows-Mac-OS雙系統"><a href="#安裝Windows-Mac-OS雙系統" class="headerlink" title="安裝Windows/Mac OS雙系統"></a>安裝Windows/Mac OS雙系統</h5><p>蘋果：NO<br>PC：YES</p>
+<p>PC黑蘋果就不行了，雙系統更不行。Mac原生支援雙系統或多系統。</p>
+<h5 id="安裝原生Linux"><a href="#安裝原生Linux" class="headerlink" title="安裝原生Linux"></a>安裝原生Linux</h5><p>蘋果：YES<br>PC：YES</p>
+<p>PC可以，Mac當然可以，參考這個網址和這個網址。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;TL-DR&quot;&gt;&lt;a href=&quot;#TL-DR&quot; class=&quot;headerlink&quot; title=&quot;TL;DR:&quot;&gt;&lt;/a&gt;TL;DR:&lt;/h3&gt;&lt;p&gt;第一志願選擇MacBook Pro，第二志願選擇一般筆電裝Linux Mint&lt;/p&gt;
+&lt;h2 id=&quot;用什麼電腦重要嗎？&quot;&gt;&lt;a href=&quot;#用什麼電腦重要嗎？&quot; class=&quot;headerlink&quot; title=&quot;用什麼電腦重要嗎？&quot;&gt;&lt;/a&gt;用什麼電腦重要嗎？&lt;/h2&gt;&lt;p&gt;一個專業IT人的電腦重要嗎？好像沒人認真討論過這個問題，似乎從小就用Windows，也習慣在Windows上做所有的事情，當一切都這麼理所當然時，我卻必須在這邊鄭重的說：&lt;/p&gt;
+&lt;p&gt; &lt;strong&gt;要成為專業的IT高手，儘早離開Windows！&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;有這麼嚴重嗎？下面是我的說明：&lt;/p&gt;
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>重作博主</title>
+    <link href="http://josh.hu/2017/05/18/untitled-1495038454953/"/>
+    <id>http://josh.hu/2017/05/18/untitled-1495038454953/</id>
+    <published>2017-05-17T16:27:34.000Z</published>
+    <updated>2017-05-24T09:11:37.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>TL;DR: 分享Google、FB、Yahoo!頂尖工程師的馬步及思路</p>
+<h2 id="重作博主"><a href="#重作博主" class="headerlink" title="重作博主"></a>重作博主</h2><p>這次重新寫博，花了五年時間積累，還是想和大家分享技術之路，也請大家繼續指教。</p>
+<h3 id="虛擬先生的中斷"><a href="#虛擬先生的中斷" class="headerlink" title="虛擬先生的中斷"></a>虛擬先生的中斷</h3><p>我在2011年寫了一本VMware的書的前後，也開了一個blog叫做「虛擬先生」。中間記錄了許多和VMware相關的知識。當時除了記錄使用的過程之外，也想讓讀者和我之間有一個溝通的管道。「虛擬先生」使用的是標準的Wordpress，也租了雲端主機安裝，算是第一次寫blog。</p>
+<a id="more"></a>
+<p>但隨著使用開源項目的機會越來越多，相對VMware也就越來越少接觸，再加上重心幾乎都投入雲端、Big Data等技術，這幾年工作也轉到DevOps上，虛擬先生在2013年後就完全沒更新，2014年也就關站了。</p>
+<h3 id="為什麼又要寫？"><a href="#為什麼又要寫？" class="headerlink" title="為什麼又要寫？"></a>為什麼又要寫？</h3><p>由於工作的關係，這幾年來慢慢和一些新創公司的頂尖工程師有越來越多的合作機會。除了他們絕頂聰明的腦袋讓我常常覺得跟不上之外，我發現這些頂尖的工程師和普通工程師最大的不同，就是他們<strong>基本功夫紮實地讓人汗顏</strong>。他們所做的所有事情，每一個細節，每一個步驟，都是穩紮穩打，並且有絕對正確的道理，在日積月累之後，和一般工程師的差距自然就拉開了。</p>
+<p>在從頭開始培養工程師，一直到能獨立作業，甚至是帶領團隊的完整cycle中，我慢慢發現這是一個可以re-produce的過程。雖然知識面又廣又深，但點點滴滴開始未嚐不可。</p>
+<p>這個新開的blog，目的就是想把這整個步驟付諸實現。</p>
+<p>這個blog，將會是從最基礎的面向探討電腦工程的學習之路，會有哲學思想(例如：學習電腦從卡關開始)、有最基礎，但卻沒有人認真探討過的問題(例如：為什麼要用蘋果而不用Windows)；有語言的選擇(例如：選一個最適合你的電腦程式語言)；有工具(例如：ansible的使用大全)等等。林林總總，大大小小的事都會最詳細說明。</p>
+<h3 id="寫的方式"><a href="#寫的方式" class="headerlink" title="寫的方式"></a>寫的方式</h3><p>學電腦最怕就是找不到資料，但更怕就是找到的資料照著做，根本做不出來！我搞不懂為什麼會有人寫這種教程，浪費自己的時間寫一些沒用的東西不說，浪費更多人的時間照著做一些永遠做不出來的事！</p>
+<p>我不想當這種人，因此會儘量把過程寫的一清二楚。但每個人的環境不一樣，因此我會列出最完整的環境，並且會附上完整的程式碼放到github上，至少保證用我的環境是一定做的出來的。因此力求完整清楚，會是一貫的寫作風格。</p>
+<h3 id="當某個內容夠多時"><a href="#當某個內容夠多時" class="headerlink" title="當某個內容夠多時"></a>當某個內容夠多時</h3><p>當某一個主題的內容經過系統化整理，並且有一定的份量時，我會把這些內容用gitbook的方式發佈，這樣是希望大家可以專心地、系統化地學習一個完整的領域。</p>
+<h3 id="這個blog的樣式"><a href="#這個blog的樣式" class="headerlink" title="這個blog的樣式"></a>這個blog的樣式</h3><p>這個blog使用hexo+github的靜態網頁製作，因此速度快，容易維護，但因為我對hexo不熟，因此會花一段時間研究，隨著我文章的不斷更新，這個blog也會越來越好用，越來越漂亮。</p>
+<p>至於其它常常會提到的重點，我會放到一個專門的about來說明。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;TL;DR: 分享Google、FB、Yahoo!頂尖工程師的馬步及思路&lt;/p&gt;
+&lt;h2 id=&quot;重作博主&quot;&gt;&lt;a href=&quot;#重作博主&quot; class=&quot;headerlink&quot; title=&quot;重作博主&quot;&gt;&lt;/a&gt;重作博主&lt;/h2&gt;&lt;p&gt;這次重新寫博，花了五年時間積累，還是想和大家分享技術之路，也請大家繼續指教。&lt;/p&gt;
+&lt;h3 id=&quot;虛擬先生的中斷&quot;&gt;&lt;a href=&quot;#虛擬先生的中斷&quot; class=&quot;headerlink&quot; title=&quot;虛擬先生的中斷&quot;&gt;&lt;/a&gt;虛擬先生的中斷&lt;/h3&gt;&lt;p&gt;我在2011年寫了一本VMware的書的前後，也開了一個blog叫做「虛擬先生」。中間記錄了許多和VMware相關的知識。當時除了記錄使用的過程之外，也想讓讀者和我之間有一個溝通的管道。「虛擬先生」使用的是標準的Wordpress，也租了雲端主機安裝，算是第一次寫blog。&lt;/p&gt;
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>
