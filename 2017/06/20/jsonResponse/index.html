@@ -12,7 +12,7 @@
 
     
     <meta name="description" content="我們在網路上註冊時，常常在輸入名稱之後，但還沒按下「送出」之前，系統會傳回「使用者名稱已存在」這種提示，通常這種「即時驗證」的功能都是透過ajax call去後端資料庫檢查，用起來十分方便，本篇文章就用一個非常簡單的例子來看這個功能怎麼實現。">
-<meta name="keywords" content="ajax,Rails,json,javascript">
+<meta name="keywords" content="Rails,ajax,javascript,json">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Rails用ajax call作表單即時驗證(ajax and json)">
 <meta property="og:url" content="http://josh.hu/2017/06/20/jsonResponse/index.html">
@@ -70,20 +70,12 @@
 					
 					<li>
  					
-						<script>
-  (function() {
-    var cx = '011669084661304k120196:mzvues54z2q';
-    var gcse = document.createElement('script');
-    gcse.type = 'text/javascript';
-    gcse.async = true;
-    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
-    var s = document.getElementsByTagName('script')[0];
-    s.parentNode.insertBefore(gcse, s);
-  })();
-</script>
-<gcse:search></gcse:search>
+					<form class="search" action="/search/index.html" method="get" accept-charset="utf-8">
+						<label>Search</label>
+						<input type="search" id="search" autocomplete="off" name="q" maxlength="20" placeholder="搜索" />
+          </form>
 
-					
+
 					</li>
 				</ul>
 			</nav>			
@@ -230,7 +222,7 @@
 
   <div class="article-tags">
   
-  <span></span> <a href="/tags/ajax/">ajax</a><a href="/tags/Rails/">Rails</a><a href="/tags/json/">json</a><a href="/tags/javascript/">javascript</a>
+  <span></span> <a href="/tags/Rails/">Rails</a><a href="/tags/ajax/">ajax</a><a href="/tags/javascript/">javascript</a><a href="/tags/json/">json</a>
   </div>
 
 </div>
@@ -302,11 +294,11 @@
 		<ul class="clearfix">
 		
 			
-				<li><a href="/tags/ajax/" title="ajax">ajax<sup>4</sup></a></li>
+				<li><a href="/tags/Rails/" title="Rails">Rails<sup>4</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/Rails/" title="Rails">Rails<sup>4</sup></a></li>
+				<li><a href="/tags/ajax/" title="ajax">ajax<sup>4</sup></a></li>
 			
 		
 			
@@ -326,15 +318,15 @@
 			
 		
 			
-				<li><a href="/tags/json/" title="json">json<sup>1</sup></a></li>
-			
-		
-			
 				<li><a href="/tags/PC/" title="PC">PC<sup>1</sup></a></li>
 			
 		
 			
 				<li><a href="/tags/Windows/" title="Windows">Windows<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/json/" title="json">json<sup>1</sup></a></li>
 			
 		
 		</ul>
