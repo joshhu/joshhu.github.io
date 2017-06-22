@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://josh.hu/"/>
-  <updated>2017-06-21T16:31:12.000Z</updated>
+  <updated>2017-06-22T07:36:40.000Z</updated>
   <id>http://josh.hu/</id>
   
   <author>
@@ -20,12 +20,13 @@
     <link href="http://josh.hu/2017/06/20/lkf/"/>
     <id>http://josh.hu/2017/06/20/lkf/</id>
     <published>2017-06-20T10:13:15.000Z</published>
-    <updated>2017-06-21T16:31:12.000Z</updated>
+    <updated>2017-06-22T07:36:40.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>李開復博士在他的fb上有<a href="https://www.facebook.com/kaifulee/posts/1670663686294276" target="_blank" rel="external">一篇探論人工智慧在台灣發展的文章</a>，談到ICT(Information and Communication Technology)的世代交替分別如下：</p>
 <blockquote>
 <p>ICT高科技朝代迭代是快速，有週期，有連續性。從<strong>半導體-&gt;PC-&gt;軟體-&gt;Internet-&gt;社交-&gt;行動-&gt;大數據-&gt;AI</strong></p>
 </blockquote>
+<p><img src="lkf.jpg" alt=""></p>
 <p>我個人覺得這個分法有點不倫不類，把世代和服務混為一談的確有點<strong>張飛打岳飛</strong>。</p>
 <p>根據Jim Gray 2003年在<a href="http://www.immagic.com/eLibrary/ARCHIVES/EBOOKS/M091000H.pdf" target="_blank" rel="external">The Fourth Paradigm: Data-Intensive Scientific Discovery</a>這本書中的說法，ICT工業的出現不過就這幾十年，而這幾十年間，ICT工業向前進的動力就是運算(Computation)。</p>
 <p>根據Jim Gray的說法，Computation是第三代範式，運算就是這個範式的基礎。當然運算一直是以半導體(硬體)的運算能力為代表，因此從半導體開始的世代交替，是離不開硬體的。<br><img src="https://static01.nyt.com/images/2009/12/15/science/15books-1/popup.jpg" alt=""></p>
