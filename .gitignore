@@ -1,0 +1,14 @@
+# here.now publish state — contains claim token, must not be public
+.herenow/
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.vscode/
+.idea/
+
+# Logs / temp
+*.log
+*.tmp

@@ -1,997 +1,907 @@
-
- <!DOCTYPE HTML>
-<html lang="zh-TW">
+<!DOCTYPE html>
+<html lang="zh-Hant">
 <head>
-  <meta charset="UTF-8">
-  
-    <title>在範式間穿梭</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
-    
-    <meta name="author" content="Josh Hu">
-    
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="胡嘉璽 Josh Hu — AI 應用專家、暢銷書作家、企業 AI 導入顧問。著作超過百本，協助企業從 0 到 1 完成 AI 轉型。" />
+<meta name="keywords" content="胡嘉璽, Josh Hu, AI 培訓, 企業 AI 導入, Claude Code, Vibe Coding, Cursor, OpenClaw, 生成式 AI, LLM 課程" />
+<meta property="og:title" content="胡嘉璽 Josh Hu｜AI 專家・暢銷書作家・企業 AI 顧問" />
+<meta property="og:description" content="百本著作・千場演講・全棧 AI 視野，為您的企業打造專屬 AI 轉型方案。" />
+<meta property="og:image" content="https://keen-halo-524w.here.now/profile.jpg" />
+<meta property="og:type" content="website" />
+<title>胡嘉璽 Josh Hu｜AI 專家・暢銷書作家・企業 AI 顧問</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230a0a1f'/%3E%3Ctext x='50' y='68' font-size='60' text-anchor='middle' fill='url(%23g)' font-family='sans-serif' font-weight='900'%3E胡%3C/text%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' x2='1'%3E%3Cstop offset='0' stop-color='%2300f0ff'/%3E%3Cstop offset='1' stop-color='%23a855f7'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E" />
+<style>
+  :root {
+    --bg: #050514;
+    --bg-2: #0a0a1f;
+    --surface: rgba(20, 22, 50, 0.55);
+    --surface-strong: rgba(28, 30, 70, 0.85);
+    --border: rgba(120, 140, 255, 0.18);
+    --text: #e8ecff;
+    --text-dim: #9ba3c7;
+    --text-mute: #6b73a0;
+    --primary: #00f0ff;
+    --secondary: #a855f7;
+    --accent: #f472b6;
+    --gold: #fbbf24;
+    --grad-1: linear-gradient(135deg, #00f0ff 0%, #a855f7 50%, #f472b6 100%);
+    --grad-2: linear-gradient(135deg, #6366f1 0%, #ec4899 100%);
+    --grad-3: linear-gradient(135deg, #00f0ff 0%, #6366f1 100%);
+    --shadow-glow: 0 0 40px rgba(168, 85, 247, 0.35), 0 0 80px rgba(0, 240, 255, 0.18);
+  }
 
-    
-    <meta name="description" content="The Best Way To Learn Is To Struggle">
-<meta property="og:type" content="website">
-<meta property="og:title" content="在範式間穿梭">
-<meta property="og:url" content="http://josh.hu/index.html">
-<meta property="og:site_name" content="在範式間穿梭">
-<meta property="og:description" content="The Best Way To Learn Is To Struggle">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="在範式間穿梭">
-<meta name="twitter:description" content="The Best Way To Learn Is To Struggle">
-<meta name="twitter:creator" content="@joshhu">
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  html, body { background: var(--bg); color: var(--text); font-family: 'Noto Sans TC', 'Space Grotesk', system-ui, sans-serif; line-height: 1.7; overflow-x: hidden; }
+  body { min-height: 100vh; }
 
-    
-    <link rel="alternative" href="/atom.xml" title="在範式間穿梭" type="application/atom+xml">
-    
-    
-    <link rel="icon" href="/img/favicon.ico">
-    
-    
-    <link rel="apple-touch-icon" href="/img/author.jpg">
-    <link rel="apple-touch-icon-precomposed" href="/img/author.jpg">
-    
-    <link rel="stylesheet" href="/css/style.css">
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
-<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+  ::selection { background: var(--secondary); color: white; }
 
-  <body>
-    <header>
-      
-<div>
-		
-			<div id="imglogo">
-				<a href="/"><img src="/img/author.jpg" alt="在範式間穿梭" title="在範式間穿梭"/></a>
-			</div>
-			
-			<div id="textlogo">
-				<h1 class="site-name"><a href="/" title="在範式間穿梭">在範式間穿梭</a></h1>
-				<h2 class="blog-motto">I am a Paradigm Shifter</h2>
-			</div>
-			<div class="navbar"><a class="navbutton navmobile" href="#" title="選單">
-			</a></div>
-			<nav class="animated">
-				<ul>
-					<ul>
-					 
-						<li><a href="/">Home</a></li>
-					
-						<li><a href="/archives">Archives</a></li>
-					
-						<li><a href="/about">About</a></li>
-					
-						<li><a href="/contact">Contact</a></li>
-					
-					<li>
- 					
-					<form class="search" action="/search/index.html" method="get" accept-charset="utf-8">
-						<label>Search</label>
-						<input type="search" id="search" autocomplete="off" name="q" maxlength="20" placeholder="搜索" />
-          </form>
+  ::-webkit-scrollbar { width: 10px; }
+  ::-webkit-scrollbar-track { background: var(--bg); }
+  ::-webkit-scrollbar-thumb { background: var(--grad-1); border-radius: 8px; }
 
+  /* 進度條 */
+  #progress { position: fixed; top: 0; left: 0; height: 3px; width: 0%; background: var(--grad-1); z-index: 9999; box-shadow: 0 0 12px var(--primary); transition: width 0.1s linear; }
 
-					</li>
-				</ul>
-			</nav>			
-<script type="text/javascript">
-  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
-  (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
-  e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
-  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
-  
-  _st('install','_BTubHkwNw5bpXpTMJXQ','2.0.0');
-</script>
-</div>
+  /* 動畫背景 */
+  #particles { position: fixed; inset: 0; z-index: -2; opacity: 0.85; }
+  .grid-bg { position: fixed; inset: 0; z-index: -3;
+    background-image:
+      radial-gradient(ellipse at 15% 10%, rgba(168, 85, 247, 0.22), transparent 45%),
+      radial-gradient(ellipse at 85% 85%, rgba(0, 240, 255, 0.18), transparent 45%),
+      radial-gradient(ellipse at 50% 50%, rgba(244, 114, 182, 0.10), transparent 60%),
+      linear-gradient(var(--bg) 1px, transparent 1px) 0 0 / 60px 60px,
+      linear-gradient(90deg, var(--bg) 1px, transparent 1px) 0 0 / 60px 60px,
+      var(--bg);
+  }
 
+  .cursor-glow { position: fixed; width: 480px; height: 480px; border-radius: 50%; pointer-events: none; z-index: -1;
+    background: radial-gradient(circle, rgba(168, 85, 247, 0.18), transparent 65%);
+    transform: translate(-50%, -50%); transition: transform 0.12s ease-out; mix-blend-mode: screen; }
 
+  /* Navigation */
+  nav.top { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 18px 5%;
+    backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px);
+    background: rgba(5, 5, 20, 0.55); border-bottom: 1px solid var(--border);
+    display: flex; align-items: center; justify-content: space-between; transition: padding 0.3s; }
+  nav.top.scrolled { padding: 12px 5%; }
+  .nav-logo { display: flex; align-items: center; gap: 12px; font-weight: 900; font-size: 1.15rem; letter-spacing: 0.04em; }
+  .nav-logo .badge { width: 36px; height: 36px; border-radius: 10px; background: var(--grad-1);
+    display: grid; place-items: center; color: #060614; font-weight: 900; font-size: 1.1rem; box-shadow: var(--shadow-glow); }
+  .nav-logo span { background: var(--grad-1); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .nav-links { display: flex; gap: 6px; }
+  .nav-links a { padding: 8px 16px; color: var(--text-dim); text-decoration: none; font-weight: 500; font-size: 0.92rem;
+    border-radius: 8px; transition: all 0.25s; position: relative; }
+  .nav-links a:hover { color: var(--text); background: rgba(168, 85, 247, 0.12); }
+  .nav-cta { padding: 9px 22px; border-radius: 999px; background: var(--grad-1); color: #060614 !important;
+    font-weight: 700 !important; transition: all 0.3s; }
+  .nav-cta:hover { transform: translateY(-2px); box-shadow: var(--shadow-glow); background: var(--grad-1) !important; color: #060614 !important; }
+  .menu-toggle { display: none; background: none; border: none; color: var(--text); font-size: 1.5rem; cursor: pointer; }
 
-    </header>
-    <div id="container">
-      <div id="main">
+  /* Container */
+  .container { max-width: 1240px; margin: 0 auto; padding: 0 24px; }
 
-   
-<article class="post-expand post" itemprop="articleBody"> 
-  <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2017/06/20/lkf/" title="李開復先生的世代說有何問題？" itemprop="url">李開復先生的世代說有何問題？</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="Josh Hu" target="_blank" itemprop="author">Josh Hu</a>
-		
-  <p class="article-time">
-    <time datetime="2017-06-20T10:13:15.000Z" itemprop="datePublished"> 發表日期 2017-06-20</time> | 
-     <time datetime="2017-06-22T07:36:40.000Z" itemprop="dateUpdated"> 更新日期 2017-06-22</time>
-    
-  </p>
-</header>
+  /* HERO */
+  section.hero { min-height: 100vh; display: flex; align-items: center; padding: 140px 0 80px; position: relative; }
+  .hero-grid { display: grid; grid-template-columns: 1.25fr 1fr; gap: 64px; align-items: center; }
+  .hero-tag { display: inline-flex; align-items: center; gap: 10px; padding: 8px 16px;
+    background: rgba(0, 240, 255, 0.08); border: 1px solid rgba(0, 240, 255, 0.3); border-radius: 999px;
+    font-family: 'JetBrains Mono', monospace; font-size: 0.82rem; color: var(--primary); margin-bottom: 28px; }
+  .hero-tag .pulse { width: 8px; height: 8px; border-radius: 50%; background: var(--primary); animation: pulse 1.6s infinite; }
+  @keyframes pulse { 0%,100% { box-shadow: 0 0 0 0 var(--primary); } 50% { box-shadow: 0 0 0 8px transparent; } }
 
-  <div class="article-content">
-    
-    <img style="float:right; max-width:300px; max-height:300px;" src="http://josh.hu/2017/06/20/lkf/lkf.jpg">
-    
+  h1.hero-title { font-size: clamp(2.6rem, 6.2vw, 5.2rem); font-weight: 900; line-height: 1.05; letter-spacing: -0.02em; margin-bottom: 22px; }
+  h1.hero-title .grad { background: var(--grad-1); -webkit-background-clip: text; background-clip: text; color: transparent;
+    background-size: 200% 200%; animation: gradShift 6s ease infinite; }
+  @keyframes gradShift { 0%,100% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } }
+  .hero-name-en { font-family: 'Space Grotesk', sans-serif; font-size: 1.05rem; color: var(--text-mute); letter-spacing: 0.4em; text-transform: uppercase; margin-bottom: 12px; }
+  .hero-sub { font-size: 1.18rem; color: var(--text-dim); margin-bottom: 18px; max-width: 560px; }
+  .typer { font-family: 'JetBrains Mono', monospace; font-size: 1.05rem; color: var(--primary); margin-bottom: 36px; min-height: 1.8em; }
+  .typer .cursor { display: inline-block; width: 10px; height: 1.1em; background: var(--primary); margin-left: 4px; vertical-align: text-bottom; animation: blink 1s infinite; }
+  @keyframes blink { 50% { opacity: 0; } }
 
-    
-    李開復先生ICT高科技的朝代迭代(即世代交換)是有問題的，首先這些朝代並無取代而是包容。另外他所認為的大數據和AI並非世代而是同一世代的兩面，當然最重要的，大數據已經離開了第三代範式，而成為第四代範式的第一世代。
-    
+  .hero-ctas { display: flex; gap: 16px; flex-wrap: wrap; }
+  .btn { display: inline-flex; align-items: center; gap: 10px; padding: 14px 28px; border-radius: 999px;
+    font-weight: 700; font-size: 0.98rem; text-decoration: none; cursor: pointer; border: none; transition: all 0.3s; position: relative; overflow: hidden; }
+  .btn-primary { background: var(--grad-1); color: #060614; box-shadow: 0 8px 30px rgba(168, 85, 247, 0.35); }
+  .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 12px 40px rgba(168, 85, 247, 0.55); }
+  .btn-ghost { background: transparent; color: var(--text); border: 1px solid var(--border); }
+  .btn-ghost:hover { border-color: var(--primary); background: rgba(0, 240, 255, 0.05); transform: translateY(-3px); }
+  .btn svg { width: 18px; height: 18px; }
 
-    <p class="article-more-link">
-      
-      <a href="/2017/06/20/lkf/#more">展開全文</a>
-      
-    </p>
+  /* Avatar */
+  .avatar-wrap { position: relative; display: grid; place-items: center; }
+  .avatar-orbit { position: absolute; inset: -40px; border: 1px dashed rgba(168, 85, 247, 0.4); border-radius: 50%; animation: spin 30s linear infinite; }
+  .avatar-orbit::before, .avatar-orbit::after { content: ''; position: absolute; width: 14px; height: 14px; border-radius: 50%; background: var(--primary); box-shadow: 0 0 18px var(--primary); }
+  .avatar-orbit::before { top: -7px; left: 50%; transform: translateX(-50%); }
+  .avatar-orbit::after { bottom: -7px; left: 50%; transform: translateX(-50%); background: var(--accent); box-shadow: 0 0 18px var(--accent); }
+  .avatar-orbit-2 { position: absolute; inset: -80px; border: 1px dashed rgba(0, 240, 255, 0.25); border-radius: 50%; animation: spin 50s linear infinite reverse; }
+  .avatar-orbit-2::before { content: ''; position: absolute; width: 12px; height: 12px; border-radius: 50%; background: var(--secondary); box-shadow: 0 0 18px var(--secondary); top: 50%; right: -6px; transform: translateY(-50%); }
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  .avatar { width: 320px; height: 320px; border-radius: 50%; position: relative;
+    background: var(--grad-1); padding: 4px; box-shadow: var(--shadow-glow); }
+  .avatar-inner { width: 100%; height: 100%; border-radius: 50%; background: var(--bg-2); display: grid; place-items: center; overflow: hidden; position: relative; }
+  .avatar-inner::after { content: ''; position: absolute; inset: 0; border-radius: 50%; pointer-events: none;
+    background: conic-gradient(from 0deg, transparent 0deg, rgba(0,240,255,0.45) 60deg, transparent 120deg);
+    animation: spin 4s linear infinite; mix-blend-mode: screen; z-index: 3; }
+  .avatar-photo { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; position: relative; z-index: 2;
+    filter: contrast(1.05) saturate(1.1); transition: transform 0.6s; }
+  .avatar:hover .avatar-photo { transform: scale(1.05); }
+  .avatar-tag { position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%); padding: 6px 16px;
+    background: var(--bg-2); border: 1px solid var(--border); border-radius: 999px; font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; color: var(--primary); z-index: 5; white-space: nowrap; }
+
+  /* Section header */
+  section { padding: 120px 0; position: relative; }
+  .sec-tag { display: inline-flex; align-items: center; gap: 8px; padding: 6px 14px; border: 1px solid var(--border);
+    border-radius: 999px; font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; color: var(--primary); margin-bottom: 18px; }
+  .sec-title { font-size: clamp(2rem, 4.5vw, 3.4rem); font-weight: 900; line-height: 1.1; margin-bottom: 16px; letter-spacing: -0.02em; }
+  .sec-title .grad { background: var(--grad-1); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .sec-desc { font-size: 1.08rem; color: var(--text-dim); max-width: 720px; margin-bottom: 60px; }
+
+  /* Stats */
+  .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-top: 40px; }
+  .stat { padding: 28px 24px; background: var(--surface); backdrop-filter: blur(20px); border: 1px solid var(--border);
+    border-radius: 20px; text-align: left; position: relative; overflow: hidden; transition: all 0.4s; }
+  .stat::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: var(--grad-1); transform: scaleX(0); transform-origin: left; transition: transform 0.5s; }
+  .stat:hover { transform: translateY(-6px); border-color: rgba(0,240,255,0.4); background: var(--surface-strong); }
+  .stat:hover::before { transform: scaleX(1); }
+  .stat-num { font-size: 2.8rem; font-weight: 900; background: var(--grad-1); -webkit-background-clip: text; background-clip: text; color: transparent; font-family: 'Space Grotesk', sans-serif; line-height: 1; }
+  .stat-label { color: var(--text-dim); margin-top: 8px; font-size: 0.95rem; }
+  .stat-icon { position: absolute; right: 20px; bottom: 20px; opacity: 0.18; font-size: 2.4rem; }
+
+  /* About */
+  .about-grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: 64px; align-items: start; }
+  .about-text p { color: var(--text-dim); font-size: 1.05rem; margin-bottom: 18px; }
+  .about-text p strong { color: var(--text); font-weight: 600; }
+  .about-text p .hl { color: var(--primary); font-weight: 600; }
+  .skills-card { background: var(--surface); backdrop-filter: blur(20px); border: 1px solid var(--border);
+    border-radius: 24px; padding: 36px; }
+  .skills-card h3 { font-size: 1.2rem; margin-bottom: 20px; display: flex; align-items: center; gap: 10px; }
+  .skills-card h3::before { content: ''; width: 6px; height: 24px; background: var(--grad-1); border-radius: 3px; }
+  .skill-tags { display: flex; flex-wrap: wrap; gap: 10px; }
+  .skill-tag { padding: 8px 16px; background: rgba(168, 85, 247, 0.10); border: 1px solid rgba(168, 85, 247, 0.3);
+    border-radius: 999px; font-size: 0.88rem; color: var(--text); transition: all 0.25s; cursor: default;
+    font-family: 'JetBrains Mono', monospace; }
+  .skill-tag:hover { background: var(--grad-1); color: #060614; border-color: transparent; transform: translateY(-2px); }
+
+  /* Books */
+  .books { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; }
+  .book { perspective: 1200px; text-decoration: none; color: inherit; display: block; }
+  .book-inner { position: relative; padding: 18px 18px 22px; background: var(--surface); backdrop-filter: blur(20px);
+    border: 1px solid var(--border); border-radius: 20px; height: 100%; transition: transform 0.4s, box-shadow 0.4s, border-color 0.4s;
+    transform-style: preserve-3d; overflow: hidden; }
+  .book-inner::before { content: ''; position: absolute; inset: 0;
+    background: radial-gradient(circle at var(--mx,50%) var(--my,50%), rgba(168, 85, 247, 0.22), transparent 50%);
+    opacity: 0; transition: opacity 0.4s; pointer-events: none; z-index: 1; }
+  .book:hover .book-inner { transform: translateY(-8px); border-color: rgba(0,240,255,0.5); box-shadow: 0 20px 60px rgba(168,85,247,0.3); }
+  .book:hover .book-inner::before { opacity: 1; }
+  .book-cover { width: 100%; aspect-ratio: 3/4; border-radius: 12px; margin-bottom: 18px; position: relative; overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.04) inset; background: #0a0a1a; }
+  .book-cover img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.6s cubic-bezier(.2,.8,.2,1); }
+  .book:hover .book-cover img { transform: scale(1.06); }
+  .book-cover.placeholder { display: flex; align-items: center; justify-content: center; padding: 24px; text-align: center;
+    box-shadow: inset 0 0 40px rgba(0,0,0,0.4), 0 8px 24px rgba(0,0,0,0.3); }
+  .book-cover.placeholder::after { content: ''; position: absolute; left: 6%; top: 8%; bottom: 8%; width: 4px; background: rgba(0,0,0,0.35); border-radius: 2px; }
+  .book-cover-text { font-weight: 900; font-size: 1.05rem; line-height: 1.3; color: white; text-shadow: 0 2px 6px rgba(0,0,0,0.5); }
+  .book-no { position: absolute; top: 12px; right: 14px; font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; color: var(--text-mute); z-index: 2;
+    background: rgba(5,5,20,0.7); backdrop-filter: blur(8px); padding: 2px 8px; border-radius: 999px; border: 1px solid var(--border); }
+  .book-title { font-size: 0.98rem; font-weight: 700; margin-bottom: 8px; line-height: 1.35; min-height: 2.7em; }
+  .book-desc { font-size: 0.82rem; color: var(--text-dim); margin-bottom: 12px; line-height: 1.5; }
+  .book-tag { display: inline-block; padding: 3px 10px; background: rgba(0, 240, 255, 0.10); border: 1px solid rgba(0, 240, 255, 0.3);
+    border-radius: 6px; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; color: var(--primary); }
+
+  .author-badge { display: inline-flex; align-items: center; gap: 14px; padding: 8px 18px 8px 8px; margin-bottom: 28px;
+    background: var(--surface); border: 1px solid var(--border); border-radius: 999px; }
+  .author-badge img { width: 44px; height: 44px; border-radius: 50%; object-fit: cover; border: 2px solid var(--primary); }
+  .author-badge .meta { display: flex; flex-direction: column; line-height: 1.2; }
+  .author-badge .meta .label { font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; color: var(--text-mute); }
+  .author-badge .meta .name { font-weight: 700; font-size: 0.95rem; }
+
+  .more-books { text-align: center; margin-top: 50px; padding: 30px 24px; border: 1px dashed var(--border); border-radius: 18px; }
+  .more-books .num { font-family: 'Space Grotesk', sans-serif; font-size: 2.6rem; font-weight: 900; background: var(--grad-1); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .more-books p { color: var(--text-dim); margin-top: 8px; }
+
+  /* Courses */
+  .courses { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .course { background: var(--surface); backdrop-filter: blur(20px); border: 1px solid var(--border);
+    border-radius: 22px; padding: 32px 28px; transition: all 0.4s; position: relative; overflow: hidden; cursor: pointer; }
+  .course::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    background: var(--grad-1); opacity: 0; transition: opacity 0.4s; z-index: -1; }
+  .course:hover { transform: translateY(-8px); border-color: rgba(168,85,247,0.5); }
+  .course:hover .course-icon { transform: rotate(-8deg) scale(1.08); }
+  .course-icon { width: 56px; height: 56px; border-radius: 14px; background: var(--grad-1);
+    display: grid; place-items: center; margin-bottom: 22px; transition: transform 0.4s; box-shadow: 0 8px 24px rgba(168,85,247,0.3); }
+  .course-icon svg { width: 28px; height: 28px; color: #060614; }
+  .course h3 { font-size: 1.2rem; margin-bottom: 12px; }
+  .course p { color: var(--text-dim); font-size: 0.95rem; margin-bottom: 18px; }
+  .course-meta { display: flex; gap: 14px; flex-wrap: wrap; padding-top: 18px; border-top: 1px solid var(--border); }
+  .course-meta span { font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; color: var(--text-mute); display: flex; align-items: center; gap: 6px; }
+  .course-meta span::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--primary); }
+
+  /* Process */
+  .process { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; margin-top: 40px; position: relative; }
+  .process::before { content: ''; position: absolute; top: 32px; left: 8%; right: 8%; height: 2px; background: var(--grad-1); opacity: 0.3; }
+  .step { text-align: center; padding: 0 16px; position: relative; }
+  .step-num { width: 64px; height: 64px; border-radius: 50%; margin: 0 auto 20px;
+    background: var(--bg-2); border: 2px solid var(--border); display: grid; place-items: center;
+    font-family: 'Space Grotesk', sans-serif; font-weight: 900; font-size: 1.4rem; color: var(--primary); position: relative; z-index: 2; transition: all 0.3s; }
+  .step:hover .step-num { background: var(--grad-1); color: #060614; border-color: transparent; transform: scale(1.1); }
+  .step h4 { font-size: 1.05rem; margin-bottom: 8px; }
+  .step p { font-size: 0.88rem; color: var(--text-dim); }
+
+  /* Why Me */
+  .why-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+  .why-card { padding: 32px; background: var(--surface); backdrop-filter: blur(20px); border: 1px solid var(--border); border-radius: 22px; transition: all 0.4s; display: flex; gap: 22px; align-items: flex-start; }
+  .why-card:hover { border-color: rgba(0,240,255,0.4); transform: translateY(-4px); }
+  .why-icon { flex-shrink: 0; width: 52px; height: 52px; border-radius: 14px;
+    background: rgba(168, 85, 247, 0.15); border: 1px solid rgba(168, 85, 247, 0.4); display: grid; place-items: center; }
+  .why-icon svg { width: 26px; height: 26px; color: var(--secondary); }
+  .why-card h3 { font-size: 1.15rem; margin-bottom: 8px; }
+  .why-card p { color: var(--text-dim); font-size: 0.95rem; }
+
+  /* Quote */
+  .quote-section { padding: 100px 0; }
+  .quote { max-width: 880px; margin: 0 auto; text-align: center; padding: 50px 32px;
+    background: var(--surface); backdrop-filter: blur(20px); border: 1px solid var(--border); border-radius: 28px; position: relative; overflow: hidden; }
+  .quote::before { content: '"'; position: absolute; top: -40px; left: 30px; font-size: 18rem; font-family: 'Space Grotesk', sans-serif; line-height: 1; background: var(--grad-1); -webkit-background-clip: text; background-clip: text; color: transparent; opacity: 0.3; }
+  .quote p { font-size: clamp(1.3rem, 2.5vw, 1.8rem); font-weight: 500; line-height: 1.5; margin-bottom: 22px; position: relative; z-index: 2; }
+  .quote .author { color: var(--text-dim); font-family: 'JetBrains Mono', monospace; font-size: 0.92rem; }
+
+  /* Contact */
+  .contact-grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: 48px; align-items: center; }
+  .contact-info h2 { margin-bottom: 18px; }
+  .contact-channels { display: flex; flex-direction: column; gap: 14px; margin-top: 28px; }
+  .channel { display: flex; align-items: center; gap: 18px; padding: 18px 22px; background: var(--surface);
+    border: 1px solid var(--border); border-radius: 16px; text-decoration: none; color: var(--text); transition: all 0.3s; }
+  .channel:hover { transform: translateX(6px); border-color: var(--primary); background: var(--surface-strong); }
+  .channel-icon { width: 44px; height: 44px; border-radius: 12px; display: grid; place-items: center; flex-shrink: 0;
+    background: var(--grad-1); color: #060614; }
+  .channel-icon svg { width: 22px; height: 22px; }
+  .channel-label { font-size: 0.82rem; color: var(--text-mute); font-family: 'JetBrains Mono', monospace; }
+  .channel-value { font-weight: 600; margin-top: 2px; }
+
+  .contact-card { padding: 40px; background: var(--surface-strong); backdrop-filter: blur(20px);
+    border: 1px solid var(--border); border-radius: 28px; text-align: center; position: relative; overflow: hidden; }
+  .contact-card::before { content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%;
+    background: conic-gradient(from 0deg, transparent, rgba(0,240,255,0.2), transparent 30%); animation: spin 8s linear infinite; opacity: 0.6; }
+  .contact-card > * { position: relative; z-index: 2; }
+  .contact-card h3 { font-size: 1.5rem; margin-bottom: 12px; }
+  .contact-card p { color: var(--text-dim); margin-bottom: 28px; }
+
+  /* Footer */
+  footer { padding: 50px 0 30px; border-top: 1px solid var(--border); margin-top: 80px; text-align: center; color: var(--text-mute); font-size: 0.88rem; }
+  footer .grad-text { background: var(--grad-1); -webkit-background-clip: text; background-clip: text; color: transparent; font-weight: 700; }
+
+  /* Reveal animations */
+  .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease, transform 0.8s cubic-bezier(.2,.8,.2,1); }
+  .reveal.in { opacity: 1; transform: translateY(0); }
+  .reveal-delay-1 { transition-delay: 0.1s; }
+  .reveal-delay-2 { transition-delay: 0.2s; }
+  .reveal-delay-3 { transition-delay: 0.3s; }
+  .reveal-delay-4 { transition-delay: 0.4s; }
+
+  /* Floating chat */
+  .float-cta { position: fixed; bottom: 28px; right: 28px; padding: 14px 22px; border-radius: 999px;
+    background: var(--grad-1); color: #060614; font-weight: 700; text-decoration: none; box-shadow: 0 12px 40px rgba(168,85,247,0.45);
+    z-index: 90; transition: all 0.3s; display: inline-flex; align-items: center; gap: 8px; opacity: 0; transform: translateY(20px); pointer-events: none; }
+  .float-cta.visible { opacity: 1; transform: translateY(0); pointer-events: all; }
+  .float-cta:hover { transform: translateY(-3px); box-shadow: 0 16px 50px rgba(168,85,247,0.65); }
+
+  /* Responsive */
+  @media (max-width: 980px) {
+    .hero-grid, .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+    .avatar { width: 240px; height: 240px; }
+    .avatar-char { font-size: 8rem; }
+    .stats { grid-template-columns: repeat(2, 1fr); }
+    .books { grid-template-columns: repeat(3, 1fr); }
+    .courses { grid-template-columns: repeat(2, 1fr); }
+    .why-grid { grid-template-columns: 1fr; }
+    .process { grid-template-columns: repeat(2, 1fr); gap: 30px; }
+    .process::before { display: none; }
+    .nav-links { display: none; }
+    .nav-links.open { display: flex; flex-direction: column; position: absolute; top: 100%; right: 5%; left: 5%;
+      background: var(--bg-2); border: 1px solid var(--border); border-radius: 16px; padding: 16px; gap: 4px; }
+    .menu-toggle { display: block; }
+    section { padding: 80px 0; }
+  }
+  @media (max-width: 720px) {
+    .books { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 480px) {
+    .books, .courses { grid-template-columns: 1fr; }
+    .stats { grid-template-columns: 1fr; }
+    section.hero { padding: 110px 0 50px; }
+  }
+</style>
+</head>
+<body>
+
+<div id="progress"></div>
+<div class="grid-bg"></div>
+<canvas id="particles"></canvas>
+<div class="cursor-glow" id="cursorGlow"></div>
+
+<nav class="top" id="nav">
+  <div class="nav-logo">
+    <div class="badge">胡</div>
+    <div>JOSH<span> HU</span></div>
   </div>
-  <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-	  	<span></span>
-      <a href="/2017/06/20/lkf/#disqus_thread" class="comments-count-link">Comments</a>
-	
-</div>
-
-</footer>
-
-
-</article>
-
-
-
-
-
-
-   
-<article class="post-expand post" itemprop="articleBody"> 
-  <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2017/06/20/jsonResponse/" title="Rails用ajax call作表單即時驗證(ajax and json)" itemprop="url">Rails用ajax call作表單即時驗證(ajax and json)</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="Josh Hu" target="_blank" itemprop="author">Josh Hu</a>
-		
-  <p class="article-time">
-    <time datetime="2017-06-20T05:50:55.000Z" itemprop="datePublished"> 發表日期 2017-06-20</time> | 
-     <time datetime="2017-06-20T08:35:03.000Z" itemprop="dateUpdated"> 更新日期 2017-06-20</time>
-    
-  </p>
-</header>
-
-  <div class="article-content">
-    
-    <img style="float:right; max-width:300px; max-height:300px;" src="http://josh.hu/2017/06/20/jsonResponse/jsonresponse.gif">
-    
-
-    
-    我們在網路上註冊時，常常在輸入名稱之後，但還沒按下「送出」之前，系統會傳回「使用者名稱已存在」這種提示，通常這種「即時驗證」的功能都是透過ajax call去後端資料庫檢查，用起來十分方便，本篇文章就用一個非常簡單的例子來看這個功能怎麼實現。
-    
-
-    <p class="article-more-link">
-      
-      <a href="/2017/06/20/jsonResponse/#more">展開全文</a>
-      
-    </p>
+  <div class="nav-links" id="navLinks">
+    <a href="#about">關於</a>
+    <a href="#books">著作</a>
+    <a href="#courses">企業課程</a>
+    <a href="#why">為什麼選我</a>
+    <a href="#contact" class="nav-cta">預約諮詢</a>
   </div>
-  <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/ajax/">ajax</a><a href="/tags/Rails/">Rails</a><a href="/tags/json/">json</a><a href="/tags/javascript/">javascript</a>
-  </div>
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-	  	<span></span>
-      <a href="/2017/06/20/jsonResponse/#disqus_thread" class="comments-count-link">Comments</a>
-	
-</div>
-
-</footer>
-
-
-</article>
-
-
-
-
-
-
-   
-<article class="post-expand post" itemprop="articleBody"> 
-  <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2017/06/19/learnToCode1/" title="為什麼要學程式設計(一）？" itemprop="url">為什麼要學程式設計(一）？</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="Josh Hu" target="_blank" itemprop="author">Josh Hu</a>
-		
-  <p class="article-time">
-    <time datetime="2017-06-19T13:03:18.000Z" itemprop="datePublished"> 發表日期 2017-06-19</time> | 
-     <time datetime="2017-06-21T16:37:21.000Z" itemprop="dateUpdated"> 更新日期 2017-06-22</time>
-    
-  </p>
-</header>
-
-  <div class="article-content">
-    
-    <img style="float:right; max-width:300px; max-height:300px;" src="http://josh.hu/2017/06/19/learnToCode1/code.jpg">
-    
-
-    
-    當你可以賺更多錢，變得更聰明，交更多朋友，省下更多時間，比別人更多機會時，你會退縮嗎？我們現在正逢這個時機，就是學習程式設計可以讓你達成以上的目的，這在人類文明史上從來沒有這麼爽過。Thmoas Fredman說過，PC的出現造成蘇聯計劃經濟的瓦解，正是因為人類有史以來，單人+PC就具有工廠的生產力，有這麼好的機會，我們要怎麼把握呢？
-    
-
-    <p class="article-more-link">
-      
-      <a href="/2017/06/19/learnToCode1/#more">展開全文</a>
-      
-    </p>
-  </div>
-  <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-	  	<span></span>
-      <a href="/2017/06/19/learnToCode1/#disqus_thread" class="comments-count-link">Comments</a>
-	
-</div>
-
-</footer>
-
-
-</article>
-
-
-
-
-
-
-   
-<article class="post-expand post" itemprop="articleBody"> 
-  <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2017/06/13/jsresponse/" title="Rails單頁選單顯示表單實作(三)" itemprop="url">Rails單頁選單顯示表單實作(三)</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="Josh Hu" target="_blank" itemprop="author">Josh Hu</a>
-		
-  <p class="article-time">
-    <time datetime="2017-06-13T04:20:43.000Z" itemprop="datePublished"> 發表日期 2017-06-13</time> | 
-     <time datetime="2017-06-20T07:00:17.000Z" itemprop="dateUpdated"> 更新日期 2017-06-20</time>
-    
-  </p>
-</header>
-
-  <div class="article-content">
-    
-    <img style="float:right; max-width:300px; max-height:300px;" src="/images/jsresponse.gif">
-    
-
-    
-    繼上一篇使用了標準rails的remote true選項，來完成HTTP POST的ajax call。但我總覺得那個按下「查詢」按鈕的動作是多此一舉的。能不能只有選單，當你在選單中選擇了國家之後，自動就會更新下方的城市列表。在這個系列的第三篇，我們就來看看怎麼做，重點選是ajax call，只是這次我們自己寫，不用rails的。這篇文章著重javascript。
-    
-
-    <p class="article-more-link">
-      
-      <a href="/2017/06/13/jsresponse/#more">展開全文</a>
-      
-    </p>
-  </div>
-  <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/ajax/">ajax</a><a href="/tags/Rails/">Rails</a><a href="/tags/javascript/">javascript</a>
-  </div>
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-	  	<span></span>
-      <a href="/2017/06/13/jsresponse/#disqus_thread" class="comments-count-link">Comments</a>
-	
-</div>
-
-</footer>
-
-
-</article>
-
-
-
-
-
-
-   
-<article class="post-expand post" itemprop="articleBody"> 
-  <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2017/06/13/remoteTrue/" title="Rails單頁選單顯示表單實作(二)" itemprop="url">Rails單頁選單顯示表單實作(二)</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="Josh Hu" target="_blank" itemprop="author">Josh Hu</a>
-		
-  <p class="article-time">
-    <time datetime="2017-06-12T16:32:10.000Z" itemprop="datePublished"> 發表日期 2017-06-13</time> | 
-     <time datetime="2017-06-14T08:34:42.000Z" itemprop="dateUpdated"> 更新日期 2017-06-14</time>
-    
-  </p>
-</header>
-
-  <div class="article-content">
-    
-    <img style="float:right; max-width:300px; max-height:300px;" src="/images/remotetrue.gif">
-    
-
-    
-    前一篇我們用標準的HTTP GET更新表單，取代了傳統的HTTP POST，因此只需要一個action。 但這個方法問題很多，因此在這一篇中，我們使用了rails的ajax。只要在表單中放在remote true的參數，就會用rails的ajax call，不但程式碼變簡單，也更符合一般網頁的使用習慣，當然，這還不是最好的做法。
-    
-
-    <p class="article-more-link">
-      
-      <a href="/2017/06/13/remoteTrue/#more">展開全文</a>
-      
-    </p>
-  </div>
-  <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/ajax/">ajax</a><a href="/tags/Rails/">Rails</a><a href="/tags/javascript/">javascript</a>
-  </div>
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-	  	<span></span>
-      <a href="/2017/06/13/remoteTrue/#disqus_thread" class="comments-count-link">Comments</a>
-	
-</div>
-
-</footer>
-
-
-</article>
-
-
-
-
-
-
-   
-<article class="post-expand post" itemprop="articleBody"> 
-  <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2017/06/12/samePageForm/" title="Rails單頁選單顯示表單實作(一)" itemprop="url">Rails單頁選單顯示表單實作(一)</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="Josh Hu" target="_blank" itemprop="author">Josh Hu</a>
-		
-  <p class="article-time">
-    <time datetime="2017-06-12T14:13:24.000Z" itemprop="datePublished"> 發表日期 2017-06-12</time> | 
-     <time datetime="2017-06-13T04:04:02.000Z" itemprop="dateUpdated"> 更新日期 2017-06-13</time>
-    
-  </p>
-</header>
-
-  <div class="article-content">
-    
-    <img style="float:right; max-width:300px; max-height:300px;" src="/images/result.gif">
-    
-
-    
-    目前流行的單頁應用程式(SPA)大部分時間我是用node.js來做，但Rails也可以，只是做法不太一樣，這一篇先從最簡單的rails form做起。
-    
-
-    <p class="article-more-link">
-      
-      <a href="/2017/06/12/samePageForm/#more">展開全文</a>
-      
-    </p>
-  </div>
-  <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/ajax/">ajax</a><a href="/tags/Rails/">Rails</a><a href="/tags/javascript/">javascript</a>
-  </div>
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-	  	<span></span>
-      <a href="/2017/06/12/samePageForm/#disqus_thread" class="comments-count-link">Comments</a>
-	
-</div>
-
-</footer>
-
-
-</article>
-
-
-
-
-
-
-   
-<article class="post-expand post" itemprop="articleBody"> 
-  <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2017/05/23/MacCheaper/" title="對Mac的誤解之一：Mac比PC貴？" itemprop="url">對Mac的誤解之一：Mac比PC貴？</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="Josh Hu" target="_blank" itemprop="author">Josh Hu</a>
-		
-  <p class="article-time">
-    <time datetime="2017-05-22T16:34:10.000Z" itemprop="datePublished"> 發表日期 2017-05-23</time> | 
-     <time datetime="2017-05-25T15:36:22.000Z" itemprop="dateUpdated"> 更新日期 2017-05-25</time>
-    
-  </p>
-</header>
-
-  <div class="article-content">
-    
-    <img style="float:right; max-width:300px; max-height:300px;" src="http://josh.hu/2017/05/23/MacCheaper/macpcback.jpg">
-    
-
-    
-    Mac比PC貴嗎？這是很多人對Mac的第一印象，覺得用同樣的錢買PC，可以得到更好的硬體，本文就為你打破這個迷思。
-    
-
-    <p class="article-more-link">
-      
-      <a href="/2017/05/23/MacCheaper/#more">展開全文</a>
-      
-    </p>
-  </div>
-  <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/Mac/">Mac</a><a href="/tags/Linux/">Linux</a><a href="/tags/PC/">PC</a><a href="/tags/Windows/">Windows</a>
-  </div>
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-	  	<span></span>
-      <a href="/2017/05/23/MacCheaper/#disqus_thread" class="comments-count-link">Comments</a>
-	
-</div>
-
-</footer>
-
-
-</article>
-
-
-
-
-
-
-   
-<article class="post-expand post" itemprop="articleBody"> 
-  <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2017/05/22/ComputerHardware/" title="電腦的選擇(硬體篇)" itemprop="url">電腦的選擇(硬體篇)</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="Josh Hu" target="_blank" itemprop="author">Josh Hu</a>
-		
-  <p class="article-time">
-    <time datetime="2017-05-22T04:40:48.000Z" itemprop="datePublished"> 發表日期 2017-05-22</time> | 
-     <time datetime="2017-05-25T16:25:11.000Z" itemprop="dateUpdated"> 更新日期 2017-05-26</time>
-    
-  </p>
-</header>
-
-  <div class="article-content">
-    
-    <img style="float:right; max-width:300px; max-height:300px;" src="http://josh.hu/2017/05/22/ComputerHardware/3.jpg">
-    
-
-    
-    <p>TL;DR:</p>
-<ul>
-<li>你需要至少兩台實體機(開發機和伺服器)和一台雲端主機</li>
-<li>開發機用筆電，伺服器用筆電或桌機都行  </li>
-<li>開發機：16GB記憶體、多核心CPU、三螢幕</li>
-<li>伺服器：16GB記憶體、多核心CPU</li>
-<li>雲端主機用Google Compute Engine或阿里雲，<strong> 不要用Heroku </strong></li>
-<li>預算夠可再組一台NAS機(RAID1)備份資料(12GB記憶體，雙核心CPU, 3TB RAID1)
-    
-
-    <p class="article-more-link">
-      
-      <a href="/2017/05/22/ComputerHardware/#more">展開全文</a>
-      
-    </p>
-  </div>
-  <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/Mac/">Mac</a><a href="/tags/Linux/">Linux</a><a href="/tags/ssh/">ssh</a>
-  </div>
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-	  	<span></span>
-      <a href="/2017/05/22/ComputerHardware/#disqus_thread" class="comments-count-link">Comments</a>
-	
-</div>
-
-</footer>
-
-
-</article>
-
-
-
-
-
-
-   
-<article class="post-expand post" itemprop="articleBody"> 
-  <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2017/05/18/untitled-1495120237176/" title="Windows？Mac？Linux？我要用什麼電腦？" itemprop="url">Windows？Mac？Linux？我要用什麼電腦？</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="Josh Hu" target="_blank" itemprop="author">Josh Hu</a>
-		
-  <p class="article-time">
-    <time datetime="2017-05-17T16:36:44.000Z" itemprop="datePublished"> 發表日期 2017-05-18</time> | 
-     <time datetime="2017-05-20T08:57:11.000Z" itemprop="dateUpdated"> 更新日期 2017-05-20</time>
-    
-  </p>
-</header>
-
-  <div class="article-content">
-    
-
-    
-    <h3 id="TL-DR"><a href="#TL-DR" class="headerlink" title="TL;DR:"></a>TL;DR:</h3><p>第一志願選擇MacBook Pro，第二志願選擇一般筆電裝Linux Mint</p>
-<h2 id="用什麼電腦重要嗎？"><a href="#用什麼電腦重要嗎？" class="headerlink" title="用什麼電腦重要嗎？"></a>用什麼電腦重要嗎？</h2><p>一個專業IT人的電腦重要嗎？好像沒人認真討論過這個問題，似乎從小就用Windows，也習慣在Windows上做所有的事情，當一切都這麼理所當然時，我卻必須在這邊鄭重的說：</p>
-<p> <strong>要成為專業的IT高手，儘早離開Windows！</strong>。</p>
-<p>有這麼嚴重嗎？下面是我的說明：</p>
-    
-
-    <p class="article-more-link">
-      
-      <a href="/2017/05/18/untitled-1495120237176/#more">展開全文</a>
-      
-    </p>
-  </div>
-  <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-	  	<span></span>
-      <a href="/2017/05/18/untitled-1495120237176/#disqus_thread" class="comments-count-link">Comments</a>
-	
-</div>
-
-</footer>
-
-
-</article>
-
-
-
-
-
-
-   
-<article class="post-expand post" itemprop="articleBody"> 
-  <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2017/05/18/untitled-1495038454953/" title="重作博主" itemprop="url">重作博主</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="Josh Hu" target="_blank" itemprop="author">Josh Hu</a>
-		
-  <p class="article-time">
-    <time datetime="2017-05-17T16:27:34.000Z" itemprop="datePublished"> 發表日期 2017-05-18</time> | 
-     <time datetime="2017-05-24T09:11:37.000Z" itemprop="dateUpdated"> 更新日期 2017-05-24</time>
-    
-  </p>
-</header>
-
-  <div class="article-content">
-    
-
-    
-    <p>TL;DR: 分享Google、FB、Yahoo!頂尖工程師的馬步及思路</p>
-<h2 id="重作博主"><a href="#重作博主" class="headerlink" title="重作博主"></a>重作博主</h2><p>這次重新寫博，花了五年時間積累，還是想和大家分享技術之路，也請大家繼續指教。</p>
-<h3 id="虛擬先生的中斷"><a href="#虛擬先生的中斷" class="headerlink" title="虛擬先生的中斷"></a>虛擬先生的中斷</h3><p>我在2011年寫了一本VMware的書的前後，也開了一個blog叫做「虛擬先生」。中間記錄了許多和VMware相關的知識。當時除了記錄使用的過程之外，也想讓讀者和我之間有一個溝通的管道。「虛擬先生」使用的是標準的Wordpress，也租了雲端主機安裝，算是第一次寫blog。</p>
-    
-
-    <p class="article-more-link">
-      
-      <a href="/2017/05/18/untitled-1495038454953/#more">展開全文</a>
-      
-    </p>
-  </div>
-  <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-	  	<span></span>
-      <a href="/2017/05/18/untitled-1495038454953/#disqus_thread" class="comments-count-link">Comments</a>
-	
-</div>
-
-</footer>
-
-
-</article>
-
-
-
-
-
-
-
-</div>
-<script id="dsq-count-scr" src="//joshhu.disqus.com/count.js" async></script>
-
-      <div class="openaside"><a class="navbutton" href="#" title="顯示側邊欄"></a></div>
-
-<div id="asidepart">
-<div class="closeaside"><a class="closebutton" href="#" title="隱藏側邊欄"></a></div>
-<aside class="clearfix">
-
-  
-
-  
-<div class="tagslist">
-	<p class="asidetitle">標籤</p>
-		<ul class="clearfix">
-		
-			
-				<li><a href="/tags/ajax/" title="ajax">ajax<sup>4</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Rails/" title="Rails">Rails<sup>4</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/javascript/" title="javascript">javascript<sup>4</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Mac/" title="Mac">Mac<sup>2</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Linux/" title="Linux">Linux<sup>2</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/ssh/" title="ssh">ssh<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/PC/" title="PC">PC<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Windows/" title="Windows">Windows<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/json/" title="json">json<sup>1</sup></a></li>
-			
-		
-		</ul>
-</div>
-
-
-  <div class="linkslist">
-  <p class="asidetitle">我的連結</p>
-    <ul>
-        
-          <li>
-            
-            	<a href="http://wuchong.me" target="_blank" title="Jark&#39;s Blog">Jark&#39;s Blog</a>
-            
-          </li>
-        
-    </ul>
-</div>
-
-  
-
-
-  <div class="rsspart">
-	<a href="/atom.xml" target="_blank" title="rss">RSS 訂閱</a>
-</div>
-
-
-  <div class="weiboshow">
-  <p class="asidetitle">新浪微博</p>
-    <iframe width="100%" height="119" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=119&fansRow=2&ptype=1&speed=0&skin=9&isTitle=1&noborder=1&isWeibo=0&isFans=0&uid=null&verifier=b3593ceb&dpc=1"></iframe>
-</div>
-
-
-  
-  <div class="tagcloudlist">
-    <p class="asidetitle">標籤雲</p>
-    <div class="tagcloudlist clearfix">
-      <a href="/tags/Linux/" style="font-size: 15px;">Linux</a> <a href="/tags/Mac/" style="font-size: 15px;">Mac</a> <a href="/tags/PC/" style="font-size: 10px;">PC</a> <a href="/tags/Rails/" style="font-size: 20px;">Rails</a> <a href="/tags/Windows/" style="font-size: 10px;">Windows</a> <a href="/tags/ajax/" style="font-size: 20px;">ajax</a> <a href="/tags/javascript/" style="font-size: 20px;">javascript</a> <a href="/tags/json/" style="font-size: 10px;">json</a> <a href="/tags/ssh/" style="font-size: 10px;">ssh</a>
+  <button class="menu-toggle" id="menuToggle" aria-label="menu">☰</button>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <div class="hero-tag reveal"><span class="pulse"></span>AVAILABLE FOR ENTERPRISE AI WORKSHOPS · 2026</div>
+      <p class="hero-name-en reveal reveal-delay-1">Josh Hu · 胡嘉璽</p>
+      <h1 class="hero-title reveal reveal-delay-1">
+        讓 AI <span class="grad">真正落地</span><br />您的企業
+      </h1>
+      <p class="hero-sub reveal reveal-delay-2">
+        AI 應用專家・暢銷書作家・企業 AI 導入顧問。
+      </p>
+      <div class="typer reveal reveal-delay-3">
+        <span id="typed"></span><span class="cursor"></span>
+      </div>
+      <div class="hero-ctas reveal reveal-delay-4">
+        <a href="#courses" class="btn btn-primary">
+          探索企業 AI 課程
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#books" class="btn btn-ghost">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2zM22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+          查看百本著作
+        </a>
+      </div>
+    </div>
+
+    <div class="avatar-wrap reveal reveal-delay-2">
+      <div class="avatar-orbit-2"></div>
+      <div class="avatar-orbit"></div>
+      <div class="avatar">
+        <div class="avatar-inner">
+          <img class="avatar-photo" src="profile.jpg" alt="胡嘉璽 Josh Hu" />
+        </div>
+        <div class="avatar-tag">// AI_EXPERT.online</div>
+      </div>
     </div>
   </div>
+</section>
 
+<!-- ABOUT / STATS -->
+<section id="about">
+  <div class="container">
+    <div class="reveal"><span class="sec-tag">// 01 · ABOUT ME</span></div>
+    <h2 class="sec-title reveal">當技術走得比想像快，<br /><span class="grad">企業需要一位帶路的人。</span></h2>
+    <p class="sec-desc reveal">我是胡嘉璽，深耕資訊科技 35 年，從虛擬化、雲端到 AI 應用，著作上百本，並於企業及大專院校教授 AI 實戰課程，協助數十家企業完成 AI 導入。</p>
 
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <p>從 <span class="hl">VMware vSphere</span> 的伺服器虛擬化，到 <span class="hl">PyTorch、LLM、Agentic AI</span> 的全棧開發；從 <strong>初學者教材</strong> 到 <strong>企業級實戰指南</strong> — 我相信「<span class="hl">把難事說清楚</span>」是技術人最重要的能力。</p>
+        <p>近三年我把火力集中在 <strong>生成式 AI 與 Vibe Coding 工作流</strong>，著有《Vibe Coding CLI 頂級開發》、《Coding Agent 大神 - Google Antigravity 最強實戰指南》、《Cursor 教戰手冊》等熱門著作，並協助科技、金融、製造、零售業導入 Claude Code、Cursor 與企業 AI Agent。</p>
+        <p>我的信念很簡單：<span class="hl">AI 不是炫技，是讓每位員工省下三小時、讓每筆決策快十倍。</span></p>
+      </div>
 
-</aside>
-</div>
-
+      <div class="skills-card reveal reveal-delay-2">
+        <h3>Tech Stack & Expertise</h3>
+        <div class="skill-tags">
+          <span class="skill-tag">Claude Code</span>
+          <span class="skill-tag">Cursor</span>
+          <span class="skill-tag">OpenClaw</span>
+          <span class="skill-tag">Google Antigravity</span>
+          <span class="skill-tag">PyTorch</span>
+          <span class="skill-tag">LLM Fine-tuning</span>
+          <span class="skill-tag">RAG / Vector DB</span>
+          <span class="skill-tag">AI Agent</span>
+          <span class="skill-tag">Mermaid</span>
+          <span class="skill-tag">DGX Spark</span>
+          <span class="skill-tag">CUDA</span>
+          <span class="skill-tag">Docker / Podman</span>
+          <span class="skill-tag">企業 AI 戰略</span>
+          <span class="skill-tag">AI 治理 & 安全</span>
+        </div>
+      </div>
     </div>
-    <footer><div id="footer" >
-	
-	<div class="line">
-		<span></span>
-		<div class="author"></div>
-	</div>
-	
-	
-	<section class="info">
-		<p> Josh Hu，研究領域為虛擬化, 大數據、人工智慧及機器學習 <br/>
-			使用的語言為Ruby, Python, Nodejs, Scala</p>
-	</section>
-	 
-	<div class="social-font" class="clearfix">
-		
-		<a href="http://weibo.com/2176287895" target="_blank" class="icon-weibo" title="微博"></a>
-		
-		
-		<a href="https://github.com/joshhu" target="_blank" class="icon-github" title="github"></a>
-		
-		
-		
-		<a href="https://twitter.com/joshhu" target="_blank" class="icon-twitter" title="twitter"></a>
-		
-		
-		
-		
-		
-		
-		
-		<a href="mailto:joshhu.usa@gmail.com" target="_blank" class="icon-email" title="Email Me"></a>
-		
-	</div>
-			
-		
 
-		<p class="copyright">
-		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2017 
-		
-		<a href="/about" target="_blank" title="Josh Hu">Josh Hu</a>
-		
-		
-		</p>
-</div>
+    <div class="stats">
+      <div class="stat reveal">
+        <div class="stat-num"><span class="counter" data-target="100" data-suffix="+">0</span></div>
+        <div class="stat-label">本暢銷著作</div>
+        <div class="stat-icon">📚</div>
+      </div>
+      <div class="stat reveal reveal-delay-1">
+        <div class="stat-num"><span class="counter" data-target="500" data-suffix="+">0</span></div>
+        <div class="stat-label">場企業內訓 / 演講</div>
+        <div class="stat-icon">🎤</div>
+      </div>
+      <div class="stat reveal reveal-delay-2">
+        <div class="stat-num"><span class="counter" data-target="20000" data-suffix="+">0</span></div>
+        <div class="stat-label">名學員受益</div>
+        <div class="stat-icon">🎓</div>
+      </div>
+      <div class="stat reveal reveal-delay-3">
+        <div class="stat-num"><span class="counter" data-target="35" data-suffix="年">0</span></div>
+        <div class="stat-label">資訊科技經驗</div>
+        <div class="stat-icon">⚡</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BOOKS -->
+<section id="books">
+  <div class="container">
+    <div class="reveal"><span class="sec-tag">// 02 · PUBLICATIONS</span></div>
+    <h2 class="sec-title reveal">用文字傳承<br /><span class="grad">最前沿的 AI 技術</span></h2>
+    <div class="author-badge reveal">
+      <img src="profile.jpg" alt="胡嘉璽 Josh Hu" />
+      <div class="meta">
+        <span class="label">// AUTHOR</span>
+        <span class="name">胡嘉璽 Josh Hu</span>
+      </div>
+    </div>
+    <p class="sec-desc reveal">從生成式 AI 到 Coding Agent，從基礎理論到企業實戰 — 我的著作涵蓋當代 AI 工程師最需要的核心能力。</p>
+
+    <div class="books">
+      <a class="book reveal" data-tilt href="https://www.books.com.tw/products/0011037086" target="_blank" rel="noopener">
+        <div class="book-inner">
+          <div class="book-no">#001</div>
+          <div class="book-cover"><img src="covers/1.jpg" alt="Vibe Coding CLI 頂級開發 - Claude Code 前瞻菁英育成手冊" loading="lazy" /></div>
+          <h3 class="book-title">Vibe Coding CLI 頂級開發</h3>
+          <p class="book-desc">Claude Code 前瞻菁英育成手冊，CLI Agent 工作流完整解析。</p>
+          <span class="book-tag">Claude Code · 暢銷</span>
+        </div>
+      </a>
+
+      <a class="book reveal reveal-delay-1" data-tilt href="https://www.books.com.tw/products/0011049631" target="_blank" rel="noopener">
+        <div class="book-inner">
+          <div class="book-no">#002</div>
+          <div class="book-cover"><img src="covers/2.jpg" alt="Coding Agent 大神 - Google Antigravity 最強實戰指南" loading="lazy" /></div>
+          <h3 class="book-title">Coding Agent 大神</h3>
+          <p class="book-desc">Google Antigravity 最強實戰指南，掌握下一代 AI Coding Agent。</p>
+          <span class="book-tag">Antigravity · 新書</span>
+        </div>
+      </a>
+
+      <a class="book reveal reveal-delay-2" data-tilt href="https://www.books.com.tw/products/0011031491" target="_blank" rel="noopener">
+        <div class="book-inner">
+          <div class="book-no">#003</div>
+          <div class="book-cover"><img src="covers/3.jpg" alt="Vibe Coding：Cursor 教戰手冊" loading="lazy" /></div>
+          <h3 class="book-title">Vibe Coding：Cursor 教戰手冊</h3>
+          <p class="book-desc">從零到精通 Cursor，建立你的 AI 配對程式設計工作流。</p>
+          <span class="book-tag">Cursor · 暢銷</span>
+        </div>
+      </a>
+
+      <a class="book reveal reveal-delay-3" data-tilt href="https://www.books.com.tw/products/0011047060" target="_blank" rel="noopener">
+        <div class="book-inner">
+          <div class="book-no">#004</div>
+          <div class="book-cover"><img src="covers/4.jpg" alt="玩爆你的龍蝦 - 最強 OpenClaw 安裝設定應用實機演練" loading="lazy" /></div>
+          <h3 class="book-title">玩爆你的龍蝦</h3>
+          <p class="book-desc">最強 OpenClaw 安裝設定應用實機演練，開源 Coding Agent 指南。</p>
+          <span class="book-tag">OpenClaw · 開源</span>
+        </div>
+      </a>
+
+      <a class="book reveal" data-tilt href="https://www.books.com.tw/products/0011047042" target="_blank" rel="noopener">
+        <div class="book-inner">
+          <div class="book-no">#005</div>
+          <div class="book-cover"><img src="covers/5.jpg" alt="Sutskever 大神推薦 - 建構AI世界最重要的30篇論文：用PyTorch完整實作" loading="lazy" /></div>
+          <h3 class="book-title">AI 世界最重要的 30 篇論文</h3>
+          <p class="book-desc">Sutskever 大神推薦，用 PyTorch 親手實作 30 篇 AI 經典論文。</p>
+          <span class="book-tag">PyTorch · 進階</span>
+        </div>
+      </a>
+
+      <a class="book reveal reveal-delay-1" data-tilt href="https://www.books.com.tw/products/0011049249" target="_blank" rel="noopener">
+        <div class="book-inner">
+          <div class="book-no">#006</div>
+          <div class="book-cover"><img src="covers/6.jpg" alt="勝過 AI 的技能 - 玩熟 Mermaid 做出最專業的圖表" loading="lazy" /></div>
+          <h3 class="book-title">勝過 AI 的技能：Mermaid</h3>
+          <p class="book-desc">在 AI 時代用 Mermaid 做出最專業、最易維護的視覺化圖表。</p>
+          <span class="book-tag">Mermaid · 工具</span>
+        </div>
+      </a>
+
+      <a class="book reveal reveal-delay-2" data-tilt href="https://www.books.com.tw/products/0011051781" target="_blank" rel="noopener">
+        <div class="book-inner">
+          <div class="book-no">#007</div>
+          <div class="book-cover"><img src="covers/7.jpg" alt="塞爆 128G GPU 記憶體，Nvidia DGX Spark" loading="lazy" /></div>
+          <h3 class="book-title">Nvidia DGX Spark 實戰</h3>
+          <p class="book-desc">在地端跑 70B 級大模型，DGX Spark 統一記憶體完整解析。</p>
+          <span class="book-tag">DGX · 硬體</span>
+        </div>
+      </a>
+
+      <a class="book reveal reveal-delay-3" data-tilt href="https://search.books.com.tw/search/query/key/%E8%83%A1%E5%98%89%E7%92%BD/adv_author/1/" target="_blank" rel="noopener">
+        <div class="book-inner">
+          <div class="book-no">ALL</div>
+          <div class="book-cover placeholder" style="background: linear-gradient(135deg, #581c87, #c026d3 60%, #f472b6);">
+            <div class="book-cover-text">還有<br /><span style="font-size:2.2em;display:block;margin:6px 0;background:linear-gradient(180deg,#fff,#fde68a);-webkit-background-clip:text;background-clip:text;color:transparent;">90+</span>本著作</div>
+          </div>
+          <h3 class="book-title">百本著作・持續更新中</h3>
+          <p class="book-desc">從 SSD、WordPress、VMware 到 AI 全棧，總有一本您需要的。</p>
+          <span class="book-tag">查看全部 · 博客來 →</span>
+        </div>
+      </a>
+    </div>
+
+    <div class="more-books reveal">
+      <div class="num">100+</div>
+      <p>本著作・橫跨 IT 基礎建設、虛擬化、雲端、生成式 AI、Coding Agent</p>
+    </div>
+  </div>
+</section>
+
+<!-- COURSES -->
+<section id="courses">
+  <div class="container">
+    <div class="reveal"><span class="sec-tag">// 03 · ENTERPRISE AI COURSES</span></div>
+    <h2 class="sec-title reveal">企業 AI 導入<br /><span class="grad">完整培訓地圖</span></h2>
+    <p class="sec-desc reveal">不是教您「什麼是 ChatGPT」— 而是帶您的團隊真正把 AI 用進日常工作流，產出可衡量的商業價值。</p>
+
+    <div class="courses">
+      <div class="course reveal">
+        <div class="course-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </div>
+        <h3>AI 戰略規劃工作坊</h3>
+        <p>專為高階主管設計，盤點企業流程中的 AI 切入點，建立 12 個月落地藍圖。</p>
+        <div class="course-meta"><span>1-2 天</span><span>C-Level</span><span>策略級</span></div>
+      </div>
+
+      <div class="course reveal reveal-delay-1">
+        <div class="course-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+        </div>
+        <h3>Vibe Coding 開發者實戰營</h3>
+        <p>讓工程團隊掌握 Claude Code、Cursor、Antigravity 三大 Coding Agent，生產力提升 3-5 倍。</p>
+        <div class="course-meta"><span>3-5 天</span><span>RD 團隊</span><span>實作密集</span></div>
+      </div>
+
+      <div class="course reveal reveal-delay-2">
+        <div class="course-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+        </div>
+        <h3>Claude Code 企業導入</h3>
+        <p>從權限治理、Hooks、MCP、Plugin 到內部知識整合，建立屬於企業的 Claude Code 工作環境。</p>
+        <div class="course-meta"><span>2-3 天</span><span>RD + IT</span><span>企業客製</span></div>
+      </div>
+
+      <div class="course reveal">
+        <div class="course-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09a1.65 1.65 0 0 0-1-1.51 1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09a1.65 1.65 0 0 0 1.51-1 1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+        </div>
+        <h3>客製化 AI Agent 開發</h3>
+        <p>協助企業打造專屬 Agent — 客服、銷售、流程自動化、文件分析，全鏈路落地。</p>
+        <div class="course-meta"><span>5-10 天</span><span>顧問 + 開發</span><span>POC 交付</span></div>
+      </div>
+
+      <div class="course reveal reveal-delay-1">
+        <div class="course-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+        </div>
+        <h3>企業 RAG 知識庫建置</h3>
+        <p>把分散的 SOP、技術文件、會議紀錄變成可問答的內部知識中樞，員工 5 秒找答案。</p>
+        <div class="course-meta"><span>2-4 週</span><span>專案制</span><span>地端可選</span></div>
+      </div>
+
+      <div class="course reveal reveal-delay-2">
+        <div class="course-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+        </div>
+        <h3>AI 安全與治理培訓</h3>
+        <p>資料外洩、Prompt Injection、合規審計 — 讓主管與員工同步建立 AI 風險意識。</p>
+        <div class="course-meta"><span>1-2 天</span><span>主管 + 員工</span><span>合規必修</span></div>
+      </div>
+    </div>
+
+    <h3 style="text-align:center;margin-top:80px;font-size:1.6rem;font-weight:700;" class="reveal">企業合作 4 步驟</h3>
+    <div class="process">
+      <div class="step reveal"><div class="step-num">01</div><h4>需求盤點</h4><p>30 分鐘免費諮詢，深度了解企業流程痛點。</p></div>
+      <div class="step reveal reveal-delay-1"><div class="step-num">02</div><h4>方案設計</h4><p>客製化培訓地圖、POC 範圍與 KPI 指標。</p></div>
+      <div class="step reveal reveal-delay-2"><div class="step-num">03</div><h4>實戰交付</h4><p>講師親授 + 工程團隊陪跑，產出可上線成果。</p></div>
+      <div class="step reveal reveal-delay-3"><div class="step-num">04</div><h4>持續優化</h4><p>3 個月追蹤輔導，確保 AI 真正融入日常。</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY ME -->
+<section id="why">
+  <div class="container">
+    <div class="reveal"><span class="sec-tag">// 04 · WHY CHOOSE ME</span></div>
+    <h2 class="sec-title reveal">為什麼<br /><span class="grad">企業選擇胡老師？</span></h2>
+    <p class="sec-desc reveal">市面上 AI 講師很多，但能同時兼具技術深度、實戰經驗與教學能力的，屈指可數。</p>
+
+    <div class="why-grid">
+      <div class="why-card reveal">
+        <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <div><h3>百本著作為證的實戰派</h3><p>不是只會 PPT 的講師。每一本書都是把技術從 0 拆解到 1 的證明，您的團隊得到的是真本領。</p></div>
+      </div>
+
+      <div class="why-card reveal reveal-delay-1">
+        <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+        <div><h3>跟得上 AI 速度</h3><p>Claude Code、Antigravity、OpenClaw 上市三個月內就有書 — 您的企業不會學到過時的內容。</p></div>
+      </div>
+
+      <div class="why-card reveal reveal-delay-2">
+        <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
+        <div><h3>從硬體到應用的全棧視野</h3><p>能聊 GPU 記憶體調校、能寫 PyTorch、能設計 RAG、能談企業治理 — 一站滿足所有層級。</p></div>
+      </div>
+
+      <div class="why-card reveal reveal-delay-3">
+        <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
+        <div><h3>客製化而非套餐式</h3><p>每家企業的痛點不同。我們不賣標準課程，只賣為您量身訂作的 AI 落地方案。</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- QUOTE -->
+<section class="quote-section">
+  <div class="container">
+    <div class="quote reveal">
+      <p>AI 不會取代您的員工，<br /><span style="background: var(--grad-1); -webkit-background-clip: text; background-clip: text; color: transparent; font-weight:900;">但會用 AI 的員工會。</span></p>
+      <div class="author">— 胡嘉璽 / Josh Hu</div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-info">
+        <div class="reveal"><span class="sec-tag">// 05 · LET'S TALK</span></div>
+        <h2 class="sec-title reveal">準備好讓 AI<br /><span class="grad">為您工作了嗎？</span></h2>
+        <p class="sec-desc reveal" style="margin-bottom: 0;">無論是 30 分鐘諮詢、企業內訓邀約、書籍合作，歡迎隨時聯繫。我會在 24 小時內回覆。</p>
+
+        <div class="contact-channels">
+          <a class="channel reveal" href="https://www.facebook.com/profile.php?id=61579313407097" target="_blank" rel="noopener">
+            <div class="channel-icon">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z"/></svg>
+            </div>
+            <div>
+              <div class="channel-label">// FACEBOOK</div>
+              <div class="channel-value">胡嘉璽 Josh Hu 粉絲專頁</div>
+            </div>
+          </a>
+
+          <a class="channel reveal reveal-delay-1" href="mailto:joshhu.usa@gmail.com">
+            <div class="channel-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div>
+              <div class="channel-label">// EMAIL</div>
+              <div class="channel-value">joshhu.usa@gmail.com</div>
+            </div>
+          </a>
+
+          <a class="channel reveal reveal-delay-2" href="https://search.books.com.tw/search/query/key/%E8%83%A1%E5%98%89%E7%92%BD/adv_author/1/" target="_blank" rel="noopener">
+            <div class="channel-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2zM22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+            </div>
+            <div>
+              <div class="channel-label">// 博客來</div>
+              <div class="channel-value">查看完整著作清單</div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="contact-card reveal reveal-delay-2">
+        <h3>30 分鐘免費諮詢</h3>
+        <p>分享您的企業 AI 困境，我會給您具體的下一步建議。<br />無論最後是否合作，您都將帶走可立即落地的洞察。</p>
+        <a href="https://www.facebook.com/profile.php?id=61579313407097" target="_blank" rel="noopener" class="btn btn-primary" style="width:100%;justify-content:center;">
+          私訊預約諮詢
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+        <div style="margin-top: 24px; padding-top: 24px; border-top: 1px solid var(--border); display: flex; justify-content: space-around; font-family: 'JetBrains Mono', monospace; font-size: 0.82rem; color: var(--text-mute);">
+          <div><div style="color:var(--primary);font-size:1.4rem;font-weight:900;">24h</div>回覆</div>
+          <div><div style="color:var(--primary);font-size:1.4rem;font-weight:900;">100%</div>客製化</div>
+          <div><div style="color:var(--primary);font-size:1.4rem;font-weight:900;">∞</div>後續支援</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>© 2026 <span class="grad-text">胡嘉璽 Josh Hu</span> · All Rights Reserved</p>
+    <p style="margin-top: 8px; opacity: 0.7;">本網站由 Claude Code 協作打造，部署於 here.now</p>
+  </div>
 </footer>
-    <script src="/js/jquery-2.0.3.min.js"></script>
-<script src="/js/jquery.imagesloaded.min.js"></script>
-<script src="/js/gallery.js"></script>
-<script src="/js/jquery.qrcode-0.12.0.min.js"></script>
 
-<script type="text/javascript">
-$(document).ready(function(){ 
-  $('.navbar').click(function(){
-    $('header nav').toggleClass('shownav');
+<a href="#contact" class="float-cta" id="floatCta">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+  立即諮詢
+</a>
+
+<script>
+  // ===== 進度條 =====
+  const progress = document.getElementById('progress');
+  window.addEventListener('scroll', () => {
+    const h = document.documentElement;
+    const pct = (h.scrollTop / (h.scrollHeight - h.clientHeight)) * 100;
+    progress.style.width = pct + '%';
   });
-  var myWidth = 0;
-  function getSize(){
-    if( typeof( window.innerWidth ) == 'number' ) {
-      myWidth = window.innerWidth;
-    } else if( document.documentElement && document.documentElement.clientWidth) {
-      myWidth = document.documentElement.clientWidth;
-    };
-  };
-  var m = $('#main'),
-      a = $('#asidepart'),
-      c = $('.closeaside'),
-      o = $('.openaside');
-  c.click(function(){
-    a.addClass('fadeOut').css('display', 'none');
-    o.css('display', 'block').addClass('fadeIn');
-    m.addClass('moveMain');
+
+  // ===== Nav scrolled =====
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 50);
+    document.getElementById('floatCta').classList.toggle('visible', window.scrollY > 600);
   });
-  o.click(function(){
-    o.css('display', 'none').removeClass('beforeFadeIn');
-    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
-    m.removeClass('moveMain');
+
+  // ===== Mobile menu =====
+  document.getElementById('menuToggle').addEventListener('click', () => {
+    document.getElementById('navLinks').classList.toggle('open');
   });
-  $(window).scroll(function(){
-    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  document.querySelectorAll('#navLinks a').forEach(a => a.addEventListener('click', () => {
+    document.getElementById('navLinks').classList.remove('open');
+  }));
+
+  // ===== Cursor glow =====
+  const glow = document.getElementById('cursorGlow');
+  let glowX = window.innerWidth / 2, glowY = window.innerHeight / 2;
+  let targetX = glowX, targetY = glowY;
+  document.addEventListener('mousemove', e => { targetX = e.clientX; targetY = e.clientY; });
+  function animateGlow() {
+    glowX += (targetX - glowX) * 0.12;
+    glowY += (targetY - glowY) * 0.12;
+    glow.style.transform = `translate(${glowX}px, ${glowY}px) translate(-50%, -50%)`;
+    requestAnimationFrame(animateGlow);
+  }
+  animateGlow();
+
+  // ===== Particles =====
+  const canvas = document.getElementById('particles');
+  const ctx = canvas.getContext('2d');
+  let particles = [];
+  function resize() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+  }
+  resize(); window.addEventListener('resize', resize);
+  function initParticles() {
+    const count = Math.min(80, Math.floor(window.innerWidth / 20));
+    particles = Array.from({ length: count }, () => ({
+      x: Math.random() * canvas.width,
+      y: Math.random() * canvas.height,
+      vx: (Math.random() - 0.5) * 0.4,
+      vy: (Math.random() - 0.5) * 0.4,
+      r: Math.random() * 1.6 + 0.6,
+      hue: Math.random() > 0.5 ? 280 : 190
+    }));
+  }
+  initParticles();
+  function drawParticles() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    particles.forEach(p => {
+      p.x += p.vx; p.y += p.vy;
+      if (p.x < 0 || p.x > canvas.width) p.vx *= -1;
+      if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fillStyle = `hsla(${p.hue}, 90%, 70%, 0.7)`;
+      ctx.fill();
+    });
+    // connections
+    for (let i = 0; i < particles.length; i++) {
+      for (let j = i + 1; j < particles.length; j++) {
+        const dx = particles[i].x - particles[j].x;
+        const dy = particles[i].y - particles[j].y;
+        const d = Math.sqrt(dx * dx + dy * dy);
+        if (d < 130) {
+          ctx.beginPath();
+          ctx.moveTo(particles[i].x, particles[i].y);
+          ctx.lineTo(particles[j].x, particles[j].y);
+          ctx.strokeStyle = `hsla(260, 80%, 70%, ${(1 - d / 130) * 0.18})`;
+          ctx.lineWidth = 0.6;
+          ctx.stroke();
+        }
+      }
+    }
+    requestAnimationFrame(drawParticles);
+  }
+  drawParticles();
+
+  // ===== Typewriter =====
+  const phrases = [
+    '> 為企業導入 Claude Code 與 Cursor...',
+    '> 設計專屬 AI Agent，跑出商業價值...',
+    '> 讓您的團隊每天省下 3 小時...',
+    '> 把 AI 從 PPT 變成可落地的工作流...',
+    '> 著有百本，唯一目標：讓 AI 真的好用。'
+  ];
+  let phraseIdx = 0, charIdx = 0, deleting = false;
+  const typed = document.getElementById('typed');
+  function tick() {
+    const cur = phrases[phraseIdx];
+    if (!deleting) {
+      typed.textContent = cur.slice(0, ++charIdx);
+      if (charIdx === cur.length) { deleting = true; setTimeout(tick, 1800); return; }
+    } else {
+      typed.textContent = cur.slice(0, --charIdx);
+      if (charIdx === 0) { deleting = false; phraseIdx = (phraseIdx + 1) % phrases.length; }
+    }
+    setTimeout(tick, deleting ? 28 : 55);
+  }
+  tick();
+
+  // ===== Reveal on scroll =====
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(en => { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  // ===== Counter animation =====
+  const counters = document.querySelectorAll('.counter');
+  const countObserver = new IntersectionObserver((entries) => {
+    entries.forEach(en => {
+      if (en.isIntersecting) {
+        const el = en.target;
+        const target = parseInt(el.dataset.target, 10);
+        const suffix = el.dataset.suffix || '';
+        const duration = 1800;
+        const start = performance.now();
+        function step(now) {
+          const p = Math.min((now - start) / duration, 1);
+          const ease = 1 - Math.pow(1 - p, 3);
+          el.textContent = Math.floor(target * ease).toLocaleString() + suffix;
+          if (p < 1) requestAnimationFrame(step);
+        }
+        requestAnimationFrame(step);
+        countObserver.unobserve(el);
+      }
+    });
+  }, { threshold: 0.5 });
+  counters.forEach(c => countObserver.observe(c));
+
+  // ===== 3D tilt for books =====
+  document.querySelectorAll('[data-tilt]').forEach(el => {
+    const inner = el.querySelector('.book-inner');
+    el.addEventListener('mousemove', e => {
+      const r = el.getBoundingClientRect();
+      const x = (e.clientX - r.left) / r.width;
+      const y = (e.clientY - r.top) / r.height;
+      const rx = (y - 0.5) * -10;
+      const ry = (x - 0.5) * 10;
+      inner.style.transform = `translateY(-8px) rotateX(${rx}deg) rotateY(${ry}deg)`;
+      inner.style.setProperty('--mx', (x * 100) + '%');
+      inner.style.setProperty('--my', (y * 100) + '%');
+    });
+    el.addEventListener('mouseleave', () => {
+      inner.style.transform = '';
+    });
   });
-  
-  $(window).resize(function(){
-    getSize(); 
-    if (myWidth >= 1024) {
-      $('header nav').removeClass('shownav');
-    }else{
-      m.removeClass('moveMain');
-      a.css('display', 'block').removeClass('fadeOut');
-      o.css('display', 'none');
-        
+
+  // ===== Konami easter egg =====
+  let kc = []; const seq = ['ArrowUp','ArrowUp','ArrowDown','ArrowDown','ArrowLeft','ArrowRight','ArrowLeft','ArrowRight'];
+  document.addEventListener('keydown', e => {
+    kc.push(e.key); kc = kc.slice(-seq.length);
+    if (kc.join() === seq.join()) {
+      document.body.style.transition = 'filter 0.6s';
+      document.body.style.filter = 'hue-rotate(180deg)';
+      setTimeout(() => document.body.style.filter = '', 3000);
     }
   });
-});
 </script>
 
-
-
-
-
-
-
-
-
-
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
-<script src="/fancybox/jquery.fancybox.pack.js"></script>
-<script type="text/javascript">
-$(document).ready(function(){ 
-  $('.article-content').each(function(i){
-    $(this).find('img').each(function(){
-      if ($(this).parent().hasClass('fancybox')) return;
-      var alt = this.alt;
-      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
-      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
-    });
-    $(this).find('.fancybox').each(function(){
-      $(this).attr('rel', 'article' + i);
-    });
-  });
-  if($.fancybox){
-    $('.fancybox').fancybox();
-  }
-}); 
-</script>
-
-
-
-<!-- Analytics Begin -->
-
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-              ga('create', 'UA-99939082-1', 'auto');
-                ga('send', 'pageview');
-
-</script>
-
-
-
-<script>
-  var _hmt = _hmt || [];
-  (function() {
-    var hm = document.createElement("script");
-    hm.src = "//hm.baidu.com/hm.js?e6d1f421bbc9962127a50488f9ed37d1";
-    var s = document.getElementsByTagName("script")[0]; 
-    s.parentNode.insertBefore(hm, s);
-  })();
-</script>
-
-
-
-
-<!-- Analytics End -->
-
-<!-- Totop Begin -->
-
-	<div id="totop">
-	<a title="返回頂部"><img src="/img/scrollup.png"/></a>
-	</div>
-	<script src="/js/totop.js"></script>
-
-<!-- Totop End -->
-
-<!-- MathJax Begin -->
-<!-- mathjax config similar to math.stackexchange -->
-
-
-<!-- MathJax End -->
-
-<!-- Tiny_search Begin -->
-
-<!-- Tiny_search End -->
-
-  </body>
- </html>
-
+</body>
+</html>
