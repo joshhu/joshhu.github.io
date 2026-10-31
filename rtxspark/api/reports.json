@@ -1,16 +1,4 @@
 {
   "license": "CC-BY-4.0",
-  "reports": [
-    {
-      "machine": "asus-proart-p16",
-      "software": "Blender",
-      "version": "0.0-pipeline-test",
-      "status": "native",
-      "notes": "Pipeline test by the maintainer. Not a real result.",
-      "appId": "blender",
-      "issue": 3,
-      "reportedAt": "2026-10-31",
-      "approvedAt": "2026-10-31"
-    }
-  ]
+  "reports": []
 }
