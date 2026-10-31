@@ -1,0 +1,2333 @@
+{
+  "license": "CC-BY-4.0",
+  "updated": "2026-10-31",
+  "apps": [
+    {
+      "id": "7-zip",
+      "name": "7-Zip",
+      "vendor": "Igor Pavlov",
+      "category": "utility",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "high",
+      "version": "26.05",
+      "homepage": "https://www.7-zip.org",
+      "evidence": [
+        {
+          "url": "https://www.7-zip.org/download.html",
+          "title": "7-Zip downloads",
+          "type": "vendor",
+          "checked": "2026-10-31"
+        }
+      ],
+      "addedAt": "2026-10-31",
+      "verifiedAt": "2026-10-31",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "adobe-acrobat",
+      "name": "Adobe Acrobat",
+      "vendor": "Adobe",
+      "category": "adobe",
+      "status": "prism",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "high",
+      "homepage": "https://www.adobe.com/acrobat.html",
+      "aliases": [
+        "Acrobat Reader",
+        "PDF"
+      ],
+      "caveats": [
+        {
+          "en": "No Arm64 build. Test deployment first: installing the 32-bit edition on Arm needed a fix as recently as August 2026.",
+          "zh-TW": "沒有 Arm64 版本。部署前請先測試：32 位元版在 Arm 上的安裝問題，2026 年 8 月才有修正紀錄。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://helpx.adobe.com/download-install/apps/system-requirements/apps-compatibility-copilot.html",
+          "title": "Adobe: app compatibility on Copilot+ PCs",
+          "type": "vendor",
+          "checked": "2026-10-31"
+        }
+      ],
+      "addedAt": "2026-10-31",
+      "verifiedAt": "2026-10-31",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "adobe-after-effects",
+      "name": "Adobe After Effects",
+      "vendor": "Adobe",
+      "category": "adobe",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "high",
+      "version": "26.0+",
+      "homepage": "https://www.adobe.com/products/aftereffects.html",
+      "aliases": [
+        "AE"
+      ],
+      "caveats": [
+        {
+          "en": "x64 plug-ins do not load. MKV import and some hardware-accelerated exports are still missing.",
+          "zh-TW": "x64 外掛無法載入，MKV 匯入和部分硬體加速匯出仍未支援。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://helpx.adobe.com/x-productkb/multi/windows-arm-support.html",
+          "title": "Adobe: Windows on Arm support",
+          "type": "vendor",
+          "checked": "2026-10-31"
+        }
+      ],
+      "addedAt": "2026-10-31",
+      "verifiedAt": "2026-10-31",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "adobe-illustrator",
+      "name": "Adobe Illustrator",
+      "vendor": "Adobe",
+      "category": "adobe",
+      "status": "prism",
+      "scope": "windows-on-arm",
+      "maturity": "beta",
+      "confidence": "medium",
+      "version": "28.7 beta+",
+      "homepage": "https://www.adobe.com/products/illustrator.html",
+      "aliases": [
+        "AI"
+      ],
+      "caveats": [
+        {
+          "en": "Only the beta runs on Arm. A community expert says the beta has since gone native, but Adobe hasn't confirmed this.",
+          "zh-TW": "Arm 上只有 Beta 版可用。社群專家稱 Beta 已改為原生，但 Adobe 尚未證實。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://helpx.adobe.com/download-install/apps/system-requirements/apps-compatibility-copilot.html",
+          "title": "Adobe: app compatibility on Copilot+ PCs",
+          "type": "vendor",
+          "checked": "2026-10-31"
+        }
+      ],
+      "addedAt": "2026-10-31",
+      "verifiedAt": "2026-10-31",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "adobe-indesign",
+      "name": "Adobe InDesign",
+      "vendor": "Adobe",
+      "category": "adobe",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "beta",
+      "confidence": "medium",
+      "version": "22.0 beta+",
+      "homepage": "https://www.adobe.com/products/indesign.html",
+      "aliases": [
+        "ID"
+      ],
+      "caveats": [
+        {
+          "en": "Beta only. Adobe's stated minimum requirements name Snapdragon only.",
+          "zh-TW": "僅限 Beta 版，Adobe 的最低需求只列 Snapdragon。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://helpx.adobe.com/indesign/desktop/get-started/system-and-product-info/support-for-windows-arm.html",
+          "title": "Adobe: InDesign support for Windows on Arm",
+          "type": "vendor",
+          "checked": "2026-10-31"
+        }
+      ],
+      "addedAt": "2026-10-31",
+      "verifiedAt": "2026-10-31",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "adobe-lightroom",
+      "name": "Adobe Lightroom",
+      "vendor": "Adobe",
+      "category": "adobe",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "medium",
+      "homepage": "https://www.adobe.com/products/photoshop-lightroom.html",
+      "aliases": [
+        "LR"
+      ],
+      "caveats": [
+        {
+          "en": "Adobe's pages disagree: its compatibility page says native, while another requirements page lists only Intel and AMD.",
+          "zh-TW": "Adobe 的頁面說法不一：相容性頁面標示原生，另一份系統需求頁只列 Intel 與 AMD。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://helpx.adobe.com/download-install/apps/system-requirements/apps-compatibility-copilot.html",
+          "title": "Adobe: app compatibility on Copilot+ PCs",
+          "type": "vendor",
+          "checked": "2026-10-31"
+        }
+      ],
+      "addedAt": "2026-10-31",
+      "verifiedAt": "2026-10-31",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "adobe-lightroom-classic",
+      "name": "Adobe Lightroom Classic",
+      "vendor": "Adobe",
+      "category": "adobe",
+      "status": "prism",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "high",
+      "homepage": "https://www.adobe.com/products/photoshop-lightroom-classic.html",
+      "aliases": [
+        "LrC"
+      ],
+      "evidence": [
+        {
+          "url": "https://helpx.adobe.com/lightroom-classic/desktop/introduction-to-lightroom-classic/system-requirements.html",
+          "title": "Adobe: Lightroom Classic system requirements",
+          "type": "vendor",
+          "checked": "2026-10-31"
+        }
+      ],
+      "addedAt": "2026-10-31",
+      "verifiedAt": "2026-10-31",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "adobe-photoshop",
+      "name": "Adobe Photoshop",
+      "vendor": "Adobe",
+      "category": "adobe",
+      "status": "native",
+      "scope": "rtx-spark",
+      "maturity": "beta",
+      "confidence": "high",
+      "homepage": "https://www.adobe.com/products/photoshop.html",
+      "aliases": [
+        "PS"
+      ],
+      "caveats": [
+        {
+          "en": "RTX Spark support is in the beta release at launch.",
+          "zh-TW": "RTX Spark 支援在上市時僅限 Beta 版。"
+        },
+        {
+          "en": "Adobe's last published feature-gap list on Arm dates from 2022, so current gaps are unconfirmed.",
+          "zh-TW": "Adobe 上次公布 Arm 功能缺口是 2022 年，目前缺口尚未確認。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://nvidianews.nvidia.com/news/nvidia-rtx-spark-pcs-available-today-a-new-beginning-for-windows-pcs",
+          "title": "NVIDIA: RTX Spark PCs available today",
+          "type": "vendor",
+          "checked": "2026-10-31"
+        }
+      ],
+      "addedAt": "2026-10-31",
+      "verifiedAt": "2026-10-31",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "adobe-premiere-pro",
+      "name": "Adobe Premiere Pro",
+      "vendor": "Adobe",
+      "category": "adobe",
+      "status": "native",
+      "scope": "rtx-spark",
+      "maturity": "beta",
+      "confidence": "high",
+      "version": "26.0+",
+      "homepage": "https://www.adobe.com/products/premiere.html",
+      "aliases": [
+        "Premiere",
+        "PR"
+      ],
+      "caveats": [
+        {
+          "en": "RTX Spark support is in the beta release.",
+          "zh-TW": "RTX Spark 支援在 Beta 版。"
+        },
+        {
+          "en": "x64 plug-ins do not load. MKV and several RAW video formats are still missing.",
+          "zh-TW": "x64 外掛無法載入，MKV 和多種 RAW 影片格式仍未支援。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.windowscentral.com/hardware/nvidia/rtx-spark-review-benchmarks-2026",
+          "title": "Windows Central: RTX Spark review",
+          "type": "review",
+          "checked": "2026-10-31"
+        },
+        {
+          "url": "https://helpx.adobe.com/x-productkb/multi/windows-arm-support.html",
+          "title": "Adobe: Windows on Arm support",
+          "type": "vendor",
+          "checked": "2026-10-31"
+        }
+      ],
+      "addedAt": "2026-10-31",
+      "verifiedAt": "2026-10-31",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "affinity",
+      "name": "Affinity",
+      "vendor": "Canva",
+      "category": "creative",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "high",
+      "homepage": "https://affinity.studio",
+      "aliases": [
+        "Affinity Photo",
+        "Affinity Designer"
+      ],
+      "evidence": [
+        {
+          "url": "https://affinity.studio/download",
+          "title": "Affinity downloads",
+          "type": "vendor",
+          "checked": "2026-10-31"
+        }
+      ],
+      "addedAt": "2026-10-31",
+      "verifiedAt": "2026-10-31",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "arc",
+      "name": "Arc",
+      "vendor": "The Browser Company",
+      "category": "browser",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "medium",
+      "version": "1.22.2+",
+      "homepage": "https://arc.net",
+      "caveats": [
+        {
+          "en": "Arc now receives Chromium updates only, and its maker recommends moving to Dia.",
+          "zh-TW": "Arc 現在只接收 Chromium 更新，開發商建議改用 Dia。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://learn.microsoft.com/microsoft-365/education/guide/1-windows/windows-arm",
+          "title": "Microsoft: Windows on Arm guide",
+          "type": "vendor",
+          "checked": "2026-10-31"
+        }
+      ],
+      "addedAt": "2026-10-31",
+      "verifiedAt": "2026-10-31",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "autocad",
+      "name": "Autodesk AutoCAD",
+      "vendor": "Autodesk",
+      "category": "creative",
+      "status": "prism",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "low",
+      "version": "x64 61.0.0",
+      "homepage": "https://www.autodesk.com/products/autocad",
+      "aliases": [
+        "AutoCAD"
+      ],
+      "caveats": [
+        {
+          "en": "Autodesk says Arm devices are not officially supported, even if the program installs and starts.",
+          "zh-TW": "Autodesk 表示 Arm 裝置不受官方支援，即使能安裝和啟動。"
+        },
+        {
+          "en": "Result comes from one catalog, not a test on RTX Spark.",
+          "zh-TW": "結果只來自單一資料庫，並非在 RTX Spark 實測。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://github.com/Linaro/works-on-woa/blob/staging/src/data/content/projects.json",
+          "title": "Linaro Works on WoA catalog",
+          "type": "aggregator",
+          "checked": "2026-10-31"
+        }
+      ],
+      "addedAt": "2026-10-31",
+      "verifiedAt": "2026-10-31",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "autodesk-fusion",
+      "name": "Autodesk Fusion",
+      "vendor": "Autodesk",
+      "category": "creative",
+      "status": "prism",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "low",
+      "version": "x64 2.0.17457",
+      "homepage": "https://www.autodesk.com/products/fusion-360",
+      "aliases": [
+        "Fusion 360"
+      ],
+      "caveats": [
+        {
+          "en": "Autodesk says Arm devices are not officially supported, even if the program installs and starts.",
+          "zh-TW": "Autodesk 表示 Arm 裝置不受官方支援，即使能安裝和啟動。"
+        },
+        {
+          "en": "Result comes from one catalog, not a test on RTX Spark.",
+          "zh-TW": "結果只來自單一資料庫，並非在 RTX Spark 實測。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://github.com/Linaro/works-on-woa/blob/staging/src/data/content/projects.json",
+          "title": "Linaro Works on WoA catalog",
+          "type": "aggregator",
+          "checked": "2026-10-31"
+        }
+      ],
+      "addedAt": "2026-10-31",
+      "verifiedAt": "2026-10-31",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "autodesk-maya",
+      "name": "Autodesk Maya",
+      "vendor": "Autodesk",
+      "category": "creative",
+      "status": "prism",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "low",
+      "version": "x64 2024.1",
+      "homepage": "https://www.autodesk.com/products/maya",
+      "aliases": [
+        "Maya"
+      ],
+      "caveats": [
+        {
+          "en": "Autodesk says Arm devices are not officially supported, even if the program installs and starts.",
+          "zh-TW": "Autodesk 表示 Arm 裝置不受官方支援，即使能安裝和啟動。"
+        },
+        {
+          "en": "Plug-ins and GPU features are unverified.",
+          "zh-TW": "外掛和 GPU 功能尚未驗證。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://github.com/Linaro/works-on-woa/blob/staging/src/data/content/projects.json",
+          "title": "Linaro Works on WoA catalog",
+          "type": "aggregator",
+          "checked": "2026-10-31"
+        }
+      ],
+      "addedAt": "2026-10-31",
+      "verifiedAt": "2026-10-31",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "battlefield-6",
+      "name": "Battlefield 6",
+      "vendor": "Electronic Arts",
+      "category": "game",
+      "status": "broken",
+      "scope": "rtx-spark",
+      "maturity": "stable",
+      "confidence": "high",
+      "homepage": "https://www.ea.com/games/battlefield",
+      "aliases": [
+        "BF6"
+      ],
+      "caveats": [
+        {
+          "en": "Doesn't launch in testing. NVIDIA expects EA Javelin anti-cheat support in early 2027.",
+          "zh-TW": "實測無法啟動。NVIDIA 預計 EA Javelin 反作弊系統在 2027 年初支援。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.notebookcheck.net/Asus-ProArt-P16-RTX-Spark-Laptop-Review-The-future-of-multimedia-laptops.1422366.0.html",
+          "title": "Notebookcheck: ASUS ProArt P16 review",
+          "type": "review",
+          "checked": "2026-10-31"
+        },
+        {
+          "url": "https://www.nvidia.com/en-us/geforce/news/rtx-spark-dlss-reflex-ray-tracing-games/",
+          "title": "NVIDIA: RTX Spark games",
+          "type": "vendor",
+          "checked": "2026-10-31"
+        }
+      ],
+      "addedAt": "2026-10-31",
+      "verifiedAt": "2026-10-31",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "blender",
+      "name": "Blender",
+      "vendor": "Blender Foundation",
+      "category": "creative",
+      "status": "native",
+      "scope": "rtx-spark",
+      "maturity": "stable",
+      "confidence": "high",
+      "version": "5.2 LTS",
+      "homepage": "https://www.blender.org",
+      "caveats": [
+        {
+          "en": "GPU rendering with OptiX was tested on the 5.3 beta. Sources disagree about GPU support in stable versions.",
+          "zh-TW": "OptiX GPU 算圖是以 5.3 Beta 實測，各來源對穩定版的 GPU 支援說法不一。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.xda-developers.com/rtx-spark-laptop-rendered-blender-scene-too-big-rtx-5090-local-llm/",
+          "title": "XDA: Blender scene rendered on RTX Spark",
+          "type": "review",
+          "checked": "2026-10-31"
+        }
+      ],
+      "addedAt": "2026-10-31",
+      "verifiedAt": "2026-10-31",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "brave",
+      "name": "Brave",
+      "vendor": "Brave Software",
+      "category": "browser",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "high",
+      "version": "1.58+",
+      "homepage": "https://brave.com",
+      "evidence": [
+        {
+          "url": "https://github.com/microsoft/winget-pkgs/tree/master/manifests/b/Brave/Brave",
+          "title": "winget manifest: Brave",
+          "type": "release",
+          "checked": "2026-10-31"
+        }
+      ],
+      "addedAt": "2026-10-31",
+      "verifiedAt": "2026-10-31",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "capcut",
+      "name": "CapCut",
+      "vendor": "ByteDance",
+      "category": "creative",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "medium",
+      "version": "9.7.0.4153",
+      "homepage": "https://www.capcut.com",
+      "aliases": [
+        "剪映"
+      ],
+      "caveats": [
+        {
+          "en": "Only the installer architecture was confirmed. GPU acceleration and effects are untested.",
+          "zh-TW": "只確認了安裝檔架構，GPU 加速和特效尚未驗證。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://storeedgefd.dsx.mp.microsoft.com/v9.0/packageManifests/XP9KN75RRB9NHS?Market=US&Locale=en-US",
+          "title": "Microsoft Store package manifest: CapCut",
+          "type": "release",
+          "checked": "2026-10-31"
+        }
+      ],
+      "addedAt": "2026-10-31",
+      "verifiedAt": "2026-10-31",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "claude-code",
+      "name": "Claude Code",
+      "vendor": "Anthropic",
+      "category": "developer",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "high",
+      "homepage": "https://code.claude.com",
+      "evidence": [
+        {
+          "url": "https://code.claude.com/docs/en/setup",
+          "title": "Claude Code setup",
+          "type": "vendor",
+          "checked": "2026-10-31"
+        }
+      ],
+      "addedAt": "2026-10-31",
+      "verifiedAt": "2026-10-31",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "claude-desktop",
+      "name": "Claude Desktop",
+      "vendor": "Anthropic",
+      "category": "developer",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "high",
+      "homepage": "https://claude.ai/download",
+      "aliases": [
+        "Claude"
+      ],
+      "evidence": [
+        {
+          "url": "https://claude.ai/download",
+          "title": "Claude downloads",
+          "type": "vendor",
+          "checked": "2026-10-31"
+        }
+      ],
+      "addedAt": "2026-10-31",
+      "verifiedAt": "2026-10-31",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "comfyui",
+      "name": "ComfyUI",
+      "vendor": "Comfy Org",
+      "category": "ai",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "high",
+      "version": "0.40.0+",
+      "homepage": "https://www.comfy.org",
+      "caveats": [
+        {
+          "en": "Applies to the portable nvidia_arm64 build. Comfy Desktop is listed as emulated. Custom nodes with x64 DLLs do not load.",
+          "zh-TW": "適用於可攜式 nvidia_arm64 版本。Comfy Desktop 被列為模擬執行，含 x64 DLL 的自訂節點無法載入。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://github.com/Comfy-Org/ComfyUI/releases/tag/v0.43.0",
+          "title": "ComfyUI v0.43.0 release",
+          "type": "release",
+          "checked": "2026-10-31"
+        }
+      ],
+      "addedAt": "2026-10-31",
+      "verifiedAt": "2026-10-31",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "cuda-toolkit",
+      "name": "CUDA Toolkit",
+      "vendor": "NVIDIA",
+      "category": "developer",
+      "status": "native",
+      "scope": "rtx-spark",
+      "maturity": "stable",
+      "confidence": "high",
+      "version": "13.4.2",
+      "homepage": "https://developer.nvidia.com/cuda-toolkit",
+      "aliases": [
+        "CUDA"
+      ],
+      "caveats": [
+        {
+          "en": "Requires RTX Spark driver 616.41 or later.",
+          "zh-TW": "需要 RTX Spark 驅動程式 616.41 以上。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://forums.developer.nvidia.com/t/rtx-spark-getting-started-with-development/385976",
+          "title": "NVIDIA: getting started with RTX Spark development",
+          "type": "vendor",
+          "checked": "2026-10-31"
+        }
+      ],
+      "addedAt": "2026-10-31",
+      "verifiedAt": "2026-10-31",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "cursor",
+      "name": "Cursor",
+      "vendor": "Anysphere",
+      "category": "developer",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "high",
+      "version": "0.50.5+",
+      "homepage": "https://cursor.com",
+      "evidence": [
+        {
+          "url": "https://cursor.com/downloads",
+          "title": "Cursor downloads",
+          "type": "vendor",
+          "checked": "2026-10-31"
+        }
+      ],
+      "addedAt": "2026-10-31",
+      "verifiedAt": "2026-10-31",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "cyberpunk-2077",
+      "name": "Cyberpunk 2077",
+      "vendor": "CD PROJEKT RED",
+      "category": "game",
+      "status": "prism",
+      "scope": "rtx-spark",
+      "maturity": "stable",
+      "confidence": "high",
+      "homepage": "https://www.cyberpunk.net",
+      "caveats": [
+        {
+          "en": "Runs well at 1440p with frame generation, but ray tracing is demanding. PC Gamer measured an average of 36 fps at 1080p RT Ultra.",
+          "zh-TW": "1440p 開啟畫格生成時運作良好，但光線追蹤較吃力。PC Gamer 測得 1080p RT Ultra 平均 36 fps。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.windowscentral.com/hardware/nvidia/rtx-spark-review-benchmarks-2026",
+          "title": "Windows Central: RTX Spark review",
+          "type": "review",
+          "checked": "2026-10-31"
+        }
+      ],
+      "addedAt": "2026-10-31",
+      "verifiedAt": "2026-10-31",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "davinci-resolve",
+      "name": "DaVinci Resolve",
+      "vendor": "Blackmagic Design",
+      "category": "creative",
+      "status": "native",
+      "scope": "rtx-spark",
+      "maturity": "stable",
+      "confidence": "medium",
+      "version": "21.1",
+      "homepage": "https://www.blackmagicdesign.com/products/davinciresolve",
+      "aliases": [
+        "Resolve"
+      ],
+      "caveats": [
+        {
+          "en": "Requires NVIDIA Studio Driver 616.0 or later, according to a third party quoting the official readme. CUDA acceleration has no test report yet.",
+          "zh-TW": "需要 NVIDIA Studio Driver 616.0 以上，這是第三方轉述官方說明。CUDA 加速尚無實測。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://davinciresolveclub.com/davinci-resolve-windows-x86-vs-arm/",
+          "title": "DaVinci Resolve Club: Windows x86 vs Arm",
+          "type": "community",
+          "checked": "2026-10-31"
+        }
+      ],
+      "addedAt": "2026-10-31",
+      "verifiedAt": "2026-10-31",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "discord",
+      "name": "Discord",
+      "vendor": "Discord",
+      "category": "communication",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "medium",
+      "version": "1.0.58",
+      "homepage": "https://discord.com",
+      "caveats": [
+        {
+          "en": "Where you install from matters: winget and the Microsoft Store list x64 only, and those installs run under Prism.",
+          "zh-TW": "安裝來源會決定架構：winget 和 Microsoft Store 只有 x64，這些安裝會透過 Prism 執行。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://discord.com/api/downloads/distributions/app/installers/latest?arch=arm64&channel=stable&platform=win",
+          "title": "Discord Arm64 installer (starts a download)",
+          "type": "vendor",
+          "checked": "2026-10-31"
+        }
+      ],
+      "addedAt": "2026-10-31",
+      "verifiedAt": "2026-10-31",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "docker-desktop",
+      "name": "Docker Desktop",
+      "vendor": "Docker",
+      "category": "developer",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "preview",
+      "confidence": "high",
+      "version": "4.97.0",
+      "homepage": "https://www.docker.com/products/docker-desktop/",
+      "aliases": [
+        "Docker"
+      ],
+      "caveats": [
+        {
+          "en": "Windows on Arm support is in Early Access and requires the WSL 2 backend. CUDA inside containers has no official confirmation.",
+          "zh-TW": "Windows on Arm 支援為 Early Access，只能使用 WSL 2 後端。容器內的 CUDA 尚無官方確認。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://docs.docker.com/desktop/setup/install/windows-install/",
+          "title": "Install Docker Desktop on Windows",
+          "type": "vendor",
+          "checked": "2026-10-31"
+        }
+      ],
+      "addedAt": "2026-10-31",
+      "verifiedAt": "2026-10-31",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "f1-25",
+      "name": "F1 25",
+      "vendor": "Electronic Arts / Codemasters",
+      "category": "game",
+      "status": "broken",
+      "scope": "rtx-spark",
+      "maturity": "stable",
+      "confidence": "high",
+      "homepage": "https://www.ea.com/games/f1",
+      "caveats": [
+        {
+          "en": "Doesn't launch in testing. EA Javelin anti-cheat is the suspected cause, not confirmed.",
+          "zh-TW": "實測無法啟動。推測原因是 EA Javelin 反作弊系統，但尚未證實。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.notebookcheck.net/Asus-ProArt-P16-RTX-Spark-Laptop-Review-The-future-of-multimedia-laptops.1422366.0.html",
+          "title": "Notebookcheck: ASUS ProArt P16 review",
+          "type": "review",
+          "checked": "2026-10-31"
+        }
+      ],
+      "addedAt": "2026-10-31",
+      "verifiedAt": "2026-10-31",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "figma",
+      "name": "Figma",
+      "vendor": "Figma",
+      "category": "creative",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "high",
+      "version": "124.0.2+",
+      "homepage": "https://www.figma.com",
+      "evidence": [
+        {
+          "url": "https://www.figma.com/downloads/",
+          "title": "Figma downloads",
+          "type": "vendor",
+          "checked": "2026-10-31"
+        }
+      ],
+      "addedAt": "2026-10-31",
+      "verifiedAt": "2026-10-31",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "fortnite",
+      "name": "Fortnite",
+      "vendor": "Epic Games",
+      "category": "game",
+      "status": "prism",
+      "scope": "rtx-spark",
+      "maturity": "stable",
+      "confidence": "high",
+      "homepage": "https://www.fortnite.com",
+      "caveats": [
+        {
+          "en": "Easy Anti-Cheat runs natively, but the game itself is emulated.",
+          "zh-TW": "Easy Anti-Cheat 是原生執行，但遊戲本身是模擬執行。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.xda-developers.com/tested-two-decades-of-windows-gaming-history-on-arm-rtx-spark-nvidia/",
+          "title": "XDA: two decades of Windows games on RTX Spark",
+          "type": "review",
+          "checked": "2026-10-31"
+        }
+      ],
+      "addedAt": "2026-10-31",
+      "verifiedAt": "2026-10-31",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "genshin-impact",
+      "name": "Genshin Impact",
+      "vendor": "HoYoverse",
+      "category": "game",
+      "status": "prism",
+      "scope": "rtx-spark",
+      "maturity": "stable",
+      "confidence": "medium",
+      "homepage": "https://genshin.hoyoverse.com",
+      "aliases": [
+        "原神"
+      ],
+      "caveats": [
+        {
+          "en": "NVIDIA says it's playable. No independent test has been found.",
+          "zh-TW": "NVIDIA 稱可以遊玩，但未找到獨立實測。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.nvidia.com/en-us/geforce/news/rtx-spark-dlss-reflex-ray-tracing-games/",
+          "title": "NVIDIA: RTX Spark games",
+          "type": "vendor",
+          "checked": "2026-10-31"
+        }
+      ],
+      "addedAt": "2026-10-31",
+      "verifiedAt": "2026-10-31",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "git-for-windows",
+      "name": "Git for Windows",
+      "vendor": "Git for Windows",
+      "category": "developer",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "high",
+      "version": "2.56.0",
+      "homepage": "https://gitforwindows.org",
+      "aliases": [
+        "Git"
+      ],
+      "evidence": [
+        {
+          "url": "https://github.com/git-for-windows/git/releases/tag/v2.56.0.windows.4",
+          "title": "Git for Windows 2.56.0 release",
+          "type": "release",
+          "checked": "2026-10-31"
+        }
+      ],
+      "addedAt": "2026-10-31",
+      "verifiedAt": "2026-10-31",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "google-chrome",
+      "name": "Google Chrome",
+      "vendor": "Google",
+      "category": "browser",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "high",
+      "version": "116+",
+      "homepage": "https://www.google.com/chrome/",
+      "aliases": [
+        "Chrome"
+      ],
+      "evidence": [
+        {
+          "url": "https://github.com/microsoft/winget-pkgs/tree/master/manifests/g/Google/Chrome",
+          "title": "winget manifest: Google Chrome",
+          "type": "release",
+          "checked": "2026-10-31"
+        }
+      ],
+      "addedAt": "2026-10-31",
+      "verifiedAt": "2026-10-31",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "handbrake",
+      "name": "HandBrake",
+      "vendor": "HandBrake",
+      "category": "utility",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "high",
+      "version": "1.11.2",
+      "homepage": "https://handbrake.fr",
+      "caveats": [
+        {
+          "en": "NVENC on RTX Spark is unverified.",
+          "zh-TW": "RTX Spark 上的 NVENC 尚未驗證。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://handbrake.fr/downloads.php",
+          "title": "HandBrake downloads",
+          "type": "vendor",
+          "checked": "2026-10-31"
+        }
+      ],
+      "addedAt": "2026-10-31",
+      "verifiedAt": "2026-10-31",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "hermes-agent",
+      "name": "Hermes Agent",
+      "vendor": "Nous Research",
+      "category": "ai",
+      "status": "native",
+      "scope": "rtx-spark",
+      "maturity": "stable",
+      "confidence": "medium",
+      "version": "0.21.3",
+      "homepage": "https://github.com/NousResearch/hermes-agent",
+      "aliases": [
+        "Hermes"
+      ],
+      "caveats": [
+        {
+          "en": "NVIDIA confirms RTX Spark support but doesn't state the architecture. Installer issues have been reported.",
+          "zh-TW": "NVIDIA 確認支援 RTX Spark，但未說明架構，也有安裝問題的回報。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://nvidianews.nvidia.com/news/nvidia-rtx-spark-pcs-available-today-a-new-beginning-for-windows-pcs",
+          "title": "NVIDIA: RTX Spark PCs available today",
+          "type": "vendor",
+          "checked": "2026-10-31"
+        },
+        {
+          "url": "https://github.com/Linaro/works-on-woa/blob/staging/src/data/content/projects.json",
+          "title": "Linaro Works on WoA catalog",
+          "type": "aggregator",
+          "checked": "2026-10-31"
+        }
+      ],
+      "addedAt": "2026-10-31",
+      "verifiedAt": "2026-10-31",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "jetbrains-ides",
+      "name": "JetBrains IDEs",
+      "vendor": "JetBrains",
+      "category": "developer",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "high",
+      "version": "2023.3.3+",
+      "homepage": "https://www.jetbrains.com",
+      "aliases": [
+        "IntelliJ IDEA",
+        "PyCharm",
+        "WebStorm"
+      ],
+      "caveats": [
+        {
+          "en": "The official page confirms IntelliJ IDEA only. Other IDEs rely on catalog records.",
+          "zh-TW": "官方頁面只確認 IntelliJ IDEA，其他 IDE 依據資料庫記錄。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.jetbrains.com/help/idea/installation-guide.html",
+          "title": "IntelliJ IDEA installation guide",
+          "type": "vendor",
+          "checked": "2026-10-31"
+        }
+      ],
+      "addedAt": "2026-10-31",
+      "verifiedAt": "2026-10-31",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "league-of-legends",
+      "name": "League of Legends",
+      "vendor": "Riot Games",
+      "category": "game",
+      "status": "broken",
+      "scope": "rtx-spark",
+      "maturity": "stable",
+      "confidence": "medium",
+      "homepage": "https://www.leagueoflegends.com",
+      "aliases": [
+        "LoL",
+        "英雄聯盟"
+      ],
+      "caveats": [
+        {
+          "en": "Vanguard support is listed as coming after launch, so treat this as not supported yet. No test of the failure itself was found.",
+          "zh-TW": "Vanguard 支援列為上市後推出，應視為尚未支援。未找到實際失敗的測試紀錄。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.nvidia.com/en-us/geforce/news/rtx-spark-dlss-reflex-ray-tracing-games/",
+          "title": "NVIDIA: RTX Spark games",
+          "type": "vendor",
+          "checked": "2026-10-31"
+        }
+      ],
+      "addedAt": "2026-10-31",
+      "verifiedAt": "2026-10-31",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "line",
+      "name": "LINE",
+      "vendor": "LY Corporation",
+      "category": "communication",
+      "status": "prism",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "medium",
+      "version": "8.7.0.3303",
+      "homepage": "https://line.me",
+      "evidence": [
+        {
+          "url": "https://storeedgefd.dsx.mp.microsoft.com/v9.0/packageManifests/XPFCC4CD725961?Market=US&Locale=en-US",
+          "title": "Microsoft Store package manifest: LINE",
+          "type": "release",
+          "checked": "2026-10-31"
+        }
+      ],
+      "addedAt": "2026-10-31",
+      "verifiedAt": "2026-10-31",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "llama-cpp",
+      "name": "llama.cpp",
+      "vendor": "ggml-org",
+      "category": "ai",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "high",
+      "version": "b12020",
+      "homepage": "https://github.com/ggml-org/llama.cpp",
+      "caveats": [
+        {
+          "en": "Ships a win-cuda-13.4-arm64 build. A performance regression on arm64 and Blackwell is being tracked upstream.",
+          "zh-TW": "提供 win-cuda-13.4-arm64 版本。上游仍在追蹤 arm64 與 Blackwell 的效能回歸問題。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12020",
+          "title": "llama.cpp b12020 release",
+          "type": "release",
+          "checked": "2026-10-31"
+        }
+      ],
+      "addedAt": "2026-10-31",
+      "verifiedAt": "2026-10-31",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "lm-studio",
+      "name": "LM Studio",
+      "vendor": "Element Labs",
+      "category": "ai",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "medium",
+      "version": "0.2.31+",
+      "homepage": "https://lmstudio.ai",
+      "caveats": [
+        {
+          "en": "Documentation names Snapdragon only. Don't assume GPU acceleration on RTX Spark.",
+          "zh-TW": "文件只提到 Snapdragon，不要預設 RTX Spark 有 GPU 加速。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://lmstudio.ai/docs/app/system-requirements",
+          "title": "LM Studio system requirements",
+          "type": "vendor",
+          "checked": "2026-10-31"
+        }
+      ],
+      "addedAt": "2026-10-31",
+      "verifiedAt": "2026-10-31",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "marvel-rivals",
+      "name": "Marvel Rivals",
+      "vendor": "NetEase Games",
+      "category": "game",
+      "status": "prism",
+      "scope": "rtx-spark",
+      "maturity": "stable",
+      "confidence": "high",
+      "homepage": "https://www.marvelrivals.com",
+      "evidence": [
+        {
+          "url": "https://www.xda-developers.com/tested-two-decades-of-windows-gaming-history-on-arm-rtx-spark-nvidia/",
+          "title": "XDA: two decades of Windows games on RTX Spark",
+          "type": "review",
+          "checked": "2026-10-31"
+        }
+      ],
+      "addedAt": "2026-10-31",
+      "verifiedAt": "2026-10-31",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "matlab",
+      "name": "MATLAB",
+      "vendor": "MathWorks",
+      "category": "developer",
+      "status": "prism",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "high",
+      "version": "R2026a+",
+      "homepage": "https://www.mathworks.com/products/matlab.html",
+      "caveats": [
+        {
+          "en": "Officially supported through Prism. Simulink Desktop Real-Time, TensorFlow, QEMU, and third-party hardware interfaces are not.",
+          "zh-TW": "透過 Prism 獲官方支援，但不支援 Simulink Desktop Real-Time、TensorFlow、QEMU 和第三方硬體介面。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.mathworks.com/matlabcentral/answers/2182415-is-matlab-supported-on-windows-on-arm-devices",
+          "title": "MathWorks: MATLAB on Windows on Arm",
+          "type": "vendor",
+          "checked": "2026-10-31"
+        }
+      ],
+      "addedAt": "2026-10-31",
+      "verifiedAt": "2026-10-31",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "microsoft-edge",
+      "name": "Microsoft Edge",
+      "vendor": "Microsoft",
+      "category": "browser",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "high",
+      "homepage": "https://www.microsoft.com/edge",
+      "aliases": [
+        "Edge"
+      ],
+      "evidence": [
+        {
+          "url": "https://learn.microsoft.com/surface/surface-pro-arm-app-management",
+          "title": "Surface Pro on Arm app management",
+          "type": "vendor",
+          "checked": "2026-10-31"
+        }
+      ],
+      "addedAt": "2026-10-31",
+      "verifiedAt": "2026-10-31",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "microsoft-excel",
+      "name": "Microsoft Excel",
+      "vendor": "Microsoft",
+      "category": "productivity",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "high",
+      "version": "2308+",
+      "homepage": "https://www.microsoft.com/microsoft-365/excel",
+      "aliases": [
+        "Office",
+        "Microsoft 365"
+      ],
+      "caveats": [
+        {
+          "en": "Support for 32-bit Microsoft 365 on Arm ends in December 2026. Perpetual versions such as Office 2021 need the 32-bit edition.",
+          "zh-TW": "Arm 版 32 位元 Microsoft 365 的安全更新於 2026 年 12 月結束。Office 2021 等買斷版需安裝 32 位元版。"
+        },
+        {
+          "en": "Test older add-ins and macros separately.",
+          "zh-TW": "舊版增益集和巨集需另外測試。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://learn.microsoft.com/surface/surface-arm-faq",
+          "title": "Surface Arm FAQ",
+          "type": "vendor",
+          "checked": "2026-10-31"
+        }
+      ],
+      "addedAt": "2026-10-31",
+      "verifiedAt": "2026-10-31",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "microsoft-onenote",
+      "name": "Microsoft OneNote",
+      "vendor": "Microsoft",
+      "category": "productivity",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "medium",
+      "homepage": "https://www.onenote.com",
+      "aliases": [
+        "Office",
+        "Microsoft 365"
+      ],
+      "evidence": [
+        {
+          "url": "https://learn.microsoft.com/surface/surface-arm-faq",
+          "title": "Surface Arm FAQ",
+          "type": "vendor",
+          "checked": "2026-10-31"
+        }
+      ],
+      "addedAt": "2026-10-31",
+      "verifiedAt": "2026-10-31",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "microsoft-outlook",
+      "name": "Microsoft Outlook",
+      "vendor": "Microsoft",
+      "category": "productivity",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "high",
+      "version": "2308+",
+      "homepage": "https://www.microsoft.com/microsoft-365/outlook",
+      "aliases": [
+        "Office",
+        "Microsoft 365"
+      ],
+      "evidence": [
+        {
+          "url": "https://learn.microsoft.com/surface/surface-arm-faq",
+          "title": "Surface Arm FAQ",
+          "type": "vendor",
+          "checked": "2026-10-31"
+        }
+      ],
+      "addedAt": "2026-10-31",
+      "verifiedAt": "2026-10-31",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "microsoft-powerpoint",
+      "name": "Microsoft PowerPoint",
+      "vendor": "Microsoft",
+      "category": "productivity",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "high",
+      "version": "2308+",
+      "homepage": "https://www.microsoft.com/microsoft-365/powerpoint",
+      "aliases": [
+        "Office",
+        "Microsoft 365"
+      ],
+      "caveats": [
+        {
+          "en": "Support for 32-bit Microsoft 365 on Arm ends in December 2026. Perpetual versions such as Office 2021 need the 32-bit edition.",
+          "zh-TW": "Arm 版 32 位元 Microsoft 365 的安全更新於 2026 年 12 月結束。Office 2021 等買斷版需安裝 32 位元版。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://learn.microsoft.com/surface/surface-arm-faq",
+          "title": "Surface Arm FAQ",
+          "type": "vendor",
+          "checked": "2026-10-31"
+        }
+      ],
+      "addedAt": "2026-10-31",
+      "verifiedAt": "2026-10-31",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "microsoft-teams",
+      "name": "Microsoft Teams",
+      "vendor": "Microsoft",
+      "category": "communication",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "high",
+      "version": "1.25.24601",
+      "homepage": "https://www.microsoft.com/microsoft-teams",
+      "aliases": [
+        "Office",
+        "Microsoft 365"
+      ],
+      "evidence": [
+        {
+          "url": "https://learn.microsoft.com/surface/surface-arm-faq",
+          "title": "Surface Arm FAQ",
+          "type": "vendor",
+          "checked": "2026-10-31"
+        }
+      ],
+      "addedAt": "2026-10-31",
+      "verifiedAt": "2026-10-31",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "microsoft-word",
+      "name": "Microsoft Word",
+      "vendor": "Microsoft",
+      "category": "productivity",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "high",
+      "version": "2308+",
+      "homepage": "https://www.microsoft.com/microsoft-365/word",
+      "aliases": [
+        "Office",
+        "Microsoft 365"
+      ],
+      "caveats": [
+        {
+          "en": "Support for 32-bit Microsoft 365 on Arm ends in December 2026. Perpetual versions such as Office 2021 need the 32-bit edition.",
+          "zh-TW": "Arm 版 32 位元 Microsoft 365 的安全更新於 2026 年 12 月結束。Office 2021 等買斷版需安裝 32 位元版。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://learn.microsoft.com/surface/surface-arm-faq",
+          "title": "Surface Arm FAQ",
+          "type": "vendor",
+          "checked": "2026-10-31"
+        }
+      ],
+      "addedAt": "2026-10-31",
+      "verifiedAt": "2026-10-31",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "firefox",
+      "name": "Mozilla Firefox",
+      "vendor": "Mozilla",
+      "category": "browser",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "high",
+      "version": "123+",
+      "homepage": "https://www.mozilla.org/firefox/",
+      "aliases": [
+        "Firefox"
+      ],
+      "evidence": [
+        {
+          "url": "https://www.mozilla.org/en-US/firefox/all/desktop-release/",
+          "title": "Firefox downloads",
+          "type": "vendor",
+          "checked": "2026-10-31"
+        }
+      ],
+      "addedAt": "2026-10-31",
+      "verifiedAt": "2026-10-31",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "nodejs",
+      "name": "Node.js",
+      "vendor": "OpenJS Foundation",
+      "category": "developer",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "high",
+      "version": "20.5.1+",
+      "homepage": "https://nodejs.org",
+      "aliases": [
+        "Node"
+      ],
+      "caveats": [
+        {
+          "en": "Native npm add-ons need a win32-arm64 build from each package.",
+          "zh-TW": "原生 npm 附加元件需要各套件提供 win32-arm64 版本。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://nodejs.org/dist/latest/",
+          "title": "Node.js latest downloads",
+          "type": "release",
+          "checked": "2026-10-31"
+        }
+      ],
+      "addedAt": "2026-10-31",
+      "verifiedAt": "2026-10-31",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "notion",
+      "name": "Notion",
+      "vendor": "Notion Labs",
+      "category": "productivity",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "high",
+      "version": "2.2.1+",
+      "homepage": "https://www.notion.com",
+      "evidence": [
+        {
+          "url": "https://www.notion.com/desktop",
+          "title": "Notion desktop downloads",
+          "type": "vendor",
+          "checked": "2026-10-31"
+        }
+      ],
+      "addedAt": "2026-10-31",
+      "verifiedAt": "2026-10-31",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "nvidia-broadcast",
+      "name": "NVIDIA Broadcast",
+      "vendor": "NVIDIA",
+      "category": "utility",
+      "status": "native",
+      "scope": "rtx-spark",
+      "maturity": "stable",
+      "confidence": "high",
+      "version": "2.3.0",
+      "homepage": "https://www.nvidia.com/en-us/geforce/broadcasting/broadcast-app/",
+      "caveats": [
+        {
+          "en": "Requires Windows on Arm driver 617.42 or later.",
+          "zh-TW": "需要 Windows on Arm 驅動程式 617.42 以上。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.nvidia.com/en-us/geforce/broadcasting/broadcast-app/",
+          "title": "NVIDIA Broadcast app",
+          "type": "vendor",
+          "checked": "2026-10-31"
+        }
+      ],
+      "addedAt": "2026-10-31",
+      "verifiedAt": "2026-10-31",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "obs-studio",
+      "name": "OBS Studio",
+      "vendor": "OBS Project",
+      "category": "creative",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "high",
+      "version": "31.1.0+",
+      "homepage": "https://obsproject.com",
+      "aliases": [
+        "OBS"
+      ],
+      "caveats": [
+        {
+          "en": "GitHub offers the Arm64 build as a zip only. x64 plug-ins do not load. NVENC is enabled on Arm64, but nobody has confirmed it on RTX Spark yet.",
+          "zh-TW": "GitHub 上的 Arm64 版只有 zip，x64 外掛無法載入。NVENC 已在 Arm64 啟用，但尚未在 RTX Spark 確認。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://github.com/obsproject/obs-studio/releases/tag/33.0.1",
+          "title": "OBS Studio 33.0.1 release",
+          "type": "release",
+          "checked": "2026-10-31"
+        }
+      ],
+      "addedAt": "2026-10-31",
+      "verifiedAt": "2026-10-31",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "obsidian",
+      "name": "Obsidian",
+      "vendor": "Obsidian",
+      "category": "productivity",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "high",
+      "version": "1.5.12+",
+      "homepage": "https://obsidian.md",
+      "evidence": [
+        {
+          "url": "https://github.com/microsoft/winget-pkgs/tree/master/manifests/o/Obsidian/Obsidian",
+          "title": "winget manifest: Obsidian",
+          "type": "release",
+          "checked": "2026-10-31"
+        }
+      ],
+      "addedAt": "2026-10-31",
+      "verifiedAt": "2026-10-31",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "ollama",
+      "name": "Ollama",
+      "vendor": "Ollama",
+      "category": "ai",
+      "status": "native",
+      "scope": "rtx-spark",
+      "maturity": "stable",
+      "confidence": "high",
+      "version": "0.32.3+",
+      "homepage": "https://ollama.com",
+      "evidence": [
+        {
+          "url": "https://developer.nvidia.com/topics/ai/local-ai/port-apps",
+          "title": "NVIDIA: porting local AI apps",
+          "type": "vendor",
+          "checked": "2026-10-31"
+        }
+      ],
+      "addedAt": "2026-10-31",
+      "verifiedAt": "2026-10-31",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "openclaw",
+      "name": "OpenClaw",
+      "vendor": "OpenClaw",
+      "category": "ai",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "high",
+      "homepage": "https://docs.openclaw.ai",
+      "caveats": [
+        {
+          "en": "A ProArt P16 user reports Gateway restart problems under WSL 2.",
+          "zh-TW": "有 ProArt P16 使用者回報 WSL 2 下的 Gateway 重啟問題。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://docs.openclaw.ai/platforms/windows",
+          "title": "OpenClaw on Windows",
+          "type": "vendor",
+          "checked": "2026-10-31"
+        }
+      ],
+      "addedAt": "2026-10-31",
+      "verifiedAt": "2026-10-31",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "opera",
+      "name": "Opera",
+      "vendor": "Opera",
+      "category": "browser",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "high",
+      "version": "112+",
+      "homepage": "https://www.opera.com",
+      "caveats": [
+        {
+          "en": "Opera GX is a separate product, and one catalog lists it as emulated.",
+          "zh-TW": "Opera GX 是獨立產品，有資料庫將它列為模擬執行。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.opera.com/download",
+          "title": "Opera downloads",
+          "type": "vendor",
+          "checked": "2026-10-31"
+        }
+      ],
+      "addedAt": "2026-10-31",
+      "verifiedAt": "2026-10-31",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "python",
+      "name": "Python",
+      "vendor": "Python Software Foundation",
+      "category": "developer",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "high",
+      "version": "3.13+",
+      "homepage": "https://www.python.org",
+      "caveats": [
+        {
+          "en": "x64 extensions do not load. NVIDIA reports support for 97% of the top 15,000 packages. Some, such as cryptography, grpcio, PyArrow, and OpenCV, may need compiling.",
+          "zh-TW": "x64 擴充模組無法載入。NVIDIA 稱支援前 15,000 大套件的 97%，cryptography、grpcio、PyArrow、OpenCV 等可能要自行編譯。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.python.org/downloads/windows/",
+          "title": "Python downloads for Windows",
+          "type": "vendor",
+          "checked": "2026-10-31"
+        }
+      ],
+      "addedAt": "2026-10-31",
+      "verifiedAt": "2026-10-31",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "pytorch",
+      "name": "PyTorch (CUDA)",
+      "vendor": "PyTorch / NVIDIA",
+      "category": "ai",
+      "status": "native",
+      "scope": "rtx-spark",
+      "maturity": "stable",
+      "confidence": "high",
+      "version": "2.14.0+cu134",
+      "homepage": "https://pytorch.org",
+      "aliases": [
+        "torch"
+      ],
+      "caveats": [
+        {
+          "en": "The CUDA build comes from NVIDIA's package index and not from pytorch.org. Follow NVIDIA's guide exactly, and check CUDA again after installing other packages, which can replace torch.",
+          "zh-TW": "CUDA 版來自 NVIDIA 的套件索引，不是 pytorch.org。請完全依照 NVIDIA 指南安裝。安裝其他套件可能會換掉 torch，裝完後要再確認 CUDA。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://forums.developer.nvidia.com/t/rtx-spark-getting-started-with-development/385976",
+          "title": "NVIDIA: getting started with RTX Spark development",
+          "type": "vendor",
+          "checked": "2026-10-31"
+        }
+      ],
+      "addedAt": "2026-10-31",
+      "verifiedAt": "2026-10-31",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "sketchup",
+      "name": "SketchUp",
+      "vendor": "Trimble",
+      "category": "creative",
+      "status": "prism",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "low",
+      "version": "x64 23.1.329",
+      "homepage": "https://www.sketchup.com",
+      "caveats": [
+        {
+          "en": "SketchUp says running x64 under emulation on Arm64 in a virtual machine is not supported. Running does not mean officially supported.",
+          "zh-TW": "SketchUp 表示在 Arm64 虛擬機器中模擬 x64 不受支援，能執行不代表有官方支援。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://github.com/Linaro/works-on-woa/blob/staging/src/data/content/projects.json",
+          "title": "Linaro Works on WoA catalog",
+          "type": "aggregator",
+          "checked": "2026-10-31"
+        }
+      ],
+      "addedAt": "2026-10-31",
+      "verifiedAt": "2026-10-31",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "slack",
+      "name": "Slack",
+      "vendor": "Salesforce",
+      "category": "communication",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "high",
+      "version": "4.38.87+",
+      "homepage": "https://slack.com",
+      "evidence": [
+        {
+          "url": "https://slack.com/downloads/windows",
+          "title": "Slack for Windows downloads",
+          "type": "vendor",
+          "checked": "2026-10-31"
+        }
+      ],
+      "addedAt": "2026-10-31",
+      "verifiedAt": "2026-10-31",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "solidworks",
+      "name": "SolidWorks",
+      "vendor": "Dassault Systèmes",
+      "category": "creative",
+      "status": "prism",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "low",
+      "homepage": "https://www.solidworks.com",
+      "caveats": [
+        {
+          "en": "Result comes from one catalog, not a test on RTX Spark.",
+          "zh-TW": "結果只來自單一資料庫，並非在 RTX Spark 實測。"
+        },
+        {
+          "en": "No official support statement was found.",
+          "zh-TW": "未找到官方支援聲明。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://github.com/Linaro/works-on-woa/blob/staging/src/data/content/projects.json",
+          "title": "Linaro Works on WoA catalog",
+          "type": "aggregator",
+          "checked": "2026-10-31"
+        }
+      ],
+      "addedAt": "2026-10-31",
+      "verifiedAt": "2026-10-31",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "spotify",
+      "name": "Spotify",
+      "vendor": "Spotify",
+      "category": "utility",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "high",
+      "version": "1.3.6.1921",
+      "homepage": "https://www.spotify.com",
+      "evidence": [
+        {
+          "url": "https://github.com/microsoft/winget-pkgs/tree/master/manifests/s/Spotify/Spotify",
+          "title": "winget manifest: Spotify",
+          "type": "release",
+          "checked": "2026-10-31"
+        },
+        {
+          "url": "https://learn.microsoft.com/surface/surface-arm-faq",
+          "title": "Surface Arm FAQ",
+          "type": "vendor",
+          "checked": "2026-10-31"
+        }
+      ],
+      "addedAt": "2026-10-31",
+      "verifiedAt": "2026-10-31",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "steam",
+      "name": "Steam",
+      "vendor": "Valve",
+      "category": "utility",
+      "status": "prism",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "high",
+      "version": "x86 2.10.91.91",
+      "homepage": "https://store.steampowered.com",
+      "caveats": [
+        {
+          "en": "The client runs under Prism. Whether a game runs depends on the game and its anti-cheat.",
+          "zh-TW": "用戶端透過 Prism 執行。遊戲能否執行要看遊戲本身和反作弊系統。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://github.com/microsoft/winget-pkgs/tree/master/manifests/v/Valve/Steam",
+          "title": "winget manifest: Steam",
+          "type": "release",
+          "checked": "2026-10-31"
+        }
+      ],
+      "addedAt": "2026-10-31",
+      "verifiedAt": "2026-10-31",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "valorant",
+      "name": "Valorant",
+      "vendor": "Riot Games",
+      "category": "game",
+      "status": "broken",
+      "scope": "rtx-spark",
+      "maturity": "stable",
+      "confidence": "medium",
+      "homepage": "https://playvalorant.com",
+      "aliases": [
+        "特戰英豪"
+      ],
+      "caveats": [
+        {
+          "en": "The blocker is the Vanguard anti-cheat, not Prism. Riot says support is coming without giving a date.",
+          "zh-TW": "阻擋的是 Vanguard 反作弊系統，而不是 Prism。Riot 表示會支援，但沒有給日期。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.xda-developers.com/tested-two-decades-of-windows-gaming-history-on-arm-rtx-spark-nvidia/",
+          "title": "XDA: two decades of Windows games on RTX Spark",
+          "type": "review",
+          "checked": "2026-10-31"
+        }
+      ],
+      "addedAt": "2026-10-31",
+      "verifiedAt": "2026-10-31",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "visual-studio",
+      "name": "Visual Studio",
+      "vendor": "Microsoft",
+      "category": "developer",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "high",
+      "version": "2022 17.4+",
+      "homepage": "https://visualstudio.microsoft.com",
+      "aliases": [
+        "VS"
+      ],
+      "caveats": [
+        {
+          "en": "Windows 11 only. Remove older versions before installing.",
+          "zh-TW": "僅支援 Windows 11，安裝前請移除舊版。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://learn.microsoft.com/en-us/visualstudio/install/visual-studio-on-arm-devices",
+          "title": "Visual Studio on Arm devices",
+          "type": "vendor",
+          "checked": "2026-10-31"
+        }
+      ],
+      "addedAt": "2026-10-31",
+      "verifiedAt": "2026-10-31",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "vs-code",
+      "name": "Visual Studio Code",
+      "vendor": "Microsoft",
+      "category": "developer",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "high",
+      "version": "1.143.1",
+      "homepage": "https://code.visualstudio.com",
+      "aliases": [
+        "VS Code",
+        "VSCode"
+      ],
+      "caveats": [
+        {
+          "en": "Extensions with x64 native modules may not load.",
+          "zh-TW": "含 x64 原生模組的擴充功能可能無法載入。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://code.visualstudio.com/download",
+          "title": "VS Code downloads",
+          "type": "vendor",
+          "checked": "2026-10-31"
+        }
+      ],
+      "addedAt": "2026-10-31",
+      "verifiedAt": "2026-10-31",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "vivaldi",
+      "name": "Vivaldi",
+      "vendor": "Vivaldi",
+      "category": "browser",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "high",
+      "version": "6.1+",
+      "homepage": "https://vivaldi.com",
+      "caveats": [
+        {
+          "en": "The vendor labels this build Windows ARM64 (Snapdragon) and doesn't name RTX Spark.",
+          "zh-TW": "原廠標示為 Windows ARM64 (Snapdragon)，未提到 RTX Spark。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://vivaldi.com/download/",
+          "title": "Vivaldi downloads",
+          "type": "vendor",
+          "checked": "2026-10-31"
+        }
+      ],
+      "addedAt": "2026-10-31",
+      "verifiedAt": "2026-10-31",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "vlc",
+      "name": "VLC media player",
+      "vendor": "VideoLAN",
+      "category": "utility",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "high",
+      "version": "3.0.24",
+      "homepage": "https://www.videolan.org/vlc/",
+      "aliases": [
+        "VLC"
+      ],
+      "evidence": [
+        {
+          "url": "https://www.videolan.org/vlc/download-windows.html",
+          "title": "VLC for Windows downloads",
+          "type": "vendor",
+          "checked": "2026-10-31"
+        }
+      ],
+      "addedAt": "2026-10-31",
+      "verifiedAt": "2026-10-31",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "vllm-devjeonghwan",
+      "name": "vLLM for RTX Spark (devjeonghwan)",
+      "vendor": "devjeonghwan",
+      "category": "ai",
+      "status": "native",
+      "scope": "rtx-spark",
+      "maturity": "community",
+      "confidence": "high",
+      "version": "0.1.2 (vLLM 0.32.0)",
+      "homepage": "https://github.com/devjeonghwan/vllm-for-rtx-spark",
+      "aliases": [
+        "vLLM"
+      ],
+      "caveats": [
+        {
+          "en": "Unofficial preview. Supports only the 128GB machine with Qwen3.8-Flash-Next-FP4-Local. Performance numbers are the author's own.",
+          "zh-TW": "非官方預覽版，只支援 128GB 機種搭配 Qwen3.8-Flash-Next-FP4-Local。效能數字是作者自測。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://github.com/devjeonghwan/vllm-for-rtx-spark",
+          "title": "devjeonghwan/vllm-for-rtx-spark",
+          "type": "community",
+          "checked": "2026-10-31"
+        }
+      ],
+      "addedAt": "2026-10-31",
+      "verifiedAt": "2026-10-31",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "vllm-systempanic",
+      "name": "vLLM Windows (SystemPanic)",
+      "vendor": "SystemPanic",
+      "category": "ai",
+      "status": "native",
+      "scope": "rtx-spark",
+      "maturity": "community",
+      "confidence": "high",
+      "version": "v0.32.0_spark",
+      "homepage": "https://github.com/SystemPanic/vllm-windows",
+      "aliases": [
+        "vLLM"
+      ],
+      "caveats": [
+        {
+          "en": "Unofficial beta for Python 3.14, CUDA 13.4, and PyTorch 2.14. Needs a manual source edit and self-compiled dependencies. The upstream vLLM project has no official Windows Arm64 wheel.",
+          "zh-TW": "非官方 Beta 版，需要 Python 3.14、CUDA 13.4、PyTorch 2.14，還要手動修改原始碼並自行編譯相依套件。上游 vLLM 沒有官方 Windows Arm64 wheel。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://github.com/SystemPanic/vllm-windows/releases/tag/v0.32.0_spark",
+          "title": "SystemPanic/vllm-windows v0.32.0_spark",
+          "type": "community",
+          "checked": "2026-10-31"
+        }
+      ],
+      "addedAt": "2026-10-31",
+      "verifiedAt": "2026-10-31",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "whatsapp",
+      "name": "WhatsApp",
+      "vendor": "Meta",
+      "category": "communication",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "high",
+      "version": "2.2421.1.0+",
+      "homepage": "https://www.whatsapp.com",
+      "evidence": [
+        {
+          "url": "https://learn.microsoft.com/surface/surface-arm-faq",
+          "title": "Surface Arm FAQ",
+          "type": "vendor",
+          "checked": "2026-10-31"
+        }
+      ],
+      "addedAt": "2026-10-31",
+      "verifiedAt": "2026-10-31",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "wsl",
+      "name": "Windows Subsystem for Linux",
+      "vendor": "Microsoft",
+      "category": "developer",
+      "status": "native",
+      "scope": "rtx-spark",
+      "maturity": "stable",
+      "confidence": "high",
+      "version": "2.7.13",
+      "homepage": "https://learn.microsoft.com/windows/wsl/",
+      "aliases": [
+        "WSL",
+        "WSL2"
+      ],
+      "caveats": [
+        {
+          "en": "CUDA inside WSL 2 has only community evidence so far.",
+          "zh-TW": "WSL 2 內的 CUDA 目前只有社群證據。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://nvidianews.nvidia.com/news/nvidia-rtx-spark-pcs-available-today-a-new-beginning-for-windows-pcs",
+          "title": "NVIDIA: RTX Spark PCs available today",
+          "type": "vendor",
+          "checked": "2026-10-31"
+        }
+      ],
+      "addedAt": "2026-10-31",
+      "verifiedAt": "2026-10-31",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "world-of-warcraft",
+      "name": "World of Warcraft",
+      "vendor": "Blizzard",
+      "category": "game",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "low",
+      "version": "9.1+",
+      "homepage": "https://worldofwarcraft.blizzard.com",
+      "aliases": [
+        "WoW"
+      ],
+      "caveats": [
+        {
+          "en": "NVIDIA lists it as supported at launch without naming the architecture, and catalogs disagree on native versus emulated.",
+          "zh-TW": "NVIDIA 列為上市支援但未說明架構，各資料庫對原生或模擬的說法不一。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.wowhead.com/news/windows-10-arm64-support-on-the-patch-9-1-ptr-322303",
+          "title": "Wowhead: Arm64 support in the patch 9.1 PTR",
+          "type": "community",
+          "checked": "2026-10-31"
+        },
+        {
+          "url": "https://nvidianews.nvidia.com/news/nvidia-rtx-spark-pcs-available-today-a-new-beginning-for-windows-pcs",
+          "title": "NVIDIA: RTX Spark PCs available today",
+          "type": "vendor",
+          "checked": "2026-10-31"
+        }
+      ],
+      "addedAt": "2026-10-31",
+      "verifiedAt": "2026-10-31",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "zoom",
+      "name": "Zoom Workplace",
+      "vendor": "Zoom",
+      "category": "communication",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "high",
+      "version": "5.15.7+",
+      "homepage": "https://zoom.us",
+      "aliases": [
+        "Zoom"
+      ],
+      "caveats": [
+        {
+          "en": "Zoom Rooms and Zoom VDI are listed separately as emulated.",
+          "zh-TW": "Zoom Rooms 與 Zoom VDI 另被列為模擬執行。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://github.com/microsoft/winget-pkgs/tree/master/manifests/z/Zoom/Zoom",
+          "title": "winget manifest: Zoom",
+          "type": "release",
+          "checked": "2026-10-31"
+        },
+        {
+          "url": "https://learn.microsoft.com/surface/surface-arm-faq",
+          "title": "Surface Arm FAQ",
+          "type": "vendor",
+          "checked": "2026-10-31"
+        }
+      ],
+      "addedAt": "2026-10-31",
+      "verifiedAt": "2026-10-31",
+      "reportCount": 0,
+      "hasConflict": false
+    }
+  ]
+}
