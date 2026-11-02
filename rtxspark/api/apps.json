@@ -1,6 +1,6 @@
 {
   "license": "CC-BY-4.0",
-  "updated": "2026-11-02",
+  "updated": "2026-11-03",
   "apps": [
     {
       "id": "7-zip",
@@ -673,6 +673,40 @@
       "hasConflict": false
     },
     {
+      "id": "cmake",
+      "name": "CMake",
+      "vendor": "Kitware",
+      "category": "developer",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "high",
+      "version": "4.4.5",
+      "homepage": "https://cmake.org",
+      "summary": {
+        "en": "Build system generator with official windows-arm64 MSI and ZIP.",
+        "zh-TW": "建置系統產生器，官方提供 windows-arm64 的 MSI 與 ZIP。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://github.com/Kitware/CMake/releases/expanded_assets/v4.4.5",
+          "title": "CMake 4.4.5 release assets (cmake-4.4.5-windows-arm64.msi)",
+          "type": "release",
+          "checked": "2026-11-03"
+        }
+      ],
+      "addedAt": "2026-11-03",
+      "verifiedAt": "2026-11-03",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
       "id": "comfyui",
       "name": "ComfyUI",
       "vendor": "Comfy Org",
@@ -694,11 +728,11 @@
           "url": "https://github.com/Comfy-Org/ComfyUI/releases/tag/v0.43.0",
           "title": "ComfyUI v0.43.0 release",
           "type": "release",
-          "checked": "2026-10-31"
+          "checked": "2026-11-03"
         }
       ],
       "addedAt": "2026-10-31",
-      "verifiedAt": "2026-10-31",
+      "verifiedAt": "2026-11-03",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -999,6 +1033,40 @@
       "hasConflict": false
     },
     {
+      "id": "gimp",
+      "name": "GIMP",
+      "vendor": "GIMP team",
+      "category": "creative",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "high",
+      "version": "3.2.6",
+      "homepage": "https://www.gimp.org",
+      "summary": {
+        "en": "Image editor whose official Windows installer covers both x86_64 and ARM64.",
+        "zh-TW": "影像編輯軟體，官方 Windows 安裝程式同時涵蓋 x86_64 與 ARM64。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.gimp.org/downloads/",
+          "title": "GIMP downloads (3.2.6, x86_64 and ARM64 installer)",
+          "type": "vendor",
+          "checked": "2026-11-03"
+        }
+      ],
+      "addedAt": "2026-11-03",
+      "verifiedAt": "2026-11-03",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
       "id": "git-for-windows",
       "name": "Git for Windows",
       "vendor": "Git for Windows",
@@ -1090,7 +1158,7 @@
       "status": "native",
       "scope": "rtx-spark",
       "maturity": "stable",
-      "confidence": "medium",
+      "confidence": "low",
       "version": "0.21.3",
       "homepage": "https://github.com/NousResearch/hermes-agent",
       "aliases": [
@@ -1107,7 +1175,7 @@
           "url": "https://nvidianews.nvidia.com/news/nvidia-rtx-spark-pcs-available-today-a-new-beginning-for-windows-pcs",
           "title": "NVIDIA: RTX Spark PCs available today",
           "type": "vendor",
-          "checked": "2026-10-31"
+          "checked": "2026-11-03"
         },
         {
           "url": "https://github.com/Linaro/works-on-woa/blob/staging/src/data/content/projects.json",
@@ -1153,6 +1221,40 @@
       ],
       "addedAt": "2026-10-31",
       "verifiedAt": "2026-11-02",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "keepassxc",
+      "name": "KeePassXC",
+      "vendor": "KeePassXC Team",
+      "category": "utility",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "high",
+      "version": "2.8.0",
+      "homepage": "https://keepassxc.org",
+      "summary": {
+        "en": "Open-source password manager with official Windows ARM64 MSI and ZIP.",
+        "zh-TW": "開源密碼管理員，官方提供 Windows ARM64 的 MSI 與 ZIP。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://github.com/keepassxreboot/keepassxc/releases/expanded_assets/2.8.0",
+          "title": "KeePassXC 2.8.0 release assets (KeePassXC-2.8.0-ARM64.msi)",
+          "type": "release",
+          "checked": "2026-11-03"
+        }
+      ],
+      "addedAt": "2026-11-03",
+      "verifiedAt": "2026-11-03",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -1235,11 +1337,11 @@
           "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12020",
           "title": "llama.cpp b12020 release",
           "type": "release",
-          "checked": "2026-10-31"
+          "checked": "2026-11-03"
         }
       ],
       "addedAt": "2026-10-31",
-      "verifiedAt": "2026-10-31",
+      "verifiedAt": "2026-11-03",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -1715,11 +1817,11 @@
           "url": "https://www.nvidia.com/en-us/geforce/broadcasting/broadcast-app/",
           "title": "NVIDIA Broadcast app",
           "type": "vendor",
-          "checked": "2026-10-31"
+          "checked": "2026-11-03"
         }
       ],
       "addedAt": "2026-10-31",
-      "verifiedAt": "2026-10-31",
+      "verifiedAt": "2026-11-03",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -1748,11 +1850,11 @@
           "url": "https://github.com/obsproject/obs-studio/releases/tag/33.0.1",
           "title": "OBS Studio 33.0.1 release",
           "type": "release",
-          "checked": "2026-10-31"
+          "checked": "2026-11-03"
         }
       ],
       "addedAt": "2026-10-31",
-      "verifiedAt": "2026-10-31",
+      "verifiedAt": "2026-11-03",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -1796,11 +1898,23 @@
           "url": "https://developer.nvidia.com/topics/ai/local-ai/port-apps",
           "title": "NVIDIA: porting local AI apps",
           "type": "vendor",
-          "checked": "2026-10-31"
+          "checked": "2026-11-03"
+        },
+        {
+          "url": "https://github.com/ollama/ollama/releases/expanded_assets/v0.32.3",
+          "title": "Ollama v0.32.3 release assets (ollama-windows-arm64.zip)",
+          "type": "release",
+          "checked": "2026-11-03"
         }
       ],
       "addedAt": "2026-10-31",
-      "verifiedAt": "2026-10-31",
+      "verifiedAt": "2026-11-03",
+      "caveats": [
+        {
+          "en": "The Arm64 build ships as a ZIP; the release has no Arm64 OllamaSetup.exe.",
+          "zh-TW": "Arm64 版本以 ZIP 提供，該版本沒有 Arm64 的 OllamaSetup.exe。"
+        }
+      ],
       "reportCount": 0,
       "hasConflict": false
     },
@@ -1855,11 +1969,11 @@
           "url": "https://www.opera.com/download",
           "title": "Opera downloads",
           "type": "vendor",
-          "checked": "2026-10-31"
+          "checked": "2026-11-03"
         }
       ],
       "addedAt": "2026-10-31",
-      "verifiedAt": "2026-10-31",
+      "verifiedAt": "2026-11-03",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -1919,11 +2033,11 @@
           "url": "https://www.python.org/downloads/windows/",
           "title": "Python downloads for Windows",
           "type": "vendor",
-          "checked": "2026-10-31"
+          "checked": "2026-11-03"
         }
       ],
       "addedAt": "2026-10-31",
-      "verifiedAt": "2026-10-31",
+      "verifiedAt": "2026-11-03",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -2006,11 +2120,11 @@
           "url": "https://slack.com/downloads/windows",
           "title": "Slack for Windows downloads",
           "type": "vendor",
-          "checked": "2026-10-31"
+          "checked": "2026-11-03"
         }
       ],
       "addedAt": "2026-10-31",
-      "verifiedAt": "2026-10-31",
+      "verifiedAt": "2026-11-03",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -2142,6 +2256,40 @@
       "hasConflict": false
     },
     {
+      "id": "telegram",
+      "name": "Telegram Desktop",
+      "vendor": "Telegram FZ-LLC",
+      "category": "communication",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "high",
+      "version": "7.3.3",
+      "homepage": "https://desktop.telegram.org",
+      "summary": {
+        "en": "Official Telegram Desktop release with Arm64 Windows installer and portable build.",
+        "zh-TW": "Telegram 桌面版官方釋出，提供 Windows Arm64 安裝程式與可攜版。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://github.com/telegramdesktop/tdesktop/releases/expanded_assets/v7.3.3",
+          "title": "Telegram Desktop v7.3.3 release assets (td-setup-win-arm-7.3.3.exe)",
+          "type": "release",
+          "checked": "2026-11-03"
+        }
+      ],
+      "addedAt": "2026-11-03",
+      "verifiedAt": "2026-11-03",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
       "id": "valorant",
       "name": "Valorant",
       "vendor": "Riot Games",
@@ -2232,11 +2380,11 @@
           "url": "https://code.visualstudio.com/download",
           "title": "VS Code downloads",
           "type": "vendor",
-          "checked": "2026-10-31"
+          "checked": "2026-11-03"
         }
       ],
       "addedAt": "2026-10-31",
-      "verifiedAt": "2026-10-31",
+      "verifiedAt": "2026-11-03",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -2262,11 +2410,11 @@
           "url": "https://vivaldi.com/download/",
           "title": "Vivaldi downloads",
           "type": "vendor",
-          "checked": "2026-10-31"
+          "checked": "2026-11-03"
         }
       ],
       "addedAt": "2026-10-31",
-      "verifiedAt": "2026-10-31",
+      "verifiedAt": "2026-11-03",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -2452,6 +2600,40 @@
       ],
       "addedAt": "2026-11-02",
       "verifiedAt": "2026-11-02",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "wireshark",
+      "name": "Wireshark",
+      "vendor": "Wireshark Foundation",
+      "category": "developer",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "high",
+      "version": "4.6.9",
+      "homepage": "https://www.wireshark.org",
+      "summary": {
+        "en": "Network protocol analyzer with an official Windows Arm64 installer.",
+        "zh-TW": "網路封包分析工具，官方提供 Windows Arm64 安裝程式。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.wireshark.org/download.html",
+          "title": "Wireshark download page (Wireshark-4.6.9-arm64.exe)",
+          "type": "vendor",
+          "checked": "2026-11-03"
+        }
+      ],
+      "addedAt": "2026-11-03",
+      "verifiedAt": "2026-11-03",
       "reportCount": 0,
       "hasConflict": false
     },
