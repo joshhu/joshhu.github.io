@@ -503,6 +503,40 @@
       "hasConflict": false
     },
     {
+      "id": "bitwarden",
+      "name": "Bitwarden",
+      "vendor": "Bitwarden",
+      "category": "utility",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "high",
+      "version": "2026.10.2",
+      "homepage": "https://bitwarden.com",
+      "summary": {
+        "en": "Password manager desktop app with native Windows Arm64 packages.",
+        "zh-TW": "提供原生 Windows Arm64 套件的密碼管理員桌面版。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://github.com/bitwarden/clients/releases",
+          "title": "Bitwarden Desktop v2026.10.2 release (Bitwarden-2026.10.2-arm64.appx)",
+          "type": "release",
+          "checked": "2026-11-02"
+        }
+      ],
+      "addedAt": "2026-11-02",
+      "verifiedAt": "2026-11-02",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
       "id": "blender",
       "name": "Blender",
       "vendor": "Blender Foundation",
@@ -693,11 +727,11 @@
           "url": "https://forums.developer.nvidia.com/t/rtx-spark-getting-started-with-development/385976",
           "title": "NVIDIA: getting started with RTX Spark development",
           "type": "vendor",
-          "checked": "2026-10-31"
+          "checked": "2026-11-02"
         }
       ],
       "addedAt": "2026-10-31",
-      "verifiedAt": "2026-10-31",
+      "verifiedAt": "2026-11-02",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -809,11 +843,11 @@
           "url": "https://discord.com/api/downloads/distributions/app/installers/latest?arch=arm64&channel=stable&platform=win",
           "title": "Discord Arm64 installer (starts a download)",
           "type": "vendor",
-          "checked": "2026-10-31"
+          "checked": "2026-11-02"
         }
       ],
       "addedAt": "2026-10-31",
-      "verifiedAt": "2026-10-31",
+      "verifiedAt": "2026-11-02",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -842,11 +876,11 @@
           "url": "https://docs.docker.com/desktop/setup/install/windows-install/",
           "title": "Install Docker Desktop on Windows",
           "type": "vendor",
-          "checked": "2026-10-31"
+          "checked": "2026-11-02"
         }
       ],
       "addedAt": "2026-10-31",
-      "verifiedAt": "2026-10-31",
+      "verifiedAt": "2026-11-02",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -895,11 +929,11 @@
           "url": "https://www.figma.com/downloads/",
           "title": "Figma downloads",
           "type": "vendor",
-          "checked": "2026-10-31"
+          "checked": "2026-11-02"
         }
       ],
       "addedAt": "2026-10-31",
-      "verifiedAt": "2026-10-31",
+      "verifiedAt": "2026-11-02",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -1114,11 +1148,11 @@
           "url": "https://www.jetbrains.com/help/idea/installation-guide.html",
           "title": "IntelliJ IDEA installation guide",
           "type": "vendor",
-          "checked": "2026-10-31"
+          "checked": "2026-11-02"
         }
       ],
       "addedAt": "2026-10-31",
-      "verifiedAt": "2026-10-31",
+      "verifiedAt": "2026-11-02",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -1231,11 +1265,11 @@
           "url": "https://lmstudio.ai/docs/app/system-requirements",
           "title": "LM Studio system requirements",
           "type": "vendor",
-          "checked": "2026-10-31"
+          "checked": "2026-11-02"
         }
       ],
       "addedAt": "2026-10-31",
-      "verifiedAt": "2026-10-31",
+      "verifiedAt": "2026-11-02",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -1284,11 +1318,11 @@
           "url": "https://www.mathworks.com/matlabcentral/answers/2182415-is-matlab-supported-on-windows-on-arm-devices",
           "title": "MathWorks: MATLAB on Windows on Arm",
           "type": "vendor",
-          "checked": "2026-10-31"
+          "checked": "2026-11-02"
         }
       ],
       "addedAt": "2026-10-31",
-      "verifiedAt": "2026-10-31",
+      "verifiedAt": "2026-11-02",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -1348,11 +1382,11 @@
           "url": "https://learn.microsoft.com/surface/surface-arm-faq",
           "title": "Surface Arm FAQ",
           "type": "vendor",
-          "checked": "2026-10-31"
+          "checked": "2026-11-02"
         }
       ],
       "addedAt": "2026-10-31",
-      "verifiedAt": "2026-10-31",
+      "verifiedAt": "2026-11-02",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -1375,11 +1409,11 @@
           "url": "https://learn.microsoft.com/surface/surface-arm-faq",
           "title": "Surface Arm FAQ",
           "type": "vendor",
-          "checked": "2026-10-31"
+          "checked": "2026-11-02"
         }
       ],
       "addedAt": "2026-10-31",
-      "verifiedAt": "2026-10-31",
+      "verifiedAt": "2026-11-02",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -1403,11 +1437,11 @@
           "url": "https://learn.microsoft.com/surface/surface-arm-faq",
           "title": "Surface Arm FAQ",
           "type": "vendor",
-          "checked": "2026-10-31"
+          "checked": "2026-11-02"
         }
       ],
       "addedAt": "2026-10-31",
-      "verifiedAt": "2026-10-31",
+      "verifiedAt": "2026-11-02",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -1437,11 +1471,45 @@
           "url": "https://learn.microsoft.com/surface/surface-arm-faq",
           "title": "Surface Arm FAQ",
           "type": "vendor",
-          "checked": "2026-10-31"
+          "checked": "2026-11-02"
         }
       ],
       "addedAt": "2026-10-31",
-      "verifiedAt": "2026-10-31",
+      "verifiedAt": "2026-11-02",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "powertoys",
+      "name": "Microsoft PowerToys",
+      "vendor": "Microsoft",
+      "category": "utility",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "high",
+      "version": "0.102.3001",
+      "homepage": "https://github.com/microsoft/PowerToys",
+      "summary": {
+        "en": "Windows utility suite with official Arm64 installers.",
+        "zh-TW": "提供官方 Arm64 安裝程式的 Windows 實用工具集。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://github.com/microsoft/PowerToys/releases/latest",
+          "title": "PowerToys v0.102.3001 release (PowerToysSetup-0.102.3001.0-arm64.exe)",
+          "type": "release",
+          "checked": "2026-11-02"
+        }
+      ],
+      "addedAt": "2026-11-02",
+      "verifiedAt": "2026-11-02",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -1465,11 +1533,11 @@
           "url": "https://learn.microsoft.com/surface/surface-arm-faq",
           "title": "Surface Arm FAQ",
           "type": "vendor",
-          "checked": "2026-10-31"
+          "checked": "2026-11-02"
         }
       ],
       "addedAt": "2026-10-31",
-      "verifiedAt": "2026-10-31",
+      "verifiedAt": "2026-11-02",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -1499,11 +1567,11 @@
           "url": "https://learn.microsoft.com/surface/surface-arm-faq",
           "title": "Surface Arm FAQ",
           "type": "vendor",
-          "checked": "2026-10-31"
+          "checked": "2026-11-02"
         }
       ],
       "addedAt": "2026-10-31",
-      "verifiedAt": "2026-10-31",
+      "verifiedAt": "2026-11-02",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -1559,11 +1627,45 @@
           "url": "https://nodejs.org/dist/latest/",
           "title": "Node.js latest downloads",
           "type": "release",
-          "checked": "2026-10-31"
+          "checked": "2026-11-02"
         }
       ],
       "addedAt": "2026-10-31",
-      "verifiedAt": "2026-10-31",
+      "verifiedAt": "2026-11-02",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "notepad-plus-plus",
+      "name": "Notepad++",
+      "vendor": "Notepad++ team",
+      "category": "productivity",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "high",
+      "version": "8.9.8.1",
+      "homepage": "https://notepad-plus-plus.org",
+      "summary": {
+        "en": "Text and code editor with an official native Arm64 installer.",
+        "zh-TW": "官方提供原生 Arm64 安裝程式的文字與程式碼編輯器。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://github.com/notepad-plus-plus/notepad-plus-plus/releases/latest",
+          "title": "Notepad++ 8.9.8.1 release assets (npp.8.9.8.1.Installer.arm64.exe)",
+          "type": "release",
+          "checked": "2026-11-02"
+        }
+      ],
+      "addedAt": "2026-11-02",
+      "verifiedAt": "2026-11-02",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -1583,11 +1685,11 @@
           "url": "https://www.notion.com/desktop",
           "title": "Notion desktop downloads",
           "type": "vendor",
-          "checked": "2026-10-31"
+          "checked": "2026-11-02"
         }
       ],
       "addedAt": "2026-10-31",
-      "verifiedAt": "2026-10-31",
+      "verifiedAt": "2026-11-02",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -1758,6 +1860,40 @@
       ],
       "addedAt": "2026-10-31",
       "verifiedAt": "2026-10-31",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "powershell",
+      "name": "PowerShell",
+      "vendor": "Microsoft",
+      "category": "developer",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "high",
+      "version": "7.6.9",
+      "homepage": "https://github.com/PowerShell/PowerShell",
+      "summary": {
+        "en": "PowerShell 7 ships a native win-arm64 MSI and zip.",
+        "zh-TW": "PowerShell 7 提供原生 win-arm64 的 MSI 與 zip 套件。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://github.com/PowerShell/PowerShell/releases/latest",
+          "title": "PowerShell 7.6.9 release (PowerShell-7.6.9-win-arm64.msi)",
+          "type": "release",
+          "checked": "2026-11-02"
+        }
+      ],
+      "addedAt": "2026-11-02",
+      "verifiedAt": "2026-11-02",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -2286,6 +2422,40 @@
       "hasConflict": false
     },
     {
+      "id": "winmerge",
+      "name": "WinMerge",
+      "vendor": "WinMerge project",
+      "category": "developer",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "high",
+      "version": "2.16.60",
+      "homepage": "https://winmerge.org",
+      "summary": {
+        "en": "File and folder diff tool with an official ARM64 installer.",
+        "zh-TW": "檔案與資料夾比較工具，官方提供 ARM64 安裝程式。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://github.com/winmerge/winmerge/releases/expanded_assets/v2.16.60",
+          "title": "WinMerge 2.16.60 release assets (WinMerge-2.16.60-ARM64-Setup.exe)",
+          "type": "release",
+          "checked": "2026-11-02"
+        }
+      ],
+      "addedAt": "2026-11-02",
+      "verifiedAt": "2026-11-02",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
       "id": "world-of-warcraft",
       "name": "World of Warcraft",
       "vendor": "Blizzard",
@@ -2355,11 +2525,11 @@
           "url": "https://learn.microsoft.com/surface/surface-arm-faq",
           "title": "Surface Arm FAQ",
           "type": "vendor",
-          "checked": "2026-10-31"
+          "checked": "2026-11-02"
         }
       ],
       "addedAt": "2026-10-31",
-      "verifiedAt": "2026-10-31",
+      "verifiedAt": "2026-11-02",
       "reportCount": 0,
       "hasConflict": false
     }
