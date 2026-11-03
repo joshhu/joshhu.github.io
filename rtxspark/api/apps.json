@@ -1,6 +1,6 @@
 {
   "license": "CC-BY-4.0",
-  "updated": "2026-11-03",
+  "updated": "2026-11-04",
   "apps": [
     {
       "id": "2xko",
@@ -450,6 +450,50 @@
       "hasConflict": false
     },
     {
+      "id": "audacity",
+      "name": "Audacity",
+      "vendor": "Audacity Team",
+      "category": "creative",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "high",
+      "version": "4.0.2",
+      "homepage": "https://www.audacityteam.org",
+      "summary": {
+        "en": "Audio editor with an official Arm64 MSI installer and portable archive on the download page.",
+        "zh-TW": "音訊編輯軟體，官方下載頁提供 Arm64 的 MSI 安裝程式與免安裝版。"
+      },
+      "caveats": [
+        {
+          "en": "The download page says the Arm64 builds have no plugin support.",
+          "zh-TW": "官方下載頁註明 Arm64 版本不支援外掛。"
+        },
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.audacityteam.org/download/windows/",
+          "title": "Audacity download page: ARM64 MSI and portable, version 4.0.2",
+          "type": "vendor",
+          "checked": "2026-11-04"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/a/Audacity/Audacity/4.0.2.263060742/Audacity.Audacity.installer.yaml",
+          "title": "winget manifest: audacity-win-4.0.2-arm64.msi",
+          "type": "release",
+          "checked": "2026-11-04"
+        }
+      ],
+      "addedAt": "2026-11-04",
+      "verifiedAt": "2026-11-04",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
       "id": "autocad",
       "name": "Autodesk AutoCAD",
       "vendor": "Autodesk",
@@ -584,17 +628,17 @@
           "url": "https://www.notebookcheck.net/Asus-ProArt-P16-RTX-Spark-Laptop-Review-The-future-of-multimedia-laptops.1422366.0.html",
           "title": "Notebookcheck: ASUS ProArt P16 review",
           "type": "review",
-          "checked": "2026-10-31"
+          "checked": "2026-11-04"
         },
         {
           "url": "https://www.nvidia.com/en-us/geforce/news/rtx-spark-dlss-reflex-ray-tracing-games/",
           "title": "NVIDIA: RTX Spark games",
           "type": "vendor",
-          "checked": "2026-10-31"
+          "checked": "2026-11-04"
         }
       ],
       "addedAt": "2026-10-31",
-      "verifiedAt": "2026-10-31",
+      "verifiedAt": "2026-11-04",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -756,11 +800,11 @@
           "url": "https://storeedgefd.dsx.mp.microsoft.com/v9.0/packageManifests/XP9KN75RRB9NHS?Market=US&Locale=en-US",
           "title": "Microsoft Store package manifest: CapCut",
           "type": "release",
-          "checked": "2026-10-31"
+          "checked": "2026-11-04"
         }
       ],
       "addedAt": "2026-10-31",
-      "verifiedAt": "2026-10-31",
+      "verifiedAt": "2026-11-04",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -805,11 +849,11 @@
           "url": "https://claude.ai/download",
           "title": "Claude downloads",
           "type": "vendor",
-          "checked": "2026-10-31"
+          "checked": "2026-11-04"
         }
       ],
       "addedAt": "2026-10-31",
-      "verifiedAt": "2026-10-31",
+      "verifiedAt": "2026-11-04",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -955,11 +999,11 @@
           "url": "https://www.windowscentral.com/hardware/nvidia/rtx-spark-review-benchmarks-2026",
           "title": "Windows Central: RTX Spark review",
           "type": "review",
-          "checked": "2026-10-31"
+          "checked": "2026-11-04"
         }
       ],
       "addedAt": "2026-10-31",
-      "verifiedAt": "2026-10-31",
+      "verifiedAt": "2026-11-04",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -988,11 +1032,11 @@
           "url": "https://davinciresolveclub.com/davinci-resolve-windows-x86-vs-arm/",
           "title": "DaVinci Resolve Club: Windows x86 vs Arm",
           "type": "community",
-          "checked": "2026-10-31"
+          "checked": "2026-11-04"
         }
       ],
       "addedAt": "2026-10-31",
-      "verifiedAt": "2026-10-31",
+      "verifiedAt": "2026-11-04",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -1221,11 +1265,11 @@
           "url": "https://www.notebookcheck.net/Asus-ProArt-P16-RTX-Spark-Laptop-Review-The-future-of-multimedia-laptops.1422366.0.html",
           "title": "Notebookcheck: ASUS ProArt P16 review",
           "type": "review",
-          "checked": "2026-10-31"
+          "checked": "2026-11-04"
         }
       ],
       "addedAt": "2026-10-31",
-      "verifiedAt": "2026-10-31",
+      "verifiedAt": "2026-11-04",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -1274,11 +1318,11 @@
           "url": "https://www.xda-developers.com/tested-two-decades-of-windows-gaming-history-on-arm-rtx-spark-nvidia/",
           "title": "XDA: two decades of Windows games on RTX Spark",
           "type": "review",
-          "checked": "2026-10-31"
+          "checked": "2026-11-04"
         }
       ],
       "addedAt": "2026-10-31",
-      "verifiedAt": "2026-10-31",
+      "verifiedAt": "2026-11-04",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -1306,11 +1350,11 @@
           "url": "https://www.nvidia.com/en-us/geforce/news/rtx-spark-dlss-reflex-ray-tracing-games/",
           "title": "NVIDIA: RTX Spark games",
           "type": "vendor",
-          "checked": "2026-10-31"
+          "checked": "2026-11-04"
         }
       ],
       "addedAt": "2026-10-31",
-      "verifiedAt": "2026-10-31",
+      "verifiedAt": "2026-11-04",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -1472,6 +1516,44 @@
       "hasConflict": false
     },
     {
+      "id": "inkscape",
+      "name": "Inkscape",
+      "vendor": "Inkscape Project",
+      "category": "creative",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "medium",
+      "version": "Store build",
+      "homepage": "https://inkscape.org",
+      "summary": {
+        "en": "Vector graphics editor whose Microsoft Store package includes an arm64 build.",
+        "zh-TW": "向量繪圖軟體，Microsoft Store 套件內含 arm64 版本。"
+      },
+      "caveats": [
+        {
+          "en": "The Store manifest gives no version number. Linaro's catalog lists native 1.3.2.0 and an NVIDIA validation, but the Linaro result was not independently read for RTX Spark.",
+          "zh-TW": "Store 資訊未標示版本號。Linaro 目錄列為原生 1.3.2.0 並有 NVIDIA 驗證，但未另行確認 RTX Spark 的結果。"
+        },
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://storeedgefd.dsx.mp.microsoft.com/v9.0/packageManifests/9pd9bhglfc7h?Market=US&Locale=en-US",
+          "title": "Microsoft Store package manifest: Inkscape (arm64, x64, x86)",
+          "type": "release",
+          "checked": "2026-11-04"
+        }
+      ],
+      "addedAt": "2026-11-04",
+      "verifiedAt": "2026-11-04",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
       "id": "jetbrains-ides",
       "name": "JetBrains IDEs",
       "vendor": "JetBrains",
@@ -1503,6 +1585,48 @@
       ],
       "addedAt": "2026-10-31",
       "verifiedAt": "2026-11-02",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "kakaotalk",
+      "name": "KakaoTalk",
+      "vendor": "Kakao Corp.",
+      "category": "communication",
+      "status": "prism",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "medium",
+      "version": "x64 26.8.1",
+      "homepage": "https://www.kakaocorp.com",
+      "aliases": [
+        "카카오톡",
+        "Kakao Talk"
+      ],
+      "summary": {
+        "en": "Korean messenger. The Microsoft Store package offers only x64 and x86 installers, so it runs under Prism.",
+        "zh-TW": "南韓常用的通訊軟體。Microsoft Store 套件只提供 x64 與 x86 安裝程式，在 Arm 上以 Prism 轉譯執行。"
+      },
+      "caveats": [
+        {
+          "en": "No Arm64 build is listed. Linaro's catalog records it as working under emulation, but I did not test it on RTX Spark.",
+          "zh-TW": "Store 未列出 Arm64 版本。Linaro 目錄記錄為轉譯可運作，但未在 RTX Spark 上實測。"
+        },
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://storeedgefd.dsx.mp.microsoft.com/v9.0/packageManifests/XP9K178L5G0JQ0?Market=US&Locale=en-US",
+          "title": "Microsoft Store package manifest: 카카오톡 26.8.1.5315 (x64, x86 only)",
+          "type": "release",
+          "checked": "2026-11-04"
+        }
+      ],
+      "addedAt": "2026-11-04",
+      "verifiedAt": "2026-11-04",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -1565,11 +1689,45 @@
           "url": "https://www.nvidia.com/en-us/geforce/news/rtx-spark-dlss-reflex-ray-tracing-games/",
           "title": "NVIDIA: RTX Spark games",
           "type": "vendor",
-          "checked": "2026-10-31"
+          "checked": "2026-11-04"
         }
       ],
       "addedAt": "2026-10-31",
-      "verifiedAt": "2026-10-31",
+      "verifiedAt": "2026-11-04",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "libreoffice",
+      "name": "LibreOffice",
+      "vendor": "The Document Foundation",
+      "category": "productivity",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "medium",
+      "version": "26.8.2",
+      "homepage": "https://www.libreoffice.org",
+      "summary": {
+        "en": "Office suite with a native aarch64 Windows MSI published on the project's download server.",
+        "zh-TW": "開放原始碼辦公室軟體，專案下載伺服器提供 Windows 原生 aarch64 的 MSI 安裝程式。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/t/TheDocumentFoundation/LibreOffice/26.8.2.2/TheDocumentFoundation.LibreOffice.installer.yaml",
+          "title": "winget manifest 26.8.2.2: arm64 installer LibreOffice_26.8.2_Win_aarch64.msi on download.documentfoundation.org",
+          "type": "release",
+          "checked": "2026-11-04"
+        }
+      ],
+      "addedAt": "2026-11-04",
+      "verifiedAt": "2026-11-04",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -1589,11 +1747,11 @@
           "url": "https://storeedgefd.dsx.mp.microsoft.com/v9.0/packageManifests/XPFCC4CD725961?Market=US&Locale=en-US",
           "title": "Microsoft Store package manifest: LINE",
           "type": "release",
-          "checked": "2026-10-31"
+          "checked": "2026-11-04"
         }
       ],
       "addedAt": "2026-10-31",
-      "verifiedAt": "2026-10-31",
+      "verifiedAt": "2026-11-04",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -2425,6 +2583,40 @@
       "hasConflict": false
     },
     {
+      "id": "putty",
+      "name": "PuTTY",
+      "vendor": "Simon Tatham",
+      "category": "developer",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "medium",
+      "version": "0.85",
+      "homepage": "https://www.chiark.greenend.org.uk/~sgtatham/putty/",
+      "summary": {
+        "en": "SSH and telnet client whose Microsoft Store package ships an arm64 MSI.",
+        "zh-TW": "SSH 與 Telnet 用戶端，Microsoft Store 套件提供 arm64 的 MSI。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://storeedgefd.dsx.mp.microsoft.com/v9.0/packageManifests/XPFNZKSKLBP7RJ?Market=US&Locale=en-US",
+          "title": "Microsoft Store package manifest: PuTTY 0.85.0.0 (arm64 MSI)",
+          "type": "release",
+          "checked": "2026-11-04"
+        }
+      ],
+      "addedAt": "2026-11-04",
+      "verifiedAt": "2026-11-04",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
       "id": "python",
       "name": "Python",
       "vendor": "Python Software Foundation",
@@ -3117,6 +3309,48 @@
       "hasConflict": false
     },
     {
+      "id": "wechat",
+      "name": "WeChat",
+      "vendor": "Tencent",
+      "category": "communication",
+      "status": "prism",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "medium",
+      "version": "x64 4.1",
+      "homepage": "https://www.wechat.com",
+      "aliases": [
+        "微信",
+        "Weixin"
+      ],
+      "summary": {
+        "en": "Chinese messenger. The Microsoft Store package offers only x64 and x86 installers, so it runs under Prism.",
+        "zh-TW": "微信。Microsoft Store 套件只提供 x64 與 x86 安裝程式，在 Arm 上以 Prism 轉譯執行。"
+      },
+      "caveats": [
+        {
+          "en": "No Arm64 build is listed. Linaro's catalog records it as working under emulation, but I did not test it on RTX Spark.",
+          "zh-TW": "Store 未列出 Arm64 版本。Linaro 目錄記錄為轉譯可運作，但未在 RTX Spark 上實測。"
+        },
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://storeedgefd.dsx.mp.microsoft.com/v9.0/packageManifests/XPFCKBRNFZQ62G?Market=US&Locale=en-US",
+          "title": "Microsoft Store package manifest: 微信 4.1.15.12 (x64, x86 only)",
+          "type": "release",
+          "checked": "2026-11-04"
+        }
+      ],
+      "addedAt": "2026-11-04",
+      "verifiedAt": "2026-11-04",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
       "id": "whatsapp",
       "name": "WhatsApp",
       "vendor": "Meta",
@@ -3317,6 +3551,40 @@
       ],
       "addedAt": "2026-10-31",
       "verifiedAt": "2026-11-02",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "zotero",
+      "name": "Zotero",
+      "vendor": "Corporation for Digital Scholarship",
+      "category": "productivity",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "medium",
+      "version": "10.0.7",
+      "homepage": "https://www.zotero.org",
+      "summary": {
+        "en": "Reference manager with an arm64 Windows installer published on download.zotero.org.",
+        "zh-TW": "文獻管理軟體，download.zotero.org 提供 Windows arm64 安裝程式。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/d/DigitalScholar/Zotero/10.0.7/DigitalScholar.Zotero.installer.yaml",
+          "title": "winget manifest 10.0.7: Zotero-10.0.7_arm64_setup.exe",
+          "type": "release",
+          "checked": "2026-11-04"
+        }
+      ],
+      "addedAt": "2026-11-04",
+      "verifiedAt": "2026-11-04",
       "reportCount": 0,
       "hasConflict": false
     },
