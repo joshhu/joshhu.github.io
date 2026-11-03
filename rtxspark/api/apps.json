@@ -3,6 +3,41 @@
   "updated": "2026-11-03",
   "apps": [
     {
+      "id": "2xko",
+      "name": "2XKO",
+      "vendor": "Riot Games",
+      "category": "game",
+      "status": "broken",
+      "scope": "rtx-spark",
+      "maturity": "stable",
+      "confidence": "medium",
+      "homepage": "https://2xko.riotgames.com",
+      "caveats": [
+        {
+          "en": "Riot lists x64 as the required OS architecture and needs the Vanguard anti-cheat setup (TPM 2.0, Secure Boot). On RTX Spark the Vanguard driver refuses to install. Riot has not given an Arm date.",
+          "zh-TW": "Riot 規定作業系統架構須為 x64，並需要 Vanguard 反作弊環境（TPM 2.0、安全開機）。在 RTX Spark 上 Vanguard 驅動程式無法安裝。Riot 尚未公布 Arm 支援時程。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://support.riotgames.com/2xko/performance/2xko-system-requirements",
+          "title": "Riot: 2XKO system requirements, OS architecture x64",
+          "type": "vendor",
+          "checked": "2026-11-03"
+        },
+        {
+          "url": "https://www.xda-developers.com/nvidia-rtx-spark-passed-most-anti-cheat-tests-valorant-and-call-of-duty-still-wont-run/",
+          "title": "XDA: RTX Spark anti-cheat tests (Oct 21, 2026), 5 of 9 worked",
+          "type": "review",
+          "checked": "2026-11-03"
+        }
+      ],
+      "addedAt": "2026-11-03",
+      "verifiedAt": "2026-11-03",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
       "id": "7-zip",
       "name": "7-Zip",
       "vendor": "Igor Pavlov",
@@ -354,6 +389,67 @@
       "hasConflict": false
     },
     {
+      "id": "arena-breakout-infinite",
+      "name": "Arena Breakout: Infinite",
+      "vendor": "MoreFun Studios (Tencent)",
+      "category": "game",
+      "status": "broken",
+      "scope": "rtx-spark",
+      "maturity": "stable",
+      "confidence": "medium",
+      "homepage": "https://www.arenabreakoutinfinite.com",
+      "aliases": [
+        "暗區突圍：無限"
+      ],
+      "caveats": [
+        {
+          "en": "Its anti-cheat is not on RTX Spark yet. Tencent says the game is coming to RTX Spark laptops with anti-cheat in 2027. No independent launch test found.",
+          "zh-TW": "反作弊系統尚未支援 RTX Spark。騰訊表示本作會在 2027 年連同反作弊一起登上 RTX Spark 筆電。目前找不到獨立實測。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.nvidia.com/en-us/geforce/news/rtx-spark-dlss-reflex-ray-tracing-games/",
+          "title": "NVIDIA: RTX Spark launch games and anti-cheat roadmap (Oct 13, 2026)",
+          "type": "vendor",
+          "checked": "2026-11-03"
+        }
+      ],
+      "addedAt": "2026-11-03",
+      "verifiedAt": "2026-11-03",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "arturia-drivers",
+      "name": "Arturia ASIO and MIDI drivers",
+      "vendor": "Arturia",
+      "category": "utility",
+      "status": "broken",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "medium",
+      "homepage": "https://www.arturia.com",
+      "caveats": [
+        {
+          "en": "Arturia says none of its drivers (audio interfaces, controllers, synths) support Windows on Arm; the installer stops with 'The Current system is not supported'. Its plug-ins may run under emulation but are untested.",
+          "zh-TW": "Arturia 表示旗下所有驅動程式（錄音介面、控制器、合成器）都不支援 Windows on Arm，安裝程式會顯示「The Current system is not supported」。外掛在模擬下或許能跑，但未經測試。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://support.arturia.com/hc/en-us/articles/4407871884818-Compatibility-with-Windows-11",
+          "title": "Arturia: Windows 11 compatibility, drivers not compatible with Windows on Arm",
+          "type": "vendor",
+          "checked": "2026-11-03"
+        }
+      ],
+      "addedAt": "2026-11-03",
+      "verifiedAt": "2026-11-03",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
       "id": "autocad",
       "name": "Autodesk AutoCAD",
       "vendor": "Autodesk",
@@ -587,6 +683,51 @@
       ],
       "addedAt": "2026-10-31",
       "verifiedAt": "2026-10-31",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "call-of-duty",
+      "name": "Call of Duty (Black Ops 7, Warzone)",
+      "vendor": "Activision",
+      "category": "game",
+      "status": "broken",
+      "scope": "rtx-spark",
+      "maturity": "stable",
+      "confidence": "high",
+      "homepage": "https://www.callofduty.com",
+      "aliases": [
+        "決勝時刻",
+        "決勝時刻：戰區"
+      ],
+      "caveats": [
+        {
+          "en": "Ricochet kernel anti-cheat has no Arm64 driver yet. XDA saw Warzone crash on launch on RTX Spark, and Activision lists only Intel/AMD CPUs. NVIDIA says Call of Duty is coming to RTX Spark in 2027.",
+          "zh-TW": "Ricochet 核心層反作弊尚無 Arm64 驅動程式。XDA 在 RTX Spark 上實測《戰區》一啟動就當掉，Activision 也只列出 Intel/AMD 處理器。NVIDIA 表示《決勝時刻》要到 2027 年才會支援 RTX Spark。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.xda-developers.com/nvidia-rtx-spark-passed-most-anti-cheat-tests-valorant-and-call-of-duty-still-wont-run/",
+          "title": "XDA: RTX Spark anti-cheat tests (Oct 21, 2026), 5 of 9 worked",
+          "type": "review",
+          "checked": "2026-11-03"
+        },
+        {
+          "url": "https://www.nvidia.com/en-us/geforce/news/rtx-spark-dlss-reflex-ray-tracing-games/",
+          "title": "NVIDIA: RTX Spark launch games and anti-cheat roadmap (Oct 13, 2026)",
+          "type": "vendor",
+          "checked": "2026-11-03"
+        },
+        {
+          "url": "https://support.activision.com/black-ops-7/articles/pc-system-requirements-for-black-ops-7",
+          "title": "Activision: Black Ops 7 PC requirements, only Intel/AMD CPUs with AVX supported",
+          "type": "vendor",
+          "checked": "2026-11-03"
+        }
+      ],
+      "addedAt": "2026-11-03",
+      "verifiedAt": "2026-11-03",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -856,6 +997,44 @@
       "hasConflict": false
     },
     {
+      "id": "delta-force",
+      "name": "Delta Force",
+      "vendor": "Team Jade (Tencent)",
+      "category": "game",
+      "status": "broken",
+      "scope": "rtx-spark",
+      "maturity": "stable",
+      "confidence": "high",
+      "homepage": "https://www.playdeltaforce.com",
+      "aliases": [
+        "三角洲行動"
+      ],
+      "caveats": [
+        {
+          "en": "Tencent ACE kernel anti-cheat blocks it: XDA got an unsupported-platform pop-up on RTX Spark. Tencent says it will support RTX Spark, with limited testing planned for a future season; no date.",
+          "zh-TW": "被騰訊 ACE 核心層反作弊擋下：XDA 在 RTX Spark 上啟動時跳出「不支援的平台」。騰訊表示會支援 RTX Spark，並計畫在之後的賽季做小規模測試，沒有給日期。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.xda-developers.com/nvidia-rtx-spark-passed-most-anti-cheat-tests-valorant-and-call-of-duty-still-wont-run/",
+          "title": "XDA: RTX Spark anti-cheat tests (Oct 21, 2026), 5 of 9 worked",
+          "type": "review",
+          "checked": "2026-11-03"
+        },
+        {
+          "url": "https://www.nvidia.com/en-us/geforce/news/rtx-spark-dlss-reflex-ray-tracing-games/",
+          "title": "NVIDIA: RTX Spark launch games and anti-cheat roadmap (Oct 13, 2026)",
+          "type": "vendor",
+          "checked": "2026-11-03"
+        }
+      ],
+      "addedAt": "2026-11-03",
+      "verifiedAt": "2026-11-03",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
       "id": "discord",
       "name": "Discord",
       "vendor": "Discord",
@@ -915,6 +1094,109 @@
       ],
       "addedAt": "2026-10-31",
       "verifiedAt": "2026-11-02",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "ea-sports-fc-26",
+      "name": "EA SPORTS FC 26",
+      "vendor": "Electronic Arts",
+      "category": "game",
+      "status": "broken",
+      "scope": "rtx-spark",
+      "maturity": "stable",
+      "confidence": "medium",
+      "homepage": "https://www.ea.com/games/ea-sports-fc/fc-26",
+      "caveats": [
+        {
+          "en": "The PC version requires EA Javelin anti-cheat, which has no Arm64 driver yet; Battlefield 6, which uses the same anti-cheat, refuses to launch on RTX Spark. EA says Javelin reaches RTX Spark in early 2027.",
+          "zh-TW": "PC 版需要 EA Javelin 反作弊，而它還沒有 Arm64 驅動程式；同樣使用 Javelin 的《戰地風雲 6》在 RTX Spark 上無法啟動。EA 表示 Javelin 會在 2027 年初支援 RTX Spark。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.ea.com/games/ea-sports-fc/news/pitch-notes-fc26-pc-deep-dive",
+          "title": "EA: FC 26 PC deep dive, protected by EA Javelin Anticheat",
+          "type": "vendor",
+          "checked": "2026-11-03"
+        },
+        {
+          "url": "https://www.nvidia.com/en-us/geforce/news/rtx-spark-dlss-reflex-ray-tracing-games/",
+          "title": "NVIDIA: RTX Spark launch games and anti-cheat roadmap (Oct 13, 2026)",
+          "type": "vendor",
+          "checked": "2026-11-03"
+        },
+        {
+          "url": "https://www.xda-developers.com/nvidia-rtx-spark-passed-most-anti-cheat-tests-valorant-and-call-of-duty-still-wont-run/",
+          "title": "XDA: RTX Spark anti-cheat tests (Oct 21, 2026), 5 of 9 worked",
+          "type": "review",
+          "checked": "2026-11-03"
+        }
+      ],
+      "addedAt": "2026-11-03",
+      "verifiedAt": "2026-11-03",
+      "aliases": [
+        "FC 26",
+        "EA FC 26"
+      ],
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "elgato-camera-hub",
+      "name": "Elgato Camera Hub",
+      "vendor": "Elgato (Corsair)",
+      "category": "utility",
+      "status": "broken",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "medium",
+      "homepage": "https://www.elgato.com/us/en/s/downloads",
+      "caveats": [
+        {
+          "en": "Elgato marks Camera Hub as 'does not work: software installation fails' on Windows on Arm. Facecam hardware still works as a standard webcam in other apps.",
+          "zh-TW": "Elgato 將 Camera Hub 標示為「無法使用：軟體安裝失敗」。Facecam 硬體本身仍可在其他 App 中當一般網路攝影機使用。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://help.elgato.com/hc/en-us/articles/29935411773837-Windows-on-ARM-compatibility",
+          "title": "Elgato: Windows on ARM compatibility table",
+          "type": "vendor",
+          "checked": "2026-11-03"
+        }
+      ],
+      "addedAt": "2026-11-03",
+      "verifiedAt": "2026-11-03",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "elgato-video-capture",
+      "name": "Elgato Video Capture",
+      "vendor": "Elgato (Corsair)",
+      "category": "utility",
+      "status": "broken",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "medium",
+      "homepage": "https://www.elgato.com/us/en/s/downloads",
+      "caveats": [
+        {
+          "en": "Elgato lists Video Capture (and its device) as 'does not work' on Windows on Arm; Prism cannot emulate its DirectShow driver. No Arm version is announced.",
+          "zh-TW": "Elgato 將 Video Capture（及其擷取裝置）列為在 Windows on Arm 上「無法使用」；Prism 無法模擬它的 DirectShow 驅動程式。尚未宣布 Arm 版。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://help.elgato.com/hc/en-us/articles/29935411773837-Windows-on-ARM-compatibility",
+          "title": "Elgato: Windows on ARM compatibility table",
+          "type": "vendor",
+          "checked": "2026-11-03"
+        }
+      ],
+      "addedAt": "2026-11-03",
+      "verifiedAt": "2026-11-03",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -1372,6 +1654,70 @@
       ],
       "addedAt": "2026-10-31",
       "verifiedAt": "2026-11-02",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "mackie-drivers",
+      "name": "Mackie Windows audio drivers",
+      "vendor": "Mackie (LOUD Audio)",
+      "category": "utility",
+      "status": "broken",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "medium",
+      "homepage": "https://mackie.com",
+      "caveats": [
+        {
+          "en": "Mackie says its Windows drivers are x64-only and 'will not install or function correctly' on Snapdragon/Arm PCs, since hardware drivers can't be emulated. No Arm driver is announced.",
+          "zh-TW": "Mackie 表示其 Windows 驅動程式只有 x64 版，在 Snapdragon/Arm 電腦上「無法安裝或正常運作」，因為硬體驅動程式無法模擬。尚未宣布 Arm 版驅動。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://help.mackie.com/hc/en-us/articles/15022597422607-Why-Can-t-I-Install-the-Windows-Driver-for-My-Mackie-Product",
+          "title": "Mackie: why the Windows driver won't install on Snapdragon/Arm PCs",
+          "type": "vendor",
+          "checked": "2026-11-03"
+        }
+      ],
+      "addedAt": "2026-11-03",
+      "verifiedAt": "2026-11-03",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "madden-nfl-26",
+      "name": "Madden NFL 26",
+      "vendor": "Electronic Arts",
+      "category": "game",
+      "status": "broken",
+      "scope": "rtx-spark",
+      "maturity": "stable",
+      "confidence": "medium",
+      "homepage": "https://www.ea.com/games/madden-nfl/madden-nfl-26",
+      "caveats": [
+        {
+          "en": "Recent Madden releases use EA Javelin anti-cheat, which requires x86 Windows and makes them unplayable on Arm PCs for now. EA says Javelin reaches RTX Spark in early 2027.",
+          "zh-TW": "近年的 Madden 都使用 EA Javelin 反作弊，它需要 x86 版 Windows，所以目前在 Arm 電腦上無法遊玩。EA 表示 Javelin 會在 2027 年初支援 RTX Spark。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.notebookcheck.net/Battlefield-6-and-Madden-NFL-to-come-to-SteamOS-and-ARM-PCs.1243276.0.html",
+          "title": "Notebookcheck: Javelin requires x86 Windows; Battlefield, EA Sports, Madden use it",
+          "type": "review",
+          "checked": "2026-11-03"
+        },
+        {
+          "url": "https://www.nvidia.com/en-us/geforce/news/rtx-spark-dlss-reflex-ray-tracing-games/",
+          "title": "NVIDIA: RTX Spark launch games and anti-cheat roadmap (Oct 13, 2026)",
+          "type": "vendor",
+          "checked": "2026-11-03"
+        }
+      ],
+      "addedAt": "2026-11-03",
+      "verifiedAt": "2026-11-03",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -2012,6 +2358,73 @@
       "hasConflict": false
     },
     {
+      "id": "presonus-universal-control",
+      "name": "PreSonus Universal Control",
+      "vendor": "PreSonus (Fender)",
+      "category": "utility",
+      "status": "broken",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "medium",
+      "homepage": "https://www.presonus.com",
+      "caveats": [
+        {
+          "en": "PreSonus says Snapdragon/Windows on Arm is currently not supported in Universal Control with PreSonus hardware, and will update when Arm drivers ship. No date given.",
+          "zh-TW": "PreSonus 表示 Universal Control 搭配其硬體目前不支援 Snapdragon/Windows on Arm，等 Arm 驅動推出後會更新說明，沒有給日期。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://support.presonus.com/hc/en-us/articles/36667812249357-Windows-Arm-Processors-Snapdragon-are-currently-NOT-supported-in-Universal-Control-with-PreSonus-hardware",
+          "title": "PreSonus: Windows Arm (Snapdragon) not supported in Universal Control (May 2025)",
+          "type": "vendor",
+          "checked": "2026-11-03"
+        }
+      ],
+      "addedAt": "2026-11-03",
+      "verifiedAt": "2026-11-03",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "pubg-battlegrounds",
+      "name": "PUBG: BATTLEGROUNDS",
+      "vendor": "KRAFTON",
+      "category": "game",
+      "status": "broken",
+      "scope": "rtx-spark",
+      "maturity": "stable",
+      "confidence": "high",
+      "homepage": "https://pubg.com",
+      "aliases": [
+        "絕地求生"
+      ],
+      "caveats": [
+        {
+          "en": "Not playable on RTX Spark yet: the developer has not finished its side of Arm anti-cheat support. KRAFTON intends to bring it to the platform by the first half of 2027.",
+          "zh-TW": "目前在 RTX Spark 上還不能玩：開發商尚未完成 Arm 版反作弊的整合。KRAFTON 預計在 2027 年上半年前讓它支援這個平台。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.nvidia.com/en-us/geforce/news/rtx-spark-dlss-reflex-ray-tracing-games/",
+          "title": "NVIDIA: RTX Spark launch games and anti-cheat roadmap (Oct 13, 2026)",
+          "type": "vendor",
+          "checked": "2026-11-03"
+        },
+        {
+          "url": "https://www.xda-developers.com/nvidia-rtx-spark-passed-most-anti-cheat-tests-valorant-and-call-of-duty-still-wont-run/",
+          "title": "XDA: RTX Spark anti-cheat tests (Oct 21, 2026), 5 of 9 worked",
+          "type": "review",
+          "checked": "2026-11-03"
+        }
+      ],
+      "addedAt": "2026-11-03",
+      "verifiedAt": "2026-11-03",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
       "id": "python",
       "name": "Python",
       "vendor": "Python Software Foundation",
@@ -2075,6 +2488,76 @@
       "hasConflict": false
     },
     {
+      "id": "quickbooks-desktop",
+      "name": "QuickBooks Desktop",
+      "vendor": "Intuit",
+      "category": "productivity",
+      "status": "broken",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "medium",
+      "homepage": "https://quickbooks.intuit.com/desktop/",
+      "caveats": [
+        {
+          "en": "Intuit says QuickBooks Desktop is built for Intel/AMD, doesn't work properly on Arm, and the 6123 error can't be fixed by an update. Intuit points Arm users to hosted desktops or QuickBooks Online.",
+          "zh-TW": "Intuit 表示 QuickBooks Desktop 是為 Intel/AMD 設計，在 Arm 上無法正常運作，6123 錯誤也無法靠更新修正。Intuit 建議 Arm 使用者改用代管桌面或 QuickBooks Online。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://quickbooks.intuit.com/learn-support/en-us/help-articles/how-to-fix-error-6123-0/00/262247",
+          "title": "Intuit: Error 6123 on ARM computers, QuickBooks Desktop not compatible",
+          "type": "vendor",
+          "checked": "2026-11-03"
+        }
+      ],
+      "addedAt": "2026-11-03",
+      "verifiedAt": "2026-11-03",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "skate",
+      "name": "skate.",
+      "vendor": "Electronic Arts",
+      "category": "game",
+      "status": "broken",
+      "scope": "rtx-spark",
+      "maturity": "stable",
+      "confidence": "medium",
+      "homepage": "https://www.ea.com/games/skate/skate",
+      "caveats": [
+        {
+          "en": "Protected by EA Javelin anti-cheat, which still requires x86-64 Windows; Battlefield 6 with the same anti-cheat refuses to launch on RTX Spark. EA says Javelin reaches RTX Spark in early 2027.",
+          "zh-TW": "使用 EA Javelin 反作弊，目前仍需要 x86-64 版 Windows；同樣使用 Javelin 的《戰地風雲 6》在 RTX Spark 上無法啟動。EA 表示 Javelin 會在 2027 年初支援 RTX Spark。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.ea.com/news/ea-javelin-anticheat-2026-update",
+          "title": "EA: Javelin Anticheat 2026 update, native ARM64 support 'in the near future'",
+          "type": "vendor",
+          "checked": "2026-11-03"
+        },
+        {
+          "url": "https://www.nvidia.com/en-us/geforce/news/rtx-spark-dlss-reflex-ray-tracing-games/",
+          "title": "NVIDIA: RTX Spark launch games and anti-cheat roadmap (Oct 13, 2026)",
+          "type": "vendor",
+          "checked": "2026-11-03"
+        },
+        {
+          "url": "https://www.xda-developers.com/nvidia-rtx-spark-passed-most-anti-cheat-tests-valorant-and-call-of-duty-still-wont-run/",
+          "title": "XDA: RTX Spark anti-cheat tests (Oct 21, 2026), 5 of 9 worked",
+          "type": "review",
+          "checked": "2026-11-03"
+        }
+      ],
+      "addedAt": "2026-11-03",
+      "verifiedAt": "2026-11-03",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
       "id": "sketchup",
       "name": "SketchUp",
       "vendor": "Trimble",
@@ -2124,6 +2607,41 @@
         }
       ],
       "addedAt": "2026-10-31",
+      "verifiedAt": "2026-11-03",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "slate-digital-plugins",
+      "name": "Slate Digital plug-ins",
+      "vendor": "Slate Digital",
+      "category": "creative",
+      "status": "broken",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "medium",
+      "homepage": "https://slatedigital.com",
+      "caveats": [
+        {
+          "en": "Slate Digital says its plug-ins are not compatible with Windows on Arm (Snapdragon) and recommends Intel/AMD PCs. Arm support is being explored with no date.",
+          "zh-TW": "Slate Digital 表示其外掛與 Windows on Arm（Snapdragon）不相容，建議使用 Intel/AMD 電腦。Arm 支援仍在評估中，沒有時程。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://support.slatedigital.com/hc/en-us/articles/33265225047955-ARM-Based-Windows-Devices-Why-Slate-Digital-Plugins-Aren-t-Ready-for-Snapdragon-Yet",
+          "title": "Slate Digital: plug-ins not compatible with Snapdragon/Windows on Arm (Apr 2025)",
+          "type": "vendor",
+          "checked": "2026-11-03"
+        },
+        {
+          "url": "https://www.production-expert.com/production-expert-1/windows-on-arm-for-your-studio-what-audio-pros-need-to-know",
+          "title": "Production Expert: Windows on Arm for audio pros (Jul 13, 2026)",
+          "type": "review",
+          "checked": "2026-11-03"
+        }
+      ],
+      "addedAt": "2026-11-03",
       "verifiedAt": "2026-11-03",
       "reportCount": 0,
       "hasConflict": false
@@ -2188,6 +2706,35 @@
       ],
       "addedAt": "2026-10-31",
       "verifiedAt": "2026-10-31",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "st-link-driver",
+      "name": "ST-LINK USB driver",
+      "vendor": "STMicroelectronics",
+      "category": "developer",
+      "status": "broken",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "medium",
+      "homepage": "https://www.st.com/en/development-tools/stsw-link009.html",
+      "caveats": [
+        {
+          "en": "ST says it does not yet ship native Windows on Arm drivers for ST-LINK probes, so STM32CubeProgrammer can't use them out of the box. A user-reported WinUSB registry workaround exists but is unofficial.",
+          "zh-TW": "ST 表示尚未提供 ST-LINK 的原生 Windows on Arm 驅動程式，STM32CubeProgrammer 無法直接使用。有使用者分享改用 WinUSB 並修改登錄檔的做法，但並非官方方案。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://community.st.com/t5/stm32cubeprogrammer-mcus/snapdragon-stlink-interface/td-p/840979",
+          "title": "ST Community: no native Windows on Arm ST-LINK drivers yet (ST moderator, Oct 2025)",
+          "type": "community",
+          "checked": "2026-11-03"
+        }
+      ],
+      "addedAt": "2026-11-03",
+      "verifiedAt": "2026-11-03",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -2508,6 +3055,64 @@
       ],
       "addedAt": "2026-10-31",
       "verifiedAt": "2026-10-31",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "vmware-workstation-pro",
+      "name": "VMware Workstation Pro",
+      "vendor": "Broadcom",
+      "category": "developer",
+      "status": "broken",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "medium",
+      "homepage": "https://www.vmware.com/products/desktop-hypervisor/workstation-and-fusion",
+      "caveats": [
+        {
+          "en": "Built for x86 only and its drivers are x64-only, which Prism cannot emulate. A June 2026 install attempt on Snapdragon ended during driver installation. Use Hyper-V or VirtualBox 7.2 (Arm host, experimental) instead.",
+          "zh-TW": "只為 x86 開發，驅動程式也只有 x64 版，Prism 無法模擬。2026 年 6 月有人在 Snapdragon 上安裝，到驅動程式階段就失敗。可改用 Hyper-V 或 VirtualBox 7.2（Arm 主機，實驗性質）。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://community.broadcom.com/vmware-cloud-foundation/question/snapdragon-x-laptops-does-vmware-workstation-work",
+          "title": "Broadcom community: Workstation not supported on Snapdragon; install fails (Jun 2026)",
+          "type": "community",
+          "checked": "2026-11-03"
+        }
+      ],
+      "addedAt": "2026-11-03",
+      "verifiedAt": "2026-11-03",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "focusrite-vocasterhub",
+      "name": "Vocaster Hub",
+      "vendor": "Focusrite",
+      "category": "utility",
+      "status": "broken",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "medium",
+      "homepage": "https://focusrite.com",
+      "caveats": [
+        {
+          "en": "Focusrite says Vocaster Hub is not currently compatible with Windows on Arm. Vocaster audio still works through the standalone Arm driver; only the control app is missing.",
+          "zh-TW": "Focusrite 表示 Vocaster Hub 目前與 Windows on Arm 不相容。Vocaster 的聲音仍可透過獨立的 Arm 驅動程式使用，只是少了控制 App。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://support.focusrite.com/hc/en-gb/articles/21643588192146-Focusrite-compatibility-with-Windows-on-Arm",
+          "title": "Focusrite: interface and app compatibility with Windows on Arm",
+          "type": "vendor",
+          "checked": "2026-11-03"
+        }
+      ],
+      "addedAt": "2026-11-03",
+      "verifiedAt": "2026-11-03",
       "reportCount": 0,
       "hasConflict": false
     },
