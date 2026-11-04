@@ -1,6 +1,6 @@
 {
   "license": "CC-BY-4.0",
-  "updated": "2026-11-04",
+  "updated": "2026-11-05",
   "apps": [
     {
       "id": "2xko",
@@ -643,6 +643,40 @@
       "hasConflict": false
     },
     {
+      "id": "beekeeper-studio",
+      "name": "Beekeeper Studio",
+      "vendor": "Beekeeper Studio",
+      "category": "developer",
+      "status": "native",
+      "maturity": "stable",
+      "confidence": "medium",
+      "version": "6.2.1",
+      "homepage": "https://www.beekeeperstudio.io",
+      "summary": {
+        "en": "SQL editor and database manager whose release ships a separate arm64 installer.",
+        "zh-TW": "SQL 編輯器與資料庫管理工具，發行版另外提供 arm64 安裝程式。"
+      },
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/b/beekeeper-studio/beekeeper-studio/6.2.1/beekeeper-studio.beekeeper-studio.installer.yaml",
+          "title": "winget manifest 6.2.1: Beekeeper-Studio-Setup-6.2.1-arm64.exe",
+          "type": "release",
+          "checked": "2026-11-05"
+        }
+      ],
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        }
+      ],
+      "scope": "windows-on-arm",
+      "addedAt": "2026-11-05",
+      "verifiedAt": "2026-11-05",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
       "id": "bitwarden",
       "name": "Bitwarden",
       "vendor": "Bitwarden",
@@ -683,14 +717,14 @@
       "category": "creative",
       "status": "native",
       "scope": "rtx-spark",
-      "maturity": "stable",
+      "maturity": "beta",
       "confidence": "medium",
-      "version": "5.2 LTS",
+      "version": "5.3 beta",
       "homepage": "https://www.blender.org",
       "caveats": [
         {
-          "en": "GPU rendering with OptiX was tested on the 5.3 beta. Sources disagree about GPU support in stable versions.",
-          "zh-TW": "OptiX GPU 算圖是以 5.3 Beta 實測，各來源對穩定版的 GPU 支援說法不一。"
+          "en": "GPU rendering with OptiX was tested on the 5.3 beta; the review does not say whether the build is native Arm64. Microsoft's Surface Arm FAQ lists Blender as running natively on Arm, but that is not RTX Spark specific.",
+          "zh-TW": "OptiX GPU 算圖是以 5.3 Beta 實測，該評測未說明是否為原生 Arm64。微軟 Surface Arm 常見問題將 Blender 列為原生 Arm 執行，但並非針對 RTX Spark。"
         }
       ],
       "evidence": [
@@ -698,11 +732,17 @@
           "url": "https://www.xda-developers.com/rtx-spark-laptop-rendered-blender-scene-too-big-rtx-5090-local-llm/",
           "title": "XDA: Blender scene rendered on RTX Spark",
           "type": "review",
-          "checked": "2026-10-31"
+          "checked": "2026-11-05"
+        },
+        {
+          "url": "https://learn.microsoft.com/surface/surface-arm-faq",
+          "title": "Microsoft Surface Arm FAQ: Blender runs natively on Arm",
+          "type": "vendor",
+          "checked": "2026-11-05"
         }
       ],
       "addedAt": "2026-10-31",
-      "verifiedAt": "2026-10-31",
+      "verifiedAt": "2026-11-05",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -1138,6 +1178,40 @@
       ],
       "addedAt": "2026-10-31",
       "verifiedAt": "2026-11-02",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "dropbox",
+      "name": "Dropbox",
+      "vendor": "Dropbox, Inc.",
+      "category": "productivity",
+      "status": "native",
+      "maturity": "stable",
+      "confidence": "medium",
+      "version": "270.4+",
+      "homepage": "https://www.dropbox.com",
+      "summary": {
+        "en": "Cloud sync client whose offline EXE and enterprise MSI installers both have an arm64 build.",
+        "zh-TW": "雲端同步用戶端，離線 EXE 與企業版 MSI 安裝程式都有 arm64 版本。"
+      },
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/d/Dropbox/Dropbox/270.4.3312/Dropbox.Dropbox.installer.yaml",
+          "title": "winget manifest 270.4.3312: Offline Installer.arm64.exe and Enterprise Installer.arm64.msi",
+          "type": "release",
+          "checked": "2026-11-05"
+        }
+      ],
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        }
+      ],
+      "scope": "windows-on-arm",
+      "addedAt": "2026-11-05",
+      "verifiedAt": "2026-11-05",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -1894,11 +1968,11 @@
           "url": "https://www.xda-developers.com/tested-two-decades-of-windows-gaming-history-on-arm-rtx-spark-nvidia/",
           "title": "XDA: two decades of Windows games on RTX Spark",
           "type": "review",
-          "checked": "2026-10-31"
+          "checked": "2026-11-05"
         }
       ],
       "addedAt": "2026-10-31",
-      "verifiedAt": "2026-10-31",
+      "verifiedAt": "2026-11-05",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -2443,11 +2517,11 @@
           "url": "https://docs.openclaw.ai/platforms/windows",
           "title": "OpenClaw on Windows",
           "type": "vendor",
-          "checked": "2026-10-31"
+          "checked": "2026-11-05"
         }
       ],
       "addedAt": "2026-10-31",
-      "verifiedAt": "2026-10-31",
+      "verifiedAt": "2026-11-05",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -2478,6 +2552,40 @@
       ],
       "addedAt": "2026-10-31",
       "verifiedAt": "2026-11-03",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "postman",
+      "name": "Postman",
+      "vendor": "Postman, Inc.",
+      "category": "developer",
+      "status": "native",
+      "maturity": "stable",
+      "confidence": "medium",
+      "version": "12.35.1",
+      "homepage": "https://www.postman.com",
+      "summary": {
+        "en": "API client with a dedicated windows_arm64 download.",
+        "zh-TW": "API 測試用戶端，提供專屬的 windows_arm64 下載。"
+      },
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/p/Postman/Postman/arm64/12.35.1/Postman.Postman.arm64.installer.yaml",
+          "title": "winget manifest 12.35.1: dl.pstmn.io/download/version/12.35.1/windows_arm64",
+          "type": "release",
+          "checked": "2026-11-05"
+        }
+      ],
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        }
+      ],
+      "scope": "windows-on-arm",
+      "addedAt": "2026-11-05",
+      "verifiedAt": "2026-11-05",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -2680,6 +2788,45 @@
       "hasConflict": false
     },
     {
+      "id": "tencent-qq",
+      "name": "QQ",
+      "vendor": "Tencent",
+      "category": "communication",
+      "status": "native",
+      "maturity": "stable",
+      "confidence": "medium",
+      "version": "9.9.33",
+      "homepage": "https://im.qq.com",
+      "aliases": [
+        "騰訊 QQ",
+        "Tencent QQ",
+        "QQ NT"
+      ],
+      "summary": {
+        "en": "Tencent's messenger (QQ NT), whose release ships a QQ_9.9.33_260813_arm64 installer.",
+        "zh-TW": "騰訊的即時通訊軟體（QQ NT），發行版提供 QQ_9.9.33_260813_arm64 安裝程式。"
+      },
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/t/Tencent/QQ/NT/9.9.33.52230/Tencent.QQ.NT.installer.yaml",
+          "title": "winget manifest 9.9.33.52230: QQ_9.9.33_260813_arm64_01.exe",
+          "type": "release",
+          "checked": "2026-11-05"
+        }
+      ],
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        }
+      ],
+      "scope": "windows-on-arm",
+      "addedAt": "2026-11-05",
+      "verifiedAt": "2026-11-05",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
       "id": "quickbooks-desktop",
       "name": "QuickBooks Desktop",
       "vendor": "Intuit",
@@ -2705,6 +2852,44 @@
       ],
       "addedAt": "2026-11-03",
       "verifiedAt": "2026-11-03",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "reaper",
+      "name": "REAPER",
+      "vendor": "Cockos",
+      "category": "creative",
+      "status": "native",
+      "maturity": "beta",
+      "confidence": "medium",
+      "version": "7.84",
+      "homepage": "https://www.reaper.fm",
+      "summary": {
+        "en": "Digital audio workstation with an ARM64EC beta installer for Windows 11.",
+        "zh-TW": "數位音訊工作站，提供 Windows 11 用的 ARM64EC beta 安裝程式。"
+      },
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/c/Cockos/REAPER/7.84/Cockos.REAPER.installer.yaml",
+          "title": "winget manifest 7.84: reaper784_win11_arm64ec_beta-install.exe",
+          "type": "release",
+          "checked": "2026-11-05"
+        }
+      ],
+      "caveats": [
+        {
+          "en": "The Arm installer is an ARM64EC build labeled beta (reaper784_win11_arm64ec_beta).",
+          "zh-TW": "Arm 安裝程式是標示為 beta 的 ARM64EC 版本（reaper784_win11_arm64ec_beta）。"
+        },
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        }
+      ],
+      "scope": "windows-on-arm",
+      "addedAt": "2026-11-05",
+      "verifiedAt": "2026-11-05",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -2893,11 +3078,11 @@
           "url": "https://learn.microsoft.com/surface/surface-arm-faq",
           "title": "Surface Arm FAQ",
           "type": "vendor",
-          "checked": "2026-10-31"
+          "checked": "2026-11-05"
         }
       ],
       "addedAt": "2026-10-31",
-      "verifiedAt": "2026-10-31",
+      "verifiedAt": "2026-11-05",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -3052,11 +3237,11 @@
           "url": "https://www.xda-developers.com/tested-two-decades-of-windows-gaming-history-on-arm-rtx-spark-nvidia/",
           "title": "XDA: two decades of Windows games on RTX Spark",
           "type": "review",
-          "checked": "2026-10-31"
+          "checked": "2026-11-05"
         }
       ],
       "addedAt": "2026-10-31",
-      "verifiedAt": "2026-10-31",
+      "verifiedAt": "2026-11-05",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -3085,11 +3270,11 @@
           "url": "https://learn.microsoft.com/en-us/visualstudio/install/visual-studio-on-arm-devices",
           "title": "Visual Studio on Arm devices",
           "type": "vendor",
-          "checked": "2026-10-31"
+          "checked": "2026-11-05"
         }
       ],
       "addedAt": "2026-10-31",
-      "verifiedAt": "2026-10-31",
+      "verifiedAt": "2026-11-05",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -3176,11 +3361,11 @@
           "url": "https://www.videolan.org/vlc/download-windows.html",
           "title": "VLC for Windows downloads",
           "type": "vendor",
-          "checked": "2026-10-31"
+          "checked": "2026-11-05"
         }
       ],
       "addedAt": "2026-10-31",
-      "verifiedAt": "2026-10-31",
+      "verifiedAt": "2026-11-05",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -3209,11 +3394,11 @@
           "url": "https://github.com/devjeonghwan/vllm-for-rtx-spark",
           "title": "devjeonghwan/vllm-for-rtx-spark",
           "type": "community",
-          "checked": "2026-10-31"
+          "checked": "2026-11-05"
         }
       ],
       "addedAt": "2026-10-31",
-      "verifiedAt": "2026-10-31",
+      "verifiedAt": "2026-11-05",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -3242,11 +3427,11 @@
           "url": "https://github.com/SystemPanic/vllm-windows/releases/tag/v0.32.0_spark",
           "title": "SystemPanic/vllm-windows v0.32.0_spark",
           "type": "community",
-          "checked": "2026-10-31"
+          "checked": "2026-11-05"
         }
       ],
       "addedAt": "2026-10-31",
-      "verifiedAt": "2026-10-31",
+      "verifiedAt": "2026-11-05",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -3366,11 +3551,45 @@
           "url": "https://learn.microsoft.com/surface/surface-arm-faq",
           "title": "Surface Arm FAQ",
           "type": "vendor",
-          "checked": "2026-10-31"
+          "checked": "2026-11-05"
         }
       ],
       "addedAt": "2026-10-31",
-      "verifiedAt": "2026-10-31",
+      "verifiedAt": "2026-11-05",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "winbox",
+      "name": "WinBox",
+      "vendor": "MikroTik",
+      "category": "utility",
+      "status": "native",
+      "maturity": "stable",
+      "confidence": "medium",
+      "version": "4.5",
+      "homepage": "https://mikrotik.com",
+      "summary": {
+        "en": "RouterOS management tool with a WinBox_Windows_arm64.zip on MikroTik's download server.",
+        "zh-TW": "RouterOS 管理工具，MikroTik 下載伺服器提供 WinBox_Windows_arm64.zip。"
+      },
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/m/Mikrotik/Winbox/4.5/Mikrotik.Winbox.installer.yaml",
+          "title": "winget manifest 4.5: download.mikrotik.com/.../WinBox_Windows_arm64.zip",
+          "type": "release",
+          "checked": "2026-11-05"
+        }
+      ],
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        }
+      ],
+      "scope": "windows-on-arm",
+      "addedAt": "2026-11-05",
+      "verifiedAt": "2026-11-05",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -3507,11 +3726,45 @@
           "url": "https://nvidianews.nvidia.com/news/nvidia-rtx-spark-pcs-available-today-a-new-beginning-for-windows-pcs",
           "title": "NVIDIA: RTX Spark PCs available today",
           "type": "vendor",
-          "checked": "2026-10-31"
+          "checked": "2026-11-05"
         }
       ],
       "addedAt": "2026-10-31",
-      "verifiedAt": "2026-10-31",
+      "verifiedAt": "2026-11-05",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "zeal",
+      "name": "Zeal",
+      "vendor": "Zeal contributors",
+      "category": "developer",
+      "status": "native",
+      "maturity": "stable",
+      "confidence": "medium",
+      "version": "0.9.2",
+      "homepage": "https://zealdocs.org",
+      "summary": {
+        "en": "Offline API documentation browser with a zeal-0.9.2-windows-arm64.msi release asset.",
+        "zh-TW": "離線 API 文件瀏覽器，GitHub 發行版提供 zeal-0.9.2-windows-arm64.msi。"
+      },
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/o/OlegShparber/Zeal/0.9.2/OlegShparber.Zeal.installer.yaml",
+          "title": "winget manifest 0.9.2: zeal-0.9.2-windows-arm64.msi",
+          "type": "release",
+          "checked": "2026-11-05"
+        }
+      ],
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        }
+      ],
+      "scope": "windows-on-arm",
+      "addedAt": "2026-11-05",
+      "verifiedAt": "2026-11-05",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -3624,6 +3877,44 @@
       ],
       "addedAt": "2026-11-03",
       "verifiedAt": "2026-11-03",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "doubao",
+      "name": "豆包 (Doubao)",
+      "vendor": "ByteDance",
+      "category": "ai",
+      "status": "native",
+      "maturity": "stable",
+      "confidence": "medium",
+      "version": "2.32.5",
+      "homepage": "https://www.doubao.com",
+      "aliases": [
+        "Doubao",
+        "豆包"
+      ],
+      "summary": {
+        "en": "ByteDance's AI assistant desktop app, with a separate Doubao_Arm64_installer on the vendor's CDN.",
+        "zh-TW": "字節跳動的 AI 助理桌面版，官方 CDN 另有 Doubao_Arm64_installer 安裝程式。"
+      },
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/b/ByteDance/Doubao/2.32.5/ByteDance.Doubao.installer.yaml",
+          "title": "winget manifest 2.32.5: Doubao_Arm64_installer_2.32.5.exe",
+          "type": "release",
+          "checked": "2026-11-05"
+        }
+      ],
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        }
+      ],
+      "scope": "windows-on-arm",
+      "addedAt": "2026-11-05",
+      "verifiedAt": "2026-11-05",
       "reportCount": 0,
       "hasConflict": false
     }
