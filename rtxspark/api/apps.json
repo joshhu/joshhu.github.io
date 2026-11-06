@@ -1,6 +1,6 @@
 {
   "license": "CC-BY-4.0",
-  "updated": "2026-11-06",
+  "updated": "2026-11-07",
   "apps": [
     {
       "id": "2xko",
@@ -324,10 +324,16 @@
           "title": "Adobe: Windows on Arm support",
           "type": "vendor",
           "checked": "2026-10-31"
+        },
+        {
+          "url": "https://nvidianews.nvidia.com/news/nvidia-rtx-spark-pcs-available-today-a-new-beginning-for-windows-pcs",
+          "title": "NVIDIA: RTX Spark PCs available today (Photoshop and Premiere native beta at launch)",
+          "type": "vendor",
+          "checked": "2026-11-07"
         }
       ],
       "addedAt": "2026-10-31",
-      "verifiedAt": "2026-10-31",
+      "verifiedAt": "2026-11-07",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -350,11 +356,88 @@
           "url": "https://affinity.studio/download",
           "title": "Affinity downloads",
           "type": "vendor",
-          "checked": "2026-11-02"
+          "checked": "2026-11-07"
         }
       ],
       "addedAt": "2026-10-31",
-      "verifiedAt": "2026-11-02",
+      "verifiedAt": "2026-11-07",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "ahnlab-safe-transaction",
+      "name": "AhnLab Safe Transaction",
+      "vendor": "AhnLab",
+      "category": "utility",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "medium",
+      "version": "1.13.0+",
+      "homepage": "https://www.ahnlab.com",
+      "aliases": [
+        "AhnLab Safe Transaction (ASTx)",
+        "ASTx",
+        "안랩 세이프 트랜잭션"
+      ],
+      "summary": {
+        "en": "Korean online-banking security module. Linaro's Works on WoA data lists it as native Arm64, validated by Qualcomm and NVIDIA.",
+        "zh-TW": "韓國網路銀行使用的安全模組。Linaro 的 Works on WoA 資料列為原生 Arm64，並經 Qualcomm 與 NVIDIA 驗證。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        },
+        {
+          "en": "Vendor page could not be read from this environment; the result rests on the Linaro catalog alone.",
+          "zh-TW": "此環境無法讀取原廠頁面，結果僅依據 Linaro 目錄。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/Linaro/works-on-woa/staging/src/data/content/projects.json",
+          "title": "Linaro Works on WoA catalog: ahnlabsafetransaction (native, 1.13.0.1907)",
+          "type": "aggregator",
+          "checked": "2026-11-07"
+        }
+      ],
+      "addedAt": "2026-11-07",
+      "verifiedAt": "2026-11-07",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "anki",
+      "name": "Anki",
+      "vendor": "Anki",
+      "category": "productivity",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "high",
+      "version": "26.09.4",
+      "homepage": "https://apps.ankiweb.net",
+      "summary": {
+        "en": "Spaced-repetition flashcard app. The official release ships a separate win-arm64 MSI.",
+        "zh-TW": "間隔重複的字卡學習軟體。官方釋出另有 win-arm64 的 MSI 安裝檔。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/a/Anki/Anki/26.09.4/Anki.Anki.installer.yaml",
+          "title": "winget manifest 26.09.4: anki-26.09.4-win-arm64.msi",
+          "type": "release",
+          "checked": "2026-11-07"
+        }
+      ],
+      "addedAt": "2026-11-07",
+      "verifiedAt": "2026-11-07",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -526,7 +609,7 @@
         }
       ],
       "addedAt": "2026-10-31",
-      "verifiedAt": "2026-11-02",
+      "verifiedAt": "2026-11-07",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -563,7 +646,7 @@
         }
       ],
       "addedAt": "2026-10-31",
-      "verifiedAt": "2026-11-02",
+      "verifiedAt": "2026-11-07",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -601,6 +684,47 @@
       ],
       "addedAt": "2026-10-31",
       "verifiedAt": "2026-11-02",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "baidu-input",
+      "name": "Baidu Input",
+      "vendor": "Baidu",
+      "category": "utility",
+      "status": "prism",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "low",
+      "homepage": "https://shurufa.baidu.com",
+      "aliases": [
+        "百度输入法",
+        "Baidu IME"
+      ],
+      "summary": {
+        "en": "Chinese input method. Linaro's Works on WoA data lists it as working under emulation, validated by NVIDIA.",
+        "zh-TW": "中文輸入法。Linaro 的 Works on WoA 資料列為以轉譯執行可運作，並經 NVIDIA 驗證。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        },
+        {
+          "en": "Input methods load DLLs into other programs, so the Arm64 type matters; no vendor statement or version was found.",
+          "zh-TW": "輸入法會把 DLL 載入其他程式，Arm64 與否影響很大；未找到原廠說明或版本。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/Linaro/works-on-woa/staging/src/data/content/projects.json",
+          "title": "Linaro Works on WoA catalog: baidu-input (emulation)",
+          "type": "aggregator",
+          "checked": "2026-11-07"
+        }
+      ],
+      "addedAt": "2026-11-07",
+      "verifiedAt": "2026-11-07",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -767,6 +891,74 @@
       ],
       "addedAt": "2026-10-31",
       "verifiedAt": "2026-11-06",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "bruno",
+      "name": "Bruno",
+      "vendor": "Bruno Software",
+      "category": "developer",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "high",
+      "version": "4.3.0",
+      "homepage": "https://www.usebruno.com",
+      "summary": {
+        "en": "Open-source API client. The official release ships arm64 exe, msi and zip builds.",
+        "zh-TW": "開源的 API 測試工具。官方釋出提供 arm64 的 exe、msi 與 zip。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/b/Bruno/Bruno/4.3.0/Bruno.Bruno.installer.yaml",
+          "title": "winget manifest 4.3.0: bruno_4.3.0_arm64_win installers",
+          "type": "release",
+          "checked": "2026-11-07"
+        }
+      ],
+      "addedAt": "2026-11-07",
+      "verifiedAt": "2026-11-07",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "bun",
+      "name": "Bun",
+      "vendor": "Oven",
+      "category": "developer",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "high",
+      "version": "1.4.4",
+      "homepage": "https://bun.sh",
+      "summary": {
+        "en": "JavaScript runtime and package manager. The official release ships bun-windows-aarch64.zip.",
+        "zh-TW": "JavaScript 執行環境與套件管理工具。官方釋出提供 bun-windows-aarch64.zip。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/o/Oven-sh/Bun/1.4.4/Oven-sh.Bun.installer.yaml",
+          "title": "winget manifest 1.4.4: bun-windows-aarch64.zip",
+          "type": "release",
+          "checked": "2026-11-07"
+        }
+      ],
+      "addedAt": "2026-11-07",
+      "verifiedAt": "2026-11-07",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -1711,7 +1903,7 @@
           "url": "https://nvidianews.nvidia.com/news/nvidia-rtx-spark-pcs-available-today-a-new-beginning-for-windows-pcs",
           "title": "NVIDIA: RTX Spark PCs available today",
           "type": "vendor",
-          "checked": "2026-11-03"
+          "checked": "2026-11-07"
         },
         {
           "url": "https://github.com/Linaro/works-on-woa/blob/staging/src/data/content/projects.json",
@@ -1721,7 +1913,7 @@
         }
       ],
       "addedAt": "2026-10-31",
-      "verifiedAt": "2026-10-31",
+      "verifiedAt": "2026-11-07",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -2022,6 +2214,40 @@
       ],
       "addedAt": "2026-10-31",
       "verifiedAt": "2026-11-02",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "logseq",
+      "name": "Logseq",
+      "vendor": "Logseq",
+      "category": "productivity",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "high",
+      "version": "2.0.2",
+      "homepage": "https://logseq.com",
+      "summary": {
+        "en": "Outliner and knowledge-base app. The official release ships Logseq-win-arm64-2.0.2-nsis.exe.",
+        "zh-TW": "大綱式知識庫筆記軟體。官方釋出提供 Logseq-win-arm64-2.0.2-nsis.exe。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/l/Logseq/Logseq/2.0.2/Logseq.Logseq.installer.yaml",
+          "title": "winget manifest 2.0.2: Logseq-win-arm64-2.0.2-nsis.exe",
+          "type": "release",
+          "checked": "2026-11-07"
+        }
+      ],
+      "addedAt": "2026-11-07",
+      "verifiedAt": "2026-11-07",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -2459,6 +2685,40 @@
       "hasConflict": false
     },
     {
+      "id": "neovim",
+      "name": "Neovim",
+      "vendor": "Neovim contributors",
+      "category": "developer",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "high",
+      "version": "0.12.6",
+      "homepage": "https://neovim.io",
+      "summary": {
+        "en": "Vim-based text editor. The official release ships nvim-win-arm64.msi.",
+        "zh-TW": "以 Vim 為基礎的文字編輯器。官方釋出提供 nvim-win-arm64.msi。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/n/Neovim/Neovim/0.12.6/Neovim.Neovim.installer.yaml",
+          "title": "winget manifest 0.12.6: nvim-win-arm64.msi",
+          "type": "release",
+          "checked": "2026-11-07"
+        }
+      ],
+      "addedAt": "2026-11-07",
+      "verifiedAt": "2026-11-07",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
       "id": "nodejs",
       "name": "Node.js",
       "vendor": "OpenJS Foundation",
@@ -2628,11 +2888,11 @@
           "url": "https://github.com/microsoft/winget-pkgs/tree/master/manifests/o/Obsidian/Obsidian",
           "title": "winget manifest: Obsidian",
           "type": "release",
-          "checked": "2026-10-31"
+          "checked": "2026-11-07"
         }
       ],
       "addedAt": "2026-10-31",
-      "verifiedAt": "2026-10-31",
+      "verifiedAt": "2026-11-07",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -3204,7 +3464,7 @@
         }
       ],
       "addedAt": "2026-10-31",
-      "verifiedAt": "2026-10-31",
+      "verifiedAt": "2026-11-07",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -3296,7 +3556,7 @@
         }
       ],
       "addedAt": "2026-10-31",
-      "verifiedAt": "2026-10-31",
+      "verifiedAt": "2026-11-07",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -3381,11 +3641,45 @@
           "url": "https://github.com/microsoft/winget-pkgs/tree/master/manifests/v/Valve/Steam",
           "title": "winget manifest: Steam",
           "type": "release",
-          "checked": "2026-10-31"
+          "checked": "2026-11-07"
         }
       ],
       "addedAt": "2026-10-31",
-      "verifiedAt": "2026-10-31",
+      "verifiedAt": "2026-11-07",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "syncthing",
+      "name": "Syncthing",
+      "vendor": "Syncthing Foundation",
+      "category": "utility",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "high",
+      "version": "2.1.7",
+      "homepage": "https://syncthing.net",
+      "summary": {
+        "en": "Peer-to-peer file synchronisation. The official release ships a windows-arm64 build.",
+        "zh-TW": "點對點檔案同步工具。官方釋出提供 windows-arm64 版本。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/s/Syncthing/Syncthing/2.1.7/Syncthing.Syncthing.installer.yaml",
+          "title": "winget manifest 2.1.7: syncthing-windows-arm64-v2.1.7.zip",
+          "type": "release",
+          "checked": "2026-11-07"
+        }
+      ],
+      "addedAt": "2026-11-07",
+      "verifiedAt": "2026-11-07",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -3863,11 +4157,11 @@
           "url": "https://nvidianews.nvidia.com/news/nvidia-rtx-spark-pcs-available-today-a-new-beginning-for-windows-pcs",
           "title": "NVIDIA: RTX Spark PCs available today",
           "type": "vendor",
-          "checked": "2026-10-31"
+          "checked": "2026-11-07"
         }
       ],
       "addedAt": "2026-10-31",
-      "verifiedAt": "2026-10-31",
+      "verifiedAt": "2026-11-07",
       "reportCount": 0,
       "hasConflict": false
     },
