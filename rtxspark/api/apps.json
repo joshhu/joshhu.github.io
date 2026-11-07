@@ -1,6 +1,6 @@
 {
   "license": "CC-BY-4.0",
-  "updated": "2026-11-07",
+  "updated": "2026-11-08",
   "apps": [
     {
       "id": "2xko",
@@ -1819,6 +1819,40 @@
       "hasConflict": false
     },
     {
+      "id": "ghq",
+      "name": "ghq",
+      "vendor": "x-motemen",
+      "category": "developer",
+      "status": "native",
+      "version": "1.12.0",
+      "homepage": "https://github.com/x-motemen/ghq",
+      "summary": {
+        "en": "Git repository manager CLI with a Windows arm64 zip build.",
+        "zh-TW": "Git 儲存庫管理命令列工具，提供 Windows arm64 zip 版本。"
+      },
+      "caveats": [
+        {
+          "en": "The release lists ghq_windows_arm64.zip; no RTX Spark test is stated.",
+          "zh-TW": "發行頁列出 ghq_windows_arm64.zip；頁面沒有 RTX Spark 的測試說明。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://github.com/x-motemen/ghq/releases/tag/v1.12.0",
+          "title": "ghq v1.12.0 release (ghq_windows_arm64.zip)",
+          "type": "release",
+          "checked": "2026-11-08"
+        }
+      ],
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "high",
+      "addedAt": "2026-11-08",
+      "verifiedAt": "2026-11-08",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
       "id": "gimp",
       "name": "GIMP",
       "vendor": "GIMP team",
@@ -2346,6 +2380,40 @@
       "hasConflict": false
     },
     {
+      "id": "libation",
+      "name": "Libation",
+      "vendor": "rmcrackan",
+      "category": "utility",
+      "status": "native",
+      "version": "14.2.5",
+      "homepage": "https://github.com/rmcrackan/Libation",
+      "summary": {
+        "en": "Audiobook library manager with Windows Arm64 setup and zip builds.",
+        "zh-TW": "有聲書書庫管理工具，提供 Windows Arm64 安裝程式與 zip。"
+      },
+      "caveats": [
+        {
+          "en": "The release lists Libation.14.2.5-windows-chardonnay-arm64-setup.exe and an arm64 zip; the Classic edition is x64 only. No RTX Spark test is stated.",
+          "zh-TW": "發行頁列出 Libation.14.2.5-windows-chardonnay-arm64-setup.exe 與 arm64 zip；Classic 版只有 x64。頁面沒有 RTX Spark 的測試說明。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://github.com/rmcrackan/Libation/releases/tag/v14.2.5",
+          "title": "Libation v14.2.5 release (windows-chardonnay-arm64 setup and zip)",
+          "type": "release",
+          "checked": "2026-11-08"
+        }
+      ],
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "high",
+      "addedAt": "2026-11-08",
+      "verifiedAt": "2026-11-08",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
       "id": "libreoffice",
       "name": "LibreOffice",
       "vendor": "The Document Foundation",
@@ -2670,11 +2738,11 @@
           "url": "https://learn.microsoft.com/surface/surface-arm-faq",
           "title": "Surface Arm FAQ",
           "type": "vendor",
-          "checked": "2026-11-02"
+          "checked": "2026-11-08"
         }
       ],
       "addedAt": "2026-10-31",
-      "verifiedAt": "2026-11-02",
+      "verifiedAt": "2026-11-08",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -2697,11 +2765,11 @@
           "url": "https://learn.microsoft.com/surface/surface-arm-faq",
           "title": "Surface Arm FAQ",
           "type": "vendor",
-          "checked": "2026-11-02"
+          "checked": "2026-11-08"
         }
       ],
       "addedAt": "2026-10-31",
-      "verifiedAt": "2026-11-02",
+      "verifiedAt": "2026-11-08",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -2725,11 +2793,11 @@
           "url": "https://learn.microsoft.com/surface/surface-arm-faq",
           "title": "Surface Arm FAQ",
           "type": "vendor",
-          "checked": "2026-11-02"
+          "checked": "2026-11-08"
         }
       ],
       "addedAt": "2026-10-31",
-      "verifiedAt": "2026-11-02",
+      "verifiedAt": "2026-11-08",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -2759,11 +2827,11 @@
           "url": "https://learn.microsoft.com/surface/surface-arm-faq",
           "title": "Surface Arm FAQ",
           "type": "vendor",
-          "checked": "2026-11-02"
+          "checked": "2026-11-08"
         }
       ],
       "addedAt": "2026-10-31",
-      "verifiedAt": "2026-11-02",
+      "verifiedAt": "2026-11-08",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -2776,7 +2844,7 @@
       "scope": "windows-on-arm",
       "maturity": "stable",
       "confidence": "high",
-      "version": "0.102.3001",
+      "version": "0.102.3101",
       "homepage": "https://github.com/microsoft/PowerToys",
       "summary": {
         "en": "Windows utility suite with official Arm64 installers.",
@@ -2791,13 +2859,13 @@
       "evidence": [
         {
           "url": "https://github.com/microsoft/PowerToys/releases/latest",
-          "title": "PowerToys v0.102.3001 release (PowerToysSetup-0.102.3001.0-arm64.exe)",
+          "title": "PowerToys v0.102.3101 release (PowerToysSetup-0.102.3101.0-arm64.exe)",
           "type": "release",
-          "checked": "2026-11-02"
+          "checked": "2026-11-08"
         }
       ],
       "addedAt": "2026-11-02",
-      "verifiedAt": "2026-11-02",
+      "verifiedAt": "2026-11-08",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -2821,11 +2889,11 @@
           "url": "https://learn.microsoft.com/surface/surface-arm-faq",
           "title": "Surface Arm FAQ",
           "type": "vendor",
-          "checked": "2026-11-02"
+          "checked": "2026-11-08"
         }
       ],
       "addedAt": "2026-10-31",
-      "verifiedAt": "2026-11-02",
+      "verifiedAt": "2026-11-08",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -2855,11 +2923,11 @@
           "url": "https://learn.microsoft.com/surface/surface-arm-faq",
           "title": "Surface Arm FAQ",
           "type": "vendor",
-          "checked": "2026-11-02"
+          "checked": "2026-11-08"
         }
       ],
       "addedAt": "2026-10-31",
-      "verifiedAt": "2026-11-02",
+      "verifiedAt": "2026-11-08",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -3006,7 +3074,7 @@
       "scope": "windows-on-arm",
       "maturity": "stable",
       "confidence": "high",
-      "version": "8.9.8.1",
+      "version": "8.9.9",
       "homepage": "https://notepad-plus-plus.org",
       "summary": {
         "en": "Text and code editor with an official native Arm64 installer.",
@@ -3021,13 +3089,13 @@
       "evidence": [
         {
           "url": "https://github.com/notepad-plus-plus/notepad-plus-plus/releases/latest",
-          "title": "Notepad++ 8.9.8.1 release assets (npp.8.9.8.1.Installer.arm64.exe)",
+          "title": "Notepad++ 8.9.9 release assets (npp.8.9.9.Installer.arm64.exe)",
           "type": "release",
-          "checked": "2026-11-02"
+          "checked": "2026-11-08"
         }
       ],
       "addedAt": "2026-11-02",
-      "verifiedAt": "2026-11-02",
+      "verifiedAt": "2026-11-08",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -3272,6 +3340,40 @@
       "hasConflict": false
     },
     {
+      "id": "orcaslicer",
+      "name": "OrcaSlicer",
+      "vendor": "SoftFever",
+      "category": "creative",
+      "status": "native",
+      "version": "2.5.0",
+      "homepage": "https://github.com/SoftFever/OrcaSlicer",
+      "summary": {
+        "en": "3D-printing slicer with native Windows Arm64 installer and portable zip.",
+        "zh-TW": "3D 列印切片軟體，提供原生 Windows Arm64 安裝程式與可攜版 zip。"
+      },
+      "caveats": [
+        {
+          "en": "The release lists OrcaSlicer_Windows_Installer_V2.5.0_arm64.exe and a portable arm64 zip; no RTX Spark test is stated.",
+          "zh-TW": "發行頁列出 OrcaSlicer_Windows_Installer_V2.5.0_arm64.exe 與 arm64 可攜版 zip；頁面沒有 RTX Spark 的測試說明。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://github.com/SoftFever/OrcaSlicer/releases/tag/v2.5.0",
+          "title": "OrcaSlicer v2.5.0 release (arm64 installer and portable zip)",
+          "type": "release",
+          "checked": "2026-11-08"
+        }
+      ],
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "high",
+      "addedAt": "2026-11-08",
+      "verifiedAt": "2026-11-08",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
       "id": "trend-micro-pc-cillin",
       "name": "PC-cillin 雲端版 (Trend Micro Maximum Security)",
       "vendor": "Trend Micro 趨勢科技",
@@ -3418,11 +3520,11 @@
           "url": "https://github.com/PowerShell/PowerShell/releases/latest",
           "title": "PowerShell 7.6.9 release (PowerShell-7.6.9-win-arm64.msi)",
           "type": "release",
-          "checked": "2026-11-02"
+          "checked": "2026-11-08"
         }
       ],
       "addedAt": "2026-11-02",
-      "verifiedAt": "2026-11-02",
+      "verifiedAt": "2026-11-08",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -4499,6 +4601,40 @@
       "hasConflict": false
     },
     {
+      "id": "windows-app-development-cli",
+      "name": "Windows App Development CLI",
+      "vendor": "Microsoft",
+      "category": "developer",
+      "status": "native",
+      "version": "0.8.0",
+      "homepage": "https://github.com/microsoft/WinAppCli",
+      "summary": {
+        "en": "Microsoft's winapp command-line tool with Arm64 MSIX and zip packages.",
+        "zh-TW": "微軟的 winapp 命令列工具，提供 Arm64 MSIX 與 zip 套件。"
+      },
+      "caveats": [
+        {
+          "en": "The release notes list winappcli_arm64.msix and winappcli-arm64.zip; no RTX Spark test is stated.",
+          "zh-TW": "發行說明列出 winappcli_arm64.msix 與 winappcli-arm64.zip；頁面沒有 RTX Spark 的測試說明。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://github.com/microsoft/WinAppCli/releases/tag/v0.8.0",
+          "title": "WinAppCli v0.8.0 release (winappcli_arm64.msix, winappcli-arm64.zip)",
+          "type": "release",
+          "checked": "2026-11-08"
+        }
+      ],
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "high",
+      "addedAt": "2026-11-08",
+      "verifiedAt": "2026-11-08",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
       "id": "wsl",
       "name": "Windows Subsystem for Linux",
       "vendor": "Microsoft",
@@ -4558,11 +4694,11 @@
           "url": "https://github.com/winmerge/winmerge/releases/expanded_assets/v2.16.60",
           "title": "WinMerge 2.16.60 release assets (WinMerge-2.16.60-ARM64-Setup.exe)",
           "type": "release",
-          "checked": "2026-11-02"
+          "checked": "2026-11-08"
         }
       ],
       "addedAt": "2026-11-02",
-      "verifiedAt": "2026-11-02",
+      "verifiedAt": "2026-11-08",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -4597,6 +4733,40 @@
       ],
       "addedAt": "2026-11-03",
       "verifiedAt": "2026-11-03",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "wnr",
+      "name": "Work/Break Timer (wnr)",
+      "vendor": "RoderickQiu",
+      "category": "productivity",
+      "status": "native",
+      "version": "1.35.0",
+      "homepage": "https://github.com/RoderickQiu/wnr",
+      "summary": {
+        "en": "Work and break timer with a separate Windows on Arm installer.",
+        "zh-TW": "工作與休息計時器，提供專用的 Windows on Arm 安裝程式。"
+      },
+      "caveats": [
+        {
+          "en": "The release notes say the arm64 installer is only for Windows on ARM devices; the asset list was not visible on the page and no RTX Spark test is stated.",
+          "zh-TW": "發行說明寫明 arm64 安裝程式僅適用 Windows on ARM 裝置；頁面未顯示檔案清單，也沒有 RTX Spark 的測試說明。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://github.com/RoderickQiu/wnr/releases/tag/v1.35.0-patch",
+          "title": "wnr v1.35.0-patch release notes (arm64 installer note)",
+          "type": "release",
+          "checked": "2026-11-08"
+        }
+      ],
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "high",
+      "addedAt": "2026-11-08",
+      "verifiedAt": "2026-11-08",
       "reportCount": 0,
       "hasConflict": false
     },
