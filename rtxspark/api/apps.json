@@ -809,7 +809,7 @@
       "scope": "windows-on-arm",
       "maturity": "stable",
       "confidence": "high",
-      "version": "2026.10.2",
+      "version": "2026.10.4",
       "homepage": "https://bitwarden.com",
       "summary": {
         "en": "Password manager desktop app with native Windows Arm64 packages.",
@@ -824,13 +824,13 @@
       "evidence": [
         {
           "url": "https://github.com/bitwarden/clients/releases",
-          "title": "Bitwarden Desktop v2026.10.2 release (Bitwarden-2026.10.2-arm64.appx)",
+          "title": "Bitwarden Desktop v2026.10.4 release (Bitwarden-2026.10.4-arm64.appx)",
           "type": "release",
-          "checked": "2026-11-02"
+          "checked": "2026-11-07"
         }
       ],
       "addedAt": "2026-11-02",
-      "verifiedAt": "2026-11-02",
+      "verifiedAt": "2026-11-07",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -1089,11 +1089,11 @@
           "url": "https://code.claude.com/docs/en/setup",
           "title": "Claude Code setup",
           "type": "vendor",
-          "checked": "2026-11-02"
+          "checked": "2026-11-07"
         }
       ],
       "addedAt": "2026-10-31",
-      "verifiedAt": "2026-11-02",
+      "verifiedAt": "2026-11-07",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -1236,11 +1236,11 @@
           "url": "https://cursor.com/downloads",
           "title": "Cursor downloads",
           "type": "vendor",
-          "checked": "2026-11-02"
+          "checked": "2026-11-07"
         }
       ],
       "addedAt": "2026-10-31",
-      "verifiedAt": "2026-11-02",
+      "verifiedAt": "2026-11-07",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -1437,6 +1437,40 @@
       "hasConflict": false
     },
     {
+      "id": "deno",
+      "name": "Deno",
+      "vendor": "Deno Land Inc.",
+      "category": "developer",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "high",
+      "version": "2.9.8",
+      "homepage": "https://deno.com",
+      "summary": {
+        "en": "JavaScript and TypeScript runtime with a native Windows Arm64 build.",
+        "zh-TW": "提供原生 Windows Arm64 版本的 JavaScript 與 TypeScript 執行環境。"
+      },
+      "caveats": [
+        {
+          "en": "The release publishes deno-aarch64-pc-windows-msvc.zip; the page does not report an RTX Spark test.",
+          "zh-TW": "發行頁提供 deno-aarch64-pc-windows-msvc.zip；頁面沒有 RTX Spark 的測試紀錄。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://github.com/denoland/deno/releases/tag/v2.9.8",
+          "title": "Deno v2.9.8 release (deno-aarch64-pc-windows-msvc.zip)",
+          "type": "release",
+          "checked": "2026-11-07"
+        }
+      ],
+      "addedAt": "2026-11-07",
+      "verifiedAt": "2026-11-07",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
       "id": "discord",
       "name": "Discord",
       "vendor": "Discord",
@@ -1445,7 +1479,7 @@
       "scope": "windows-on-arm",
       "maturity": "stable",
       "confidence": "medium",
-      "version": "1.0.58",
+      "version": "1.0.59",
       "homepage": "https://discord.com",
       "caveats": [
         {
@@ -1458,11 +1492,11 @@
           "url": "https://discord.com/api/downloads/distributions/app/installers/latest?arch=arm64&channel=stable&platform=win",
           "title": "Discord Arm64 installer (starts a download)",
           "type": "vendor",
-          "checked": "2026-11-02"
+          "checked": "2026-11-07"
         }
       ],
       "addedAt": "2026-10-31",
-      "verifiedAt": "2026-11-02",
+      "verifiedAt": "2026-11-07",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -1491,11 +1525,11 @@
           "url": "https://docs.docker.com/desktop/setup/install/windows-install/",
           "title": "Install Docker Desktop on Windows",
           "type": "vendor",
-          "checked": "2026-11-02"
+          "checked": "2026-11-07"
         }
       ],
       "addedAt": "2026-10-31",
-      "verifiedAt": "2026-11-02",
+      "verifiedAt": "2026-11-07",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -1681,11 +1715,11 @@
           "url": "https://www.figma.com/downloads/",
           "title": "Figma downloads",
           "type": "vendor",
-          "checked": "2026-11-02"
+          "checked": "2026-11-07"
         }
       ],
       "addedAt": "2026-10-31",
-      "verifiedAt": "2026-11-02",
+      "verifiedAt": "2026-11-07",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -1715,6 +1749,40 @@
       ],
       "addedAt": "2026-10-31",
       "verifiedAt": "2026-11-04",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "fzf",
+      "name": "fzf",
+      "vendor": "Junegunn Choi",
+      "category": "utility",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "high",
+      "version": "0.75.0",
+      "homepage": "https://junegunn.github.io/fzf/",
+      "summary": {
+        "en": "Command-line fuzzy finder with Windows Arm64 zip and MSI builds.",
+        "zh-TW": "提供 Windows Arm64 zip 與 MSI 的命令列模糊搜尋工具。"
+      },
+      "caveats": [
+        {
+          "en": "The release lists fzf-0.75.0-windows_arm64.zip and .msi; no RTX Spark test is stated on the page.",
+          "zh-TW": "發行頁列出 fzf-0.75.0-windows_arm64.zip 與 .msi；頁面沒有 RTX Spark 的測試說明。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://github.com/junegunn/fzf/releases/tag/v0.75.0",
+          "title": "fzf 0.75.0 release (fzf-0.75.0-windows_arm64.msi, .zip)",
+          "type": "release",
+          "checked": "2026-11-07"
+        }
+      ],
+      "addedAt": "2026-11-07",
+      "verifiedAt": "2026-11-07",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -1803,11 +1871,11 @@
           "url": "https://github.com/git-for-windows/git/releases/tag/v2.56.0.windows.4",
           "title": "Git for Windows 2.56.0 release",
           "type": "release",
-          "checked": "2026-11-02"
+          "checked": "2026-11-07"
         }
       ],
       "addedAt": "2026-10-31",
-      "verifiedAt": "2026-11-02",
+      "verifiedAt": "2026-11-07",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -1842,6 +1910,40 @@
       "scope": "windows-on-arm",
       "addedAt": "2026-11-06",
       "verifiedAt": "2026-11-06",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "github-copilot-cli",
+      "name": "GitHub Copilot CLI",
+      "vendor": "GitHub",
+      "category": "ai",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "high",
+      "version": "1.0.107",
+      "homepage": "https://github.com/features/copilot/cli",
+      "summary": {
+        "en": "Terminal AI coding agent with Windows Arm64 zip and MSI packages.",
+        "zh-TW": "提供 Windows Arm64 zip 與 MSI 套件的終端機 AI 程式碼代理。"
+      },
+      "caveats": [
+        {
+          "en": "The release lists copilot-win32-arm64.zip and copilot-arm64.msi; no RTX Spark test is stated on the page.",
+          "zh-TW": "發行頁列出 copilot-win32-arm64.zip 與 copilot-arm64.msi；頁面沒有 RTX Spark 的測試說明。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://github.com/github/copilot-cli/releases/tag/v1.0.107",
+          "title": "GitHub Copilot CLI v1.0.107 release (copilot-win32-arm64.zip, copilot-arm64.msi)",
+          "type": "release",
+          "checked": "2026-11-07"
+        }
+      ],
+      "addedAt": "2026-11-07",
+      "verifiedAt": "2026-11-07",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -2126,11 +2228,11 @@
           "url": "https://www.jetbrains.com/help/idea/installation-guide.html",
           "title": "IntelliJ IDEA installation guide",
           "type": "vendor",
-          "checked": "2026-11-02"
+          "checked": "2026-11-07"
         }
       ],
       "addedAt": "2026-10-31",
-      "verifiedAt": "2026-11-02",
+      "verifiedAt": "2026-11-07",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -2353,11 +2455,11 @@
           "url": "https://lmstudio.ai/docs/app/system-requirements",
           "title": "LM Studio system requirements",
           "type": "vendor",
-          "checked": "2026-11-02"
+          "checked": "2026-11-07"
         }
       ],
       "addedAt": "2026-10-31",
-      "verifiedAt": "2026-11-02",
+      "verifiedAt": "2026-11-07",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -2504,11 +2606,11 @@
           "url": "https://www.mathworks.com/matlabcentral/answers/2182415-is-matlab-supported-on-windows-on-arm-devices",
           "title": "MathWorks: MATLAB on Windows on Arm",
           "type": "vendor",
-          "checked": "2026-11-02"
+          "checked": "2026-11-07"
         }
       ],
       "addedAt": "2026-10-31",
-      "verifiedAt": "2026-11-02",
+      "verifiedAt": "2026-11-07",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -2820,11 +2922,11 @@
           "url": "https://www.mozilla.org/en-US/firefox/all/desktop-release/",
           "title": "Firefox downloads",
           "type": "vendor",
-          "checked": "2026-11-02"
+          "checked": "2026-11-07"
         }
       ],
       "addedAt": "2026-10-31",
-      "verifiedAt": "2026-11-02",
+      "verifiedAt": "2026-11-07",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -3106,6 +3208,40 @@
       "hasConflict": false
     },
     {
+      "id": "opencode",
+      "name": "OpenCode",
+      "vendor": "Anomaly",
+      "category": "ai",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "high",
+      "version": "1.19.5",
+      "homepage": "https://opencode.ai",
+      "summary": {
+        "en": "Open-source AI coding agent with Windows Arm64 builds of both the CLI and the desktop app.",
+        "zh-TW": "開源 AI 程式碼代理，命令列版與桌面版都提供 Windows Arm64 版本。"
+      },
+      "caveats": [
+        {
+          "en": "The release assets include opencode-windows-arm64.zip and opencode-desktop-win-arm64.exe; no RTX Spark test is stated on the page.",
+          "zh-TW": "發行頁資產包含 opencode-windows-arm64.zip 與 opencode-desktop-win-arm64.exe；頁面沒有 RTX Spark 的測試說明。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://github.com/anomalyco/opencode/releases/tag/v1.19.5",
+          "title": "OpenCode v1.19.5 release (opencode-windows-arm64.zip, opencode-desktop-win-arm64.exe)",
+          "type": "release",
+          "checked": "2026-11-07"
+        }
+      ],
+      "addedAt": "2026-11-07",
+      "verifiedAt": "2026-11-07",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
       "id": "opera",
       "name": "Opera",
       "vendor": "Opera",
@@ -3354,6 +3490,40 @@
       ],
       "addedAt": "2026-11-03",
       "verifiedAt": "2026-11-03",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "pulumi",
+      "name": "Pulumi",
+      "vendor": "Pulumi Corporation",
+      "category": "developer",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "high",
+      "version": "3.274.1",
+      "homepage": "https://www.pulumi.com",
+      "summary": {
+        "en": "Infrastructure-as-code CLI with a native Windows Arm64 archive.",
+        "zh-TW": "提供原生 Windows Arm64 壓縮檔的基礎架構即程式碼命令列工具。"
+      },
+      "caveats": [
+        {
+          "en": "The release lists pulumi-v3.274.1-windows-arm64.zip; language runtimes you use with it (Node.js, Python and so on) are separate installs.",
+          "zh-TW": "發行頁列出 pulumi-v3.274.1-windows-arm64.zip；搭配使用的語言執行環境（如 Node.js、Python）需另外安裝。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://github.com/pulumi/pulumi/releases/tag/v3.274.1",
+          "title": "Pulumi v3.274.1 release (pulumi-v3.274.1-windows-arm64.zip)",
+          "type": "release",
+          "checked": "2026-11-07"
+        }
+      ],
+      "addedAt": "2026-11-07",
+      "verifiedAt": "2026-11-07",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -4500,6 +4670,40 @@
       "scope": "windows-on-arm",
       "addedAt": "2026-11-05",
       "verifiedAt": "2026-11-05",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "zed",
+      "name": "Zed",
+      "vendor": "Zed Industries",
+      "category": "developer",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "high",
+      "version": "1.27.0",
+      "homepage": "https://zed.dev",
+      "summary": {
+        "en": "Code editor with an official Windows Arm64 installer.",
+        "zh-TW": "提供官方 Windows Arm64 安裝程式的程式碼編輯器。"
+      },
+      "caveats": [
+        {
+          "en": "The release asset is named Zed-aarch64.exe next to Zed-x86_64.exe; the release page does not say it was tested on RTX Spark.",
+          "zh-TW": "發行頁的資產為 Zed-aarch64.exe，與 Zed-x86_64.exe 並列；頁面沒有說明是否在 RTX Spark 上測試過。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://github.com/zed-industries/zed/releases/tag/v1.27.0",
+          "title": "Zed v1.27.0 release (Zed-aarch64.exe)",
+          "type": "release",
+          "checked": "2026-11-07"
+        }
+      ],
+      "addedAt": "2026-11-07",
+      "verifiedAt": "2026-11-07",
       "reportCount": 0,
       "hasConflict": false
     },
