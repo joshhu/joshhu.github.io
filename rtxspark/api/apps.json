@@ -1245,6 +1245,98 @@
       "hasConflict": false
     },
     {
+      "id": "cyberlink-photodirector",
+      "name": "CyberLink PhotoDirector 相片大師",
+      "vendor": "CyberLink 訊連科技",
+      "category": "creative",
+      "status": "prism",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "high",
+      "version": "x64 16.0",
+      "homepage": "https://www.cyberlink.com/products/photodirector-photo-editing-software-365/",
+      "aliases": [
+        "相片大師",
+        "PhotoDirector",
+        "PhotoDirector 365",
+        "訊連"
+      ],
+      "summary": {
+        "en": "CyberLink supports PhotoDirector 2025, 2026 and 365 (15.7 or later) on Windows on Arm. Linaro lists PhotoDirector 365 as running under emulation.",
+        "zh-TW": "訊連官方支援在 Windows on Arm 上執行相片大師 2025、2026 和 365（15.7 以上）。Linaro 目錄記錄相片大師 365 透過模擬執行。"
+      },
+      "caveats": [
+        {
+          "en": "WMV video export is not available. PhotoDirector 2024 is not recommended on Arm, because AI background removal does not work.",
+          "zh-TW": "無法匯出 WMV 影片。相片大師 2024 不建議在 Arm 上使用，因為 AI 去背無法運作。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.cyberlink.com/support-center/faq/content?id=29176",
+          "title": "CyberLink FAQ: What versions of CyberLink software support Windows 11 ARM platforms with Qualcomm CPU?",
+          "type": "vendor",
+          "checked": "2026-11-07"
+        },
+        {
+          "url": "https://www.cyberlink.com/support-center/faq/content?id=30002",
+          "title": "CyberLink PhotoDirector 2026 system requirements: Qualcomm Snapdragon X (Windows 11 ARM)",
+          "type": "vendor",
+          "checked": "2026-11-07"
+        }
+      ],
+      "addedAt": "2026-11-07",
+      "verifiedAt": "2026-11-07",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "cyberlink-powerdirector",
+      "name": "CyberLink PowerDirector 威力導演",
+      "vendor": "CyberLink 訊連科技",
+      "category": "creative",
+      "status": "prism",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "high",
+      "version": "x64 23.3",
+      "homepage": "https://www.cyberlink.com/products/powerdirector-video-editing-software/",
+      "aliases": [
+        "威力導演",
+        "PowerDirector",
+        "PowerDirector 365",
+        "訊連"
+      ],
+      "summary": {
+        "en": "CyberLink supports PowerDirector 2025, 2026 and 365 (22.6 or later) on Windows on Arm. Linaro lists it as running under emulation, and NVIDIA verified it.",
+        "zh-TW": "訊連官方支援在 Windows on Arm 上執行威力導演 2025、2026 和 365（22.6 以上）。Linaro 目錄記錄它透過模擬執行，NVIDIA 也驗證過。"
+      },
+      "caveats": [
+        {
+          "en": "The AI Style plugin does not work, and BorisFX effects preview slowly. PowerDirector 2024 is not supported on Arm.",
+          "zh-TW": "不支援 AI 風格外掛，BorisFX 特效預覽會很慢。威力導演 2024 不支援 Arm。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.cyberlink.com/support-center/faq/content?id=29176",
+          "title": "CyberLink FAQ: What versions of CyberLink software support Windows 11 ARM platforms with Qualcomm CPU?",
+          "type": "vendor",
+          "checked": "2026-11-07"
+        },
+        {
+          "url": "https://worksonwoa.com/en/applications/cyberlinkpowerdirector/",
+          "title": "Works on WoA: Cyberlink PowerDirector 23.3.1614.0, emulation, verified by NVIDIA",
+          "type": "aggregator",
+          "checked": "2026-11-07"
+        }
+      ],
+      "addedAt": "2026-11-07",
+      "verifiedAt": "2026-11-07",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
       "id": "cyberpunk-2077",
       "name": "Cyberpunk 2077",
       "vendor": "CD PROJEKT RED",
@@ -1913,6 +2005,58 @@
         }
       ],
       "addedAt": "2026-10-31",
+      "verifiedAt": "2026-11-07",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "hicos",
+      "name": "HiCOS 自然人憑證跨平台網頁元件",
+      "vendor": "內政部憑證管理中心 / 中華電信",
+      "category": "utility",
+      "status": "prism",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "medium",
+      "version": "3.2.8",
+      "homepage": "https://moica.nat.gov.tw/rac_plugin.html",
+      "aliases": [
+        "自然人憑證",
+        "HiCOS",
+        "HiCOS PKI Smart Card",
+        "MOICA",
+        "工商憑證",
+        "報稅"
+      ],
+      "summary": {
+        "en": "The card component for Taiwan citizen digital certificates (自然人憑證) installs and reads the card on a Snapdragon X laptop, in a community test.",
+        "zh-TW": "自然人憑證的 HiCOS 元件在 Snapdragon X 筆電上可以安裝並讀卡，這是網友實測的結果。"
+      },
+      "caveats": [
+        {
+          "en": "There is one Windows installer with no Arm build mentioned, so it is listed as running under Prism. The test used an older version on a Snapdragon X laptop, not RTX Spark. A USB card reader is needed; most need no driver.",
+          "zh-TW": "官方只提供一個 Windows 安裝檔，沒有提到 Arm 版，所以列為透過 Prism 執行。實測用的是較舊的版本和 Snapdragon X 筆電，不是 RTX Spark。需要 USB 晶片讀卡機，大多數不用另裝驅動程式。"
+        },
+        {
+          "en": "The official download page asks for a CAPTCHA, so the version comes from its HiNet mirror.",
+          "zh-TW": "官方下載頁要先通過真人驗證，版本號是從 HiNet 鏡像頁讀到的。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.mobile01.com/topicdetail.php?f=233&t=7076123",
+          "title": "Mobile01：ARM 高通筆電讀卡機、政府憑證測試（ASUS S5507QA，2025-01-25）",
+          "type": "community",
+          "checked": "2026-11-07"
+        },
+        {
+          "url": "https://api-hisecurecdn.cdn.hinet.net/HiPKILocalSignServer/downloadMain.html",
+          "title": "自然人憑證跨平台網頁元件下載（HiNet 鏡像）：Windows 版 HiCOS 3.2.8",
+          "type": "vendor",
+          "checked": "2026-11-07"
+        }
+      ],
+      "addedAt": "2026-11-07",
       "verifiedAt": "2026-11-07",
       "reportCount": 0,
       "hasConflict": false
@@ -2988,6 +3132,59 @@
       ],
       "addedAt": "2026-10-31",
       "verifiedAt": "2026-11-03",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "trend-micro-pc-cillin",
+      "name": "PC-cillin 雲端版 (Trend Micro Maximum Security)",
+      "vendor": "Trend Micro 趨勢科技",
+      "category": "utility",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "high",
+      "homepage": "https://www.trendmicro.com/zh_tw/forHome/products/pccillin.html",
+      "aliases": [
+        "PC-cillin",
+        "趨勢科技",
+        "Trend Micro",
+        "Maximum Security",
+        "Virus Buster",
+        "ウイルスバスター"
+      ],
+      "summary": {
+        "en": "Trend Micro supports Windows 11 on Arm in PC-cillin Cloud (Maximum Security). Linaro lists it as native, verified by NVIDIA.",
+        "zh-TW": "趨勢科技的 PC-cillin 雲端版支援 Windows 11 on ARM。Linaro 目錄記錄為原生版本，NVIDIA 也驗證過。"
+      },
+      "caveats": [
+        {
+          "en": "Only PC-cillin Cloud has an Arm installer, and you download it after signing in to a Trend Micro account. Performance optimization, the security settings check and Do Not Disturb mode are not available on Arm.",
+          "zh-TW": "只有 PC-cillin 雲端版有 Arm 安裝檔，要先註冊趨勢科技會員才能下載。效能最佳化、安全設定檢查和無干擾模式在 Arm 上無法使用。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://helpcenter.trendmicro.com/zh-tw/article/TMKA-19439",
+          "title": "PC-cillin 防毒軟體：Windows 安裝需求（ARM 架構僅雲端版支援）",
+          "type": "vendor",
+          "checked": "2026-11-07"
+        },
+        {
+          "url": "https://www.trendmicro.com/zh_tw/forHome/products/pccillin.html",
+          "title": "PC-cillin 產品頁：支援 Windows 11 on ARM，部分功能不支援",
+          "type": "vendor",
+          "checked": "2026-11-07"
+        },
+        {
+          "url": "https://worksonwoa.com/en/applications/trendmicromaximumsecurity/",
+          "title": "Works on WoA: Trend Micro Maximum Security, native, verified by NVIDIA",
+          "type": "aggregator",
+          "checked": "2026-11-07"
+        }
+      ],
+      "addedAt": "2026-11-07",
+      "verifiedAt": "2026-11-07",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -4380,6 +4577,50 @@
       "hasConflict": false
     },
     {
+      "id": "nhi-card-component",
+      "name": "健保卡網路服務註冊元件",
+      "vendor": "衛生福利部中央健康保險署",
+      "category": "utility",
+      "status": "prism",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "low",
+      "homepage": "https://www.nhi.gov.tw/",
+      "aliases": [
+        "健保卡",
+        "健保卡元件",
+        "健康存摺",
+        "NHI card",
+        "健保署"
+      ],
+      "summary": {
+        "en": "The component that lets a browser read Taiwan NHI health insurance cards installs and works on a Snapdragon X laptop, in a community test.",
+        "zh-TW": "讓瀏覽器讀取健保卡的元件在 Snapdragon X 筆電上可以安裝使用，這是網友實測的結果。"
+      },
+      "caveats": [
+        {
+          "en": "Only one community test, on a Snapdragon X laptop and not RTX Spark. The agency does not mention Arm, so it is listed as running under Prism. The agency site blocks automated reading, so its own pages were not checked.",
+          "zh-TW": "只有一篇網友實測，用的是 Snapdragon X 筆電，不是 RTX Spark。健保署沒有提到 Arm，所以列為透過 Prism 執行。健保署網站擋自動讀取，所以沒有查到官方頁面。"
+        },
+        {
+          "en": "The NHI mobile app (健保快易通) avoids the card reader entirely.",
+          "zh-TW": "改用手機「健保快易通」App 就不需要讀卡機。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.mobile01.com/topicdetail.php?f=233&t=7076123",
+          "title": "Mobile01：ARM 高通筆電讀卡機、政府憑證測試（ASUS S5507QA，2025-01-25）",
+          "type": "community",
+          "checked": "2026-11-07"
+        }
+      ],
+      "addedAt": "2026-11-07",
+      "verifiedAt": "2026-11-07",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
       "id": "boshiamy",
       "name": "嘸蝦米輸入法 (Boshiamy)",
       "vendor": "行易有限公司 (Boshiamy)",
@@ -4415,6 +4656,52 @@
       ],
       "addedAt": "2026-11-03",
       "verifiedAt": "2026-11-03",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "going-ime",
+      "name": "自然輸入法 (GOING)",
+      "vendor": "網際智慧 (IQ Technology)",
+      "category": "utility",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "medium",
+      "version": "V13.1.1+",
+      "homepage": "https://www.text.tw/",
+      "aliases": [
+        "自然輸入法",
+        "GOING",
+        "Going IME",
+        "新自然輸入法"
+      ],
+      "summary": {
+        "en": "The GOING Chinese input method supports Windows on Arm from V13 Professional (V13.1.1.35084).",
+        "zh-TW": "自然輸入法從 V13 專業版（V13.1.1.35084）起支援 Windows on Arm。"
+      },
+      "caveats": [
+        {
+          "en": "The free V13 Lite edition and V12 and older do not support Arm. The vendor says only that it supports Windows on Arm, and it has not been confirmed on RTX Spark yet.",
+          "zh-TW": "免費的 V13 Lite 版和 V12 以前的版本都不支援 Arm。原廠只寫了支援 Windows on Arm，還沒有人在 RTX Spark 上確認過。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://www.text.tw/download",
+          "title": "自然輸入法 V13 專業版下載：重大更新！支援 Windows on Arm 作業系統",
+          "type": "vendor",
+          "checked": "2026-11-07"
+        },
+        {
+          "url": "https://www.text.tw/old-download",
+          "title": "自然輸入法舊版下載：V12 不支援 Arm 版 Windows",
+          "type": "vendor",
+          "checked": "2026-11-07"
+        }
+      ],
+      "addedAt": "2026-11-07",
+      "verifiedAt": "2026-11-07",
       "reportCount": 0,
       "hasConflict": false
     },
