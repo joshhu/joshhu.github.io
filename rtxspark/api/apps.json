@@ -1,6 +1,6 @@
 {
   "license": "CC-BY-4.0",
-  "updated": "2026-11-08",
+  "updated": "2026-11-09",
   "apps": [
     {
       "id": "2xko",
@@ -495,11 +495,11 @@
           "url": "https://www.nvidia.com/en-us/geforce/news/rtx-spark-dlss-reflex-ray-tracing-games/",
           "title": "NVIDIA: RTX Spark launch games and anti-cheat roadmap (Oct 13, 2026)",
           "type": "vendor",
-          "checked": "2026-11-03"
+          "checked": "2026-11-09"
         }
       ],
       "addedAt": "2026-11-03",
-      "verifiedAt": "2026-11-03",
+      "verifiedAt": "2026-11-09",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -529,6 +529,52 @@
       ],
       "addedAt": "2026-11-03",
       "verifiedAt": "2026-11-03",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "atok-passport",
+      "name": "ATOK Passport",
+      "vendor": "JustSystems",
+      "category": "utility",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "low",
+      "version": "1.0+",
+      "homepage": "https://www.justsystems.com",
+      "aliases": [
+        "ATOK",
+        "ジャストシステム ATOK"
+      ],
+      "summary": {
+        "en": "Japanese input method. Linaro's Works on WoA data lists it as native Arm64, validated by NVIDIA.",
+        "zh-TW": "日文輸入法。Linaro 的 Works on WoA 資料列為原生 Arm64，並經 NVIDIA 驗證。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        },
+        {
+          "en": "Vendor page could not be read from this environment; the result rests on the Linaro catalog alone.",
+          "zh-TW": "此環境無法讀取原廠頁面，結果僅依據 Linaro 目錄。"
+        },
+        {
+          "en": "The catalog gives no version number; the version shown is a placeholder lower bound.",
+          "zh-TW": "目錄未提供版本號，所列版本僅為下限的暫定值。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/Linaro/works-on-woa/staging/src/data/content/projects.json",
+          "title": "Linaro Works on WoA catalog: atok-passport (native)",
+          "type": "aggregator",
+          "checked": "2026-11-09"
+        }
+      ],
+      "addedAt": "2026-11-09",
+      "verifiedAt": "2026-11-09",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -987,7 +1033,7 @@
           "url": "https://www.xda-developers.com/nvidia-rtx-spark-passed-most-anti-cheat-tests-valorant-and-call-of-duty-still-wont-run/",
           "title": "XDA: RTX Spark anti-cheat tests (Oct 21, 2026), 5 of 9 worked",
           "type": "review",
-          "checked": "2026-11-03"
+          "checked": "2026-11-09"
         },
         {
           "url": "https://www.nvidia.com/en-us/geforce/news/rtx-spark-dlss-reflex-ray-tracing-games/",
@@ -1003,7 +1049,7 @@
         }
       ],
       "addedAt": "2026-11-03",
-      "verifiedAt": "2026-11-03",
+      "verifiedAt": "2026-11-09",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -1149,11 +1195,11 @@
           "url": "https://github.com/Kitware/CMake/releases/expanded_assets/v4.4.5",
           "title": "CMake 4.4.5 release assets (cmake-4.4.5-windows-arm64.msi)",
           "type": "release",
-          "checked": "2026-11-03"
+          "checked": "2026-11-09"
         }
       ],
       "addedAt": "2026-11-03",
-      "verifiedAt": "2026-11-03",
+      "verifiedAt": "2026-11-09",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -1422,7 +1468,7 @@
           "url": "https://www.xda-developers.com/nvidia-rtx-spark-passed-most-anti-cheat-tests-valorant-and-call-of-duty-still-wont-run/",
           "title": "XDA: RTX Spark anti-cheat tests (Oct 21, 2026), 5 of 9 worked",
           "type": "review",
-          "checked": "2026-11-03"
+          "checked": "2026-11-09"
         },
         {
           "url": "https://www.nvidia.com/en-us/geforce/news/rtx-spark-dlss-reflex-ray-tracing-games/",
@@ -1432,7 +1478,7 @@
         }
       ],
       "addedAt": "2026-11-03",
-      "verifiedAt": "2026-11-03",
+      "verifiedAt": "2026-11-09",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -1609,6 +1655,40 @@
         "FC 26",
         "EA FC 26"
       ],
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "element-desktop",
+      "name": "Element",
+      "vendor": "Element",
+      "category": "communication",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "high",
+      "version": "1.12.33",
+      "homepage": "https://element.io",
+      "summary": {
+        "en": "Matrix chat client with an arm64 Windows installer on packages.element.io.",
+        "zh-TW": "Matrix 聊天用戶端，packages.element.io 提供 Windows arm64 安裝程式。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/e/Element/Element/1.12.33/Element.Element.installer.yaml",
+          "title": "winget manifest 1.12.33: Element Setup 1.12.33.exe (arm64)",
+          "type": "release",
+          "checked": "2026-11-09"
+        }
+      ],
+      "addedAt": "2026-11-09",
+      "verifiedAt": "2026-11-09",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -1861,7 +1941,7 @@
       "scope": "windows-on-arm",
       "maturity": "stable",
       "confidence": "high",
-      "version": "3.2.6",
+      "version": "3.2.8",
       "homepage": "https://www.gimp.org",
       "summary": {
         "en": "Image editor whose official Windows installer covers both x86_64 and ARM64.",
@@ -1878,11 +1958,11 @@
           "url": "https://www.gimp.org/downloads/",
           "title": "GIMP downloads (3.2.6, x86_64 and ARM64 installer)",
           "type": "vendor",
-          "checked": "2026-11-03"
+          "checked": "2026-11-09"
         }
       ],
       "addedAt": "2026-11-03",
-      "verifiedAt": "2026-11-03",
+      "verifiedAt": "2026-11-09",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -2338,11 +2418,11 @@
           "url": "https://github.com/keepassxreboot/keepassxc/releases/expanded_assets/2.8.0",
           "title": "KeePassXC 2.8.0 release assets (KeePassXC-2.8.0-ARM64.msi)",
           "type": "release",
-          "checked": "2026-11-03"
+          "checked": "2026-11-09"
         }
       ],
       "addedAt": "2026-11-03",
-      "verifiedAt": "2026-11-03",
+      "verifiedAt": "2026-11-09",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -2493,11 +2573,11 @@
           "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12020",
           "title": "llama.cpp b12020 release",
           "type": "release",
-          "checked": "2026-11-03"
+          "checked": "2026-11-09"
         }
       ],
       "addedAt": "2026-10-31",
-      "verifiedAt": "2026-11-03",
+      "verifiedAt": "2026-11-09",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -2679,6 +2759,74 @@
       ],
       "addedAt": "2026-10-31",
       "verifiedAt": "2026-11-07",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "mattermost-desktop",
+      "name": "Mattermost Desktop",
+      "vendor": "Mattermost",
+      "category": "communication",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "high",
+      "version": "6.3.2",
+      "homepage": "https://mattermost.com",
+      "summary": {
+        "en": "Team chat desktop app with a Windows arm64 MSI on GitHub releases.",
+        "zh-TW": "團隊聊天桌面應用程式，GitHub 發行頁提供 Windows arm64 MSI。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/m/Mattermost/MattermostDesktop/6.3.2/Mattermost.MattermostDesktop.installer.yaml",
+          "title": "winget manifest 6.3.2: mattermost-desktop-6.3.2-win-arm64.msi",
+          "type": "release",
+          "checked": "2026-11-09"
+        }
+      ],
+      "addedAt": "2026-11-09",
+      "verifiedAt": "2026-11-09",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "dotnet-sdk",
+      "name": "Microsoft .NET SDK",
+      "vendor": "Microsoft",
+      "category": "developer",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "high",
+      "version": "10.0.114",
+      "homepage": "https://dotnet.microsoft.com",
+      "summary": {
+        "en": "The .NET 10 SDK ships a win-arm64 installer.",
+        "zh-TW": ".NET 10 SDK 提供 win-arm64 安裝程式。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/m/Microsoft/DotNet/SDK/10/10.0.114/Microsoft.DotNet.SDK.10.installer.yaml",
+          "title": "winget manifest 10.0.114: dotnet-sdk-10.0.114-win-arm64.exe",
+          "type": "release",
+          "checked": "2026-11-09"
+        }
+      ],
+      "addedAt": "2026-11-09",
+      "verifiedAt": "2026-11-09",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -2999,6 +3147,40 @@
       "hasConflict": false
     },
     {
+      "id": "mullvad-vpn",
+      "name": "Mullvad VPN",
+      "vendor": "Mullvad VPN AB",
+      "category": "utility",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "high",
+      "version": "2026.5",
+      "homepage": "https://mullvad.net",
+      "summary": {
+        "en": "VPN client with a separate Windows arm64 installer (MullvadVPN-2026.5_arm64.exe).",
+        "zh-TW": "VPN 用戶端，提供獨立的 Windows arm64 安裝程式（MullvadVPN-2026.5_arm64.exe）。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/m/MullvadVPN/MullvadVPN/2026.5/MullvadVPN.MullvadVPN.installer.yaml",
+          "title": "winget manifest 2026.5: MullvadVPN-2026.5_arm64.exe",
+          "type": "release",
+          "checked": "2026-11-09"
+        }
+      ],
+      "addedAt": "2026-11-09",
+      "verifiedAt": "2026-11-09",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
       "id": "neovim",
       "name": "Neovim",
       "vendor": "Neovim contributors",
@@ -3115,11 +3297,11 @@
           "url": "https://www.notion.com/desktop",
           "title": "Notion desktop downloads",
           "type": "vendor",
-          "checked": "2026-11-02"
+          "checked": "2026-11-09"
         }
       ],
       "addedAt": "2026-10-31",
-      "verifiedAt": "2026-11-02",
+      "verifiedAt": "2026-11-09",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -3178,11 +3360,11 @@
           "url": "https://github.com/obsproject/obs-studio/releases/tag/33.0.1",
           "title": "OBS Studio 33.0.1 release",
           "type": "release",
-          "checked": "2026-11-03"
+          "checked": "2026-11-09"
         }
       ],
       "addedAt": "2026-10-31",
-      "verifiedAt": "2026-11-03",
+      "verifiedAt": "2026-11-09",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -3554,6 +3736,40 @@
       ],
       "addedAt": "2026-11-03",
       "verifiedAt": "2026-11-03",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "proton-vpn",
+      "name": "Proton VPN",
+      "vendor": "Proton AG",
+      "category": "utility",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "high",
+      "version": "5.1.9",
+      "homepage": "https://protonvpn.com",
+      "summary": {
+        "en": "VPN client with a separate Windows arm64 installer (ProtonVPN_v5.1.9_arm64.exe).",
+        "zh-TW": "VPN 用戶端，提供獨立的 Windows arm64 安裝程式（ProtonVPN_v5.1.9_arm64.exe）。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/p/Proton/ProtonVPN/5.1.9/Proton.ProtonVPN.installer.yaml",
+          "title": "winget manifest 5.1.9: ProtonVPN_v5.1.9_arm64.exe",
+          "type": "release",
+          "checked": "2026-11-09"
+        }
+      ],
+      "addedAt": "2026-11-09",
+      "verifiedAt": "2026-11-09",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -3997,6 +4213,52 @@
       "hasConflict": false
     },
     {
+      "id": "sogou-pinyin",
+      "name": "Sogou Pinyin IME",
+      "vendor": "Sogou",
+      "category": "utility",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "low",
+      "version": "1.0+",
+      "homepage": "https://shurufa.sogou.com",
+      "aliases": [
+        "搜狗输入法",
+        "搜狗拼音"
+      ],
+      "summary": {
+        "en": "Chinese pinyin input method. Linaro's Works on WoA data lists it as native Arm64, validated by NVIDIA.",
+        "zh-TW": "中文拼音輸入法。Linaro 的 Works on WoA 資料列為原生 Arm64，並經 NVIDIA 驗證。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        },
+        {
+          "en": "Vendor page could not be read from this environment; the result rests on the Linaro catalog alone.",
+          "zh-TW": "此環境無法讀取原廠頁面，結果僅依據 Linaro 目錄。"
+        },
+        {
+          "en": "The catalog gives no version number; the version shown is a placeholder lower bound.",
+          "zh-TW": "目錄未提供版本號，所列版本僅為下限的暫定值。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/Linaro/works-on-woa/staging/src/data/content/projects.json",
+          "title": "Linaro Works on WoA catalog: sogou-pinyin-ime (native)",
+          "type": "aggregator",
+          "checked": "2026-11-09"
+        }
+      ],
+      "addedAt": "2026-11-09",
+      "verifiedAt": "2026-11-09",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
       "id": "solidworks",
       "name": "SolidWorks",
       "vendor": "Dassault Systèmes",
@@ -4212,11 +4474,11 @@
           "url": "https://github.com/telegramdesktop/tdesktop/releases/expanded_assets/v7.3.3",
           "title": "Telegram Desktop v7.3.3 release assets (td-setup-win-arm-7.3.3.exe)",
           "type": "release",
-          "checked": "2026-11-03"
+          "checked": "2026-11-09"
         }
       ],
       "addedAt": "2026-11-03",
-      "verifiedAt": "2026-11-03",
+      "verifiedAt": "2026-11-09",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -4806,6 +5068,49 @@
       ],
       "addedAt": "2026-10-31",
       "verifiedAt": "2026-11-05",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "wps-office",
+      "name": "WPS Office",
+      "vendor": "Kingsoft",
+      "category": "productivity",
+      "status": "prism",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "medium",
+      "version": "x64 12.1.0.203+",
+      "homepage": "https://www.wps.com",
+      "aliases": [
+        "WPS Office Professional",
+        "金山 WPS",
+        "WPS 辦公室"
+      ],
+      "summary": {
+        "en": "Office suite popular in China. Linaro's Works on WoA data lists it as running under emulation, validated by Qualcomm and NVIDIA.",
+        "zh-TW": "中國常用的辦公室軟體。Linaro 的 Works on WoA 資料列為透過模擬執行，並經 Qualcomm 與 NVIDIA 驗證。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        },
+        {
+          "en": "Vendor page could not be read from this environment; the result rests on the Linaro catalog alone.",
+          "zh-TW": "此環境無法讀取原廠頁面，結果僅依據 Linaro 目錄。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/Linaro/works-on-woa/staging/src/data/content/projects.json",
+          "title": "Linaro Works on WoA catalog: wpsoffice (emulation, from 12.1.0.203)",
+          "type": "aggregator",
+          "checked": "2026-11-09"
+        }
+      ],
+      "addedAt": "2026-11-09",
+      "verifiedAt": "2026-11-09",
       "reportCount": 0,
       "hasConflict": false
     },
