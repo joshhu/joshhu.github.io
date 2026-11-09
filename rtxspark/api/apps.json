@@ -1,6 +1,6 @@
 {
   "license": "CC-BY-4.0",
-  "updated": "2026-11-09",
+  "updated": "2026-11-10",
   "apps": [
     {
       "id": "2xko",
@@ -1222,14 +1222,14 @@
       ],
       "evidence": [
         {
-          "url": "https://github.com/Comfy-Org/ComfyUI/releases/tag/v0.43.0",
-          "title": "ComfyUI v0.43.0 release",
+          "url": "https://github.com/Comfy-Org/ComfyUI/releases",
+          "title": "ComfyUI releases (v0.44.0 latest; v0.40.0 added the ARM64 NVIDIA portable build)",
           "type": "release",
-          "checked": "2026-11-03"
+          "checked": "2026-11-10"
         }
       ],
       "addedAt": "2026-10-31",
-      "verifiedAt": "2026-11-03",
+      "verifiedAt": "2026-11-10",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -1517,6 +1517,48 @@
       "hasConflict": false
     },
     {
+      "id": "dingtalk",
+      "name": "DingTalk",
+      "vendor": "Alibaba",
+      "category": "communication",
+      "status": "prism",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "low",
+      "version": "x64 7.6.45+",
+      "homepage": "https://www.dingtalk.com",
+      "aliases": [
+        "釘釘",
+        "钉钉"
+      ],
+      "summary": {
+        "en": "Workplace chat and meetings app widely used in China. Linaro's catalog lists it as running under emulation.",
+        "zh-TW": "中國廣泛使用的職場通訊與會議軟體。Linaro 目錄列為透過模擬執行。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        },
+        {
+          "en": "Vendor page could not be read from this environment; the result rests on the Linaro catalog alone.",
+          "zh-TW": "此環境無法讀取原廠頁面，結果僅依據 Linaro 目錄。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/Linaro/works-on-woa/staging/src/data/content/projects.json",
+          "title": "Linaro Works on WoA catalog: dingtalk (emulation, from 7.6.45)",
+          "type": "aggregator",
+          "checked": "2026-11-10"
+        }
+      ],
+      "addedAt": "2026-11-10",
+      "verifiedAt": "2026-11-10",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
       "id": "discord",
       "name": "Discord",
       "vendor": "Discord",
@@ -1576,6 +1618,43 @@
       ],
       "addedAt": "2026-10-31",
       "verifiedAt": "2026-11-07",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "drawio",
+      "name": "draw.io Desktop",
+      "vendor": "JGraph",
+      "category": "productivity",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "high",
+      "version": "32.6.10",
+      "homepage": "https://www.drawio.com",
+      "aliases": [
+        "diagrams.net"
+      ],
+      "summary": {
+        "en": "Diagramming app with a separate Windows Arm64 installer.",
+        "zh-TW": "附有獨立 Windows Arm64 安裝檔的流程圖繪製軟體。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/j/JGraph/Draw/32.6.10/JGraph.Draw.installer.yaml",
+          "title": "winget manifest: JGraph.Draw 32.6.10 (arm64 installer draw.io-arm64-32.6.10-windows-arm64-installer.exe)",
+          "type": "release",
+          "checked": "2026-11-10"
+        }
+      ],
+      "addedAt": "2026-11-10",
+      "verifiedAt": "2026-11-10",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -3181,6 +3260,52 @@
       "hasConflict": false
     },
     {
+      "id": "naver-whale",
+      "name": "Naver Whale",
+      "vendor": "Naver",
+      "category": "browser",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "low",
+      "version": "4.30.291.11+",
+      "homepage": "https://whale.naver.com",
+      "aliases": [
+        "네이버 웨일",
+        "웨일"
+      ],
+      "summary": {
+        "en": "Korean Chromium-based browser. Linaro's catalog lists a native Arm64 build.",
+        "zh-TW": "南韓以 Chromium 為基礎的瀏覽器。Linaro 目錄列有原生 Arm64 版本。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        },
+        {
+          "en": "The Linaro entry was last updated 2026-05-08, so the current version is unconfirmed.",
+          "zh-TW": "Linaro 該筆資料最後更新於 2026-05-08，目前版本尚未確認。"
+        },
+        {
+          "en": "Vendor page could not be read from this environment; the result rests on the Linaro catalog alone.",
+          "zh-TW": "此環境無法讀取原廠頁面，結果僅依據 Linaro 目錄。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/Linaro/works-on-woa/staging/src/data/content/projects.json",
+          "title": "Linaro Works on WoA catalog: naverwhale (native, from 4.30.291.11)",
+          "type": "aggregator",
+          "checked": "2026-11-10"
+        }
+      ],
+      "addedAt": "2026-11-10",
+      "verifiedAt": "2026-11-10",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
       "id": "neovim",
       "name": "Neovim",
       "vendor": "Neovim contributors",
@@ -3327,11 +3452,11 @@
           "url": "https://www.nvidia.com/en-us/geforce/broadcasting/broadcast-app/",
           "title": "NVIDIA Broadcast app",
           "type": "vendor",
-          "checked": "2026-11-03"
+          "checked": "2026-11-10"
         }
       ],
       "addedAt": "2026-10-31",
-      "verifiedAt": "2026-11-03",
+      "verifiedAt": "2026-11-10",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -3411,14 +3536,14 @@
           "checked": "2026-11-03"
         },
         {
-          "url": "https://github.com/ollama/ollama/releases/expanded_assets/v0.32.3",
-          "title": "Ollama v0.32.3 release assets (ollama-windows-arm64.zip)",
+          "url": "https://github.com/ollama/ollama/releases/expanded_assets/v0.40.15",
+          "title": "Ollama v0.40.15 release assets (ollama-windows-arm64.zip)",
           "type": "release",
-          "checked": "2026-11-03"
+          "checked": "2026-11-10"
         }
       ],
       "addedAt": "2026-10-31",
-      "verifiedAt": "2026-11-03",
+      "verifiedAt": "2026-11-10",
       "caveats": [
         {
           "en": "The Arm64 build ships as a ZIP; the release has no Arm64 OllamaSetup.exe.",
@@ -3513,11 +3638,11 @@
           "url": "https://www.opera.com/download",
           "title": "Opera downloads",
           "type": "vendor",
-          "checked": "2026-11-03"
+          "checked": "2026-11-10"
         }
       ],
       "addedAt": "2026-10-31",
-      "verifiedAt": "2026-11-03",
+      "verifiedAt": "2026-11-10",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -3605,6 +3730,44 @@
       ],
       "addedAt": "2026-11-07",
       "verifiedAt": "2026-11-07",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "podman-desktop",
+      "name": "Podman Desktop",
+      "vendor": "Red Hat",
+      "category": "developer",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "high",
+      "version": "1.30.5",
+      "homepage": "https://podman-desktop.io",
+      "summary": {
+        "en": "Container manager that ships a setup-arm64.exe installer.",
+        "zh-TW": "提供 setup-arm64.exe 安裝檔的容器管理工具。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        },
+        {
+          "en": "Running containers needs WSL 2 or a Podman machine; that part was not checked.",
+          "zh-TW": "執行容器需要 WSL 2 或 Podman machine，此部分未檢查。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/r/RedHat/Podman-Desktop/1.30.5/RedHat.Podman-Desktop.installer.yaml",
+          "title": "winget manifest: RedHat.Podman-Desktop 1.30.5 (podman-desktop-1.30.5-setup-arm64.exe)",
+          "type": "release",
+          "checked": "2026-11-10"
+        }
+      ],
+      "addedAt": "2026-11-10",
+      "verifiedAt": "2026-11-10",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -3901,11 +4064,11 @@
           "url": "https://www.python.org/downloads/windows/",
           "title": "Python downloads for Windows",
           "type": "vendor",
-          "checked": "2026-11-03"
+          "checked": "2026-11-10"
         }
       ],
       "addedAt": "2026-10-31",
-      "verifiedAt": "2026-11-03",
+      "verifiedAt": "2026-11-10",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -4169,11 +4332,11 @@
           "url": "https://slack.com/downloads/windows",
           "title": "Slack for Windows downloads",
           "type": "vendor",
-          "checked": "2026-11-03"
+          "checked": "2026-11-10"
         }
       ],
       "addedAt": "2026-10-31",
-      "verifiedAt": "2026-11-03",
+      "verifiedAt": "2026-11-10",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -4483,6 +4646,44 @@
       "hasConflict": false
     },
     {
+      "id": "typora",
+      "name": "Typora",
+      "vendor": "Typora",
+      "category": "productivity",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "medium",
+      "version": "1.14.9+",
+      "homepage": "https://typora.io",
+      "summary": {
+        "en": "Markdown editor whose winget manifest lists an Arm64 installer (typora-setup-arm64-1.14.9.exe).",
+        "zh-TW": "winget 資訊清單列有 Arm64 安裝檔（typora-setup-arm64-1.14.9.exe）的 Markdown 編輯器。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        },
+        {
+          "en": "The manifest's Arm64 file is 1.14.9 while the manifest version is 1.14.15, so the newest Arm64 build is unconfirmed.",
+          "zh-TW": "資訊清單的 Arm64 檔案為 1.14.9，而清單版本為 1.14.15，最新的 Arm64 版本尚未確認。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/a/appmakes/Typora/1.14.15/appmakes.Typora.installer.yaml",
+          "title": "winget manifest: appmakes.Typora 1.14.15 (arm64 installer typora-setup-arm64-1.14.9.exe)",
+          "type": "release",
+          "checked": "2026-11-10"
+        }
+      ],
+      "addedAt": "2026-11-10",
+      "verifiedAt": "2026-11-10",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
       "id": "valorant",
       "name": "Valorant",
       "vendor": "Riot Games",
@@ -4573,11 +4774,11 @@
           "url": "https://code.visualstudio.com/download",
           "title": "VS Code downloads",
           "type": "vendor",
-          "checked": "2026-11-03"
+          "checked": "2026-11-10"
         }
       ],
       "addedAt": "2026-10-31",
-      "verifiedAt": "2026-11-03",
+      "verifiedAt": "2026-11-10",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -4603,11 +4804,11 @@
           "url": "https://vivaldi.com/download/",
           "title": "Vivaldi downloads",
           "type": "vendor",
-          "checked": "2026-11-03"
+          "checked": "2026-11-10"
         }
       ],
       "addedAt": "2026-10-31",
-      "verifiedAt": "2026-11-03",
+      "verifiedAt": "2026-11-10",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -4759,6 +4960,40 @@
       ],
       "addedAt": "2026-11-03",
       "verifiedAt": "2026-11-03",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "warp-terminal",
+      "name": "Warp",
+      "vendor": "Warp",
+      "category": "developer",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "high",
+      "version": "0.2026.11.04+",
+      "homepage": "https://www.warp.dev",
+      "summary": {
+        "en": "Terminal with an official Windows Arm64 download.",
+        "zh-TW": "提供官方 Windows Arm64 下載的終端機。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/w/Warp/Warp/v0.2026.11.04.08.17.stable_01/Warp.Warp.installer.yaml",
+          "title": "winget manifest: Warp.Warp v0.2026.11.04.08.17.stable_01 (arch=arm64 download)",
+          "type": "release",
+          "checked": "2026-11-10"
+        }
+      ],
+      "addedAt": "2026-11-10",
+      "verifiedAt": "2026-11-10",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -4990,11 +5225,11 @@
           "url": "https://www.wireshark.org/download.html",
           "title": "Wireshark download page (Wireshark-4.6.9-arm64.exe)",
           "type": "vendor",
-          "checked": "2026-11-03"
+          "checked": "2026-11-10"
         }
       ],
       "addedAt": "2026-11-03",
-      "verifiedAt": "2026-11-03",
+      "verifiedAt": "2026-11-10",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -5183,6 +5418,40 @@
       "hasConflict": false
     },
     {
+      "id": "zen-browser",
+      "name": "Zen Browser",
+      "vendor": "Zen Team",
+      "category": "browser",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "high",
+      "version": "1.24.1b",
+      "homepage": "https://zen-browser.app",
+      "summary": {
+        "en": "Firefox-based browser with a Windows Arm64 installer on GitHub.",
+        "zh-TW": "以 Firefox 為基礎、在 GitHub 提供 Windows Arm64 安裝檔的瀏覽器。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/z/Zen-Team/Zen-Browser/1.24.1b/Zen-Team.Zen-Browser.installer.yaml",
+          "title": "winget manifest: Zen-Team.Zen-Browser 1.24.1b (zen.installer-arm64.exe)",
+          "type": "release",
+          "checked": "2026-11-10"
+        }
+      ],
+      "addedAt": "2026-11-10",
+      "verifiedAt": "2026-11-10",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
       "id": "zoom",
       "name": "Zoom Workplace",
       "vendor": "Zoom",
@@ -5207,17 +5476,17 @@
           "url": "https://github.com/microsoft/winget-pkgs/tree/master/manifests/z/Zoom/Zoom",
           "title": "winget manifest: Zoom",
           "type": "release",
-          "checked": "2026-10-31"
+          "checked": "2026-11-10"
         },
         {
           "url": "https://learn.microsoft.com/surface/surface-arm-faq",
           "title": "Surface Arm FAQ",
           "type": "vendor",
-          "checked": "2026-11-02"
+          "checked": "2026-11-10"
         }
       ],
       "addedAt": "2026-10-31",
-      "verifiedAt": "2026-11-02",
+      "verifiedAt": "2026-11-10",
       "reportCount": 0,
       "hasConflict": false
     },
