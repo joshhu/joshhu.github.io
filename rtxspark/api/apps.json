@@ -1,6 +1,6 @@
 {
   "license": "CC-BY-4.0",
-  "updated": "2026-11-10",
+  "updated": "2026-11-11",
   "apps": [
     {
       "id": "2xko",
@@ -614,11 +614,11 @@
           "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/a/Audacity/Audacity/4.0.2.263060742/Audacity.Audacity.installer.yaml",
           "title": "winget manifest: audacity-win-4.0.2-arm64.msi",
           "type": "release",
-          "checked": "2026-11-04"
+          "checked": "2026-11-11"
         }
       ],
       "addedAt": "2026-11-04",
-      "verifiedAt": "2026-11-04",
+      "verifiedAt": "2026-11-11",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -809,6 +809,40 @@
       ],
       "addedAt": "2026-10-31",
       "verifiedAt": "2026-11-04",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "bazelisk",
+      "name": "Bazelisk",
+      "vendor": "Bazel",
+      "category": "developer",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "high",
+      "version": "1.30.0+",
+      "homepage": "https://github.com/bazelbuild/bazelisk",
+      "summary": {
+        "en": "Launcher for Bazel with a native bazelisk-windows-arm64.exe.",
+        "zh-TW": "Bazel 啟動器，提供原生 bazelisk-windows-arm64.exe。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://github.com/bazelbuild/bazelisk/releases/expanded_assets/v1.30.0",
+          "title": "Bazelisk v1.30.0 assets: bazelisk-windows-arm64.exe",
+          "type": "release",
+          "checked": "2026-11-11"
+        }
+      ],
+      "addedAt": "2026-11-11",
+      "verifiedAt": "2026-11-11",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -1078,11 +1112,11 @@
           "url": "https://storeedgefd.dsx.mp.microsoft.com/v9.0/packageManifests/XP9KN75RRB9NHS?Market=US&Locale=en-US",
           "title": "Microsoft Store package manifest: CapCut",
           "type": "release",
-          "checked": "2026-11-04"
+          "checked": "2026-11-11"
         }
       ],
       "addedAt": "2026-10-31",
-      "verifiedAt": "2026-11-04",
+      "verifiedAt": "2026-11-11",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -1677,7 +1711,7 @@
           "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/d/Dropbox/Dropbox/270.4.3312/Dropbox.Dropbox.installer.yaml",
           "title": "winget manifest 270.4.3312: Offline Installer.arm64.exe and Enterprise Installer.arm64.msi",
           "type": "release",
-          "checked": "2026-11-05"
+          "checked": "2026-11-11"
         }
       ],
       "caveats": [
@@ -1688,7 +1722,7 @@
       ],
       "scope": "windows-on-arm",
       "addedAt": "2026-11-05",
-      "verifiedAt": "2026-11-05",
+      "verifiedAt": "2026-11-11",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -1969,11 +2003,11 @@
           "url": "https://www.nvidia.com/en-us/geforce/news/rtx-spark-dlss-reflex-ray-tracing-games/",
           "title": "NVIDIA: RTX Spark games",
           "type": "vendor",
-          "checked": "2026-11-04"
+          "checked": "2026-11-11"
         }
       ],
       "addedAt": "2026-10-31",
-      "verifiedAt": "2026-11-04",
+      "verifiedAt": "2026-11-11",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -2386,11 +2420,11 @@
           "url": "https://storeedgefd.dsx.mp.microsoft.com/v9.0/packageManifests/9pd9bhglfc7h?Market=US&Locale=en-US",
           "title": "Microsoft Store package manifest: Inkscape (arm64, x64, x86)",
           "type": "release",
-          "checked": "2026-11-04"
+          "checked": "2026-11-11"
         }
       ],
       "addedAt": "2026-11-04",
-      "verifiedAt": "2026-11-04",
+      "verifiedAt": "2026-11-11",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -2463,11 +2497,11 @@
           "url": "https://storeedgefd.dsx.mp.microsoft.com/v9.0/packageManifests/XP9K178L5G0JQ0?Market=US&Locale=en-US",
           "title": "Microsoft Store package manifest: 카카오톡 26.8.1.5315 (x64, x86 only)",
           "type": "release",
-          "checked": "2026-11-04"
+          "checked": "2026-11-11"
         }
       ],
       "addedAt": "2026-11-04",
-      "verifiedAt": "2026-11-04",
+      "verifiedAt": "2026-11-11",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -2530,11 +2564,11 @@
           "url": "https://www.nvidia.com/en-us/geforce/news/rtx-spark-dlss-reflex-ray-tracing-games/",
           "title": "NVIDIA: RTX Spark games",
           "type": "vendor",
-          "checked": "2026-11-04"
+          "checked": "2026-11-11"
         }
       ],
       "addedAt": "2026-10-31",
-      "verifiedAt": "2026-11-04",
+      "verifiedAt": "2026-11-11",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -2598,11 +2632,11 @@
           "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/t/TheDocumentFoundation/LibreOffice/26.8.2.2/TheDocumentFoundation.LibreOffice.installer.yaml",
           "title": "winget manifest 26.8.2.2: arm64 installer LibreOffice_26.8.2_Win_aarch64.msi on download.documentfoundation.org",
           "type": "release",
-          "checked": "2026-11-04"
+          "checked": "2026-11-11"
         }
       ],
       "addedAt": "2026-11-04",
-      "verifiedAt": "2026-11-04",
+      "verifiedAt": "2026-11-11",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -2622,11 +2656,11 @@
           "url": "https://storeedgefd.dsx.mp.microsoft.com/v9.0/packageManifests/XPFCC4CD725961?Market=US&Locale=en-US",
           "title": "Microsoft Store package manifest: LINE",
           "type": "release",
-          "checked": "2026-11-04"
+          "checked": "2026-11-11"
         }
       ],
       "addedAt": "2026-10-31",
-      "verifiedAt": "2026-11-04",
+      "verifiedAt": "2026-11-11",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -3681,6 +3715,40 @@
       "hasConflict": false
     },
     {
+      "id": "oxlint",
+      "name": "oxlint",
+      "vendor": "Oxc project",
+      "category": "developer",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "high",
+      "version": "1.93.0+",
+      "homepage": "https://github.com/oxc-project/oxc",
+      "summary": {
+        "en": "JavaScript and TypeScript linter with an aarch64-pc-windows-msvc build.",
+        "zh-TW": "JavaScript 與 TypeScript 檢查工具，提供 aarch64-pc-windows-msvc 版本。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://github.com/oxc-project/oxc/releases",
+          "title": "oxlint v1.93.0 release: oxlint-aarch64-pc-windows-msvc.zip",
+          "type": "release",
+          "checked": "2026-11-11"
+        }
+      ],
+      "addedAt": "2026-11-11",
+      "verifiedAt": "2026-11-11",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
       "id": "trend-micro-pc-cillin",
       "name": "PC-cillin 雲端版 (Trend Micro Maximum Security)",
       "vendor": "Trend Micro 趨勢科技",
@@ -3960,17 +4028,17 @@
           "url": "https://www.nvidia.com/en-us/geforce/news/rtx-spark-dlss-reflex-ray-tracing-games/",
           "title": "NVIDIA: RTX Spark launch games and anti-cheat roadmap (Oct 13, 2026)",
           "type": "vendor",
-          "checked": "2026-11-03"
+          "checked": "2026-11-11"
         },
         {
           "url": "https://www.xda-developers.com/nvidia-rtx-spark-passed-most-anti-cheat-tests-valorant-and-call-of-duty-still-wont-run/",
           "title": "XDA: RTX Spark anti-cheat tests (Oct 21, 2026), 5 of 9 worked",
           "type": "review",
-          "checked": "2026-11-03"
+          "checked": "2026-11-11"
         }
       ],
       "addedAt": "2026-11-03",
-      "verifiedAt": "2026-11-03",
+      "verifiedAt": "2026-11-11",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -4034,11 +4102,11 @@
           "url": "https://storeedgefd.dsx.mp.microsoft.com/v9.0/packageManifests/XPFNZKSKLBP7RJ?Market=US&Locale=en-US",
           "title": "Microsoft Store package manifest: PuTTY 0.85.0.0 (arm64 MSI)",
           "type": "release",
-          "checked": "2026-11-04"
+          "checked": "2026-11-11"
         }
       ],
       "addedAt": "2026-11-04",
-      "verifiedAt": "2026-11-04",
+      "verifiedAt": "2026-11-11",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -4102,6 +4170,40 @@
       ],
       "addedAt": "2026-10-31",
       "verifiedAt": "2026-11-06",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "qoder-cli",
+      "name": "Qoder CLI",
+      "vendor": "Alibaba",
+      "category": "developer",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "medium",
+      "version": "1.1.80+",
+      "homepage": "https://github.com/microsoft/winget-pkgs/tree/master/manifests/a/Alibaba/QoderCLI/1.1.80",
+      "summary": {
+        "en": "Alibaba AI coding agent CLI with a qodercli-windows-arm64 zip.",
+        "zh-TW": "阿里巴巴的 AI 編碼代理命令列工具，提供 qodercli-windows-arm64 壓縮檔。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/a/Alibaba/QoderCLI/1.1.80/Alibaba.QoderCLI.installer.yaml",
+          "title": "winget manifest 1.1.80: qodercli-windows-arm64.zip",
+          "type": "release",
+          "checked": "2026-11-11"
+        }
+      ],
+      "addedAt": "2026-11-11",
+      "verifiedAt": "2026-11-11",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -4242,6 +4344,74 @@
       "scope": "windows-on-arm",
       "addedAt": "2026-11-06",
       "verifiedAt": "2026-11-06",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "sccache",
+      "name": "sccache",
+      "vendor": "Mozilla",
+      "category": "developer",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "high",
+      "version": "0.19.0+",
+      "homepage": "https://github.com/mozilla/sccache",
+      "summary": {
+        "en": "Compiler cache for Rust, C and C++ with a Windows aarch64 release.",
+        "zh-TW": "支援 Rust、C、C++ 的編譯快取工具，Release 提供 Windows aarch64 版本。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://github.com/mozilla/sccache/releases/expanded_assets/v0.19.0",
+          "title": "sccache v0.19.0 assets: aarch64-pc-windows-msvc.zip",
+          "type": "release",
+          "checked": "2026-11-11"
+        }
+      ],
+      "addedAt": "2026-11-11",
+      "verifiedAt": "2026-11-11",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "sentry-cli",
+      "name": "Sentry CLI",
+      "vendor": "Sentry",
+      "category": "developer",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "high",
+      "version": "3.8.2+",
+      "homepage": "https://github.com/getsentry/sentry-cli",
+      "summary": {
+        "en": "Sentry command-line tool with a native Windows aarch64 executable.",
+        "zh-TW": "Sentry 命令列工具，提供原生 Windows aarch64 執行檔。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://github.com/getsentry/sentry-cli/releases/expanded_assets/3.8.2",
+          "title": "sentry-cli 3.8.2 assets: sentry-cli-Windows-aarch64.exe",
+          "type": "release",
+          "checked": "2026-11-11"
+        }
+      ],
+      "addedAt": "2026-11-11",
+      "verifiedAt": "2026-11-11",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -4646,6 +4816,74 @@
       "hasConflict": false
     },
     {
+      "id": "temporal-cli",
+      "name": "Temporal CLI",
+      "vendor": "Temporal Technologies",
+      "category": "developer",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "high",
+      "version": "1.10.0+",
+      "homepage": "https://github.com/temporalio/cli",
+      "summary": {
+        "en": "Temporal workflow command-line tool with windows_arm64 zip builds.",
+        "zh-TW": "Temporal 工作流程命令列工具，提供 windows_arm64 的 zip 版本。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://github.com/temporalio/cli/releases/expanded_assets/v1.10.0",
+          "title": "Temporal CLI v1.10.0 assets: temporal_cli_1.10.0_windows_arm64.zip",
+          "type": "release",
+          "checked": "2026-11-11"
+        }
+      ],
+      "addedAt": "2026-11-11",
+      "verifiedAt": "2026-11-11",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "trilium-notes",
+      "name": "TriliumNext Notes",
+      "vendor": "TriliumNext",
+      "category": "productivity",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "high",
+      "version": "0.107.0+",
+      "homepage": "https://github.com/TriliumNext/Trilium",
+      "summary": {
+        "en": "Hierarchical note-taking app with a Windows arm64 installer and zip.",
+        "zh-TW": "階層式筆記應用程式，提供 Windows arm64 安裝程式與 zip。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://github.com/TriliumNext/Trilium/releases/expanded_assets/v0.107.0",
+          "title": "TriliumNotes v0.107.0 assets: windows-arm64.exe and .zip",
+          "type": "release",
+          "checked": "2026-11-11"
+        }
+      ],
+      "addedAt": "2026-11-11",
+      "verifiedAt": "2026-11-11",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
       "id": "typora",
       "name": "Typora",
       "vendor": "Typora",
@@ -5031,11 +5269,11 @@
           "url": "https://storeedgefd.dsx.mp.microsoft.com/v9.0/packageManifests/XPFCKBRNFZQ62G?Market=US&Locale=en-US",
           "title": "Microsoft Store package manifest: 微信 4.1.15.12 (x64, x86 only)",
           "type": "release",
-          "checked": "2026-11-04"
+          "checked": "2026-11-11"
         }
       ],
       "addedAt": "2026-11-04",
-      "verifiedAt": "2026-11-04",
+      "verifiedAt": "2026-11-11",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -5516,11 +5754,11 @@
           "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/d/DigitalScholar/Zotero/10.0.7/DigitalScholar.Zotero.installer.yaml",
           "title": "winget manifest 10.0.7: Zotero-10.0.7_arm64_setup.exe",
           "type": "release",
-          "checked": "2026-11-04"
+          "checked": "2026-11-11"
         }
       ],
       "addedAt": "2026-11-04",
-      "verifiedAt": "2026-11-04",
+      "verifiedAt": "2026-11-11",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -5691,6 +5929,44 @@
       "scope": "windows-on-arm",
       "addedAt": "2026-11-05",
       "verifiedAt": "2026-11-05",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "doubao-work",
+      "name": "豆包 Work (Doubao Work)",
+      "vendor": "ByteDance",
+      "category": "productivity",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "medium",
+      "version": "2.32.6",
+      "homepage": "https://www.doubao.com",
+      "summary": {
+        "en": "ByteDance workplace AI app with a separate DoubaoWork_Arm64 installer on the vendor CDN.",
+        "zh-TW": "字節跳動的職場 AI 應用，官方 CDN 另有 DoubaoWork_Arm64 安裝程式。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/b/ByteDance/DoubaoWork/2.32.6/ByteDance.DoubaoWork.installer.yaml",
+          "title": "winget manifest 2.32.6: DoubaoWork_Arm64_installer_2.32.6.exe",
+          "type": "release",
+          "checked": "2026-11-11"
+        }
+      ],
+      "addedAt": "2026-11-11",
+      "verifiedAt": "2026-11-11",
+      "aliases": [
+        "Doubao Work",
+        "豆包"
+      ],
       "reportCount": 0,
       "hasConflict": false
     }
