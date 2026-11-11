@@ -1,6 +1,6 @@
 {
   "license": "CC-BY-4.0",
-  "updated": "2026-11-11",
+  "updated": "2026-11-12",
   "apps": [
     {
       "id": "2xko",
@@ -798,17 +798,17 @@
           "url": "https://www.notebookcheck.net/Asus-ProArt-P16-RTX-Spark-Laptop-Review-The-future-of-multimedia-laptops.1422366.0.html",
           "title": "Notebookcheck: ASUS ProArt P16 review",
           "type": "review",
-          "checked": "2026-11-04"
+          "checked": "2026-11-12"
         },
         {
           "url": "https://www.nvidia.com/en-us/geforce/news/rtx-spark-dlss-reflex-ray-tracing-games/",
           "title": "NVIDIA: RTX Spark games",
           "type": "vendor",
-          "checked": "2026-11-04"
+          "checked": "2026-11-12"
         }
       ],
       "addedAt": "2026-10-31",
-      "verifiedAt": "2026-11-04",
+      "verifiedAt": "2026-11-12",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -865,7 +865,7 @@
           "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/b/beekeeper-studio/beekeeper-studio/6.2.1/beekeeper-studio.beekeeper-studio.installer.yaml",
           "title": "winget manifest 6.2.1: Beekeeper-Studio-Setup-6.2.1-arm64.exe",
           "type": "release",
-          "checked": "2026-11-05"
+          "checked": "2026-11-12"
         }
       ],
       "caveats": [
@@ -876,7 +876,41 @@
       ],
       "scope": "windows-on-arm",
       "addedAt": "2026-11-05",
-      "verifiedAt": "2026-11-05",
+      "verifiedAt": "2026-11-12",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "liberica-jre-21",
+      "name": "BellSoft Liberica JRE 21",
+      "vendor": "BellSoft",
+      "category": "developer",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "medium",
+      "version": "21.0.13.0.3+5",
+      "homepage": "https://bell-sw.com/libericajdk/",
+      "summary": {
+        "en": "Java 21 runtime with a Windows aarch64 MSI.",
+        "zh-TW": "Java 21 執行環境，提供 Windows aarch64 MSI。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/b/BellSoft/LibericaJRE/21/21.0.13.0.3+5/BellSoft.LibericaJRE.21.installer.yaml",
+          "title": "winget manifest 21.0.13.0.3+5: bellsoft-jre21.0.13.0.3+5-windows-aarch64.msi",
+          "type": "release",
+          "checked": "2026-11-12"
+        }
+      ],
+      "addedAt": "2026-11-12",
+      "verifiedAt": "2026-11-12",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -1204,6 +1238,44 @@
       "hasConflict": false
     },
     {
+      "id": "clouddrive2",
+      "name": "CloudDrive2",
+      "vendor": "Waytech",
+      "category": "utility",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "medium",
+      "version": "1.1.3",
+      "homepage": "https://www.clouddrive2.com/",
+      "summary": {
+        "en": "Chinese cloud-drive manager that mounts cloud storage as local disks, with an Arm64 installer.",
+        "zh-TW": "可把多個雲端硬碟掛載為本機磁碟的中國雲端硬碟管理工具，提供 Arm64 安裝程式。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        },
+        {
+          "en": "Mounting cloud drives as local disks relies on a file-system driver; that part was not tested.",
+          "zh-TW": "把雲端硬碟掛載為本機磁碟需要檔案系統驅動程式，這部分未測試。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/w/Waytech/CloudDrive2/1.0/Waytech.CloudDrive2.installer.yaml",
+          "title": "winget manifest: CloudDrive2Setup-Arm64-1.1.3.exe",
+          "type": "release",
+          "checked": "2026-11-12"
+        }
+      ],
+      "addedAt": "2026-11-12",
+      "verifiedAt": "2026-11-12",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
       "id": "cmake",
       "name": "CMake",
       "vendor": "Kitware",
@@ -1470,11 +1542,11 @@
           "url": "https://davinciresolveclub.com/davinci-resolve-windows-x86-vs-arm/",
           "title": "DaVinci Resolve Club: Windows x86 vs Arm",
           "type": "community",
-          "checked": "2026-11-04"
+          "checked": "2026-11-12"
         }
       ],
       "addedAt": "2026-10-31",
-      "verifiedAt": "2026-11-04",
+      "verifiedAt": "2026-11-12",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -1747,13 +1819,13 @@
           "url": "https://www.ea.com/games/ea-sports-fc/news/pitch-notes-fc26-pc-deep-dive",
           "title": "EA: FC 26 PC deep dive, protected by EA Javelin Anticheat",
           "type": "vendor",
-          "checked": "2026-11-03"
+          "checked": "2026-11-12"
         },
         {
           "url": "https://www.nvidia.com/en-us/geforce/news/rtx-spark-dlss-reflex-ray-tracing-games/",
           "title": "NVIDIA: RTX Spark launch games and anti-cheat roadmap (Oct 13, 2026)",
           "type": "vendor",
-          "checked": "2026-11-03"
+          "checked": "2026-11-12"
         },
         {
           "url": "https://www.xda-developers.com/nvidia-rtx-spark-passed-most-anti-cheat-tests-valorant-and-call-of-duty-still-wont-run/",
@@ -1763,7 +1835,7 @@
         }
       ],
       "addedAt": "2026-11-03",
-      "verifiedAt": "2026-11-03",
+      "verifiedAt": "2026-11-12",
       "aliases": [
         "FC 26",
         "EA FC 26"
@@ -1835,6 +1907,44 @@
       "hasConflict": false
     },
     {
+      "id": "elgato-studio",
+      "name": "Elgato Studio",
+      "vendor": "Corsair (Elgato)",
+      "category": "creative",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "medium",
+      "version": "2.0.0.3364",
+      "homepage": "https://www.elgato.com/s/downloads",
+      "summary": {
+        "en": "Elgato capture and camera app with a separate arm64 MSIX package.",
+        "zh-TW": "Elgato 的擷取與攝影機應用程式，另有 arm64 MSIX 安裝套件。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        },
+        {
+          "en": "The older Camera Hub and Video Capture apps are listed separately as not working on Windows on Arm; capture hardware drivers were not tested.",
+          "zh-TW": "舊版 Camera Hub 與 Video Capture 另列為無法在 Windows on Arm 使用；擷取硬體驅動程式未測試。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/e/Elgato/Studio/2.0.0.3364/Elgato.Studio.installer.yaml",
+          "title": "winget manifest 2.0.0.3364: Elgato.Studio_2.0.0.3364_arm64.msix",
+          "type": "release",
+          "checked": "2026-11-12"
+        }
+      ],
+      "addedAt": "2026-11-12",
+      "verifiedAt": "2026-11-12",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
       "id": "elgato-video-capture",
       "name": "Elgato Video Capture",
       "vendor": "Elgato (Corsair)",
@@ -1864,6 +1974,44 @@
       "hasConflict": false
     },
     {
+      "id": "elgato-wave-link",
+      "name": "Elgato Wave Link",
+      "vendor": "Corsair (Elgato)",
+      "category": "creative",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "medium",
+      "version": "3.4.0.4650",
+      "homepage": "https://www.elgato.com/s/downloads",
+      "summary": {
+        "en": "Elgato audio mixing app for streamers with a separate arm64 MSIX package.",
+        "zh-TW": "Elgato 為實況主打造的音訊混音應用程式，另有 arm64 MSIX 安裝套件。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        },
+        {
+          "en": "The app is native, but Elgato hardware and its drivers were not tested on RTX Spark.",
+          "zh-TW": "應用程式為原生版本，但 Elgato 硬體與驅動程式未在 RTX Spark 上測試。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/e/Elgato/WaveLink/3.4.0.4650/Elgato.WaveLink.installer.yaml",
+          "title": "winget manifest 3.4.0.4650: Elgato.WaveLink_3.4.0.4650_arm64.msix",
+          "type": "release",
+          "checked": "2026-11-12"
+        }
+      ],
+      "addedAt": "2026-11-12",
+      "verifiedAt": "2026-11-12",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
       "id": "f1-25",
       "name": "F1 25",
       "vendor": "Electronic Arts / Codemasters",
@@ -1884,11 +2032,11 @@
           "url": "https://www.notebookcheck.net/Asus-ProArt-P16-RTX-Spark-Laptop-Review-The-future-of-multimedia-laptops.1422366.0.html",
           "title": "Notebookcheck: ASUS ProArt P16 review",
           "type": "review",
-          "checked": "2026-11-04"
+          "checked": "2026-11-12"
         }
       ],
       "addedAt": "2026-10-31",
-      "verifiedAt": "2026-11-04",
+      "verifiedAt": "2026-11-12",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -2540,6 +2688,40 @@
       "hasConflict": false
     },
     {
+      "id": "kimi-code-cli",
+      "name": "Kimi Code CLI",
+      "vendor": "Moonshot AI",
+      "category": "ai",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "medium",
+      "version": "2.5.2",
+      "homepage": "https://moonshotai.github.io/kimi-code/",
+      "summary": {
+        "en": "Moonshot AI (China) coding agent CLI with a win32-arm64 binary on the vendor site.",
+        "zh-TW": "月之暗面（中國）的程式開發代理命令列工具，官方網站提供 win32-arm64 執行檔。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/m/MoonshotAI/KimiCodeCLI/2.5.2/MoonshotAI.KimiCodeCLI.installer.yaml",
+          "title": "winget manifest 2.5.2: kimi-code-win32-arm64.exe",
+          "type": "release",
+          "checked": "2026-11-12"
+        }
+      ],
+      "addedAt": "2026-11-12",
+      "verifiedAt": "2026-11-12",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
       "id": "league-of-legends",
       "name": "League of Legends",
       "vendor": "Riot Games",
@@ -2808,17 +2990,17 @@
           "url": "https://www.notebookcheck.net/Battlefield-6-and-Madden-NFL-to-come-to-SteamOS-and-ARM-PCs.1243276.0.html",
           "title": "Notebookcheck: Javelin requires x86 Windows; Battlefield, EA Sports, Madden use it",
           "type": "review",
-          "checked": "2026-11-03"
+          "checked": "2026-11-12"
         },
         {
           "url": "https://www.nvidia.com/en-us/geforce/news/rtx-spark-dlss-reflex-ray-tracing-games/",
           "title": "NVIDIA: RTX Spark launch games and anti-cheat roadmap (Oct 13, 2026)",
           "type": "vendor",
-          "checked": "2026-11-03"
+          "checked": "2026-11-12"
         }
       ],
       "addedAt": "2026-11-03",
-      "verifiedAt": "2026-11-03",
+      "verifiedAt": "2026-11-12",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -3749,6 +3931,40 @@
       "hasConflict": false
     },
     {
+      "id": "papercut-smtp",
+      "name": "Papercut SMTP",
+      "vendor": "Changemaker Studios",
+      "category": "developer",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "medium",
+      "version": "8.0.2",
+      "homepage": "https://github.com/ChangemakerStudios/Papercut-SMTP",
+      "summary": {
+        "en": "Local SMTP test server and mail viewer with a win-arm64 installer.",
+        "zh-TW": "本機 SMTP 測試伺服器與郵件檢視工具，提供 win-arm64 安裝程式。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/c/ChangemakerStudios/Papercut-SMTP/8.0.2/ChangemakerStudios.Papercut-SMTP.installer.yaml",
+          "title": "winget manifest 8.0.2: PapercutSMTP-win-arm64-stable-Setup.exe",
+          "type": "release",
+          "checked": "2026-11-12"
+        }
+      ],
+      "addedAt": "2026-11-12",
+      "verifiedAt": "2026-11-12",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
       "id": "trend-micro-pc-cillin",
       "name": "PC-cillin 雲端版 (Trend Micro Maximum Security)",
       "vendor": "Trend Micro 趨勢科技",
@@ -3858,7 +4074,7 @@
           "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/p/Postman/Postman/arm64/12.35.1/Postman.Postman.arm64.installer.yaml",
           "title": "winget manifest 12.35.1: dl.pstmn.io/download/version/12.35.1/windows_arm64",
           "type": "release",
-          "checked": "2026-11-05"
+          "checked": "2026-11-12"
         }
       ],
       "caveats": [
@@ -3869,7 +4085,7 @@
       ],
       "scope": "windows-on-arm",
       "addedAt": "2026-11-05",
-      "verifiedAt": "2026-11-05",
+      "verifiedAt": "2026-11-12",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -4231,7 +4447,7 @@
           "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/t/Tencent/QQ/NT/9.9.33.52230/Tencent.QQ.NT.installer.yaml",
           "title": "winget manifest 9.9.33.52230: QQ_9.9.33_260813_arm64_01.exe",
           "type": "release",
-          "checked": "2026-11-05"
+          "checked": "2026-11-12"
         }
       ],
       "caveats": [
@@ -4242,7 +4458,7 @@
       ],
       "scope": "windows-on-arm",
       "addedAt": "2026-11-05",
-      "verifiedAt": "2026-11-05",
+      "verifiedAt": "2026-11-12",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -4436,13 +4652,13 @@
           "url": "https://www.ea.com/news/ea-javelin-anticheat-2026-update",
           "title": "EA: Javelin Anticheat 2026 update, native ARM64 support 'in the near future'",
           "type": "vendor",
-          "checked": "2026-11-03"
+          "checked": "2026-11-12"
         },
         {
           "url": "https://www.nvidia.com/en-us/geforce/news/rtx-spark-dlss-reflex-ray-tracing-games/",
           "title": "NVIDIA: RTX Spark launch games and anti-cheat roadmap (Oct 13, 2026)",
           "type": "vendor",
-          "checked": "2026-11-03"
+          "checked": "2026-11-12"
         },
         {
           "url": "https://www.xda-developers.com/nvidia-rtx-spark-passed-most-anti-cheat-tests-valorant-and-call-of-duty-still-wont-run/",
@@ -4452,7 +4668,7 @@
         }
       ],
       "addedAt": "2026-11-03",
-      "verifiedAt": "2026-11-03",
+      "verifiedAt": "2026-11-12",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -4846,6 +5062,40 @@
       ],
       "addedAt": "2026-11-11",
       "verifiedAt": "2026-11-11",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "terramate-cli",
+      "name": "Terramate CLI",
+      "vendor": "Terramate GmbH",
+      "category": "developer",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "medium",
+      "version": "0.17.4",
+      "homepage": "https://github.com/terramate-io/terramate",
+      "summary": {
+        "en": "Infrastructure-as-code orchestration CLI with a windows_arm64 release archive.",
+        "zh-TW": "基礎架構即程式碼協作命令列工具，提供 windows_arm64 發行壓縮檔。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/t/Terramate/CLI/0.17.4/Terramate.CLI.installer.yaml",
+          "title": "winget manifest 0.17.4: terramate_0.17.4_windows_arm64.zip",
+          "type": "release",
+          "checked": "2026-11-12"
+        }
+      ],
+      "addedAt": "2026-11-12",
+      "verifiedAt": "2026-11-12",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -5320,7 +5570,7 @@
           "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/m/Mikrotik/Winbox/4.5/Mikrotik.Winbox.installer.yaml",
           "title": "winget manifest 4.5: download.mikrotik.com/.../WinBox_Windows_arm64.zip",
           "type": "release",
-          "checked": "2026-11-05"
+          "checked": "2026-11-12"
         }
       ],
       "caveats": [
@@ -5331,7 +5581,7 @@
       ],
       "scope": "windows-on-arm",
       "addedAt": "2026-11-05",
-      "verifiedAt": "2026-11-05",
+      "verifiedAt": "2026-11-12",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -5588,6 +5838,40 @@
       "hasConflict": false
     },
     {
+      "id": "zcode",
+      "name": "Z Code",
+      "vendor": "Z.AI (Zhipu)",
+      "category": "ai",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "medium",
+      "version": "3.17.2",
+      "homepage": "https://zcode-ai.com/",
+      "summary": {
+        "en": "Z.AI (Zhipu, China) AI coding agent desktop app with a windows-arm64 installer.",
+        "zh-TW": "智譜 Z.AI（中國）的 AI 程式開發代理桌面應用，提供 windows-arm64 安裝程式。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/z/ZhipuAI/ZCode/3.17.2/ZhipuAI.ZCode.installer.yaml",
+          "title": "winget manifest 3.17.2: ZCode-3.17.2-win-arm64.exe",
+          "type": "release",
+          "checked": "2026-11-12"
+        }
+      ],
+      "addedAt": "2026-11-12",
+      "verifiedAt": "2026-11-12",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
       "id": "zeal",
       "name": "Zeal",
       "vendor": "Zeal contributors",
@@ -5606,7 +5890,7 @@
           "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/o/OlegShparber/Zeal/0.9.2/OlegShparber.Zeal.installer.yaml",
           "title": "winget manifest 0.9.2: zeal-0.9.2-windows-arm64.msi",
           "type": "release",
-          "checked": "2026-11-05"
+          "checked": "2026-11-12"
         }
       ],
       "caveats": [
@@ -5617,7 +5901,7 @@
       ],
       "scope": "windows-on-arm",
       "addedAt": "2026-11-05",
-      "verifiedAt": "2026-11-05",
+      "verifiedAt": "2026-11-12",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -5917,7 +6201,7 @@
           "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/b/ByteDance/Doubao/2.32.5/ByteDance.Doubao.installer.yaml",
           "title": "winget manifest 2.32.5: Doubao_Arm64_installer_2.32.5.exe",
           "type": "release",
-          "checked": "2026-11-05"
+          "checked": "2026-11-12"
         }
       ],
       "caveats": [
@@ -5928,7 +6212,7 @@
       ],
       "scope": "windows-on-arm",
       "addedAt": "2026-11-05",
-      "verifiedAt": "2026-11-05",
+      "verifiedAt": "2026-11-12",
       "reportCount": 0,
       "hasConflict": false
     },
