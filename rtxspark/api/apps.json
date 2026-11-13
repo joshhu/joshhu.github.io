@@ -1,6 +1,6 @@
 {
   "license": "CC-BY-4.0",
-  "updated": "2026-11-13",
+  "updated": "2026-11-14",
   "apps": [
     {
       "id": "2xko",
@@ -46,18 +46,18 @@
       "scope": "windows-on-arm",
       "maturity": "stable",
       "confidence": "high",
-      "version": "26.05",
+      "version": "26.06",
       "homepage": "https://www.7-zip.org",
       "evidence": [
         {
           "url": "https://www.7-zip.org/download.html",
           "title": "7-Zip downloads",
           "type": "vendor",
-          "checked": "2026-11-06"
+          "checked": "2026-11-14"
         }
       ],
       "addedAt": "2026-10-31",
-      "verifiedAt": "2026-11-06",
+      "verifiedAt": "2026-11-14",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -433,11 +433,11 @@
           "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/a/Anki/Anki/26.09.4/Anki.Anki.installer.yaml",
           "title": "winget manifest 26.09.4: anki-26.09.4-win-arm64.msi",
           "type": "release",
-          "checked": "2026-11-07"
+          "checked": "2026-11-14"
         }
       ],
       "addedAt": "2026-11-07",
-      "verifiedAt": "2026-11-07",
+      "verifiedAt": "2026-11-14",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -809,6 +809,44 @@
       "hasConflict": false
     },
     {
+      "id": "bandizip",
+      "name": "Bandizip",
+      "vendor": "Bandisoft",
+      "category": "utility",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "low",
+      "version": "7.32",
+      "homepage": "https://www.bandisoft.com/bandizip/",
+      "summary": {
+        "en": "Korean file compression tool. Linaro's Works on WoA data lists it as native Arm64, validated by Qualcomm and NVIDIA.",
+        "zh-TW": "韓國的檔案壓縮工具。Linaro 的 Works on WoA 資料列為原生 Arm64，並經 Qualcomm 與 NVIDIA 驗證。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        },
+        {
+          "en": "Vendor page could not be read from this environment; the result rests on the Linaro catalog alone.",
+          "zh-TW": "此環境無法讀取原廠頁面，結果僅依據 Linaro 目錄。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/Linaro/works-on-woa/staging/src/data/content/projects.json",
+          "title": "Linaro Works on WoA catalog: bandizip (native, 7.32)",
+          "type": "aggregator",
+          "checked": "2026-11-14"
+        }
+      ],
+      "addedAt": "2026-11-14",
+      "verifiedAt": "2026-11-14",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
       "id": "battlefield-6",
       "name": "Battlefield 6",
       "vendor": "Electronic Arts",
@@ -1004,7 +1042,7 @@
           "url": "https://www.xda-developers.com/rtx-spark-laptop-rendered-blender-scene-too-big-rtx-5090-local-llm/",
           "title": "XDA: Blender scene rendered on RTX Spark",
           "type": "review",
-          "checked": "2026-11-05"
+          "checked": "2026-11-14"
         },
         {
           "url": "https://learn.microsoft.com/surface/surface-arm-faq",
@@ -1014,7 +1052,7 @@
         }
       ],
       "addedAt": "2026-10-31",
-      "verifiedAt": "2026-11-05",
+      "verifiedAt": "2026-11-14",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -1034,11 +1072,11 @@
           "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/b/Brave/Brave/155.1.97.57/Brave.Brave.installer.yaml",
           "title": "winget manifest 155.1.97.57: BraveBrowserStandaloneSilentSetupArm64.exe",
           "type": "release",
-          "checked": "2026-11-06"
+          "checked": "2026-11-14"
         }
       ],
       "addedAt": "2026-10-31",
-      "verifiedAt": "2026-11-06",
+      "verifiedAt": "2026-11-14",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -1068,11 +1106,11 @@
           "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/b/Bruno/Bruno/4.3.0/Bruno.Bruno.installer.yaml",
           "title": "winget manifest 4.3.0: bruno_4.3.0_arm64_win installers",
           "type": "release",
-          "checked": "2026-11-07"
+          "checked": "2026-11-14"
         }
       ],
       "addedAt": "2026-11-07",
-      "verifiedAt": "2026-11-07",
+      "verifiedAt": "2026-11-14",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -1207,7 +1245,7 @@
           "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/k/kangfenmao/CherryStudio/2.1.10/kangfenmao.CherryStudio.installer.yaml",
           "title": "winget manifest 2.1.10: Cherry-Studio-2.1.10-win-arm64-setup.exe",
           "type": "release",
-          "checked": "2026-11-06"
+          "checked": "2026-11-14"
         }
       ],
       "caveats": [
@@ -1218,7 +1256,41 @@
       ],
       "scope": "windows-on-arm",
       "addedAt": "2026-11-06",
-      "verifiedAt": "2026-11-06",
+      "verifiedAt": "2026-11-14",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "cilium-cli",
+      "name": "Cilium CLI",
+      "vendor": "Cilium",
+      "category": "developer",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "medium",
+      "version": "0.20.3",
+      "homepage": "https://github.com/cilium/cilium-cli",
+      "summary": {
+        "en": "Command-line tool for installing and checking Cilium; the release includes cilium-windows-arm64.zip.",
+        "zh-TW": "安裝與檢查 Cilium 的命令列工具；發行版含 cilium-windows-arm64.zip。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/c/Cilium/CiliumCLI/0.20.3/Cilium.CiliumCLI.installer.yaml",
+          "title": "winget manifest 0.20.3: cilium-windows-arm64.zip",
+          "type": "release",
+          "checked": "2026-11-14"
+        }
+      ],
+      "addedAt": "2026-11-14",
+      "verifiedAt": "2026-11-14",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -1543,11 +1615,11 @@
           "url": "https://www.windowscentral.com/hardware/nvidia/rtx-spark-review-benchmarks-2026",
           "title": "Windows Central: RTX Spark review",
           "type": "review",
-          "checked": "2026-11-04"
+          "checked": "2026-11-14"
         }
       ],
       "addedAt": "2026-10-31",
-      "verifiedAt": "2026-11-04",
+      "verifiedAt": "2026-11-14",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -2075,6 +2147,44 @@
       "hasConflict": false
     },
     {
+      "id": "feishu",
+      "name": "Feishu (Lark)",
+      "vendor": "ByteDance",
+      "category": "communication",
+      "status": "prism",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "low",
+      "version": "x64 7.38.6",
+      "homepage": "https://www.feishu.cn/download",
+      "summary": {
+        "en": "Chinese team chat and office suite. Linaro's Works on WoA data lists the x64 build as working under emulation, validated by Qualcomm and NVIDIA.",
+        "zh-TW": "中國的團隊通訊與辦公套件。Linaro 的 Works on WoA 資料列為 x64 版透過模擬執行，並經 Qualcomm 與 NVIDIA 驗證。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        },
+        {
+          "en": "Vendor page could not be read from this environment; the result rests on the Linaro catalog alone.",
+          "zh-TW": "此環境無法讀取原廠頁面，結果僅依據 Linaro 目錄。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/Linaro/works-on-woa/staging/src/data/content/projects.json",
+          "title": "Linaro Works on WoA catalog: feishu (emulation, 7.38.6)",
+          "type": "aggregator",
+          "checked": "2026-11-14"
+        }
+      ],
+      "addedAt": "2026-11-14",
+      "verifiedAt": "2026-11-14",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
       "id": "figma",
       "name": "Figma",
       "vendor": "Figma",
@@ -2153,11 +2263,11 @@
           "url": "https://www.xda-developers.com/tested-two-decades-of-windows-gaming-history-on-arm-rtx-spark-nvidia/",
           "title": "XDA: two decades of Windows games on RTX Spark",
           "type": "review",
-          "checked": "2026-11-04"
+          "checked": "2026-11-14"
         }
       ],
       "addedAt": "2026-10-31",
-      "verifiedAt": "2026-11-04",
+      "verifiedAt": "2026-11-14",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -2341,7 +2451,7 @@
           "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/g/GitHub/cli/2.103.3/GitHub.cli.installer.yaml",
           "title": "winget manifest 2.103.3: gh_2.103.3_windows_arm64.msi",
           "type": "release",
-          "checked": "2026-11-06"
+          "checked": "2026-11-14"
         }
       ],
       "caveats": [
@@ -2352,7 +2462,7 @@
       ],
       "scope": "windows-on-arm",
       "addedAt": "2026-11-06",
-      "verifiedAt": "2026-11-06",
+      "verifiedAt": "2026-11-14",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -2409,7 +2519,7 @@
           "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/g/GitHub/GitHubDesktop/3.6.10/GitHub.GitHubDesktop.installer.yaml",
           "title": "winget manifest 3.6.10: GitHubDesktopSetup-arm64.exe",
           "type": "release",
-          "checked": "2026-11-06"
+          "checked": "2026-11-14"
         }
       ],
       "caveats": [
@@ -2420,7 +2530,7 @@
       ],
       "scope": "windows-on-arm",
       "addedAt": "2026-11-06",
-      "verifiedAt": "2026-11-06",
+      "verifiedAt": "2026-11-14",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -2443,7 +2553,7 @@
           "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/g/GoLang/Go/1.27.3/GoLang.Go.installer.yaml",
           "title": "winget manifest 1.27.3: go1.27.3.windows-arm64.msi",
           "type": "release",
-          "checked": "2026-11-06"
+          "checked": "2026-11-14"
         }
       ],
       "caveats": [
@@ -2454,7 +2564,7 @@
       ],
       "scope": "windows-on-arm",
       "addedAt": "2026-11-06",
-      "verifiedAt": "2026-11-06",
+      "verifiedAt": "2026-11-14",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -3087,11 +3197,11 @@
           "url": "https://www.xda-developers.com/tested-two-decades-of-windows-gaming-history-on-arm-rtx-spark-nvidia/",
           "title": "XDA: two decades of Windows games on RTX Spark",
           "type": "review",
-          "checked": "2026-11-05"
+          "checked": "2026-11-14"
         }
       ],
       "addedAt": "2026-10-31",
-      "verifiedAt": "2026-11-05",
+      "verifiedAt": "2026-11-14",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -3190,6 +3300,40 @@
       ],
       "addedAt": "2026-11-09",
       "verifiedAt": "2026-11-09",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "dotnet-sdk-11",
+      "name": "Microsoft .NET SDK 11",
+      "vendor": "Microsoft",
+      "category": "developer",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "medium",
+      "version": "11.0.100",
+      "homepage": "https://dotnet.microsoft.com",
+      "summary": {
+        "en": "The .NET 11 SDK ships a win-arm64 installer on download.microsoft.com.",
+        "zh-TW": ".NET 11 SDK 在 download.microsoft.com 提供 win-arm64 安裝程式。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/m/Microsoft/DotNet/SDK/11/11.0.100/Microsoft.DotNet.SDK.11.installer.yaml",
+          "title": "winget manifest 11.0.100: dotnet-sdk-11.0.100-win-arm64.exe",
+          "type": "release",
+          "checked": "2026-11-14"
+        }
+      ],
+      "addedAt": "2026-11-14",
+      "verifiedAt": "2026-11-14",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -3495,13 +3639,13 @@
           "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/a/Anaconda/Miniconda3/py314_26.9.3-0/Anaconda.Miniconda3.installer.yaml",
           "title": "winget manifest py314_26.9.3-0: Miniconda3-py314_26.9.3-0-Windows-arm64.exe",
           "type": "release",
-          "checked": "2026-11-06"
+          "checked": "2026-11-14"
         },
         {
           "url": "https://forums.developer.nvidia.com/t/rtx-spark-getting-started-with-development/385976",
           "title": "NVIDIA: RTX Spark getting started with development (native Windows ARM64 Miniconda installer)",
           "type": "vendor",
-          "checked": "2026-11-06"
+          "checked": "2026-11-14"
         }
       ],
       "caveats": [
@@ -3512,7 +3656,7 @@
       ],
       "scope": "rtx-spark",
       "addedAt": "2026-11-06",
-      "verifiedAt": "2026-11-06",
+      "verifiedAt": "2026-11-14",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -3809,6 +3953,78 @@
       ],
       "addedAt": "2026-10-31",
       "verifiedAt": "2026-11-10",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "personal-ai-router",
+      "name": "NVIDIA Personal AI Router (PAIR)",
+      "vendor": "NVIDIA",
+      "category": "ai",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "medium",
+      "version": "1.0.0",
+      "homepage": "https://www.nvidia.com/en-us/ai-on-rtx/personal-ai-router/",
+      "summary": {
+        "en": "Local inference router that spreads AI workloads across computers on the same network; the installer list includes an arm64 build.",
+        "zh-TW": "本機推論路由器，可把 AI 工作負載分配到同一網路上的電腦；安裝程式清單包含 arm64 版本。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        },
+        {
+          "en": "Thurrott's report of NVIDIA's launch announcement lists PAIR as generally available alongside RTX Spark, but does not say the build was tested on RTX Spark hardware.",
+          "zh-TW": "Thurrott 報導 NVIDIA 發表會時將 PAIR 列為正式推出，與 RTX Spark 並列，但未說明該版本曾在 RTX Spark 硬體上測試。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/n/Nvidia/PersonalAIRouter/1.0.0/Nvidia.PersonalAIRouter.installer.yaml",
+          "title": "winget manifest 1.0.0: NVPAIR-Setup-1.0.0-arm64.exe",
+          "type": "release",
+          "checked": "2026-11-14"
+        }
+      ],
+      "addedAt": "2026-11-14",
+      "verifiedAt": "2026-11-14",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "oo-shutup10",
+      "name": "O&O ShutUp10++",
+      "vendor": "O&O Software",
+      "category": "utility",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "medium",
+      "version": "3.7.1143",
+      "homepage": "https://www.oo-software.com/en/shutup10",
+      "summary": {
+        "en": "Portable privacy and telemetry settings tool; the winget manifest lists a separate arm64 executable.",
+        "zh-TW": "可攜式隱私與遙測設定工具；winget 資訊清單列有獨立的 arm64 執行檔。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/o/OO-Software/ShutUp10/3.7.1143/OO-Software.ShutUp10.installer.yaml",
+          "title": "winget manifest 3.7.1143: ooshutup10_3.7.1143_arm64.exe",
+          "type": "release",
+          "checked": "2026-11-14"
+        }
+      ],
+      "addedAt": "2026-11-14",
+      "verifiedAt": "2026-11-14",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -4384,7 +4600,7 @@
           "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/d/Daum/PotPlayer/26.10.21.0/Daum.PotPlayer.installer.yaml",
           "title": "winget manifest 26.10.21.0: PotPlayerSetupARM64.exe",
           "type": "release",
-          "checked": "2026-11-06"
+          "checked": "2026-11-14"
         }
       ],
       "caveats": [
@@ -4395,7 +4611,7 @@
       ],
       "scope": "windows-on-arm",
       "addedAt": "2026-11-06",
-      "verifiedAt": "2026-11-06",
+      "verifiedAt": "2026-11-14",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -4824,7 +5040,7 @@
           "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/r/Rustlang/Rustup/1.29.3/Rustlang.Rustup.installer.yaml",
           "title": "winget manifest 1.29.3: aarch64-pc-windows-msvc/rustup-init.exe",
           "type": "release",
-          "checked": "2026-11-06"
+          "checked": "2026-11-14"
         }
       ],
       "caveats": [
@@ -4835,7 +5051,7 @@
       ],
       "scope": "windows-on-arm",
       "addedAt": "2026-11-06",
-      "verifiedAt": "2026-11-06",
+      "verifiedAt": "2026-11-14",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -5348,6 +5564,40 @@
       "hasConflict": false
     },
     {
+      "id": "terraform-docs",
+      "name": "terraform-docs",
+      "vendor": "terraform-docs",
+      "category": "developer",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "medium",
+      "version": "0.25.1",
+      "homepage": "https://terraform-docs.io/",
+      "summary": {
+        "en": "Generates documentation from Terraform modules; the release includes a windows-arm64 zip.",
+        "zh-TW": "由 Terraform 模組產生文件的工具；發行版含 windows-arm64 壓縮檔。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/t/Terraform-docs/Terraform-docs/v0.25.1/Terraform-docs.Terraform-docs.installer.yaml",
+          "title": "winget manifest v0.25.1: terraform-docs-v0.25.1-windows-arm64.zip",
+          "type": "release",
+          "checked": "2026-11-14"
+        }
+      ],
+      "addedAt": "2026-11-14",
+      "verifiedAt": "2026-11-14",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
       "id": "terramate-cli",
       "name": "Terramate CLI",
       "vendor": "Terramate GmbH",
@@ -5477,11 +5727,11 @@
           "url": "https://www.xda-developers.com/tested-two-decades-of-windows-gaming-history-on-arm-rtx-spark-nvidia/",
           "title": "XDA: two decades of Windows games on RTX Spark",
           "type": "review",
-          "checked": "2026-11-05"
+          "checked": "2026-11-14"
         }
       ],
       "addedAt": "2026-10-31",
-      "verifiedAt": "2026-11-05",
+      "verifiedAt": "2026-11-14",
       "reportCount": 0,
       "hasConflict": false
     },
