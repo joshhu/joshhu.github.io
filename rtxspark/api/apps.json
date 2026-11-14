@@ -1,6 +1,6 @@
 {
   "license": "CC-BY-4.0",
-  "updated": "2026-11-14",
+  "updated": "2026-11-15",
   "apps": [
     {
       "id": "2xko",
@@ -356,11 +356,11 @@
           "url": "https://affinity.studio/download",
           "title": "Affinity downloads",
           "type": "vendor",
-          "checked": "2026-11-07"
+          "checked": "2026-11-15"
         }
       ],
       "addedAt": "2026-10-31",
-      "verifiedAt": "2026-11-07",
+      "verifiedAt": "2026-11-15",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -399,11 +399,11 @@
           "url": "https://raw.githubusercontent.com/Linaro/works-on-woa/staging/src/data/content/projects.json",
           "title": "Linaro Works on WoA catalog: ahnlabsafetransaction (native, 1.13.0.1907)",
           "type": "aggregator",
-          "checked": "2026-11-07"
+          "checked": "2026-11-15"
         }
       ],
       "addedAt": "2026-11-07",
-      "verifiedAt": "2026-11-07",
+      "verifiedAt": "2026-11-15",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -497,11 +497,11 @@
           "url": "https://learn.microsoft.com/microsoft-365/education/guide/1-windows/windows-arm",
           "title": "Microsoft: Windows on Arm guide",
           "type": "vendor",
-          "checked": "2026-11-06"
+          "checked": "2026-11-15"
         }
       ],
       "addedAt": "2026-10-31",
-      "verifiedAt": "2026-11-06",
+      "verifiedAt": "2026-11-15",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -759,11 +759,45 @@
           "url": "https://github.com/Linaro/works-on-woa/blob/staging/src/data/content/projects.json",
           "title": "Linaro Works on WoA catalog",
           "type": "aggregator",
-          "checked": "2026-11-02"
+          "checked": "2026-11-15"
         }
       ],
       "addedAt": "2026-10-31",
-      "verifiedAt": "2026-11-02",
+      "verifiedAt": "2026-11-15",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "azure-storage-explorer",
+      "name": "Azure Storage Explorer",
+      "vendor": "Microsoft",
+      "category": "developer",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "medium",
+      "version": "1.47.1",
+      "homepage": "https://azure.microsoft.com/products/storage/storage-explorer",
+      "summary": {
+        "en": "Azure Storage Explorer has a Windows Arm64 installer (StorageExplorer-windows-arm64.exe) in v1.47.1.",
+        "zh-TW": "Azure Storage Explorer 於 v1.47.1 提供 Windows Arm64 安裝程式（StorageExplorer-windows-arm64.exe）。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/m/Microsoft/Azure/StorageExplorer/1.47.1/Microsoft.Azure.StorageExplorer.installer.yaml",
+          "title": "winget manifest: Azure Storage Explorer 1.47.1 (arm64 installer)",
+          "type": "aggregator",
+          "checked": "2026-11-15"
+        }
+      ],
+      "addedAt": "2026-11-15",
+      "verifiedAt": "2026-11-15",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -1470,11 +1504,11 @@
           "url": "https://forums.developer.nvidia.com/t/rtx-spark-getting-started-with-development/385976",
           "title": "NVIDIA: getting started with RTX Spark development",
           "type": "vendor",
-          "checked": "2026-11-06"
+          "checked": "2026-11-15"
         }
       ],
       "addedAt": "2026-10-31",
-      "verifiedAt": "2026-11-06",
+      "verifiedAt": "2026-11-15",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -1653,6 +1687,44 @@
       ],
       "addedAt": "2026-10-31",
       "verifiedAt": "2026-11-12",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "dbeaver",
+      "name": "DBeaver Community",
+      "vendor": "DBeaver Corp",
+      "category": "developer",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "medium",
+      "version": "26.2.3",
+      "homepage": "https://dbeaver.io",
+      "summary": {
+        "en": "Database client with a Windows Arm64 (aarch64) installer in the 26.2.3 release.",
+        "zh-TW": "資料庫用戶端，26.2.3 版提供 Windows Arm64（aarch64）安裝程式。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        },
+        {
+          "en": "Listed from the winget manifest, which points to the vendor's GitHub release asset; the program was not run.",
+          "zh-TW": "依據 winget 資訊清單（指向原廠 GitHub 發行檔），未實際執行。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/d/DBeaver/DBeaver/Community/26.2.3/DBeaver.DBeaver.Community.installer.yaml",
+          "title": "winget manifest: DBeaver Community 26.2.3 (arm64 aarch64 installer)",
+          "type": "aggregator",
+          "checked": "2026-11-15"
+        }
+      ],
+      "addedAt": "2026-11-15",
+      "verifiedAt": "2026-11-15",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -2114,6 +2186,40 @@
       ],
       "addedAt": "2026-11-12",
       "verifiedAt": "2026-11-12",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "euro-office-desktop-editors",
+      "name": "Euro-Office Desktop Editors",
+      "vendor": "Euro-Office",
+      "category": "productivity",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "medium",
+      "version": "9.3.8",
+      "homepage": "https://github.com/Euro-Office/DesktopEditors",
+      "summary": {
+        "en": "Open-source office suite with a Windows Arm64 installer in v9.3.8 (released 2026-11-14).",
+        "zh-TW": "開源辦公室軟體，v9.3.8（2026-11-14 發行）提供 Windows Arm64 安裝程式。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/e/EuroOffice/DesktopEditors/9.3.8.0/EuroOffice.DesktopEditors.installer.yaml",
+          "title": "winget manifest: Euro-Office Desktop Editors 9.3.8.0 (arm64 installer)",
+          "type": "aggregator",
+          "checked": "2026-11-15"
+        }
+      ],
+      "addedAt": "2026-11-15",
+      "verifiedAt": "2026-11-15",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -2584,14 +2690,14 @@
       ],
       "evidence": [
         {
-          "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/g/Google/Chrome/157.0.8103.39/Google.Chrome.installer.yaml",
+          "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/g/Google/Chrome/157.0.8103.79/Google.Chrome.installer.yaml",
           "title": "winget manifest 157.0.8103.39: googlechromestandaloneenterprise_arm64.msi",
           "type": "release",
-          "checked": "2026-11-06"
+          "checked": "2026-11-15"
         }
       ],
       "addedAt": "2026-10-31",
-      "verifiedAt": "2026-11-06",
+      "verifiedAt": "2026-11-15",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -2617,11 +2723,45 @@
           "url": "https://handbrake.fr/downloads.php",
           "title": "HandBrake downloads",
           "type": "vendor",
-          "checked": "2026-11-06"
+          "checked": "2026-11-15"
         }
       ],
       "addedAt": "2026-10-31",
-      "verifiedAt": "2026-11-06",
+      "verifiedAt": "2026-11-15",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "helm",
+      "name": "Helm",
+      "vendor": "The Helm Authors",
+      "category": "developer",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "medium",
+      "version": "4.3.2",
+      "homepage": "https://helm.sh",
+      "summary": {
+        "en": "Kubernetes package manager with an official windows-arm64 zip (helm-v4.3.2-windows-arm64.zip).",
+        "zh-TW": "Kubernetes 套件管理工具，官方提供 windows-arm64 壓縮檔（helm-v4.3.2-windows-arm64.zip）。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/h/Helm/Helm/4.3.2/Helm.Helm.installer.yaml",
+          "title": "winget manifest: Helm 4.3.2 (arm64 zip)",
+          "type": "aggregator",
+          "checked": "2026-11-15"
+        }
+      ],
+      "addedAt": "2026-11-15",
+      "verifiedAt": "2026-11-15",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -3355,11 +3495,11 @@
           "url": "https://learn.microsoft.com/surface/surface-pro-arm-app-management",
           "title": "Surface Pro on Arm app management",
           "type": "vendor",
-          "checked": "2026-11-06"
+          "checked": "2026-11-15"
         }
       ],
       "addedAt": "2026-10-31",
-      "verifiedAt": "2026-11-06",
+      "verifiedAt": "2026-11-15",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -4156,6 +4296,40 @@
       "hasConflict": false
     },
     {
+      "id": "onlyoffice-desktop-editors",
+      "name": "ONLYOFFICE Desktop Editors",
+      "vendor": "Ascensio System SIA",
+      "category": "productivity",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "medium",
+      "version": "10.0.0",
+      "homepage": "https://www.onlyoffice.com",
+      "summary": {
+        "en": "Office suite with a Windows Arm64 installer (DesktopEditors_arm64.exe) in release 10.0.0.",
+        "zh-TW": "辦公室軟體，10.0.0 版提供 Windows Arm64 安裝程式（DesktopEditors_arm64.exe）。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/o/ONLYOFFICE/DesktopEditors/10.0.0/ONLYOFFICE.DesktopEditors.installer.yaml",
+          "title": "winget manifest: ONLYOFFICE Desktop Editors 10.0.0 (arm64 installer)",
+          "type": "aggregator",
+          "checked": "2026-11-15"
+        }
+      ],
+      "addedAt": "2026-11-15",
+      "verifiedAt": "2026-11-15",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
       "id": "openai-cli",
       "name": "OpenAI CLI",
       "vendor": "OpenAI",
@@ -4249,6 +4423,44 @@
       ],
       "addedAt": "2026-11-07",
       "verifiedAt": "2026-11-07",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "openvpn",
+      "name": "OpenVPN Community",
+      "vendor": "OpenVPN Inc.",
+      "category": "utility",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "medium",
+      "version": "2.7.9",
+      "homepage": "https://openvpn.net",
+      "summary": {
+        "en": "VPN client with an Arm64 MSI (OpenVPN-2.7.9-I001-arm64.msi).",
+        "zh-TW": "VPN 用戶端，提供 Arm64 MSI 安裝檔（OpenVPN-2.7.9-I001-arm64.msi）。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        },
+        {
+          "en": "The tunnel driver must also work on Arm64; this was not tested here.",
+          "zh-TW": "通道驅動程式也須支援 Arm64，此處未實測。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/o/OpenVPNTechnologies/OpenVPN/2.7.901/OpenVPNTechnologies.OpenVPN.installer.yaml",
+          "title": "winget manifest: OpenVPN 2.7.901 (arm64 MSI)",
+          "type": "aggregator",
+          "checked": "2026-11-15"
+        }
+      ],
+      "addedAt": "2026-11-15",
+      "verifiedAt": "2026-11-15",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -4468,6 +4680,44 @@
       ],
       "addedAt": "2026-11-13",
       "verifiedAt": "2026-11-13",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "pime",
+      "name": "PIME 輸入法平台",
+      "vendor": "EasyIME 社群",
+      "category": "utility",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "preview",
+      "confidence": "low",
+      "version": "2.0.0 beta",
+      "homepage": "https://github.com/EasyIME/PIME",
+      "summary": {
+        "en": "The PIME input method framework lists native Windows 11 ARM64 support in the 2.0.0 beta releases.",
+        "zh-TW": "PIME 輸入法平台在 2.0.0 測試版中列出原生 Windows 11 ARM64 支援。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        },
+        {
+          "en": "Only the 2.0.0 pre-releases mention ARM64; the stable 1.3.0 does not.",
+          "zh-TW": "只有 2.0.0 預覽版提到 ARM64；穩定版 1.3.0 沒有。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://github.com/EasyIME/PIME/releases",
+          "title": "PIME releases: v2.0.0-beta4 \"Windows 11 ARM64 原生支援\"",
+          "type": "release",
+          "checked": "2026-11-15"
+        }
+      ],
+      "addedAt": "2026-11-15",
+      "verifiedAt": "2026-11-15",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -4873,11 +5123,11 @@
           "url": "https://forums.developer.nvidia.com/t/rtx-spark-getting-started-with-development/385976",
           "title": "NVIDIA: getting started with RTX Spark development",
           "type": "vendor",
-          "checked": "2026-11-06"
+          "checked": "2026-11-15"
         }
       ],
       "addedAt": "2026-10-31",
-      "verifiedAt": "2026-11-06",
+      "verifiedAt": "2026-11-15",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -5018,6 +5268,82 @@
       "scope": "windows-on-arm",
       "addedAt": "2026-11-05",
       "verifiedAt": "2026-11-13",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "royal-ts",
+      "name": "Royal TS 7",
+      "vendor": "Royal Apps",
+      "category": "utility",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "medium",
+      "version": "7.4",
+      "homepage": "https://www.royalapps.com",
+      "summary": {
+        "en": "Remote connection manager with an Arm64 MSI (royaltsinstaller_7.04.51113.0_arm64.msi).",
+        "zh-TW": "遠端連線管理工具，提供 Arm64 MSI 安裝檔（royaltsinstaller_7.04.51113.0_arm64.msi）。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        },
+        {
+          "en": "Plug-ins and connection types may rely on x64 components; not tested.",
+          "zh-TW": "外掛與連線類型可能依賴 x64 元件，未測試。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/r/RoyalApps/RoyalTS/7/7.4.51113.0/RoyalApps.RoyalTS.7.installer.yaml",
+          "title": "winget manifest: Royal TS 7.4.51113.0 (arm64 MSI)",
+          "type": "aggregator",
+          "checked": "2026-11-15"
+        }
+      ],
+      "addedAt": "2026-11-15",
+      "verifiedAt": "2026-11-15",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "ruby",
+      "name": "RubyInstaller",
+      "vendor": "RubyInstaller Team",
+      "category": "developer",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "medium",
+      "version": "4.0.9",
+      "homepage": "https://rubyinstaller.org",
+      "summary": {
+        "en": "Ruby for Windows has an Arm64 installer (rubyinstaller-4.0.9-1-arm.exe).",
+        "zh-TW": "Windows 版 Ruby 提供 Arm64 安裝程式（rubyinstaller-4.0.9-1-arm.exe）。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        },
+        {
+          "en": "Native gems that compile C extensions may need an Arm64 toolchain.",
+          "zh-TW": "需編譯 C 擴充的 gem 可能需要 Arm64 工具鏈。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/r/RubyInstallerTeam/Ruby/4/0/4.0.9-1/RubyInstallerTeam.Ruby.4.0.installer.yaml",
+          "title": "winget manifest: RubyInstaller 4.0.9-1 (arm64 installer)",
+          "type": "aggregator",
+          "checked": "2026-11-15"
+        }
+      ],
+      "addedAt": "2026-11-15",
+      "verifiedAt": "2026-11-15",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -5704,6 +6030,44 @@
       "hasConflict": false
     },
     {
+      "id": "unity-hub",
+      "name": "Unity Hub",
+      "vendor": "Unity Technologies",
+      "category": "developer",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "medium",
+      "version": "3.22.6",
+      "homepage": "https://unity.com",
+      "summary": {
+        "en": "Unity Hub has a Windows Arm64 installer (UnityHubSetup-3.22.6-arm64.exe).",
+        "zh-TW": "Unity Hub 提供 Windows Arm64 安裝程式（UnityHubSetup-3.22.6-arm64.exe）。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        },
+        {
+          "en": "Covers the Hub only, not the Unity Editor.",
+          "zh-TW": "僅限 Hub，不含 Unity 編輯器。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/u/Unity/UnityHub/3.22.6.65535/Unity.UnityHub.installer.yaml",
+          "title": "winget manifest: Unity Hub 3.22.6 (arm64 installer)",
+          "type": "aggregator",
+          "checked": "2026-11-15"
+        }
+      ],
+      "addedAt": "2026-11-15",
+      "verifiedAt": "2026-11-15",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
       "id": "valorant",
       "name": "Valorant",
       "vendor": "Riot Games",
@@ -5884,11 +6248,11 @@
           "url": "https://github.com/devjeonghwan/vllm-for-rtx-spark",
           "title": "devjeonghwan/vllm-for-rtx-spark",
           "type": "community",
-          "checked": "2026-11-05"
+          "checked": "2026-11-15"
         }
       ],
       "addedAt": "2026-10-31",
-      "verifiedAt": "2026-11-05",
+      "verifiedAt": "2026-11-15",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -6661,6 +7025,44 @@
       ],
       "addedAt": "2026-11-03",
       "verifiedAt": "2026-11-03",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "chewing-tsf",
+      "name": "新酷音輸入法 (Windows)",
+      "vendor": "Chewing 專案",
+      "category": "utility",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "beta",
+      "confidence": "low",
+      "version": "26.11.724+",
+      "homepage": "https://github.com/chewing/windows-chewing-tsf",
+      "summary": {
+        "en": "The Chewing Zhuyin input method for Windows added initial Windows on Arm support in v26.11.724.",
+        "zh-TW": "新酷音輸入法（Windows 版）於 v26.11.724 起初步支援 Windows on Arm。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        },
+        {
+          "en": "The release notes call the support \"initial\"; the exact Arm64 installer asset was not visible on the page read.",
+          "zh-TW": "發行說明稱為「初步支援」；所讀頁面未顯示 Arm64 安裝檔的確切名稱。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://github.com/chewing/windows-chewing-tsf/releases",
+          "title": "windows-chewing-tsf releases: v26.11.724 \"Windows on Arm 支援\"",
+          "type": "release",
+          "checked": "2026-11-15"
+        }
+      ],
+      "addedAt": "2026-11-15",
+      "verifiedAt": "2026-11-15",
       "reportCount": 0,
       "hasConflict": false
     },
