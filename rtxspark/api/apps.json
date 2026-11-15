@@ -1,6 +1,6 @@
 {
   "license": "CC-BY-4.0",
-  "updated": "2026-11-15",
+  "updated": "2026-11-16",
   "apps": [
     {
       "id": "2xko",
@@ -1174,11 +1174,11 @@
           "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/o/Oven-sh/Bun/1.4.4/Oven-sh.Bun.installer.yaml",
           "title": "winget manifest 1.4.4: bun-windows-aarch64.zip",
           "type": "release",
-          "checked": "2026-11-07"
+          "checked": "2026-11-16"
         }
       ],
       "addedAt": "2026-11-07",
-      "verifiedAt": "2026-11-07",
+      "verifiedAt": "2026-11-16",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -1343,11 +1343,11 @@
           "url": "https://code.claude.com/docs/en/setup",
           "title": "Claude Code setup",
           "type": "vendor",
-          "checked": "2026-11-07"
+          "checked": "2026-11-16"
         }
       ],
       "addedAt": "2026-10-31",
-      "verifiedAt": "2026-11-07",
+      "verifiedAt": "2026-11-16",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -1533,6 +1533,40 @@
       ],
       "addedAt": "2026-10-31",
       "verifiedAt": "2026-11-13",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "cyberduck-cli",
+      "name": "Cyberduck CLI (duck)",
+      "vendor": "iterate GmbH",
+      "category": "utility",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "medium",
+      "version": "9.6.0.46406",
+      "homepage": "https://duck.sh/",
+      "summary": {
+        "en": "Command-line file transfer client for FTP, SFTP, S3 and cloud storage. The release ships duck-9.6.0.46406-arm64.msi.",
+        "zh-TW": "支援 FTP、SFTP、S3 與雲端儲存的命令列檔案傳輸工具，版本提供 duck-9.6.0.46406-arm64.msi。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/i/Iterate/CyberduckCLI/9.6.0.46406/Iterate.CyberduckCLI.installer.yaml",
+          "title": "winget manifest 9.6.0.46406: duck-9.6.0.46406-arm64.msi",
+          "type": "release",
+          "checked": "2026-11-16"
+        }
+      ],
+      "addedAt": "2026-11-16",
+      "verifiedAt": "2026-11-16",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -1843,6 +1877,40 @@
       "hasConflict": false
     },
     {
+      "id": "dingtalk-workspace-cli",
+      "name": "DingTalk Workspace CLI",
+      "vendor": "Alibaba",
+      "category": "communication",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "medium",
+      "version": "1.0.68",
+      "homepage": "https://github.com/DingTalk-Real-AI/dingtalk-workspace-cli",
+      "summary": {
+        "en": "Command-line tool for DingTalk workspace APIs. The v1.0.68 release ships dws-windows-arm64.zip.",
+        "zh-TW": "釘釘工作區的命令列工具，v1.0.68 版提供 dws-windows-arm64.zip。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/a/Alibaba/DingTalkWorkspaceCLI/1.0.68/Alibaba.DingTalkWorkspaceCLI.installer.yaml",
+          "title": "winget manifest 1.0.68: dws-windows-arm64.zip",
+          "type": "release",
+          "checked": "2026-11-16"
+        }
+      ],
+      "addedAt": "2026-11-16",
+      "verifiedAt": "2026-11-16",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
       "id": "discord",
       "name": "Discord",
       "vendor": "Discord",
@@ -1897,11 +1965,11 @@
           "url": "https://docs.docker.com/desktop/setup/install/windows-install/",
           "title": "Install Docker Desktop on Windows",
           "type": "vendor",
-          "checked": "2026-11-07"
+          "checked": "2026-11-16"
         }
       ],
       "addedAt": "2026-10-31",
-      "verifiedAt": "2026-11-07",
+      "verifiedAt": "2026-11-16",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -2306,11 +2374,11 @@
           "url": "https://www.figma.com/downloads/",
           "title": "Figma downloads",
           "type": "vendor",
-          "checked": "2026-11-07"
+          "checked": "2026-11-16"
         }
       ],
       "addedAt": "2026-10-31",
-      "verifiedAt": "2026-11-07",
+      "verifiedAt": "2026-11-16",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -2408,6 +2476,40 @@
       ],
       "addedAt": "2026-11-07",
       "verifiedAt": "2026-11-07",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "gemini-api-cli",
+      "name": "Gemini API CLI",
+      "vendor": "Google",
+      "category": "ai",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "medium",
+      "version": "0.4.6",
+      "homepage": "https://github.com/google-gemini/gemini-api-cli",
+      "summary": {
+        "en": "Command-line client for the Gemini API. The v0.4.6 release ships gemini-api_Windows_arm64.zip.",
+        "zh-TW": "Gemini API 的命令列工具，v0.4.6 版提供 gemini-api_Windows_arm64.zip。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/g/Google/GeminiAPICLI/0.4.6/Google.GeminiAPICLI.installer.yaml",
+          "title": "winget manifest 0.4.6: gemini-api_Windows_arm64.zip",
+          "type": "release",
+          "checked": "2026-11-16"
+        }
+      ],
+      "addedAt": "2026-11-16",
+      "verifiedAt": "2026-11-16",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -3040,6 +3142,40 @@
       "hasConflict": false
     },
     {
+      "id": "lark-cli",
+      "name": "Lark CLI",
+      "vendor": "ByteDance",
+      "category": "communication",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "medium",
+      "version": "1.0.100",
+      "homepage": "https://github.com/larksuite/cli",
+      "summary": {
+        "en": "Command-line tool for Lark (Feishu) APIs from ByteDance. The v1.0.100 release ships lark-cli-1.0.100-windows-arm64.zip.",
+        "zh-TW": "字節跳動 Lark（飛書）的命令列工具，v1.0.100 版提供 lark-cli-1.0.100-windows-arm64.zip。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/b/ByteDance/LarkCLI/1.0.100/ByteDance.LarkCLI.installer.yaml",
+          "title": "winget manifest 1.0.100: lark-cli-1.0.100-windows-arm64.zip",
+          "type": "release",
+          "checked": "2026-11-16"
+        }
+      ],
+      "addedAt": "2026-11-16",
+      "verifiedAt": "2026-11-16",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
       "id": "league-of-legends",
       "name": "League of Legends",
       "vendor": "Riot Games",
@@ -3216,11 +3352,11 @@
           "url": "https://lmstudio.ai/docs/app/system-requirements",
           "title": "LM Studio system requirements",
           "type": "vendor",
-          "checked": "2026-11-07"
+          "checked": "2026-11-16"
         }
       ],
       "addedAt": "2026-10-31",
-      "verifiedAt": "2026-11-07",
+      "verifiedAt": "2026-11-16",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -3533,11 +3669,11 @@
           "url": "https://learn.microsoft.com/surface/surface-arm-faq",
           "title": "Surface Arm FAQ",
           "type": "vendor",
-          "checked": "2026-11-08"
+          "checked": "2026-11-16"
         }
       ],
       "addedAt": "2026-10-31",
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-16",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -3560,11 +3696,11 @@
           "url": "https://learn.microsoft.com/surface/surface-arm-faq",
           "title": "Surface Arm FAQ",
           "type": "vendor",
-          "checked": "2026-11-08"
+          "checked": "2026-11-16"
         }
       ],
       "addedAt": "2026-10-31",
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-16",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -3588,11 +3724,11 @@
           "url": "https://learn.microsoft.com/surface/surface-arm-faq",
           "title": "Surface Arm FAQ",
           "type": "vendor",
-          "checked": "2026-11-08"
+          "checked": "2026-11-16"
         }
       ],
       "addedAt": "2026-10-31",
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-16",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -3656,11 +3792,11 @@
           "url": "https://learn.microsoft.com/surface/surface-arm-faq",
           "title": "Surface Arm FAQ",
           "type": "vendor",
-          "checked": "2026-11-08"
+          "checked": "2026-11-16"
         }
       ],
       "addedAt": "2026-10-31",
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-16",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -3718,11 +3854,45 @@
           "url": "https://learn.microsoft.com/surface/surface-arm-faq",
           "title": "Surface Arm FAQ",
           "type": "vendor",
-          "checked": "2026-11-08"
+          "checked": "2026-11-16"
         }
       ],
       "addedAt": "2026-10-31",
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-16",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "vc-redist-arm64",
+      "name": "Microsoft Visual C++ Redistributable (Arm64)",
+      "vendor": "Microsoft",
+      "category": "developer",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "medium",
+      "version": "14.52.37029.0",
+      "homepage": "https://learn.microsoft.com/cpp/windows/latest-supported-vc-redist",
+      "summary": {
+        "en": "Arm64 runtime libraries that native Arm64 apps built with Visual C++ depend on. The installer is VC_redist.arm64.exe.",
+        "zh-TW": "原生 Arm64 應用程式（以 Visual C++ 建置）所需的執行階段函式庫，安裝程式為 VC_redist.arm64.exe。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/m/Microsoft/VCRedist/2015+/arm64/14.52.37029.0/Microsoft.VCRedist.2015+.arm64.installer.yaml",
+          "title": "winget manifest 14.52.37029.0: VC_redist.arm64.exe",
+          "type": "release",
+          "checked": "2026-11-16"
+        }
+      ],
+      "addedAt": "2026-11-16",
+      "verifiedAt": "2026-11-16",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -3752,11 +3922,45 @@
           "url": "https://learn.microsoft.com/surface/surface-arm-faq",
           "title": "Surface Arm FAQ",
           "type": "vendor",
-          "checked": "2026-11-08"
+          "checked": "2026-11-16"
         }
       ],
       "addedAt": "2026-10-31",
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-16",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "mimo-code",
+      "name": "MiMoCode",
+      "vendor": "Xiaomi",
+      "category": "developer",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "medium",
+      "version": "0.1.17",
+      "homepage": "https://github.com/XiaomiMiMo/MiMo-Code",
+      "summary": {
+        "en": "Terminal coding agent from Xiaomi. The v0.1.17 release ships mimocode-windows-arm64.zip.",
+        "zh-TW": "小米的終端機程式碼助理，v0.1.17 版提供 mimocode-windows-arm64.zip。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/x/Xiaomi/MiMoCode/0.1.17/Xiaomi.MiMoCode.installer.yaml",
+          "title": "winget manifest 0.1.17: mimocode-windows-arm64.zip",
+          "type": "release",
+          "checked": "2026-11-16"
+        }
+      ],
+      "addedAt": "2026-11-16",
+      "verifiedAt": "2026-11-16",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -3853,11 +4057,11 @@
           "url": "https://www.mozilla.org/en-US/firefox/all/desktop-release/",
           "title": "Firefox downloads",
           "type": "vendor",
-          "checked": "2026-11-07"
+          "checked": "2026-11-16"
         }
       ],
       "addedAt": "2026-10-31",
-      "verifiedAt": "2026-11-07",
+      "verifiedAt": "2026-11-16",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -5748,6 +5952,44 @@
       "hasConflict": false
     },
     {
+      "id": "stratoshark",
+      "name": "Stratoshark",
+      "vendor": "Wireshark Foundation",
+      "category": "developer",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "medium",
+      "version": "0.10.4",
+      "homepage": "https://www.wireshark.org/",
+      "summary": {
+        "en": "System call and log analyzer from the Wireshark project. The installer list includes Stratoshark-0.10.4-arm64.exe.",
+        "zh-TW": "Wireshark 團隊推出的系統呼叫與記錄分析工具，安裝程式清單含 Stratoshark-0.10.4-arm64.exe。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        },
+        {
+          "en": "Capture drivers may differ from Wireshark's; capture was not tested.",
+          "zh-TW": "擷取驅動程式可能與 Wireshark 不同，未測試封包擷取。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/w/WiresharkFoundation/Stratoshark/0.10.4/WiresharkFoundation.Stratoshark.installer.yaml",
+          "title": "winget manifest 0.10.4: Stratoshark-0.10.4-arm64.exe",
+          "type": "release",
+          "checked": "2026-11-16"
+        }
+      ],
+      "addedAt": "2026-11-16",
+      "verifiedAt": "2026-11-16",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
       "id": "syncthing",
       "name": "Syncthing",
       "vendor": "Syncthing Foundation",
@@ -6163,6 +6405,40 @@
       ],
       "addedAt": "2026-10-31",
       "verifiedAt": "2026-11-10",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "vs-code-insiders",
+      "name": "Visual Studio Code Insiders",
+      "vendor": "Microsoft",
+      "category": "developer",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "beta",
+      "confidence": "medium",
+      "version": "1.146.0",
+      "homepage": "https://code.visualstudio.com/insiders/",
+      "summary": {
+        "en": "Daily-build channel of VS Code. The winget manifest lists VSCodeSetup-arm64 and VSCodeUserSetup-arm64 installers.",
+        "zh-TW": "VS Code 的每日建置版本，winget 清單提供 VSCodeSetup-arm64 與 VSCodeUserSetup-arm64 安裝程式。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/m/Microsoft/VisualStudioCode/Insiders/1.146.0/Microsoft.VisualStudioCode.Insiders.installer.yaml",
+          "title": "winget manifest 1.146.0: VSCodeSetup-arm64-1.146.0-insider.exe",
+          "type": "release",
+          "checked": "2026-11-16"
+        }
+      ],
+      "addedAt": "2026-11-16",
+      "verifiedAt": "2026-11-16",
       "reportCount": 0,
       "hasConflict": false
     },
