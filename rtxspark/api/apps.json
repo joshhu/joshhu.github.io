@@ -1,6 +1,6 @@
 {
   "license": "CC-BY-4.0",
-  "updated": "2026-11-16",
+  "updated": "2026-11-17",
   "apps": [
     {
       "id": "2xko",
@@ -53,11 +53,11 @@
           "url": "https://www.7-zip.org/download.html",
           "title": "7-Zip downloads",
           "type": "vendor",
-          "checked": "2026-11-14"
+          "checked": "2026-11-17"
         }
       ],
       "addedAt": "2026-10-31",
-      "verifiedAt": "2026-11-14",
+      "verifiedAt": "2026-11-17",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -329,11 +329,11 @@
           "url": "https://nvidianews.nvidia.com/news/nvidia-rtx-spark-pcs-available-today-a-new-beginning-for-windows-pcs",
           "title": "NVIDIA: RTX Spark PCs available today (Photoshop and Premiere native beta at launch)",
           "type": "vendor",
-          "checked": "2026-11-07"
+          "checked": "2026-11-17"
         }
       ],
       "addedAt": "2026-10-31",
-      "verifiedAt": "2026-11-07",
+      "verifiedAt": "2026-11-17",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -843,6 +843,48 @@
       "hasConflict": false
     },
     {
+      "id": "baidu-netdisk",
+      "name": "Baidu Netdisk",
+      "vendor": "Baidu",
+      "category": "utility",
+      "status": "prism",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "low",
+      "version": "x64 7.52.0.135",
+      "homepage": "https://pan.baidu.com",
+      "aliases": [
+        "百度网盘",
+        "百度網盤"
+      ],
+      "summary": {
+        "en": "Baidu's cloud storage client. Linaro's catalog lists it as working under x64 emulation.",
+        "zh-TW": "百度網盤雲端硬碟用戶端。Linaro 資料庫列為以 x64 轉譯執行可運作。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        },
+        {
+          "en": "Only Linaro's catalog (tested on a Qualcomm device, 2026-03-02) was found; no vendor statement.",
+          "zh-TW": "只找到 Linaro 資料庫的紀錄（2026-03-02 在高通裝置上測試），沒有原廠說明。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/Linaro/works-on-woa/staging/src/data/content/projects.json",
+          "title": "Linaro Works on WoA catalog: baidunetdisk (emulation, v7.52.0.135)",
+          "type": "aggregator",
+          "checked": "2026-11-17"
+        }
+      ],
+      "addedAt": "2026-11-17",
+      "verifiedAt": "2026-11-17",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
       "id": "bandizip",
       "name": "Bandizip",
       "vendor": "Bandisoft",
@@ -1046,11 +1088,11 @@
           "url": "https://github.com/bitwarden/clients/releases",
           "title": "Bitwarden Desktop v2026.10.4 release (Bitwarden-2026.10.4-arm64.appx)",
           "type": "release",
-          "checked": "2026-11-07"
+          "checked": "2026-11-17"
         }
       ],
       "addedAt": "2026-11-02",
-      "verifiedAt": "2026-11-07",
+      "verifiedAt": "2026-11-17",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -2632,11 +2674,11 @@
           "url": "https://github.com/git-for-windows/git/releases/tag/v2.56.0.windows.4",
           "title": "Git for Windows 2.56.0 release",
           "type": "release",
-          "checked": "2026-11-07"
+          "checked": "2026-11-17"
         }
       ],
       "addedAt": "2026-10-31",
-      "verifiedAt": "2026-11-07",
+      "verifiedAt": "2026-11-17",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -3023,11 +3065,11 @@
           "url": "https://www.jetbrains.com/help/idea/installation-guide.html",
           "title": "IntelliJ IDEA installation guide",
           "type": "vendor",
-          "checked": "2026-11-07"
+          "checked": "2026-11-17"
         }
       ],
       "addedAt": "2026-10-31",
-      "verifiedAt": "2026-11-07",
+      "verifiedAt": "2026-11-17",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -3142,6 +3184,40 @@
       "hasConflict": false
     },
     {
+      "id": "kubectl",
+      "name": "kubectl",
+      "vendor": "Kubernetes",
+      "category": "developer",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "medium",
+      "version": "1.37.2",
+      "homepage": "https://kubernetes.io/docs/reference/kubectl/",
+      "summary": {
+        "en": "Kubernetes command-line tool. The winget manifest lists a Windows arm64 kubectl.exe.",
+        "zh-TW": "Kubernetes 命令列工具，winget 清單提供 Windows arm64 版 kubectl.exe。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/k/Kubernetes/kubectl/1.37.2/Kubernetes.kubectl.installer.yaml",
+          "title": "winget manifest 1.37.2: windows/arm64/kubectl.exe",
+          "type": "release",
+          "checked": "2026-11-17"
+        }
+      ],
+      "addedAt": "2026-11-17",
+      "verifiedAt": "2026-11-17",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
       "id": "lark-cli",
       "name": "Lark CLI",
       "vendor": "ByteDance",
@@ -3172,6 +3248,40 @@
       ],
       "addedAt": "2026-11-16",
       "verifiedAt": "2026-11-16",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "lazygit",
+      "name": "lazygit",
+      "vendor": "Jesse Duffield",
+      "category": "developer",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "medium",
+      "version": "0.66.1",
+      "homepage": "https://github.com/jesseduffield/lazygit",
+      "summary": {
+        "en": "Terminal UI for Git. The winget manifest lists lazygit_0.66.1_Windows_arm64.zip.",
+        "zh-TW": "Git 終端機介面工具，winget 清單提供 Windows_arm64 壓縮檔。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/j/JesseDuffield/lazygit/0.66.1/JesseDuffield.lazygit.installer.yaml",
+          "title": "winget manifest 0.66.1: lazygit_0.66.1_Windows_arm64.zip",
+          "type": "release",
+          "checked": "2026-11-17"
+        }
+      ],
+      "addedAt": "2026-11-17",
+      "verifiedAt": "2026-11-17",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -3331,6 +3441,40 @@
       "hasConflict": false
     },
     {
+      "id": "llvm",
+      "name": "LLVM / Clang",
+      "vendor": "LLVM Project",
+      "category": "developer",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "medium",
+      "version": "23.1.5",
+      "homepage": "https://llvm.org",
+      "summary": {
+        "en": "Compiler toolchain. The winget manifest lists LLVM-23.1.5-woa64.msi, the Windows on Arm installer.",
+        "zh-TW": "編譯器工具鏈，winget 清單提供 LLVM-23.1.5-woa64.msi（Windows on Arm 版）。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/l/LLVM/LLVM/23.1.5/LLVM.LLVM.installer.yaml",
+          "title": "winget manifest 23.1.5: LLVM-23.1.5-woa64.msi",
+          "type": "release",
+          "checked": "2026-11-17"
+        }
+      ],
+      "addedAt": "2026-11-17",
+      "verifiedAt": "2026-11-17",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
       "id": "lm-studio",
       "name": "LM Studio",
       "vendor": "Element Labs",
@@ -3386,11 +3530,11 @@
           "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/l/Logseq/Logseq/2.0.2/Logseq.Logseq.installer.yaml",
           "title": "winget manifest 2.0.2: Logseq-win-arm64-2.0.2-nsis.exe",
           "type": "release",
-          "checked": "2026-11-07"
+          "checked": "2026-11-17"
         }
       ],
       "addedAt": "2026-11-07",
-      "verifiedAt": "2026-11-07",
+      "verifiedAt": "2026-11-17",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -3503,11 +3647,11 @@
           "url": "https://www.mathworks.com/matlabcentral/answers/2182415-is-matlab-supported-on-windows-on-arm-devices",
           "title": "MathWorks: MATLAB on Windows on Arm",
           "type": "vendor",
-          "checked": "2026-11-07"
+          "checked": "2026-11-17"
         }
       ],
       "addedAt": "2026-10-31",
-      "verifiedAt": "2026-11-07",
+      "verifiedAt": "2026-11-17",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -4171,11 +4315,53 @@
           "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/n/Neovim/Neovim/0.12.6/Neovim.Neovim.installer.yaml",
           "title": "winget manifest 0.12.6: nvim-win-arm64.msi",
           "type": "release",
-          "checked": "2026-11-07"
+          "checked": "2026-11-17"
         }
       ],
       "addedAt": "2026-11-07",
-      "verifiedAt": "2026-11-07",
+      "verifiedAt": "2026-11-17",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "netease-cloud-music",
+      "name": "NetEase Cloud Music",
+      "vendor": "NetEase",
+      "category": "utility",
+      "status": "prism",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "low",
+      "version": "x64 3.1.4.203",
+      "homepage": "https://music.163.com",
+      "aliases": [
+        "网易云音乐",
+        "網易雲音樂"
+      ],
+      "summary": {
+        "en": "NetEase's music streaming app. Linaro's catalog lists it as working under x64 emulation.",
+        "zh-TW": "網易雲音樂。Linaro 資料庫列為以 x64 轉譯執行可運作。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        },
+        {
+          "en": "Only Linaro's catalog (tested on a Qualcomm device, 2026-03-02) was found; no vendor statement.",
+          "zh-TW": "只找到 Linaro 資料庫的紀錄（2026-03-02 在高通裝置上測試），沒有原廠說明。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/Linaro/works-on-woa/staging/src/data/content/projects.json",
+          "title": "Linaro Works on WoA catalog: neteasecloudmusic (emulation, v3.1.4.203)",
+          "type": "aggregator",
+          "checked": "2026-11-17"
+        }
+      ],
+      "addedAt": "2026-11-17",
+      "verifiedAt": "2026-11-17",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -5294,11 +5480,11 @@
           "url": "https://www.python.org/downloads/windows/",
           "title": "Python downloads for Windows",
           "type": "vendor",
-          "checked": "2026-11-10"
+          "checked": "2026-11-17"
         }
       ],
       "addedAt": "2026-10-31",
-      "verifiedAt": "2026-11-10",
+      "verifiedAt": "2026-11-17",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -5434,6 +5620,40 @@
       ],
       "addedAt": "2026-11-03",
       "verifiedAt": "2026-11-03",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "rclone",
+      "name": "rclone",
+      "vendor": "rclone",
+      "category": "utility",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "medium",
+      "version": "1.76.0",
+      "homepage": "https://rclone.org",
+      "summary": {
+        "en": "Command-line cloud storage sync tool. The winget manifest lists rclone-v1.76.0-windows-arm64.zip.",
+        "zh-TW": "雲端儲存同步命令列工具，winget 清單提供 windows-arm64 壓縮檔。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/r/Rclone/Rclone/1.76.0/Rclone.Rclone.installer.yaml",
+          "title": "winget manifest 1.76.0: rclone-v1.76.0-windows-arm64.zip",
+          "type": "release",
+          "checked": "2026-11-17"
+        }
+      ],
+      "addedAt": "2026-11-17",
+      "verifiedAt": "2026-11-17",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -6128,6 +6348,49 @@
       ],
       "addedAt": "2026-11-11",
       "verifiedAt": "2026-11-11",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "tencent-meeting",
+      "name": "Tencent Meeting",
+      "vendor": "Tencent",
+      "category": "communication",
+      "status": "prism",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "low",
+      "version": "x64 3.36.10.416",
+      "homepage": "https://meeting.tencent.com",
+      "aliases": [
+        "腾讯会议",
+        "騰訊會議",
+        "VooV Meeting"
+      ],
+      "summary": {
+        "en": "Tencent's video meeting app. Linaro's catalog lists it as working under x64 emulation.",
+        "zh-TW": "騰訊會議視訊會議軟體。Linaro 資料庫列為以 x64 轉譯執行可運作。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        },
+        {
+          "en": "Only Linaro's catalog (tested on a Qualcomm device, 2026-03-02) was found; no vendor statement.",
+          "zh-TW": "只找到 Linaro 資料庫的紀錄（2026-03-02 在高通裝置上測試），沒有原廠說明。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/Linaro/works-on-woa/staging/src/data/content/projects.json",
+          "title": "Linaro Works on WoA catalog: tencentmeeting (emulation, v3.36.10.416)",
+          "type": "aggregator",
+          "checked": "2026-11-17"
+        }
+      ],
+      "addedAt": "2026-11-17",
+      "verifiedAt": "2026-11-17",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -6885,11 +7148,11 @@
           "url": "https://www.wireshark.org/download.html",
           "title": "Wireshark download page (Wireshark-4.6.9-arm64.exe)",
           "type": "vendor",
-          "checked": "2026-11-10"
+          "checked": "2026-11-17"
         }
       ],
       "addedAt": "2026-11-03",
-      "verifiedAt": "2026-11-10",
+      "verifiedAt": "2026-11-17",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -6958,11 +7221,11 @@
           "url": "https://nvidianews.nvidia.com/news/nvidia-rtx-spark-pcs-available-today-a-new-beginning-for-windows-pcs",
           "title": "NVIDIA: RTX Spark PCs available today",
           "type": "vendor",
-          "checked": "2026-11-05"
+          "checked": "2026-11-17"
         }
       ],
       "addedAt": "2026-10-31",
-      "verifiedAt": "2026-11-05",
+      "verifiedAt": "2026-11-17",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -7006,6 +7269,40 @@
       ],
       "addedAt": "2026-11-09",
       "verifiedAt": "2026-11-09",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "yt-dlp",
+      "name": "yt-dlp",
+      "vendor": "yt-dlp contributors",
+      "category": "utility",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "medium",
+      "version": "2026.10.26",
+      "homepage": "https://github.com/yt-dlp/yt-dlp",
+      "summary": {
+        "en": "Command-line media downloader. The winget manifest lists yt-dlp_arm64.exe.",
+        "zh-TW": "影音下載命令列工具，winget 清單提供 yt-dlp_arm64.exe。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/y/yt-dlp/yt-dlp/2026.10.26/yt-dlp.yt-dlp.installer.yaml",
+          "title": "winget manifest 2026.10.26: yt-dlp_arm64.exe",
+          "type": "release",
+          "checked": "2026-11-17"
+        }
+      ],
+      "addedAt": "2026-11-17",
+      "verifiedAt": "2026-11-17",
       "reportCount": 0,
       "hasConflict": false
     },
