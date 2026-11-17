@@ -1,6 +1,6 @@
 {
   "license": "CC-BY-4.0",
-  "updated": "2026-11-17",
+  "updated": "2026-11-18",
   "apps": [
     {
       "id": "2xko",
@@ -529,11 +529,11 @@
           "url": "https://www.nvidia.com/en-us/geforce/news/rtx-spark-dlss-reflex-ray-tracing-games/",
           "title": "NVIDIA: RTX Spark launch games and anti-cheat roadmap (Oct 13, 2026)",
           "type": "vendor",
-          "checked": "2026-11-09"
+          "checked": "2026-11-18"
         }
       ],
       "addedAt": "2026-11-03",
-      "verifiedAt": "2026-11-09",
+      "verifiedAt": "2026-11-18",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -764,6 +764,40 @@
       ],
       "addedAt": "2026-10-31",
       "verifiedAt": "2026-11-15",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "azcopy",
+      "name": "AzCopy",
+      "vendor": "Microsoft",
+      "category": "developer",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "medium",
+      "version": "10.34.2",
+      "homepage": "https://learn.microsoft.com/azure/storage/common/storage-use-azcopy-v10",
+      "summary": {
+        "en": "Azure storage copy tool. Release 10.34.2 includes azcopy_windows_arm64.",
+        "zh-TW": "Azure 儲存體複製工具，10.34.2 版提供 azcopy_windows_arm64。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/m/Microsoft/Azure/AZCopy/10/10.34.2/Microsoft.Azure.AZCopy.10.installer.yaml",
+          "title": "winget manifest 10.34.2: azcopy_windows_arm64_10.34.2.zip",
+          "type": "release",
+          "checked": "2026-11-18"
+        }
+      ],
+      "addedAt": "2026-11-18",
+      "verifiedAt": "2026-11-18",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -1063,6 +1097,40 @@
       "hasConflict": false
     },
     {
+      "id": "bicep",
+      "name": "Bicep",
+      "vendor": "Microsoft",
+      "category": "developer",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "medium",
+      "version": "0.49.2",
+      "homepage": "https://github.com/Azure/bicep",
+      "summary": {
+        "en": "Azure infrastructure-as-code language CLI. Release 0.49.2 ships bicep-win-arm64.exe.",
+        "zh-TW": "Azure 基礎結構即程式碼語言的命令列工具，0.49.2 版提供 bicep-win-arm64.exe。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/m/Microsoft/Bicep/0.49.2/Microsoft.Bicep.installer.yaml",
+          "title": "winget manifest 0.49.2: bicep-win-arm64.exe",
+          "type": "release",
+          "checked": "2026-11-18"
+        }
+      ],
+      "addedAt": "2026-11-18",
+      "verifiedAt": "2026-11-18",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
       "id": "bitwarden",
       "name": "Bitwarden",
       "vendor": "Bitwarden",
@@ -1249,13 +1317,13 @@
           "url": "https://www.xda-developers.com/nvidia-rtx-spark-passed-most-anti-cheat-tests-valorant-and-call-of-duty-still-wont-run/",
           "title": "XDA: RTX Spark anti-cheat tests (Oct 21, 2026), 5 of 9 worked",
           "type": "review",
-          "checked": "2026-11-09"
+          "checked": "2026-11-18"
         },
         {
           "url": "https://www.nvidia.com/en-us/geforce/news/rtx-spark-dlss-reflex-ray-tracing-games/",
           "title": "NVIDIA: RTX Spark launch games and anti-cheat roadmap (Oct 13, 2026)",
           "type": "vendor",
-          "checked": "2026-11-03"
+          "checked": "2026-11-18"
         },
         {
           "url": "https://support.activision.com/black-ops-7/articles/pc-system-requirements-for-black-ops-7",
@@ -1265,7 +1333,7 @@
         }
       ],
       "addedAt": "2026-11-03",
-      "verifiedAt": "2026-11-09",
+      "verifiedAt": "2026-11-18",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -1644,7 +1712,7 @@
           "url": "https://www.cyberlink.com/support-center/faq/content?id=29176",
           "title": "CyberLink FAQ: What versions of CyberLink software support Windows 11 ARM platforms with Qualcomm CPU?",
           "type": "vendor",
-          "checked": "2026-11-07"
+          "checked": "2026-11-18"
         },
         {
           "url": "https://www.cyberlink.com/support-center/faq/content?id=30002",
@@ -1654,7 +1722,7 @@
         }
       ],
       "addedAt": "2026-11-07",
-      "verifiedAt": "2026-11-07",
+      "verifiedAt": "2026-11-18",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -1690,7 +1758,7 @@
           "url": "https://www.cyberlink.com/support-center/faq/content?id=29176",
           "title": "CyberLink FAQ: What versions of CyberLink software support Windows 11 ARM platforms with Qualcomm CPU?",
           "type": "vendor",
-          "checked": "2026-11-07"
+          "checked": "2026-11-18"
         },
         {
           "url": "https://worksonwoa.com/en/applications/cyberlinkpowerdirector/",
@@ -1700,7 +1768,7 @@
         }
       ],
       "addedAt": "2026-11-07",
-      "verifiedAt": "2026-11-07",
+      "verifiedAt": "2026-11-18",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -1730,6 +1798,40 @@
       ],
       "addedAt": "2026-10-31",
       "verifiedAt": "2026-11-14",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "dart-sdk",
+      "name": "Dart SDK",
+      "vendor": "Google",
+      "category": "developer",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "medium",
+      "version": "3.13.6",
+      "homepage": "https://dart.dev",
+      "summary": {
+        "en": "Dart language SDK. The stable 3.13.6 release includes dartsdk-windows-arm64-release.zip.",
+        "zh-TW": "Dart 語言 SDK，穩定版 3.13.6 提供 dartsdk-windows-arm64-release.zip。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/g/Google/DartSDK/3.13.6/Google.DartSDK.installer.yaml",
+          "title": "winget manifest 3.13.6: dartsdk-windows-arm64-release.zip",
+          "type": "release",
+          "checked": "2026-11-18"
+        }
+      ],
+      "addedAt": "2026-11-18",
+      "verifiedAt": "2026-11-18",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -1828,17 +1930,17 @@
           "url": "https://www.xda-developers.com/nvidia-rtx-spark-passed-most-anti-cheat-tests-valorant-and-call-of-duty-still-wont-run/",
           "title": "XDA: RTX Spark anti-cheat tests (Oct 21, 2026), 5 of 9 worked",
           "type": "review",
-          "checked": "2026-11-09"
+          "checked": "2026-11-18"
         },
         {
           "url": "https://www.nvidia.com/en-us/geforce/news/rtx-spark-dlss-reflex-ray-tracing-games/",
           "title": "NVIDIA: RTX Spark launch games and anti-cheat roadmap (Oct 13, 2026)",
           "type": "vendor",
-          "checked": "2026-11-03"
+          "checked": "2026-11-18"
         }
       ],
       "addedAt": "2026-11-03",
-      "verifiedAt": "2026-11-09",
+      "verifiedAt": "2026-11-18",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -1979,6 +2081,40 @@
       ],
       "addedAt": "2026-10-31",
       "verifiedAt": "2026-11-07",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "docker-cli",
+      "name": "Docker CLI",
+      "vendor": "Docker",
+      "category": "developer",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "medium",
+      "version": "29.10.0",
+      "homepage": "https://docs.docker.com/engine/",
+      "summary": {
+        "en": "Docker command-line client and static binaries. The winget manifest lists an aarch64 Windows zip from download.docker.com.",
+        "zh-TW": "Docker 命令列用戶端，winget 清單提供 download.docker.com 的 Windows aarch64 壓縮檔。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/d/Docker/DockerCLI/29.10.0/Docker.DockerCLI.installer.yaml",
+          "title": "winget manifest 29.10.0: arm64 docker-29.10.0.zip (aarch64)",
+          "type": "release",
+          "checked": "2026-11-18"
+        }
+      ],
+      "addedAt": "2026-11-18",
+      "verifiedAt": "2026-11-18",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -2157,11 +2293,11 @@
           "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/e/Element/Element/1.12.33/Element.Element.installer.yaml",
           "title": "winget manifest 1.12.33: Element Setup 1.12.33.exe (arm64)",
           "type": "release",
-          "checked": "2026-11-09"
+          "checked": "2026-11-18"
         }
       ],
       "addedAt": "2026-11-09",
-      "verifiedAt": "2026-11-09",
+      "verifiedAt": "2026-11-18",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -2934,7 +3070,7 @@
           "url": "https://nvidianews.nvidia.com/news/nvidia-rtx-spark-pcs-available-today-a-new-beginning-for-windows-pcs",
           "title": "NVIDIA: RTX Spark PCs available today",
           "type": "vendor",
-          "checked": "2026-11-07"
+          "checked": "2026-11-18"
         },
         {
           "url": "https://github.com/Linaro/works-on-woa/blob/staging/src/data/content/projects.json",
@@ -2944,7 +3080,7 @@
         }
       ],
       "addedAt": "2026-10-31",
-      "verifiedAt": "2026-11-07",
+      "verifiedAt": "2026-11-18",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -3184,6 +3320,40 @@
       "hasConflict": false
     },
     {
+      "id": "kiro",
+      "name": "Kiro",
+      "vendor": "Amazon",
+      "category": "developer",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "medium",
+      "version": "1.4.154",
+      "homepage": "https://kiro.dev",
+      "summary": {
+        "en": "AI coding IDE. The winget manifest lists signed win32-arm64 installers on kiro.dev's download host.",
+        "zh-TW": "AI 程式開發 IDE，winget 清單提供 kiro.dev 下載主機上的 win32-arm64 簽章安裝程式。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/a/Amazon/Kiro/1.4.154/Amazon.Kiro.installer.yaml",
+          "title": "winget manifest 1.4.154: kiro-ide win32-arm64 installers",
+          "type": "release",
+          "checked": "2026-11-18"
+        }
+      ],
+      "addedAt": "2026-11-18",
+      "verifiedAt": "2026-11-18",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
       "id": "kubectl",
       "name": "kubectl",
       "vendor": "Kubernetes",
@@ -3214,6 +3384,40 @@
       ],
       "addedAt": "2026-11-17",
       "verifiedAt": "2026-11-17",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "kustomize",
+      "name": "kustomize",
+      "vendor": "Kubernetes SIGs",
+      "category": "developer",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "medium",
+      "version": "5.8.3",
+      "homepage": "https://kustomize.io",
+      "summary": {
+        "en": "Kubernetes configuration customization tool. Release v5.8.3 includes a windows_arm64 zip.",
+        "zh-TW": "Kubernetes 設定客製化工具，v5.8.3 版提供 windows_arm64 壓縮檔。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/k/Kubernetes/kustomize/5.8.3/Kubernetes.kustomize.installer.yaml",
+          "title": "winget manifest 5.8.3: kustomize_v5.8.3_windows_arm64.zip",
+          "type": "release",
+          "checked": "2026-11-18"
+        }
+      ],
+      "addedAt": "2026-11-18",
+      "verifiedAt": "2026-11-18",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -5019,13 +5223,13 @@
           "url": "https://helpcenter.trendmicro.com/zh-tw/article/TMKA-19439",
           "title": "PC-cillin 防毒軟體：Windows 安裝需求（ARM 架構僅雲端版支援）",
           "type": "vendor",
-          "checked": "2026-11-07"
+          "checked": "2026-11-18"
         },
         {
           "url": "https://www.trendmicro.com/zh_tw/forHome/products/pccillin.html",
           "title": "PC-cillin 產品頁：支援 Windows 11 on ARM，部分功能不支援",
           "type": "vendor",
-          "checked": "2026-11-07"
+          "checked": "2026-11-18"
         },
         {
           "url": "https://worksonwoa.com/en/applications/trendmicromaximumsecurity/",
@@ -5035,7 +5239,7 @@
         }
       ],
       "addedAt": "2026-11-07",
-      "verifiedAt": "2026-11-07",
+      "verifiedAt": "2026-11-18",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -6050,6 +6254,44 @@
       "hasConflict": false
     },
     {
+      "id": "sogou-wubi",
+      "name": "Sogou Wubi (搜狗五笔输入法)",
+      "vendor": "Tencent (Sogou)",
+      "category": "utility",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "low",
+      "version": "5.5.0.259+",
+      "homepage": "https://wubi.sogou.com/",
+      "summary": {
+        "en": "Chinese Wubi input method. Linaro's Works on WoA data lists it as native Arm64, validated on Qualcomm hardware.",
+        "zh-TW": "中國大陸五筆輸入法。Linaro 的 Works on WoA 資料列為原生 Arm64，已在 Qualcomm 裝置驗證。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        },
+        {
+          "en": "Vendor page could not be read from this environment; the result rests on the Linaro catalog alone.",
+          "zh-TW": "此環境無法讀取廠商頁面，結果僅依據 Linaro 目錄。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/Linaro/works-on-woa/staging/src/data/content/projects.json",
+          "title": "Linaro Works on WoA catalog: sogouwubi (native, 5.5.0.259)",
+          "type": "aggregator",
+          "checked": "2026-11-18"
+        }
+      ],
+      "addedAt": "2026-11-18",
+      "verifiedAt": "2026-11-18",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
       "id": "solidworks",
       "name": "SolidWorks",
       "vendor": "Dassault Systèmes",
@@ -6235,11 +6477,11 @@
           "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/s/Syncthing/Syncthing/2.1.7/Syncthing.Syncthing.installer.yaml",
           "title": "winget manifest 2.1.7: syncthing-windows-arm64-v2.1.7.zip",
           "type": "release",
-          "checked": "2026-11-07"
+          "checked": "2026-11-18"
         }
       ],
       "addedAt": "2026-11-07",
-      "verifiedAt": "2026-11-07",
+      "verifiedAt": "2026-11-18",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -6963,6 +7205,44 @@
       "hasConflict": false
     },
     {
+      "id": "wechat-ime",
+      "name": "WeChat Input Method (微信输入法)",
+      "vendor": "Tencent",
+      "category": "utility",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "low",
+      "version": "1.2.8.12+",
+      "homepage": "https://z.weixin.qq.com/",
+      "summary": {
+        "en": "Chinese input method from the WeChat team. Linaro's Works on WoA data lists it as native Arm64, validated on Qualcomm hardware.",
+        "zh-TW": "微信團隊的中文輸入法。Linaro 的 Works on WoA 資料列為原生 Arm64，已在 Qualcomm 裝置驗證。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        },
+        {
+          "en": "Vendor page could not be read from this environment; the result rests on the Linaro catalog alone.",
+          "zh-TW": "此環境無法讀取廠商頁面，結果僅依據 Linaro 目錄。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/Linaro/works-on-woa/staging/src/data/content/projects.json",
+          "title": "Linaro Works on WoA catalog: wechatime (native, 1.2.8.12)",
+          "type": "aggregator",
+          "checked": "2026-11-18"
+        }
+      ],
+      "addedAt": "2026-11-18",
+      "verifiedAt": "2026-11-18",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
       "id": "whatsapp",
       "name": "WhatsApp",
       "vendor": "Meta",
@@ -7021,6 +7301,40 @@
       "hasConflict": false
     },
     {
+      "id": "windows-app",
+      "name": "Windows App (Remote Desktop)",
+      "vendor": "Microsoft",
+      "category": "utility",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "medium",
+      "version": "2.0.1485.0",
+      "homepage": "https://learn.microsoft.com/windows-app/overview",
+      "summary": {
+        "en": "Microsoft's remote desktop client. The winget manifest lists a separate arm64 MSIX build.",
+        "zh-TW": "微軟的遠端桌面用戶端，winget 清單提供獨立的 arm64 MSIX 套件。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/m/Microsoft/WindowsApp/2.0.1485.0/Microsoft.WindowsApp.installer.yaml",
+          "title": "winget manifest 2.0.1485.0: WindowsApp_arm64_Release msix",
+          "type": "release",
+          "checked": "2026-11-18"
+        }
+      ],
+      "addedAt": "2026-11-18",
+      "verifiedAt": "2026-11-18",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
       "id": "windows-app-development-cli",
       "name": "Windows App Development CLI",
       "vendor": "Microsoft",
@@ -7062,7 +7376,7 @@
       "status": "native",
       "scope": "rtx-spark",
       "maturity": "stable",
-      "confidence": "high",
+      "confidence": "medium",
       "version": "2.7.13",
       "homepage": "https://learn.microsoft.com/windows/wsl/",
       "aliases": [
@@ -7073,6 +7387,10 @@
         {
           "en": "CUDA inside WSL 2 has only community evidence so far.",
           "zh-TW": "WSL 2 內的 CUDA 目前只有社群證據。"
+        },
+        {
+          "en": "NVIDIA's launch release lists WSL among day-one tools but does not state the architecture; the native Arm64 result is not confirmed by that page.",
+          "zh-TW": "NVIDIA 發表稿列出 WSL 為首日可用工具，但未說明架構，該頁面並未證實原生 Arm64。"
         }
       ],
       "evidence": [
@@ -7080,11 +7398,11 @@
           "url": "https://nvidianews.nvidia.com/news/nvidia-rtx-spark-pcs-available-today-a-new-beginning-for-windows-pcs",
           "title": "NVIDIA: RTX Spark PCs available today",
           "type": "vendor",
-          "checked": "2026-11-07"
+          "checked": "2026-11-18"
         }
       ],
       "addedAt": "2026-10-31",
-      "verifiedAt": "2026-11-07",
+      "verifiedAt": "2026-11-18",
       "reportCount": 0,
       "hasConflict": false
     },
