@@ -1,6 +1,6 @@
 {
   "license": "CC-BY-4.0",
-  "updated": "2026-11-20",
+  "updated": "2026-11-21",
   "apps": [
     {
       "id": "2xko",
@@ -1298,6 +1298,44 @@
       "hasConflict": false
     },
     {
+      "id": "bing-wallpaper-now",
+      "name": "Bing Wallpaper Now",
+      "vendor": "Qiyuey",
+      "category": "utility",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "community",
+      "confidence": "low",
+      "version": "1.6.2",
+      "homepage": "https://github.com/qiyuey/bing-wallpaper-now",
+      "summary": {
+        "en": "Open-source wallpaper tool with a Windows Arm64 MSI.",
+        "zh-TW": "附有 Windows Arm64 MSI 的開源桌布工具。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        },
+        {
+          "en": "Result rests on the winget manifest, which lists an Arm64 installer; the vendor page could not be read from this environment.",
+          "zh-TW": "結果依據 winget 資訊清單所列的 Arm64 安裝檔；此環境無法讀取原廠頁面。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/q/Qiyuey/BingWallpaperNow/1.6.2/Qiyuey.BingWallpaperNow.installer.yaml",
+          "title": "winget manifest: Qiyuey.BingWallpaperNow (arm64 installer Bing.Wallpaper.Now_1.6.2_arm64_zh-CN.msi)",
+          "type": "release",
+          "checked": "2026-11-21"
+        }
+      ],
+      "addedAt": "2026-11-21",
+      "verifiedAt": "2026-11-21",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
       "id": "bitwarden",
       "name": "Bitwarden",
       "vendor": "Bitwarden",
@@ -1602,6 +1640,44 @@
       ],
       "addedAt": "2026-11-14",
       "verifiedAt": "2026-11-14",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "clash-verge-rev",
+      "name": "Clash Verge Rev",
+      "vendor": "Clash Verge Rev",
+      "category": "utility",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "community",
+      "confidence": "medium",
+      "version": "2.5.10",
+      "homepage": "https://github.com/clash-verge-rev/clash-verge-rev",
+      "summary": {
+        "en": "Proxy client popular in China with an Arm64 installer.",
+        "zh-TW": "廣受中國用戶使用的代理客戶端，附有 Arm64 安裝檔。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        },
+        {
+          "en": "Result rests on the winget manifest, which lists an Arm64 installer; the vendor page could not be read from this environment.",
+          "zh-TW": "結果依據 winget 資訊清單所列的 Arm64 安裝檔；此環境無法讀取原廠頁面。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/c/ClashVergeRev/ClashVergeRev/2.5.10/ClashVergeRev.ClashVergeRev.installer.yaml",
+          "title": "winget manifest: ClashVergeRev.ClashVergeRev (arm64 installer Clash.Verge_2.5.10_arm64-setup.exe)",
+          "type": "release",
+          "checked": "2026-11-21"
+        }
+      ],
+      "addedAt": "2026-11-21",
+      "verifiedAt": "2026-11-21",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -2074,6 +2150,44 @@
       "hasConflict": false
     },
     {
+      "id": "dbgate",
+      "name": "DbGate",
+      "vendor": "Jan Prochazka",
+      "category": "developer",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "medium",
+      "version": "7.3.6",
+      "homepage": "https://dbgate.org",
+      "summary": {
+        "en": "Database manager with a separate Windows Arm64 installer.",
+        "zh-TW": "附有獨立 Windows Arm64 安裝檔的資料庫管理工具。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        },
+        {
+          "en": "Result rests on the winget manifest, which lists an Arm64 installer; the vendor page could not be read from this environment.",
+          "zh-TW": "結果依據 winget 資訊清單所列的 Arm64 安裝檔；此環境無法讀取原廠頁面。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/j/JanProchazka/dbgate/7.3.6/JanProchazka.dbgate.installer.yaml",
+          "title": "winget manifest: JanProchazka.dbgate (arm64 installer dbgate-7.3.6-win_arm64.exe)",
+          "type": "release",
+          "checked": "2026-11-21"
+        }
+      ],
+      "addedAt": "2026-11-21",
+      "verifiedAt": "2026-11-21",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
       "id": "delta-force",
       "name": "Delta Force",
       "vendor": "Team Jade (Tencent)",
@@ -2347,11 +2461,11 @@
           "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/j/JGraph/Draw/32.6.10/JGraph.Draw.installer.yaml",
           "title": "winget manifest: JGraph.Draw 32.6.10 (arm64 installer draw.io-arm64-32.6.10-windows-arm64-installer.exe)",
           "type": "release",
-          "checked": "2026-11-10"
+          "checked": "2026-11-21"
         }
       ],
       "addedAt": "2026-11-10",
-      "verifiedAt": "2026-11-10",
+      "verifiedAt": "2026-11-21",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -2603,6 +2717,44 @@
       "hasConflict": false
     },
     {
+      "id": "eset-endpoint-antivirus",
+      "name": "ESET Endpoint Antivirus",
+      "vendor": "ESET",
+      "category": "utility",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "medium",
+      "version": "13.1.2036.0",
+      "homepage": "https://www.eset.com/us/business/download/endpoint-antivirus-windows/",
+      "summary": {
+        "en": "Business antivirus with a separate Arm64 MSI.",
+        "zh-TW": "附有獨立 Arm64 MSI 的企業防毒軟體。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        },
+        {
+          "en": "Result rests on the winget manifest, which lists an Arm64 installer; the vendor page could not be read from this environment.",
+          "zh-TW": "結果依據 winget 資訊清單所列的 Arm64 安裝檔；此環境無法讀取原廠頁面。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/e/ESET/EndpointAntivirus/13.1.2036.0/ESET.EndpointAntivirus.installer.yaml",
+          "title": "winget manifest: ESET.EndpointAntivirus (arm64 installer eea_arm64.msi)",
+          "type": "release",
+          "checked": "2026-11-21"
+        }
+      ],
+      "addedAt": "2026-11-21",
+      "verifiedAt": "2026-11-21",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
       "id": "euro-office-desktop-editors",
       "name": "Euro-Office Desktop Editors",
       "vendor": "Euro-Office",
@@ -2700,6 +2852,44 @@
       ],
       "addedAt": "2026-11-14",
       "verifiedAt": "2026-11-14",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "ffmpeg-btbn",
+      "name": "FFmpeg (BtbN builds)",
+      "vendor": "BtbN",
+      "category": "creative",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "community",
+      "confidence": "medium",
+      "version": "9.0.2",
+      "homepage": "https://github.com/BtbN/FFmpeg-Builds",
+      "summary": {
+        "en": "Unofficial FFmpeg build with a winarm64 package.",
+        "zh-TW": "提供 winarm64 套件的非官方 FFmpeg 建置版本。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        },
+        {
+          "en": "Result rests on the winget manifest, which lists an Arm64 installer; the vendor page could not be read from this environment.",
+          "zh-TW": "結果依據 winget 資訊清單所列的 Arm64 安裝檔；此環境無法讀取原廠頁面。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/b/BtbN/FFmpeg/GPL/9/0/9.0.2-20261031/BtbN.FFmpeg.GPL.9.0.installer.yaml",
+          "title": "winget manifest: BtbN.FFmpeg.GPL.9.0 (arm64 installer ffmpeg-n9.0.2-39-g7adfbe40dc-winarm64-gpl-9.0.zip)",
+          "type": "release",
+          "checked": "2026-11-21"
+        }
+      ],
+      "addedAt": "2026-11-21",
+      "verifiedAt": "2026-11-21",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -4212,11 +4402,11 @@
           "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/m/Mattermost/MattermostDesktop/6.3.2/Mattermost.MattermostDesktop.installer.yaml",
           "title": "winget manifest 6.3.2: mattermost-desktop-6.3.2-win-arm64.msi",
           "type": "release",
-          "checked": "2026-11-09"
+          "checked": "2026-11-21"
         }
       ],
       "addedAt": "2026-11-09",
-      "verifiedAt": "2026-11-09",
+      "verifiedAt": "2026-11-21",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -4246,11 +4436,11 @@
           "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/m/Microsoft/DotNet/SDK/10/10.0.114/Microsoft.DotNet.SDK.10.installer.yaml",
           "title": "winget manifest 10.0.114: dotnet-sdk-10.0.114-win-arm64.exe",
           "type": "release",
-          "checked": "2026-11-09"
+          "checked": "2026-11-21"
         }
       ],
       "addedAt": "2026-11-09",
-      "verifiedAt": "2026-11-09",
+      "verifiedAt": "2026-11-21",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -4841,11 +5031,11 @@
           "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/m/MullvadVPN/MullvadVPN/2026.5/MullvadVPN.MullvadVPN.installer.yaml",
           "title": "winget manifest 2026.5: MullvadVPN-2026.5_arm64.exe",
           "type": "release",
-          "checked": "2026-11-09"
+          "checked": "2026-11-21"
         }
       ],
       "addedAt": "2026-11-09",
-      "verifiedAt": "2026-11-09",
+      "verifiedAt": "2026-11-21",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -5867,11 +6057,11 @@
           "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/r/RedHat/Podman-Desktop/1.30.5/RedHat.Podman-Desktop.installer.yaml",
           "title": "winget manifest: RedHat.Podman-Desktop 1.30.5 (podman-desktop-1.30.5-setup-arm64.exe)",
           "type": "release",
-          "checked": "2026-11-10"
+          "checked": "2026-11-21"
         }
       ],
       "addedAt": "2026-11-10",
-      "verifiedAt": "2026-11-10",
+      "verifiedAt": "2026-11-21",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -6032,11 +6222,11 @@
           "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/p/Proton/ProtonVPN/5.1.9/Proton.ProtonVPN.installer.yaml",
           "title": "winget manifest 5.1.9: ProtonVPN_v5.1.9_arm64.exe",
           "type": "release",
-          "checked": "2026-11-09"
+          "checked": "2026-11-21"
         }
       ],
       "addedAt": "2026-11-09",
-      "verifiedAt": "2026-11-09",
+      "verifiedAt": "2026-11-21",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -7224,15 +7414,15 @@
       "name": "TeamViewer",
       "vendor": "TeamViewer",
       "category": "utility",
-      "status": "prism",
+      "status": "native",
       "scope": "windows-on-arm",
       "maturity": "stable",
-      "confidence": "low",
-      "version": "x64 15.44.4",
+      "confidence": "medium",
+      "version": "15.83.7",
       "homepage": "https://www.teamviewer.com",
       "summary": {
-        "en": "Remote support tool. Linaro lists the x64 build running under emulation, validated by NVIDIA.",
-        "zh-TW": "遠端支援工具。Linaro 列為 x64 版本透過模擬執行，並經 NVIDIA 驗證。"
+        "en": "Remote support tool. winget lists a native Arm64 installer package from 15.83.7; earlier Linaro data showed only the x64 build under emulation.",
+        "zh-TW": "遠端支援工具。winget 自 15.83.7 列有原生 Arm64 安裝套件；先前 Linaro 資料僅列 x64 模擬版本。"
       },
       "caveats": [
         {
@@ -7240,11 +7430,17 @@
           "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
         },
         {
-          "en": "Vendor page could not be read from this environment; the result rests on the Linaro catalog alone.",
-          "zh-TW": "此環境無法讀取原廠頁面，結果僅依據 Linaro 目錄。"
+          "en": "Result rests on the winget manifest, which lists an Arm64 installer; the vendor page could not be read from this environment.",
+          "zh-TW": "結果依據 winget 資訊清單所列的 Arm64 安裝檔；此環境無法讀取原廠頁面。"
         }
       ],
       "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/t/TeamViewer/TeamViewer/15.83.7/TeamViewer.TeamViewer.installer.yaml",
+          "title": "winget manifest: TeamViewer.TeamViewer 15.83.7 (arm64 Update_msi_15.83.7_arm64.zip)",
+          "type": "release",
+          "checked": "2026-11-21"
+        },
         {
           "url": "https://raw.githubusercontent.com/Linaro/works-on-woa/staging/src/data/content/projects.json",
           "title": "Linaro Works on WoA catalog: teamviewer (x64 emulation)",
@@ -7253,7 +7449,7 @@
         }
       ],
       "addedAt": "2026-11-20",
-      "verifiedAt": "2026-11-20",
+      "verifiedAt": "2026-11-21",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -7500,11 +7696,11 @@
           "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/a/appmakes/Typora/1.14.15/appmakes.Typora.installer.yaml",
           "title": "winget manifest: appmakes.Typora 1.14.15 (arm64 installer typora-setup-arm64-1.14.9.exe)",
           "type": "release",
-          "checked": "2026-11-10"
+          "checked": "2026-11-21"
         }
       ],
       "addedAt": "2026-11-10",
-      "verifiedAt": "2026-11-10",
+      "verifiedAt": "2026-11-21",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -7543,6 +7739,44 @@
       ],
       "addedAt": "2026-11-15",
       "verifiedAt": "2026-11-15",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "v2rayn",
+      "name": "v2rayN",
+      "vendor": "2dust",
+      "category": "utility",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "medium",
+      "version": "7.25.6",
+      "homepage": "https://github.com/2dust/v2rayN",
+      "summary": {
+        "en": "Proxy client popular in China with a windows-arm64 package.",
+        "zh-TW": "廣受中國用戶使用的代理客戶端，附有 windows-arm64 套件。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        },
+        {
+          "en": "Result rests on the winget manifest, which lists an Arm64 installer; the vendor page could not be read from this environment.",
+          "zh-TW": "結果依據 winget 資訊清單所列的 Arm64 安裝檔；此環境無法讀取原廠頁面。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/2/2dust/v2rayN/7.25.6/2dust.v2rayN.installer.yaml",
+          "title": "winget manifest: 2dust.v2rayN (arm64 installer v2rayN-windows-arm64.zip)",
+          "type": "release",
+          "checked": "2026-11-21"
+        }
+      ],
+      "addedAt": "2026-11-21",
+      "verifiedAt": "2026-11-21",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -7886,11 +8120,11 @@
           "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/w/Warp/Warp/v0.2026.11.04.08.17.stable_01/Warp.Warp.installer.yaml",
           "title": "winget manifest: Warp.Warp v0.2026.11.04.08.17.stable_01 (arch=arm64 download)",
           "type": "release",
-          "checked": "2026-11-10"
+          "checked": "2026-11-21"
         }
       ],
       "addedAt": "2026-11-10",
-      "verifiedAt": "2026-11-10",
+      "verifiedAt": "2026-11-21",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -8361,6 +8595,44 @@
       "hasConflict": false
     },
     {
+      "id": "wsl-manager",
+      "name": "WSL Manager",
+      "vendor": "Bostrot",
+      "category": "developer",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "medium",
+      "version": "2.6.1",
+      "homepage": "https://github.com/bostrot/wslmanager",
+      "summary": {
+        "en": "Manager for WSL distributions with a separate Windows Arm64 installer.",
+        "zh-TW": "管理 WSL 發行版的工具，附有獨立 Windows Arm64 安裝檔。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        },
+        {
+          "en": "Result rests on the winget manifest, which lists an Arm64 installer; the vendor page could not be read from this environment.",
+          "zh-TW": "結果依據 winget 資訊清單所列的 Arm64 安裝檔；此環境無法讀取原廠頁面。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/b/Bostrot/WSLManager/2.6.1.0/Bostrot.WSLManager.installer.yaml",
+          "title": "winget manifest: Bostrot.WSLManager (arm64 installer wsl2-distro-manager-v2.6.1-arm64-setup.exe)",
+          "type": "release",
+          "checked": "2026-11-21"
+        }
+      ],
+      "addedAt": "2026-11-21",
+      "verifiedAt": "2026-11-21",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
       "id": "yt-dlp",
       "name": "yt-dlp",
       "vendor": "yt-dlp contributors",
@@ -8522,11 +8794,11 @@
           "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/z/Zen-Team/Zen-Browser/1.24.1b/Zen-Team.Zen-Browser.installer.yaml",
           "title": "winget manifest: Zen-Team.Zen-Browser 1.24.1b (zen.installer-arm64.exe)",
           "type": "release",
-          "checked": "2026-11-10"
+          "checked": "2026-11-21"
         }
       ],
       "addedAt": "2026-11-10",
-      "verifiedAt": "2026-11-10",
+      "verifiedAt": "2026-11-21",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -8880,11 +9152,11 @@
           "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/b/ByteDance/DoubaoWork/2.32.6/ByteDance.DoubaoWork.installer.yaml",
           "title": "winget manifest 2.32.6: DoubaoWork_Arm64_installer_2.32.6.exe",
           "type": "release",
-          "checked": "2026-11-11"
+          "checked": "2026-11-21"
         }
       ],
       "addedAt": "2026-11-11",
-      "verifiedAt": "2026-11-11",
+      "verifiedAt": "2026-11-21",
       "aliases": [
         "Doubao Work",
         "豆包"
