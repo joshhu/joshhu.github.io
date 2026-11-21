@@ -1,6 +1,6 @@
 {
   "license": "CC-BY-4.0",
-  "updated": "2026-11-21",
+  "updated": "2026-11-22",
   "apps": [
     {
       "id": "2xko",
@@ -2504,6 +2504,44 @@
       "hasConflict": false
     },
     {
+      "id": "duckdb-cli",
+      "name": "DuckDB CLI",
+      "vendor": "DuckDB Foundation",
+      "category": "developer",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "medium",
+      "version": "2.0.1",
+      "homepage": "https://duckdb.org",
+      "summary": {
+        "en": "Analytical SQL database command-line shell with a native Windows Arm64 build.",
+        "zh-TW": "具有原生 Windows Arm64 版本的分析型 SQL 資料庫命令列工具。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        },
+        {
+          "en": "Result rests on the winget manifest, which lists an Arm64 installer; I did not run the build.",
+          "zh-TW": "結果依據 winget 資訊清單所列的 Arm64 安裝檔；未實際執行該版本。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/d/DuckDB/cli/2.0.1/DuckDB.cli.installer.yaml",
+          "title": "winget manifest 2.0.1: arm64 installer duckdb-cli-windows-arm64.zip",
+          "type": "release",
+          "checked": "2026-11-22"
+        }
+      ],
+      "addedAt": "2026-11-22",
+      "verifiedAt": "2026-11-22",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
       "id": "ea-sports-fc-26",
       "name": "EA SPORTS FC 26",
       "vendor": "Electronic Arts",
@@ -3756,11 +3794,11 @@
           "url": "https://github.com/keepassxreboot/keepassxc/releases/expanded_assets/2.8.0",
           "title": "KeePassXC 2.8.0 release assets (KeePassXC-2.8.0-ARM64.msi)",
           "type": "release",
-          "checked": "2026-11-09"
+          "checked": "2026-11-22"
         }
       ],
       "addedAt": "2026-11-03",
-      "verifiedAt": "2026-11-09",
+      "verifiedAt": "2026-11-22",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -4226,6 +4264,44 @@
       "hasConflict": false
     },
     {
+      "id": "lnav",
+      "name": "lnav",
+      "vendor": "lnav project (tstack)",
+      "category": "developer",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "medium",
+      "version": "0.14.1",
+      "homepage": "https://lnav.org",
+      "summary": {
+        "en": "Terminal log file viewer with a Windows arm64 release archive.",
+        "zh-TW": "終端機日誌檔檢視工具，提供 Windows arm64 發行壓縮檔。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        },
+        {
+          "en": "Result rests on the winget manifest, which lists an Arm64 installer; I did not run the build.",
+          "zh-TW": "結果依據 winget 資訊清單所列的 Arm64 安裝檔；未實際執行該版本。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/t/tstack/lnav/0.14.1/tstack.lnav.installer.yaml",
+          "title": "winget manifest 0.14.1: arm64 installer lnav-0.14.1-windows-arm64.zip",
+          "type": "release",
+          "checked": "2026-11-22"
+        }
+      ],
+      "addedAt": "2026-11-22",
+      "verifiedAt": "2026-11-22",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
       "id": "logseq",
       "name": "Logseq",
       "vendor": "Logseq",
@@ -4407,6 +4483,44 @@
       ],
       "addedAt": "2026-11-09",
       "verifiedAt": "2026-11-21",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "mediainfo-gui",
+      "name": "MediaInfo",
+      "vendor": "MediaArea",
+      "category": "utility",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "medium",
+      "version": "26.10",
+      "homepage": "https://mediaarea.net/en/MediaInfo",
+      "summary": {
+        "en": "Media file technical-information viewer with a separate ARM64 installer.",
+        "zh-TW": "影音檔技術資訊檢視工具，提供獨立的 ARM64 安裝程式。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        },
+        {
+          "en": "Result rests on the winget manifest, which lists an Arm64 installer; I did not run the build.",
+          "zh-TW": "結果依據 winget 資訊清單所列的 Arm64 安裝檔；未實際執行該版本。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/m/MediaArea/MediaInfo/GUI/26.10/MediaArea.MediaInfo.GUI.installer.yaml",
+          "title": "winget manifest 26.10: arm64 installer MediaInfo_GUI_26.10_Windows_ARM64.exe",
+          "type": "release",
+          "checked": "2026-11-22"
+        }
+      ],
+      "addedAt": "2026-11-22",
+      "verifiedAt": "2026-11-22",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -4691,11 +4805,11 @@
           "url": "https://github.com/microsoft/PowerToys/releases/latest",
           "title": "PowerToys v0.102.3101 release (PowerToysSetup-0.102.3101.0-arm64.exe)",
           "type": "release",
-          "checked": "2026-11-08"
+          "checked": "2026-11-22"
         }
       ],
       "addedAt": "2026-11-02",
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-22",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -4866,6 +4980,44 @@
       "scope": "rtx-spark",
       "addedAt": "2026-11-06",
       "verifiedAt": "2026-11-14",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "minimax-code",
+      "name": "MiniMax Code",
+      "vendor": "MiniMax",
+      "category": "ai",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "medium",
+      "version": "3.1.17",
+      "homepage": "https://www.minimax.io",
+      "summary": {
+        "en": "AI coding agent desktop app with a separate arm64 installer.",
+        "zh-TW": "AI 程式開發代理桌面應用，提供獨立的 arm64 安裝程式。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        },
+        {
+          "en": "Result rests on the winget manifest, which lists an Arm64 installer; I did not run the build.",
+          "zh-TW": "結果依據 winget 資訊清單所列的 Arm64 安裝檔；未實際執行該版本。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/m/MiniMax/MiniMaxCode/3.1.17/MiniMax.MiniMaxCode.installer.yaml",
+          "title": "winget manifest 3.1.17: arm64 installer MiniMax Code Setup 3.1.17-arm64.exe",
+          "type": "release",
+          "checked": "2026-11-22"
+        }
+      ],
+      "addedAt": "2026-11-22",
+      "verifiedAt": "2026-11-22",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -5227,11 +5379,11 @@
           "url": "https://nodejs.org/dist/latest/",
           "title": "Node.js latest downloads",
           "type": "release",
-          "checked": "2026-11-13"
+          "checked": "2026-11-22"
         }
       ],
       "addedAt": "2026-10-31",
-      "verifiedAt": "2026-11-13",
+      "verifiedAt": "2026-11-22",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -5244,7 +5396,7 @@
       "scope": "windows-on-arm",
       "maturity": "stable",
       "confidence": "high",
-      "version": "8.9.9",
+      "version": "8.9.9.1",
       "homepage": "https://notepad-plus-plus.org",
       "summary": {
         "en": "Text and code editor with an official native Arm64 installer.",
@@ -5261,11 +5413,11 @@
           "url": "https://github.com/notepad-plus-plus/notepad-plus-plus/releases/latest",
           "title": "Notepad++ 8.9.9 release assets (npp.8.9.9.Installer.arm64.exe)",
           "type": "release",
-          "checked": "2026-11-08"
+          "checked": "2026-11-22"
         }
       ],
       "addedAt": "2026-11-02",
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-22",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -5444,11 +5596,11 @@
           "url": "https://github.com/microsoft/winget-pkgs/tree/master/manifests/o/Obsidian/Obsidian",
           "title": "winget manifest: Obsidian",
           "type": "release",
-          "checked": "2026-11-07"
+          "checked": "2026-11-22"
         }
       ],
       "addedAt": "2026-10-31",
-      "verifiedAt": "2026-11-07",
+      "verifiedAt": "2026-11-22",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -5744,14 +5896,14 @@
           "url": "https://github.com/SoftFever/OrcaSlicer/releases/tag/v2.5.0",
           "title": "OrcaSlicer v2.5.0 release (arm64 installer and portable zip)",
           "type": "release",
-          "checked": "2026-11-08"
+          "checked": "2026-11-22"
         }
       ],
       "scope": "windows-on-arm",
       "maturity": "stable",
       "confidence": "high",
       "addedAt": "2026-11-08",
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-22",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -6142,7 +6294,7 @@
       "scope": "windows-on-arm",
       "maturity": "stable",
       "confidence": "high",
-      "version": "7.6.9",
+      "version": "7.7.0",
       "homepage": "https://github.com/PowerShell/PowerShell",
       "summary": {
         "en": "PowerShell 7 ships a native win-arm64 MSI and zip.",
@@ -6159,11 +6311,11 @@
           "url": "https://github.com/PowerShell/PowerShell/releases/latest",
           "title": "PowerShell 7.6.9 release (PowerShell-7.6.9-win-arm64.msi)",
           "type": "release",
-          "checked": "2026-11-08"
+          "checked": "2026-11-22"
         }
       ],
       "addedAt": "2026-11-02",
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-22",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -6333,6 +6485,40 @@
       ],
       "addedAt": "2026-11-04",
       "verifiedAt": "2026-11-11",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "pyarrow-windows-arm64-cuda",
+      "name": "PyArrow (unofficial Arm64 CUDA build)",
+      "vendor": "LGCMcn (community)",
+      "category": "developer",
+      "status": "native",
+      "scope": "rtx-spark",
+      "maturity": "community",
+      "confidence": "low",
+      "version": "26.0.1",
+      "homepage": "https://github.com/LGCMcn/pyarrow-windows-arm64-cuda",
+      "summary": {
+        "en": "Unofficial community PyArrow 26.0.1 wheel for Windows ARM64 with CUDA, smoke-tested by its author on an RTX Spark N1X.",
+        "zh-TW": "社群非官方的 Windows ARM64 PyArrow 26.0.1 wheel（含 CUDA），作者曾在 RTX Spark N1X 上做基本測試。"
+      },
+      "caveats": [
+        {
+          "en": "Not an Apache Arrow or NVIDIA release. Built for CPython 3.14 and CUDA Toolkit 13.5.0; the author's tests (import, Parquet round trip, CUDA copy) were limited and used one driver.",
+          "zh-TW": "並非 Apache Arrow 或 NVIDIA 官方版本。僅針對 CPython 3.14 與 CUDA Toolkit 13.5.0 建置；作者的測試（匯入、Parquet 往返、CUDA 複製）範圍有限，且只用一個驅動程式版本。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://github.com/LGCMcn/pyarrow-windows-arm64-cuda",
+          "title": "README: PyArrow 26.0.1 Windows ARM64 CUDA build, tested on RTX Spark N1X",
+          "type": "community",
+          "checked": "2026-11-22"
+        }
+      ],
+      "addedAt": "2026-11-22",
+      "verifiedAt": "2026-11-22",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -6968,6 +7154,44 @@
       "hasConflict": false
     },
     {
+      "id": "slang",
+      "name": "Slang",
+      "vendor": "Khronos Slang (shader-slang)",
+      "category": "developer",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "medium",
+      "version": "2026.21",
+      "homepage": "https://shader-slang.org",
+      "summary": {
+        "en": "Shader language and compiler with a Windows aarch64 release.",
+        "zh-TW": "著色器語言與編譯器，提供 Windows aarch64 發行版。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        },
+        {
+          "en": "Result rests on the winget manifest, which lists an Arm64 installer; I did not run the build.",
+          "zh-TW": "結果依據 winget 資訊清單所列的 Arm64 安裝檔；未實際執行該版本。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/s/shader-slang/slang/2026.21/shader-slang.slang.installer.yaml",
+          "title": "winget manifest 2026.21: arm64 installer slang-2026.21-windows-aarch64.zip",
+          "type": "release",
+          "checked": "2026-11-22"
+        }
+      ],
+      "addedAt": "2026-11-22",
+      "verifiedAt": "2026-11-22",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
       "id": "slate-digital-plugins",
       "name": "Slate Digital plug-ins",
       "vendor": "Slate Digital",
@@ -7366,6 +7590,44 @@
       ],
       "addedAt": "2026-11-07",
       "verifiedAt": "2026-11-18",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "tabby",
+      "name": "Tabby",
+      "vendor": "Eugene Pankov",
+      "category": "utility",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "medium",
+      "version": "1.0.238",
+      "homepage": "https://tabby.sh",
+      "summary": {
+        "en": "Terminal emulator and SSH/serial client with an arm64 installer.",
+        "zh-TW": "終端機模擬器與 SSH／序列埠用戶端，提供 arm64 安裝程式。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        },
+        {
+          "en": "Result rests on the winget manifest, which lists an Arm64 installer; I did not run the build.",
+          "zh-TW": "結果依據 winget 資訊清單所列的 Arm64 安裝檔；未實際執行該版本。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/e/Eugeny/Tabby/1.0.238/Eugeny.Tabby.installer.yaml",
+          "title": "winget manifest 1.0.238: arm64 installer tabby-1.0.238-setup-arm64.exe",
+          "type": "release",
+          "checked": "2026-11-22"
+        }
+      ],
+      "addedAt": "2026-11-22",
+      "verifiedAt": "2026-11-22",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -8323,14 +8585,14 @@
           "url": "https://github.com/microsoft/WinAppCli/releases/tag/v0.8.0",
           "title": "WinAppCli v0.8.0 release (winappcli_arm64.msix, winappcli-arm64.zip)",
           "type": "release",
-          "checked": "2026-11-08"
+          "checked": "2026-11-22"
         }
       ],
       "scope": "windows-on-arm",
       "maturity": "stable",
       "confidence": "high",
       "addedAt": "2026-11-08",
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-22",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -8398,11 +8660,11 @@
           "url": "https://github.com/winmerge/winmerge/releases/expanded_assets/v2.16.60",
           "title": "WinMerge 2.16.60 release assets (WinMerge-2.16.60-ARM64-Setup.exe)",
           "type": "release",
-          "checked": "2026-11-08"
+          "checked": "2026-11-22"
         }
       ],
       "addedAt": "2026-11-02",
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-22",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -8501,14 +8763,14 @@
           "url": "https://github.com/RoderickQiu/wnr/releases/tag/v1.35.0-patch",
           "title": "wnr v1.35.0-patch release notes (arm64 installer note)",
           "type": "release",
-          "checked": "2026-11-08"
+          "checked": "2026-11-22"
         }
       ],
       "scope": "windows-on-arm",
       "maturity": "stable",
       "confidence": "high",
       "addedAt": "2026-11-08",
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-22",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -8920,6 +9182,44 @@
       "hasConflict": false
     },
     {
+      "id": "jlc-eda-pro",
+      "name": "嘉立创EDA 專業版 (LCEDA Pro)",
+      "vendor": "JLC (嘉立创)",
+      "category": "creative",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "medium",
+      "version": "3.2.186",
+      "homepage": "https://lceda.cn",
+      "summary": {
+        "en": "Chinese PCB and electronics design tool (JLCEDA Pro) with a Windows arm64 installer.",
+        "zh-TW": "嘉立創 EDA 專業版電路板設計工具，提供 Windows arm64 安裝程式。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        },
+        {
+          "en": "Result rests on the winget manifest, which lists an Arm64 installer; I did not run the build.",
+          "zh-TW": "結果依據 winget 資訊清單所列的 Arm64 安裝檔；未實際執行該版本。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/j/JLC/LCEDA/Pro/3.2.186/JLC.LCEDA.Pro.installer.yaml",
+          "title": "winget manifest 3.2.186: arm64 installer lceda-pro-windows-arm64-3.2.186.exe",
+          "type": "release",
+          "checked": "2026-11-22"
+        }
+      ],
+      "addedAt": "2026-11-22",
+      "verifiedAt": "2026-11-22",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
       "id": "boshiamy",
       "name": "嘸蝦米輸入法 (Boshiamy)",
       "vendor": "行易有限公司 (Boshiamy)",
@@ -8958,6 +9258,44 @@
       ],
       "addedAt": "2026-11-03",
       "verifiedAt": "2026-11-03",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "tubatools",
+      "name": "圖吧工具箱 (Tuba Tools)",
+      "vendor": "luolangaga",
+      "category": "utility",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "community",
+      "confidence": "medium",
+      "version": "1.9.1",
+      "homepage": "https://github.com/luolangaga/tubatools",
+      "summary": {
+        "en": "Popular Chinese PC hardware-testing toolbox (WinUI 3 port) with an arm64 installer.",
+        "zh-TW": "常見的中文電腦硬體檢測工具箱（WinUI 3 版），提供 arm64 安裝程式。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        },
+        {
+          "en": "Result rests on the winget manifest, which lists an Arm64 installer; I did not run the build.",
+          "zh-TW": "結果依據 winget 資訊清單所列的 Arm64 安裝檔；未實際執行該版本。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/l/luolangaga/tubatools/1.9.1/luolangaga.tubatools.installer.yaml",
+          "title": "winget manifest 1.9.1: arm64 installer TubaWinUi3_Setup_1.9.1_arm64.exe",
+          "type": "release",
+          "checked": "2026-11-22"
+        }
+      ],
+      "addedAt": "2026-11-22",
+      "verifiedAt": "2026-11-22",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -9094,35 +9432,39 @@
       "vendor": "ByteDance",
       "category": "ai",
       "status": "native",
+      "scope": "windows-on-arm",
       "maturity": "stable",
       "confidence": "medium",
-      "version": "2.32.5",
+      "version": "2.36.10",
       "homepage": "https://www.doubao.com",
-      "aliases": [
-        "Doubao",
-        "豆包"
-      ],
       "summary": {
-        "en": "ByteDance's AI assistant desktop app, with a separate Doubao_Arm64_installer on the vendor's CDN.",
-        "zh-TW": "字節跳動的 AI 助理桌面版，官方 CDN 另有 Doubao_Arm64_installer 安裝程式。"
+        "en": "ByteDance's Chinese AI chat assistant desktop app with a separate Arm64 installer on the vendor CDN.",
+        "zh-TW": "字節跳動的中文 AI 聊天助理桌面應用，官方 CDN 另有 Arm64 安裝程式。"
       },
-      "evidence": [
-        {
-          "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/b/ByteDance/Doubao/2.32.5/ByteDance.Doubao.installer.yaml",
-          "title": "winget manifest 2.32.5: Doubao_Arm64_installer_2.32.5.exe",
-          "type": "release",
-          "checked": "2026-11-12"
-        }
-      ],
       "caveats": [
         {
           "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
           "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        },
+        {
+          "en": "Result rests on the winget manifest, which lists an Arm64 installer; I did not run the build.",
+          "zh-TW": "結果依據 winget 資訊清單所列的 Arm64 安裝檔；未實際執行該版本。"
         }
       ],
-      "scope": "windows-on-arm",
-      "addedAt": "2026-11-05",
-      "verifiedAt": "2026-11-12",
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/b/ByteDance/Doubao/2.36.10/ByteDance.Doubao.installer.yaml",
+          "title": "winget manifest 2.36.10: arm64 installer Doubao_Arm64_installer_2.36.10.exe",
+          "type": "release",
+          "checked": "2026-11-22"
+        }
+      ],
+      "addedAt": "2026-11-22",
+      "verifiedAt": "2026-11-22",
+      "aliases": [
+        "Doubao",
+        "豆包"
+      ],
       "reportCount": 0,
       "hasConflict": false
     },
@@ -9135,7 +9477,7 @@
       "scope": "windows-on-arm",
       "maturity": "stable",
       "confidence": "medium",
-      "version": "2.32.6",
+      "version": "2.32.14",
       "homepage": "https://www.doubao.com",
       "summary": {
         "en": "ByteDance workplace AI app with a separate DoubaoWork_Arm64 installer on the vendor CDN.",
@@ -9149,14 +9491,14 @@
       ],
       "evidence": [
         {
-          "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/b/ByteDance/DoubaoWork/2.32.6/ByteDance.DoubaoWork.installer.yaml",
-          "title": "winget manifest 2.32.6: DoubaoWork_Arm64_installer_2.32.6.exe",
+          "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/b/ByteDance/DoubaoWork/2.32.14/ByteDance.DoubaoWork.installer.yaml",
+          "title": "winget manifest 2.32.14: DoubaoWork_Arm64_installer_2.32.14.exe",
           "type": "release",
-          "checked": "2026-11-21"
+          "checked": "2026-11-22"
         }
       ],
       "addedAt": "2026-11-11",
-      "verifiedAt": "2026-11-21",
+      "verifiedAt": "2026-11-22",
       "aliases": [
         "Doubao Work",
         "豆包"
