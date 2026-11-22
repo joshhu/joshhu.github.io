@@ -1,6 +1,6 @@
 {
   "license": "CC-BY-4.0",
-  "updated": "2026-11-22",
+  "updated": "2026-11-23",
   "apps": [
     {
       "id": "2xko",
@@ -450,6 +450,93 @@
       ],
       "addedAt": "2026-11-19",
       "verifiedAt": "2026-11-19",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "alsee",
+      "name": "ALSee",
+      "vendor": "ESTsoft",
+      "category": "creative",
+      "status": "prism",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "low",
+      "version": "x64 6.22.0.0",
+      "homepage": "https://altools.co.kr/product/ALSEE",
+      "aliases": [
+        "알씨"
+      ],
+      "summary": {
+        "en": "Korean image viewer. Linaro's catalog lists it as working under Prism emulation.",
+        "zh-TW": "韓國製圖片檢視軟體。Linaro 目錄列為可透過 Prism 模擬執行。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        },
+        {
+          "en": "Runs as an x64 build under Prism. The result rests on the Linaro catalog alone; the vendor page was not read.",
+          "zh-TW": "以 x64 版本透過 Prism 執行。結果僅依據 Linaro 目錄，未讀取原廠頁面。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/Linaro/works-on-woa/staging/src/data/content/projects.json",
+          "title": "Linaro Works on WoA catalog: alsee (emulation)",
+          "type": "aggregator",
+          "checked": "2026-11-23"
+        }
+      ],
+      "addedAt": "2026-11-23",
+      "verifiedAt": "2026-11-23",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "alzip",
+      "name": "ALZip",
+      "vendor": "ESTsoft",
+      "category": "utility",
+      "status": "prism",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "low",
+      "version": "x64 11.7.0.2",
+      "homepage": "https://altools.co.kr",
+      "aliases": [
+        "알집",
+        "ESTsoft ALZip"
+      ],
+      "summary": {
+        "en": "Korean file archiver. Linaro's catalog lists it as working under Prism emulation.",
+        "zh-TW": "韓國製壓縮軟體。Linaro 目錄列為可透過 Prism 模擬執行。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        },
+        {
+          "en": "Runs as an x64 build under Prism. The result rests on the Linaro catalog alone; the vendor page was not read.",
+          "zh-TW": "以 x64 版本透過 Prism 執行。結果僅依據 Linaro 目錄，未讀取原廠頁面。"
+        },
+        {
+          "en": "Linaro's catalog also lists an NVIDIA validation for this program.",
+          "zh-TW": "Linaro 目錄同時列有此程式的 NVIDIA 驗證。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/Linaro/works-on-woa/staging/src/data/content/projects.json",
+          "title": "Linaro Works on WoA catalog: alzip (emulation)",
+          "type": "aggregator",
+          "checked": "2026-11-23"
+        }
+      ],
+      "addedAt": "2026-11-23",
+      "verifiedAt": "2026-11-23",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -1171,7 +1258,7 @@
           "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/b/beekeeper-studio/beekeeper-studio/6.2.1/beekeeper-studio.beekeeper-studio.installer.yaml",
           "title": "winget manifest 6.2.1: Beekeeper-Studio-Setup-6.2.1-arm64.exe",
           "type": "release",
-          "checked": "2026-11-12"
+          "checked": "2026-11-23"
         }
       ],
       "caveats": [
@@ -1182,7 +1269,7 @@
       ],
       "scope": "windows-on-arm",
       "addedAt": "2026-11-05",
-      "verifiedAt": "2026-11-12",
+      "verifiedAt": "2026-11-23",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -1610,6 +1697,44 @@
       "hasConflict": false
     },
     {
+      "id": "chiaki-ng",
+      "name": "chiaki-ng",
+      "vendor": "chiaki-ng project",
+      "category": "utility",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "medium",
+      "version": "1.10.1",
+      "homepage": "https://github.com/streetpea/chiaki-ng",
+      "summary": {
+        "en": "Open-source PlayStation Remote Play client with a Windows arm64 installer.",
+        "zh-TW": "開源 PlayStation 遠端遊玩用戶端，提供 Windows arm64 安裝程式。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        },
+        {
+          "en": "Result rests on the winget manifest, which lists an Arm64 installer; I did not run the build.",
+          "zh-TW": "結果依據 winget 資訊清單所列的 Arm64 安裝檔；未實際執行該版本。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/s/StreetPea/chiaki-ng/1.10.1/StreetPea.chiaki-ng.installer.yaml",
+          "title": "winget manifest 1.10.1: arm64 installer chiaki-ng-win_arm64-MSYS2-installer.exe",
+          "type": "release",
+          "checked": "2026-11-23"
+        }
+      ],
+      "addedAt": "2026-11-23",
+      "verifiedAt": "2026-11-23",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
       "id": "cilium-cli",
       "name": "Cilium CLI",
       "vendor": "Cilium",
@@ -1794,11 +1919,11 @@
           "url": "https://github.com/Kitware/CMake/releases/expanded_assets/v4.4.5",
           "title": "CMake 4.4.5 release assets (cmake-4.4.5-windows-arm64.msi)",
           "type": "release",
-          "checked": "2026-11-09"
+          "checked": "2026-11-23"
         }
       ],
       "addedAt": "2026-11-03",
-      "verifiedAt": "2026-11-09",
+      "verifiedAt": "2026-11-23",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -2488,7 +2613,7 @@
           "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/d/Dropbox/Dropbox/270.4.3312/Dropbox.Dropbox.installer.yaml",
           "title": "winget manifest 270.4.3312: Offline Installer.arm64.exe and Enterprise Installer.arm64.msi",
           "type": "release",
-          "checked": "2026-11-11"
+          "checked": "2026-11-23"
         }
       ],
       "caveats": [
@@ -2499,7 +2624,7 @@
       ],
       "scope": "windows-on-arm",
       "addedAt": "2026-11-05",
-      "verifiedAt": "2026-11-11",
+      "verifiedAt": "2026-11-23",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -2538,6 +2663,48 @@
       ],
       "addedAt": "2026-11-22",
       "verifiedAt": "2026-11-22",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "e-tax-software",
+      "name": "e-Tax software (Windows)",
+      "vendor": "National Tax Agency of Japan",
+      "category": "productivity",
+      "status": "prism",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "low",
+      "version": "x64 001.025.004",
+      "homepage": "https://www.e-tax.nta.go.jp",
+      "aliases": [
+        "e-Taxソフト",
+        "e-Tax"
+      ],
+      "summary": {
+        "en": "Japanese national tax filing client. Linaro's catalog lists it as working under Prism emulation.",
+        "zh-TW": "日本國稅廳的電子報稅用戶端。Linaro 目錄列為可透過 Prism 模擬執行。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        },
+        {
+          "en": "Runs as an x64 build under Prism. The result rests on the Linaro catalog alone; the vendor page was not read.",
+          "zh-TW": "以 x64 版本透過 Prism 執行。結果僅依據 Linaro 目錄，未讀取原廠頁面。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/Linaro/works-on-woa/staging/src/data/content/projects.json",
+          "title": "Linaro Works on WoA catalog: etaxsoftwareforwindowsusers (emulation)",
+          "type": "aggregator",
+          "checked": "2026-11-23"
+        }
+      ],
+      "addedAt": "2026-11-23",
+      "verifiedAt": "2026-11-23",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -2827,6 +2994,47 @@
       "hasConflict": false
     },
     {
+      "id": "ezpdf-editor",
+      "name": "ezPDF Editor 3.0",
+      "vendor": "Unidocs",
+      "category": "productivity",
+      "status": "prism",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "low",
+      "version": "x64 3.0.8.3",
+      "homepage": "https://www.ezpdf.co.kr",
+      "aliases": [
+        "이지PDF"
+      ],
+      "summary": {
+        "en": "Korean PDF editor. Linaro's catalog lists it as working under Prism emulation.",
+        "zh-TW": "韓國製 PDF 編輯軟體。Linaro 目錄列為可透過 Prism 模擬執行。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        },
+        {
+          "en": "Runs as an x64 build under Prism. The result rests on the Linaro catalog alone; the vendor page was not read.",
+          "zh-TW": "以 x64 版本透過 Prism 執行。結果僅依據 Linaro 目錄，未讀取原廠頁面。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/Linaro/works-on-woa/staging/src/data/content/projects.json",
+          "title": "Linaro Works on WoA catalog: ezpdfeditor30 (emulation)",
+          "type": "aggregator",
+          "checked": "2026-11-23"
+        }
+      ],
+      "addedAt": "2026-11-23",
+      "verifiedAt": "2026-11-23",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
       "id": "f1-25",
       "name": "F1 25",
       "vendor": "Electronic Arts / Codemasters",
@@ -3019,6 +3227,51 @@
       "hasConflict": false
     },
     {
+      "id": "fudemame-28",
+      "name": "Fudemame 28",
+      "vendor": "Sourcenext",
+      "category": "productivity",
+      "status": "prism",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "low",
+      "version": "x64 28",
+      "homepage": "https://fudemame.net",
+      "aliases": [
+        "筆まめ"
+      ],
+      "summary": {
+        "en": "Japanese New Year card and address-book software. Linaro's catalog lists it as working under Prism emulation.",
+        "zh-TW": "日本的賀年卡與通訊錄軟體。Linaro 目錄列為可透過 Prism 模擬執行。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        },
+        {
+          "en": "Runs as an x64 build under Prism. The result rests on the Linaro catalog alone; the vendor page was not read.",
+          "zh-TW": "以 x64 版本透過 Prism 執行。結果僅依據 Linaro 目錄，未讀取原廠頁面。"
+        },
+        {
+          "en": "Linaro's catalog also lists an NVIDIA validation for this program.",
+          "zh-TW": "Linaro 目錄同時列有此程式的 NVIDIA 驗證。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/Linaro/works-on-woa/staging/src/data/content/projects.json",
+          "title": "Linaro Works on WoA catalog: fudemame-28 (emulation)",
+          "type": "aggregator",
+          "checked": "2026-11-23"
+        }
+      ],
+      "addedAt": "2026-11-23",
+      "verifiedAt": "2026-11-23",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
       "id": "fzf",
       "name": "fzf",
       "vendor": "Junegunn Choi",
@@ -3141,14 +3394,14 @@
           "url": "https://github.com/x-motemen/ghq/releases/tag/v1.12.0",
           "title": "ghq v1.12.0 release (ghq_windows_arm64.zip)",
           "type": "release",
-          "checked": "2026-11-08"
+          "checked": "2026-11-23"
         }
       ],
       "scope": "windows-on-arm",
       "maturity": "stable",
       "confidence": "high",
       "addedAt": "2026-11-08",
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-23",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -3210,6 +3463,44 @@
       ],
       "addedAt": "2026-10-31",
       "verifiedAt": "2026-11-17",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "git-lfs",
+      "name": "Git LFS",
+      "vendor": "GitHub",
+      "category": "developer",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "medium",
+      "version": "3.8.1",
+      "homepage": "https://git-lfs.com",
+      "summary": {
+        "en": "Git extension for large files, with a Windows arm64 installer and zip.",
+        "zh-TW": "Git 大型檔案擴充工具，提供 Windows arm64 安裝程式與壓縮檔。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        },
+        {
+          "en": "Result rests on the winget manifest, which lists an Arm64 installer; I did not run the build.",
+          "zh-TW": "結果依據 winget 資訊清單所列的 Arm64 安裝檔；未實際執行該版本。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/g/GitHub/GitLFS/3.8.1/GitHub.GitLFS.installer.yaml",
+          "title": "winget manifest 3.8.1: arm64 installer git-lfs-windows-v3.8.1.exe and arm64 zip",
+          "type": "release",
+          "checked": "2026-11-23"
+        }
+      ],
+      "addedAt": "2026-11-23",
+      "verifiedAt": "2026-11-23",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -3312,6 +3603,44 @@
       "scope": "windows-on-arm",
       "addedAt": "2026-11-06",
       "verifiedAt": "2026-11-14",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "gitversion",
+      "name": "GitVersion",
+      "vendor": "GitTools",
+      "category": "developer",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "medium",
+      "version": "7.0.1",
+      "homepage": "https://gitversion.net",
+      "summary": {
+        "en": "Semantic versioning tool for Git repositories, with a Windows arm64 build.",
+        "zh-TW": "依 Git 歷程產生語意化版本號的工具，提供 Windows arm64 版本。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        },
+        {
+          "en": "Result rests on the winget manifest, which lists an Arm64 installer; I did not run the build.",
+          "zh-TW": "結果依據 winget 資訊清單所列的 Arm64 安裝檔；未實際執行該版本。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/g/GitTools/GitVersion/7.0.1/GitTools.GitVersion.installer.yaml",
+          "title": "winget manifest 7.0.1: arm64 archive gitversion-win-arm64-7.0.1.zip",
+          "type": "release",
+          "checked": "2026-11-23"
+        }
+      ],
+      "addedAt": "2026-11-23",
+      "verifiedAt": "2026-11-23",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -4100,14 +4429,14 @@
           "url": "https://github.com/rmcrackan/Libation/releases/tag/v14.2.5",
           "title": "Libation v14.2.5 release (windows-chardonnay-arm64 setup and zip)",
           "type": "release",
-          "checked": "2026-11-08"
+          "checked": "2026-11-23"
         }
       ],
       "scope": "windows-on-arm",
       "maturity": "stable",
       "confidence": "high",
       "addedAt": "2026-11-08",
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-23",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -4137,11 +4466,11 @@
           "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/t/TheDocumentFoundation/LibreOffice/26.8.2.2/TheDocumentFoundation.LibreOffice.installer.yaml",
           "title": "winget manifest 26.8.2.2: arm64 installer LibreOffice_26.8.2_Win_aarch64.msi on download.documentfoundation.org",
           "type": "release",
-          "checked": "2026-11-11"
+          "checked": "2026-11-23"
         }
       ],
       "addedAt": "2026-11-04",
-      "verifiedAt": "2026-11-11",
+      "verifiedAt": "2026-11-23",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -5572,11 +5901,11 @@
           "url": "https://github.com/obsproject/obs-studio/releases/tag/33.0.1",
           "title": "OBS Studio 33.0.1 release",
           "type": "release",
-          "checked": "2026-11-09"
+          "checked": "2026-11-23"
         }
       ],
       "addedAt": "2026-10-31",
-      "verifiedAt": "2026-11-09",
+      "verifiedAt": "2026-11-23",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -6138,6 +6467,82 @@
       ],
       "addedAt": "2026-11-15",
       "verifiedAt": "2026-11-15",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "pixi",
+      "name": "pixi",
+      "vendor": "prefix.dev",
+      "category": "developer",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "medium",
+      "version": "0.84.2",
+      "homepage": "https://pixi.sh",
+      "summary": {
+        "en": "Cross-platform package and environment manager with a Windows aarch64 MSI.",
+        "zh-TW": "跨平台套件與環境管理工具，提供 Windows aarch64 的 MSI 安裝檔。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        },
+        {
+          "en": "Result rests on the winget manifest, which lists an Arm64 installer; I did not run the build.",
+          "zh-TW": "結果依據 winget 資訊清單所列的 Arm64 安裝檔；未實際執行該版本。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/p/prefix-dev/pixi/0.84.2/prefix-dev.pixi.installer.yaml",
+          "title": "winget manifest 0.84.2: arm64 installer pixi-aarch64-pc-windows-msvc.msi",
+          "type": "release",
+          "checked": "2026-11-23"
+        }
+      ],
+      "addedAt": "2026-11-23",
+      "verifiedAt": "2026-11-23",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "pnpm",
+      "name": "pnpm",
+      "vendor": "pnpm",
+      "category": "developer",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "medium",
+      "version": "12.21.0",
+      "homepage": "https://pnpm.io",
+      "summary": {
+        "en": "Node.js package manager with a Windows arm64 release archive.",
+        "zh-TW": "Node.js 套件管理工具，提供 Windows arm64 發行壓縮檔。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        },
+        {
+          "en": "Result rests on the winget manifest, which lists an Arm64 installer; I did not run the build.",
+          "zh-TW": "結果依據 winget 資訊清單所列的 Arm64 安裝檔；未實際執行該版本。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/p/pnpm/pnpm/12.21.0/pnpm.pnpm.installer.yaml",
+          "title": "winget manifest 12.21.0: arm64 installer pnpm-win32-arm64.zip",
+          "type": "release",
+          "checked": "2026-11-23"
+        }
+      ],
+      "addedAt": "2026-11-23",
+      "verifiedAt": "2026-11-23",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -7344,6 +7749,47 @@
       "hasConflict": false
     },
     {
+      "id": "sparkle-llm-engine",
+      "name": "Sparkle",
+      "vendor": "thelogicalgate (community)",
+      "category": "ai",
+      "status": "native",
+      "scope": "rtx-spark",
+      "maturity": "community",
+      "confidence": "low",
+      "version": "0.1.0",
+      "homepage": "https://github.com/thelogicalgate/sparkle",
+      "aliases": [
+        "Sparkle Studio"
+      ],
+      "summary": {
+        "en": "Community local LLM inference engine and chat app built natively for Windows 11 on Arm64 with RTX Spark.",
+        "zh-TW": "社群開發的本機 LLM 推論引擎與聊天應用程式，原生支援 Windows 11 Arm64 與 RTX Spark。"
+      },
+      "caveats": [
+        {
+          "en": "Self-reported by one developer in the repository README; no independent test and I did not run it or confirm a published release file.",
+          "zh-TW": "僅為單一開發者在 README 的自述；未經獨立測試，我也未執行或確認已發布的安裝檔。"
+        },
+        {
+          "en": "Early version 0.1.0; the repository states it targets the RTX Spark (GB10, sm_121) GPU only.",
+          "zh-TW": "早期版本 0.1.0；儲存庫說明僅針對 RTX Spark（GB10、sm_121）GPU。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://github.com/thelogicalgate/sparkle",
+          "title": "Sparkle README: native win-arm64 Setup and zip, benchmarks measured on RTX Spark N1X",
+          "type": "community",
+          "checked": "2026-11-23"
+        }
+      ],
+      "addedAt": "2026-11-23",
+      "verifiedAt": "2026-11-23",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
       "id": "spotify",
       "name": "Spotify",
       "vendor": "Spotify",
@@ -7424,11 +7870,11 @@
           "url": "https://github.com/microsoft/winget-pkgs/tree/master/manifests/v/Valve/Steam",
           "title": "winget manifest: Steam",
           "type": "release",
-          "checked": "2026-11-07"
+          "checked": "2026-11-23"
         }
       ],
       "addedAt": "2026-10-31",
-      "verifiedAt": "2026-11-07",
+      "verifiedAt": "2026-11-23",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -7556,6 +8002,44 @@
       ],
       "addedAt": "2026-11-20",
       "verifiedAt": "2026-11-20",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "superfile",
+      "name": "superfile",
+      "vendor": "yorukot",
+      "category": "utility",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "medium",
+      "version": "1.6.1",
+      "homepage": "https://superfile.dev",
+      "summary": {
+        "en": "Terminal file manager with a Windows arm64 release archive.",
+        "zh-TW": "終端機檔案管理員，提供 Windows arm64 發行壓縮檔。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        },
+        {
+          "en": "Result rests on the winget manifest, which lists an Arm64 installer; I did not run the build.",
+          "zh-TW": "結果依據 winget 資訊清單所列的 Arm64 安裝檔；未實際執行該版本。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/y/yorukot/superfile/v1.6.1/yorukot.superfile.installer.yaml",
+          "title": "winget manifest v1.6.1: arm64 archive superfile-windows-v1.6.1-arm64.zip",
+          "type": "release",
+          "checked": "2026-11-23"
+        }
+      ],
+      "addedAt": "2026-11-23",
+      "verifiedAt": "2026-11-23",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -7741,11 +8225,11 @@
           "url": "https://github.com/telegramdesktop/tdesktop/releases/expanded_assets/v7.3.3",
           "title": "Telegram Desktop v7.3.3 release assets (td-setup-win-arm-7.3.3.exe)",
           "type": "release",
-          "checked": "2026-11-09"
+          "checked": "2026-11-23"
         }
       ],
       "addedAt": "2026-11-03",
-      "verifiedAt": "2026-11-09",
+      "verifiedAt": "2026-11-23",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -8001,6 +8485,44 @@
       ],
       "addedAt": "2026-11-15",
       "verifiedAt": "2026-11-15",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "uutils-coreutils",
+      "name": "uutils coreutils",
+      "vendor": "uutils project",
+      "category": "developer",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "medium",
+      "version": "0.13.0",
+      "homepage": "https://uutils.github.io/coreutils/",
+      "summary": {
+        "en": "Rust rewrite of GNU coreutils, with a Windows aarch64 release archive.",
+        "zh-TW": "以 Rust 重寫的 GNU coreutils，提供 Windows aarch64 發行壓縮檔。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        },
+        {
+          "en": "Result rests on the winget manifest, which lists an Arm64 installer; I did not run the build.",
+          "zh-TW": "結果依據 winget 資訊清單所列的 Arm64 安裝檔；未實際執行該版本。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/u/uutils/coreutils/0.13.0/uutils.coreutils.installer.yaml",
+          "title": "winget manifest 0.13.0: arm64 archive coreutils-0.13.0-aarch64-pc-windows-msvc.zip",
+          "type": "release",
+          "checked": "2026-11-23"
+        }
+      ],
+      "addedAt": "2026-11-23",
+      "verifiedAt": "2026-11-23",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -9129,11 +9651,11 @@
           "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/d/DigitalScholar/Zotero/10.0.7/DigitalScholar.Zotero.installer.yaml",
           "title": "winget manifest 10.0.7: Zotero-10.0.7_arm64_setup.exe",
           "type": "release",
-          "checked": "2026-11-11"
+          "checked": "2026-11-23"
         }
       ],
       "addedAt": "2026-11-04",
-      "verifiedAt": "2026-11-11",
+      "verifiedAt": "2026-11-23",
       "reportCount": 0,
       "hasConflict": false
     },
