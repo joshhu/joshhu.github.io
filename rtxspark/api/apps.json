@@ -1,6 +1,6 @@
 {
   "license": "CC-BY-4.0",
-  "updated": "2026-11-23",
+  "updated": "2026-11-24",
   "apps": [
     {
       "id": "2xko",
@@ -815,11 +815,11 @@
           "url": "https://raw.githubusercontent.com/Linaro/works-on-woa/staging/src/data/content/projects.json",
           "title": "Linaro Works on WoA catalog: atok-passport (native)",
           "type": "aggregator",
-          "checked": "2026-11-09"
+          "checked": "2026-11-24"
         }
       ],
       "addedAt": "2026-11-09",
-      "verifiedAt": "2026-11-09",
+      "verifiedAt": "2026-11-24",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -975,6 +975,44 @@
       ],
       "addedAt": "2026-10-31",
       "verifiedAt": "2026-11-15",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "aws-vpn-client",
+      "name": "AWS VPN Client",
+      "vendor": "Amazon Web Services",
+      "category": "utility",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "medium",
+      "version": "6.3.1",
+      "homepage": "https://aws.amazon.com/vpn/client-vpn-download/",
+      "summary": {
+        "en": "VPN client for AWS Client VPN, with a separate ARM64 MSI.",
+        "zh-TW": "AWS Client VPN 用的 VPN 用戶端，提供獨立的 ARM64 MSI。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        },
+        {
+          "en": "Result rests on the winget manifest, which lists an Arm64 installer; I did not run the build.",
+          "zh-TW": "結果依據 winget 資訊清單所列的 Arm64 安裝檔；未實際執行該版本。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/a/Amazon/AWSVPNClient/6.3.1/Amazon.AWSVPNClient.installer.yaml",
+          "title": "winget manifest 6.3.1: arm64 installer AWS_VPN_Client_ARM64.msi",
+          "type": "release",
+          "checked": "2026-11-24"
+        }
+      ],
+      "addedAt": "2026-11-24",
+      "verifiedAt": "2026-11-24",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -2418,11 +2456,11 @@
           "url": "https://raw.githubusercontent.com/Linaro/works-on-woa/staging/src/data/content/projects.json",
           "title": "Linaro Works on WoA catalog: dingtalk (emulation, from 7.6.45)",
           "type": "aggregator",
-          "checked": "2026-11-10"
+          "checked": "2026-11-24"
         }
       ],
       "addedAt": "2026-11-10",
-      "verifiedAt": "2026-11-10",
+      "verifiedAt": "2026-11-24",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -2846,11 +2884,11 @@
           "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/e/Elgato/Studio/2.0.0.3364/Elgato.Studio.installer.yaml",
           "title": "winget manifest 2.0.0.3364: Elgato.Studio_2.0.0.3364_arm64.msix",
           "type": "release",
-          "checked": "2026-11-12"
+          "checked": "2026-11-24"
         }
       ],
       "addedAt": "2026-11-12",
-      "verifiedAt": "2026-11-12",
+      "verifiedAt": "2026-11-24",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -2913,11 +2951,49 @@
           "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/e/Elgato/WaveLink/3.4.0.4650/Elgato.WaveLink.installer.yaml",
           "title": "winget manifest 3.4.0.4650: Elgato.WaveLink_3.4.0.4650_arm64.msix",
           "type": "release",
-          "checked": "2026-11-12"
+          "checked": "2026-11-24"
         }
       ],
       "addedAt": "2026-11-12",
-      "verifiedAt": "2026-11-12",
+      "verifiedAt": "2026-11-24",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "emerald",
+      "name": "Emerald",
+      "vendor": "BenGoldfeder17",
+      "category": "ai",
+      "status": "native",
+      "scope": "rtx-spark",
+      "maturity": "community",
+      "confidence": "low",
+      "version": "v0.2.0",
+      "homepage": "https://github.com/BenGoldfeder17/Emerald",
+      "summary": {
+        "en": "Local LLM inference platform with a prebuilt Windows ARM64 zip, measured by its author on an RTX Spark (N1X) laptop.",
+        "zh-TW": "本機 LLM 推論平台，提供預先編譯的 Windows ARM64 壓縮檔，作者在 RTX Spark（N1X）筆電上實測。"
+      },
+      "caveats": [
+        {
+          "en": "All measurements come from one laptop and are self-reported by the author; no independent verification.",
+          "zh-TW": "所有測量皆來自同一台筆電，由作者自行回報，未經獨立驗證。"
+        },
+        {
+          "en": "Executables are not code-signed; some models are unavailable on ARM64.",
+          "zh-TW": "執行檔未經程式碼簽署；部分模型在 ARM64 上無法使用。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://github.com/BenGoldfeder17/Emerald",
+          "title": "Emerald README: emerald-v0.2.0-windows-arm64.zip, tested on RTX Spark N1X",
+          "type": "community",
+          "checked": "2026-11-24"
+        }
+      ],
+      "addedAt": "2026-11-24",
+      "verifiedAt": "2026-11-24",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -3372,6 +3448,44 @@
       "hasConflict": false
     },
     {
+      "id": "ghost-downloader",
+      "name": "Ghost Downloader",
+      "vendor": "XiaoYouChR",
+      "category": "utility",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "medium",
+      "version": "4.5.11",
+      "homepage": "https://github.com/XiaoYouChR/Ghost-Downloader-3",
+      "summary": {
+        "en": "Download manager with a Windows arm64 setup installer.",
+        "zh-TW": "下載管理工具，提供 Windows arm64 安裝程式。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        },
+        {
+          "en": "Result rests on the winget manifest, which lists an Arm64 installer; I did not run the build.",
+          "zh-TW": "結果依據 winget 資訊清單所列的 Arm64 安裝檔；未實際執行該版本。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/x/XiaoYouChR/GhostDownloader/4.5.11/XiaoYouChR.GhostDownloader.installer.yaml",
+          "title": "winget manifest 4.5.11: arm64 installer Ghost-Downloader-v4.5.11-Windows-arm64-Setup.exe",
+          "type": "release",
+          "checked": "2026-11-24"
+        }
+      ],
+      "addedAt": "2026-11-24",
+      "verifiedAt": "2026-11-24",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
       "id": "ghq",
       "name": "ghq",
       "vendor": "x-motemen",
@@ -3786,6 +3900,47 @@
       "hasConflict": false
     },
     {
+      "id": "hancom-office-viewer",
+      "name": "Hancom Office Viewer",
+      "vendor": "Hancom",
+      "category": "productivity",
+      "status": "prism",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "low",
+      "version": "x64 13.0.0.226+",
+      "homepage": "https://www.hancom.com/product/office/officeViewer",
+      "aliases": [
+        "한컴오피스 뷰어"
+      ],
+      "summary": {
+        "en": "Korean document viewer for HWP files. Linaro's catalog lists it as running under emulation, validated by Qualcomm and NVIDIA.",
+        "zh-TW": "韓國的 HWP 文件檢視器。Linaro 目錄列為透過模擬執行，並經 Qualcomm 與 NVIDIA 驗證。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        },
+        {
+          "en": "Vendor page could not be read from this environment; the result rests on the Linaro catalog alone.",
+          "zh-TW": "此環境無法讀取原廠頁面，結果僅依據 Linaro 目錄。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/Linaro/works-on-woa/staging/src/data/content/projects.json",
+          "title": "Linaro Works on WoA catalog: hancomofficeviewer (emulation, from 13.0.0.226)",
+          "type": "aggregator",
+          "checked": "2026-11-24"
+        }
+      ],
+      "addedAt": "2026-11-24",
+      "verifiedAt": "2026-11-24",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
       "id": "handbrake",
       "name": "HandBrake",
       "vendor": "HandBrake",
@@ -4056,6 +4211,47 @@
       "hasConflict": false
     },
     {
+      "id": "just-pdf-6",
+      "name": "JUST PDF 6",
+      "vendor": "JUSTSYSTEMS",
+      "category": "productivity",
+      "status": "prism",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "low",
+      "version": "x64 6.1.1.0+",
+      "homepage": "https://www.justsystems.com/jp/products/justpdf/",
+      "aliases": [
+        "ジャストシステム JUST PDF 6"
+      ],
+      "summary": {
+        "en": "Japanese PDF creation and editing tool. Linaro's catalog lists it as running under emulation, validated by Qualcomm and NVIDIA.",
+        "zh-TW": "日本的 PDF 製作與編輯軟體。Linaro 目錄列為透過模擬執行，並經 Qualcomm 與 NVIDIA 驗證。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        },
+        {
+          "en": "Vendor page could not be read from this environment; the result rests on the Linaro catalog alone.",
+          "zh-TW": "此環境無法讀取原廠頁面，結果僅依據 Linaro 目錄。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/Linaro/works-on-woa/staging/src/data/content/projects.json",
+          "title": "Linaro Works on WoA catalog: JUST PDF 6 (emulation, from 6.1.1.0)",
+          "type": "aggregator",
+          "checked": "2026-11-24"
+        }
+      ],
+      "addedAt": "2026-11-24",
+      "verifiedAt": "2026-11-24",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
       "id": "kakaotalk",
       "name": "KakaoTalk",
       "vendor": "Kakao Corp.",
@@ -4157,11 +4353,11 @@
           "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/m/MoonshotAI/KimiCodeCLI/2.5.2/MoonshotAI.KimiCodeCLI.installer.yaml",
           "title": "winget manifest 2.5.2: kimi-code-win32-arm64.exe",
           "type": "release",
-          "checked": "2026-11-12"
+          "checked": "2026-11-24"
         }
       ],
       "addedAt": "2026-11-12",
-      "verifiedAt": "2026-11-12",
+      "verifiedAt": "2026-11-24",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -4507,24 +4703,24 @@
       "scope": "windows-on-arm",
       "maturity": "stable",
       "confidence": "high",
-      "version": "b12020",
+      "version": "b12651",
       "homepage": "https://github.com/ggml-org/llama.cpp",
       "caveats": [
         {
-          "en": "Ships a win-cuda-13.4-arm64 build. A performance regression on arm64 and Blackwell is being tracked upstream.",
-          "zh-TW": "提供 win-cuda-13.4-arm64 版本。上游仍在追蹤 arm64 與 Blackwell 的效能回歸問題。"
+          "en": "Ships a win-cuda-13.5-arm64 build alongside cpu, vulkan and OpenCL (Adreno) arm64 builds. A performance regression on arm64 and Blackwell was tracked upstream and was not re-checked.",
+          "zh-TW": "提供 win-cuda-13.5-arm64 版本，另有 cpu、vulkan 與 OpenCL（Adreno）arm64 版本。上游曾追蹤 arm64 與 Blackwell 的效能回歸問題，本次未重新確認。"
         }
       ],
       "evidence": [
         {
-          "url": "https://github.com/ggml-org/llama.cpp/releases/tag/b12020",
-          "title": "llama.cpp b12020 release",
+          "url": "https://github.com/ggml-org/llama.cpp/releases",
+          "title": "llama.cpp b12651 release assets: win-cpu/vulkan/opencl-adreno/cuda-13.5 arm64",
           "type": "release",
-          "checked": "2026-11-09"
+          "checked": "2026-11-24"
         }
       ],
       "addedAt": "2026-10-31",
-      "verifiedAt": "2026-11-09",
+      "verifiedAt": "2026-11-24",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -5487,6 +5683,47 @@
       "hasConflict": false
     },
     {
+      "id": "mpv-ci",
+      "name": "mpv (official CI build)",
+      "vendor": "mpv-player",
+      "category": "utility",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "medium",
+      "version": "0.42.0",
+      "homepage": "https://mpv.io",
+      "aliases": [
+        "mpv"
+      ],
+      "summary": {
+        "en": "Media player; the official CI build ships an aarch64 MSVC zip for Windows.",
+        "zh-TW": "媒體播放器；官方 CI 組建提供 Windows aarch64 MSVC zip。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        },
+        {
+          "en": "Result rests on the winget manifest, which lists an Arm64 installer; I did not run the build.",
+          "zh-TW": "結果依據 winget 資訊清單所列的 Arm64 安裝檔；未實際執行該版本。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/m/mpv-player/mpv-CI/MSVC/0.42.0/mpv-player.mpv-CI.MSVC.installer.yaml",
+          "title": "winget manifest 0.42.0: arm64 installer mpv-v0.42.0-aarch64-pc-windows-msvc.zip",
+          "type": "release",
+          "checked": "2026-11-24"
+        }
+      ],
+      "addedAt": "2026-11-24",
+      "verifiedAt": "2026-11-24",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
       "id": "mullvad-vpn",
       "name": "Mullvad VPN",
       "vendor": "Mullvad VPN AB",
@@ -5517,6 +5754,47 @@
       ],
       "addedAt": "2026-11-09",
       "verifiedAt": "2026-11-21",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "naver-mybox",
+      "name": "Naver MyBox",
+      "vendor": "Naver",
+      "category": "utility",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "low",
+      "version": "v3.0.7.125+",
+      "homepage": "https://mybox.naver.com",
+      "aliases": [
+        "네이버 마이박스"
+      ],
+      "summary": {
+        "en": "Korean cloud storage client. Linaro's Works on WoA data lists it as native, validated by Qualcomm and NVIDIA.",
+        "zh-TW": "韓國雲端儲存用戶端。Linaro 的 Works on WoA 資料列為原生，並經 Qualcomm 與 NVIDIA 驗證。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        },
+        {
+          "en": "Vendor page could not be read from this environment; the result rests on the Linaro catalog alone.",
+          "zh-TW": "此環境無法讀取原廠頁面，結果僅依據 Linaro 目錄。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/Linaro/works-on-woa/staging/src/data/content/projects.json",
+          "title": "Linaro Works on WoA catalog: navermybox (native, from v3.0.7.125)",
+          "type": "aggregator",
+          "checked": "2026-11-24"
+        }
+      ],
+      "addedAt": "2026-11-24",
+      "verifiedAt": "2026-11-24",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -5599,11 +5877,11 @@
           "url": "https://raw.githubusercontent.com/Linaro/works-on-woa/staging/src/data/content/projects.json",
           "title": "Linaro Works on WoA catalog: naverwhale (native, from 4.30.291.11)",
           "type": "aggregator",
-          "checked": "2026-11-10"
+          "checked": "2026-11-24"
         }
       ],
       "addedAt": "2026-11-10",
-      "verifiedAt": "2026-11-10",
+      "verifiedAt": "2026-11-24",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -7669,11 +7947,11 @@
           "url": "https://raw.githubusercontent.com/Linaro/works-on-woa/staging/src/data/content/projects.json",
           "title": "Linaro Works on WoA catalog: sogou-pinyin-ime (native)",
           "type": "aggregator",
-          "checked": "2026-11-09"
+          "checked": "2026-11-24"
         }
       ],
       "addedAt": "2026-11-09",
-      "verifiedAt": "2026-11-09",
+      "verifiedAt": "2026-11-24",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -7845,6 +8123,44 @@
       ],
       "addedAt": "2026-11-03",
       "verifiedAt": "2026-11-03",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "starship",
+      "name": "Starship",
+      "vendor": "Starship",
+      "category": "developer",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "medium",
+      "version": "1.27.0",
+      "homepage": "https://starship.rs",
+      "summary": {
+        "en": "Cross-shell prompt with Windows aarch64 MSI and zip releases.",
+        "zh-TW": "跨 shell 的命令列提示工具，提供 Windows aarch64 的 MSI 與 zip 發行檔。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        },
+        {
+          "en": "Result rests on the winget manifest, which lists an Arm64 installer; I did not run the build.",
+          "zh-TW": "結果依據 winget 資訊清單所列的 Arm64 安裝檔；未實際執行該版本。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/s/Starship/Starship/1.27.0/Starship.Starship.installer.yaml",
+          "title": "winget manifest 1.27.0: arm64 installer starship-aarch64-pc-windows-msvc.msi",
+          "type": "release",
+          "checked": "2026-11-24"
+        }
+      ],
+      "addedAt": "2026-11-24",
+      "verifiedAt": "2026-11-24",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -8597,6 +8913,47 @@
       "hasConflict": false
     },
     {
+      "id": "vim",
+      "name": "Vim",
+      "vendor": "Bram Moolenaar et al.",
+      "category": "developer",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "medium",
+      "version": "9.2.1310",
+      "homepage": "https://www.vim.org",
+      "aliases": [
+        "gVim"
+      ],
+      "summary": {
+        "en": "Text editor with an official Windows arm64 installer.",
+        "zh-TW": "文字編輯器，提供官方 Windows arm64 安裝程式。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        },
+        {
+          "en": "Result rests on the winget manifest, which lists an Arm64 installer; I did not run the build.",
+          "zh-TW": "結果依據 winget 資訊清單所列的 Arm64 安裝檔；未實際執行該版本。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/v/vim/vim/9.2.1310/vim.vim.installer.yaml",
+          "title": "winget manifest 9.2.1310: arm64 installer gvim_9.2.1310_arm64.exe",
+          "type": "release",
+          "checked": "2026-11-24"
+        }
+      ],
+      "addedAt": "2026-11-24",
+      "verifiedAt": "2026-11-24",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
       "id": "visual-studio",
       "name": "Visual Studio",
       "vendor": "Microsoft",
@@ -9340,11 +9697,11 @@
       "name": "WPS Office",
       "vendor": "Kingsoft",
       "category": "productivity",
-      "status": "prism",
+      "status": "native",
       "scope": "windows-on-arm",
       "maturity": "stable",
       "confidence": "medium",
-      "version": "x64 12.1.0.203+",
+      "version": "12.1.0.203+",
       "homepage": "https://www.wps.com",
       "aliases": [
         "WPS Office Professional",
@@ -9352,8 +9709,8 @@
         "WPS 辦公室"
       ],
       "summary": {
-        "en": "Office suite popular in China. Linaro's Works on WoA data lists it as running under emulation, validated by Qualcomm and NVIDIA.",
-        "zh-TW": "中國常用的辦公室軟體。Linaro 的 Works on WoA 資料列為透過模擬執行，並經 Qualcomm 與 NVIDIA 驗證。"
+        "en": "Office suite popular in China. Linaro's Works on WoA data lists it as native Arm64, validated by Qualcomm and NVIDIA.",
+        "zh-TW": "中國常用的辦公室軟體。Linaro 的 Works on WoA 資料列為原生 Arm64，並經 Qualcomm 與 NVIDIA 驗證。"
       },
       "caveats": [
         {
@@ -9368,13 +9725,13 @@
       "evidence": [
         {
           "url": "https://raw.githubusercontent.com/Linaro/works-on-woa/staging/src/data/content/projects.json",
-          "title": "Linaro Works on WoA catalog: wpsoffice (emulation, from 12.1.0.203)",
+          "title": "Linaro Works on WoA catalog: wpsoffice (native, from 12.1.0.203)",
           "type": "aggregator",
-          "checked": "2026-11-09"
+          "checked": "2026-11-24"
         }
       ],
       "addedAt": "2026-11-09",
-      "verifiedAt": "2026-11-09",
+      "verifiedAt": "2026-11-24",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -9413,6 +9770,47 @@
       ],
       "addedAt": "2026-11-21",
       "verifiedAt": "2026-11-21",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "yayoi-accounting",
+      "name": "Yayoi Accounting 弥生会計",
+      "vendor": "Yayoi",
+      "category": "productivity",
+      "status": "prism",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "low",
+      "version": "x64 29.3.1+",
+      "homepage": "https://www.yayoi-kk.co.jp/",
+      "aliases": [
+        "弥生会計"
+      ],
+      "summary": {
+        "en": "Japanese accounting software. Linaro's catalog lists it as running under emulation, validated by Qualcomm only.",
+        "zh-TW": "日本的會計軟體。Linaro 目錄列為透過模擬執行，僅經 Qualcomm 驗證。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        },
+        {
+          "en": "Vendor page could not be read from this environment; the result rests on the Linaro catalog alone.",
+          "zh-TW": "此環境無法讀取原廠頁面，結果僅依據 Linaro 目錄。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/Linaro/works-on-woa/staging/src/data/content/projects.json",
+          "title": "Linaro Works on WoA catalog: yayoiaccounting (emulation, from 29.3.1)",
+          "type": "aggregator",
+          "checked": "2026-11-24"
+        }
+      ],
+      "addedAt": "2026-11-24",
+      "verifiedAt": "2026-11-24",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -9611,7 +10009,7 @@
           "url": "https://github.com/microsoft/winget-pkgs/tree/master/manifests/z/Zoom/Zoom",
           "title": "winget manifest: Zoom",
           "type": "release",
-          "checked": "2026-11-10"
+          "checked": "2026-11-24"
         },
         {
           "url": "https://learn.microsoft.com/surface/surface-arm-faq",
@@ -9621,7 +10019,7 @@
         }
       ],
       "addedAt": "2026-10-31",
-      "verifiedAt": "2026-11-10",
+      "verifiedAt": "2026-11-24",
       "reportCount": 0,
       "hasConflict": false
     },
