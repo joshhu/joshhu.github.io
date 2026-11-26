@@ -1,6 +1,6 @@
 {
   "license": "CC-BY-4.0",
-  "updated": "2026-11-26",
+  "updated": "2026-11-27",
   "apps": [
     {
       "id": "2345-browser",
@@ -787,11 +787,11 @@
       "scope": "windows-on-arm",
       "maturity": "stable",
       "confidence": "medium",
-      "version": "2.6.0",
+      "version": "2.8.0",
       "homepage": "https://antigravity.google",
       "summary": {
-        "en": "Google AI coding IDE with a windows-arm64 installer in the stable 2.6.0 channel.",
-        "zh-TW": "Google 的 AI 程式開發 IDE，穩定版 2.6.0 提供 windows-arm64 安裝程式。"
+        "en": "Google AI coding IDE with a windows-arm64 installer in the stable 2.8.0 channel.",
+        "zh-TW": "Google 的 AI 程式開發 IDE，穩定版 2.8.0 提供 windows-arm64 安裝程式。"
       },
       "caveats": [
         {
@@ -801,14 +801,14 @@
       ],
       "evidence": [
         {
-          "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/g/Google/AntigravityIDE/2.6.0/Google.AntigravityIDE.installer.yaml",
-          "title": "winget manifest 2.6.0: antigravity stable windows-arm64 installer",
+          "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/g/Google/AntigravityIDE/2.8.0/Google.AntigravityIDE.installer.yaml",
+          "title": "winget manifest 2.8.0: arm64 installer Antigravity%20IDE.exe",
           "type": "release",
-          "checked": "2026-11-13"
+          "checked": "2026-11-27"
         }
       ],
       "addedAt": "2026-11-13",
-      "verifiedAt": "2026-11-13",
+      "verifiedAt": "2026-11-27",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -1412,6 +1412,50 @@
       "hasConflict": false
     },
     {
+      "id": "basalt-rtx-spark",
+      "name": "Basalt RTX Spark",
+      "vendor": "SuperDistance",
+      "category": "ai",
+      "status": "native",
+      "scope": "rtx-spark",
+      "maturity": "community",
+      "confidence": "low",
+      "version": "0.4.1-rtx-spark.2",
+      "homepage": "https://github.com/SuperDistance/basalt-rtx-spark",
+      "summary": {
+        "en": "Community local LLM inference engine with a native Windows Arm64 CUDA (sm_121) build, measured by its author on an RTX Spark N1X laptop.",
+        "zh-TW": "社群製作的本機 LLM 推論引擎，提供原生 Windows Arm64 CUDA（sm_121）版本，作者在 RTX Spark N1X 筆電上實測。"
+      },
+      "caveats": [
+        {
+          "en": "Measurements are self-reported from one HP OmniBook X; no independent verification.",
+          "zh-TW": "測量結果由作者自行回報，僅來自一台 HP OmniBook X，未經獨立驗證。"
+        },
+        {
+          "en": "Community project; the release page did not show asset names, so the contents were taken from the release notes.",
+          "zh-TW": "社群專案；發行頁未顯示檔案名稱，內容以發行說明為準。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://github.com/SuperDistance/basalt-rtx-spark",
+          "title": "Basalt RTX Spark README: native Windows on Arm, RTX Spark N1X, CUDA sm_121",
+          "type": "community",
+          "checked": "2026-11-27"
+        },
+        {
+          "url": "https://github.com/SuperDistance/basalt-rtx-spark/releases",
+          "title": "Release v0.4.1-rtx-spark.2: Windows Arm64 ZIP, tested on HP OmniBook X with RTX Spark N1X",
+          "type": "community",
+          "checked": "2026-11-27"
+        }
+      ],
+      "addedAt": "2026-11-27",
+      "verifiedAt": "2026-11-27",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
       "id": "battlefield-6",
       "name": "Battlefield 6",
       "vendor": "Electronic Arts",
@@ -1914,7 +1958,7 @@
       "status": "native",
       "maturity": "stable",
       "confidence": "medium",
-      "version": "2.1.10",
+      "version": "2.2.3",
       "homepage": "https://www.cherry-ai.com",
       "summary": {
         "en": "Chinese-developed desktop client for multiple LLM providers, with a win-arm64 setup on GitHub releases.",
@@ -1922,10 +1966,10 @@
       },
       "evidence": [
         {
-          "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/k/kangfenmao/CherryStudio/2.1.10/kangfenmao.CherryStudio.installer.yaml",
-          "title": "winget manifest 2.1.10: Cherry-Studio-2.1.10-win-arm64-setup.exe",
+          "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/k/kangfenmao/CherryStudio/2.2.3/kangfenmao.CherryStudio.installer.yaml",
+          "title": "winget manifest 2.2.3: arm64 installer Cherry-Studio-2.2.3-win-arm64-setup.exe",
           "type": "release",
-          "checked": "2026-11-14"
+          "checked": "2026-11-27"
         }
       ],
       "caveats": [
@@ -1936,7 +1980,7 @@
       ],
       "scope": "windows-on-arm",
       "addedAt": "2026-11-06",
-      "verifiedAt": "2026-11-14",
+      "verifiedAt": "2026-11-27",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -2129,11 +2173,11 @@
           "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/w/Waytech/CloudDrive2/1.0/Waytech.CloudDrive2.installer.yaml",
           "title": "winget manifest: CloudDrive2Setup-Arm64-1.1.3.exe",
           "type": "release",
-          "checked": "2026-11-12"
+          "checked": "2026-11-27"
         }
       ],
       "addedAt": "2026-11-12",
-      "verifiedAt": "2026-11-12",
+      "verifiedAt": "2026-11-27",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -3346,6 +3390,44 @@
       "hasConflict": false
     },
     {
+      "id": "fastfetch",
+      "name": "fastfetch",
+      "vendor": "Fastfetch-cli",
+      "category": "utility",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "medium",
+      "version": "2.71.0+",
+      "homepage": "https://github.com/fastfetch-cli/fastfetch",
+      "summary": {
+        "en": "System information display tool; 2.71.0 ships a windows-aarch64 zip.",
+        "zh-TW": "系統資訊顯示工具，2.71.0 版提供 windows-aarch64 壓縮檔。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        },
+        {
+          "en": "Only the installer architecture in the winget manifest was confirmed; runtime behavior is untested.",
+          "zh-TW": "只確認了 winget 資訊清單中的安裝檔架構，執行行為尚未驗證。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/f/Fastfetch-cli/Fastfetch/2.71.0/Fastfetch-cli.Fastfetch.installer.yaml",
+          "title": "winget manifest 2.71.0: fastfetch-windows-aarch64.zip",
+          "type": "release",
+          "checked": "2026-11-27"
+        }
+      ],
+      "addedAt": "2026-11-27",
+      "verifiedAt": "2026-11-27",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
       "id": "feishu",
       "name": "Feishu (Lark)",
       "vendor": "ByteDance",
@@ -3622,6 +3704,44 @@
       "hasConflict": false
     },
     {
+      "id": "google-gemini-desktop",
+      "name": "Gemini desktop app",
+      "vendor": "Google",
+      "category": "ai",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "medium",
+      "version": "1.21.1+",
+      "homepage": "https://gemini.google.com",
+      "summary": {
+        "en": "Google's Gemini app for Windows; the winget manifest lists a separate arm64 installer.",
+        "zh-TW": "Google 的 Windows 版 Gemini 應用程式，winget 資訊清單列有獨立的 arm64 安裝檔。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        },
+        {
+          "en": "Only the installer architecture in the winget manifest was confirmed; runtime behavior is untested.",
+          "zh-TW": "只確認了 winget 資訊清單中的安裝檔架構，執行行為尚未驗證。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/g/Google/GeminiDesktop/1.21.1/Google.GeminiDesktop.installer.yaml",
+          "title": "winget manifest 1.21.1: a separate arm64 GeminiSetup-1.21.1_uncompressed.exe on dl.google.com",
+          "type": "release",
+          "checked": "2026-11-27"
+        }
+      ],
+      "addedAt": "2026-11-27",
+      "verifiedAt": "2026-11-27",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
       "id": "genshin-impact",
       "name": "Genshin Impact",
       "vendor": "HoYoverse",
@@ -3832,7 +3952,7 @@
       "status": "native",
       "maturity": "stable",
       "confidence": "medium",
-      "version": "2.103.3",
+      "version": "2.106.0",
       "homepage": "https://cli.github.com",
       "summary": {
         "en": "GitHub's command-line tool, with windows_arm64 MSI and zip release assets.",
@@ -3840,10 +3960,10 @@
       },
       "evidence": [
         {
-          "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/g/GitHub/cli/2.103.3/GitHub.cli.installer.yaml",
-          "title": "winget manifest 2.103.3: gh_2.103.3_windows_arm64.msi",
+          "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/g/GitHub/cli/2.106.0/GitHub.cli.installer.yaml",
+          "title": "winget manifest 2.106.0: arm64 installer gh_2.106.0_windows_arm64.msi",
           "type": "release",
-          "checked": "2026-11-14"
+          "checked": "2026-11-27"
         }
       ],
       "caveats": [
@@ -3854,7 +3974,7 @@
       ],
       "scope": "windows-on-arm",
       "addedAt": "2026-11-06",
-      "verifiedAt": "2026-11-14",
+      "verifiedAt": "2026-11-27",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -3972,7 +4092,7 @@
       "status": "native",
       "maturity": "stable",
       "confidence": "medium",
-      "version": "1.27.3",
+      "version": "1.27.4",
       "homepage": "https://go.dev",
       "summary": {
         "en": "Go programming language toolchain with an official windows-arm64 MSI installer.",
@@ -3980,10 +4100,10 @@
       },
       "evidence": [
         {
-          "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/g/GoLang/Go/1.27.3/GoLang.Go.installer.yaml",
-          "title": "winget manifest 1.27.3: go1.27.3.windows-arm64.msi",
+          "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/g/GoLang/Go/1.27.4/GoLang.Go.installer.yaml",
+          "title": "winget manifest 1.27.4: arm64 installer go1.27.4.windows-arm64.msi",
           "type": "release",
-          "checked": "2026-11-14"
+          "checked": "2026-11-27"
         }
       ],
       "caveats": [
@@ -3994,7 +4114,7 @@
       ],
       "scope": "windows-on-arm",
       "addedAt": "2026-11-06",
-      "verifiedAt": "2026-11-14",
+      "verifiedAt": "2026-11-27",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -5033,6 +5153,44 @@
       "hasConflict": false
     },
     {
+      "id": "localsend-cli",
+      "name": "LocalSend CLI",
+      "vendor": "LocalSend",
+      "category": "utility",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "medium",
+      "version": "1.19.0+",
+      "homepage": "https://localsend.org",
+      "summary": {
+        "en": "Command-line client for LocalSend local file sharing; 1.19.0 ships a windows-arm-64 binary.",
+        "zh-TW": "LocalSend 區域網路檔案分享的命令列用戶端，1.19.0 版提供 windows-arm-64 執行檔。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        },
+        {
+          "en": "Only the installer architecture in the winget manifest was confirmed; runtime behavior is untested.",
+          "zh-TW": "只確認了 winget 資訊清單中的安裝檔架構，執行行為尚未驗證。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/l/LocalSend/LocalSend/CLI/1.19.0/LocalSend.LocalSend.CLI.installer.yaml",
+          "title": "winget manifest 1.19.0: LocalSend-CLI-1.19.0-windows-arm-64.exe",
+          "type": "release",
+          "checked": "2026-11-27"
+        }
+      ],
+      "addedAt": "2026-11-27",
+      "verifiedAt": "2026-11-27",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
       "id": "logseq",
       "name": "Logseq",
       "vendor": "Logseq",
@@ -5324,6 +5482,44 @@
       "hasConflict": false
     },
     {
+      "id": "microsoft-copilot",
+      "name": "Microsoft Copilot",
+      "vendor": "Microsoft",
+      "category": "ai",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "medium",
+      "version": "158.0.4370.45+",
+      "homepage": "https://copilot.microsoft.com",
+      "summary": {
+        "en": "Microsoft Copilot app; the enterprise MSI is published in an ARM64 variant.",
+        "zh-TW": "微軟 Copilot 應用程式，企業版 MSI 提供 ARM64 版本。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        },
+        {
+          "en": "Only the installer architecture in the winget manifest was confirmed; runtime behavior is untested.",
+          "zh-TW": "只確認了 winget 資訊清單中的安裝檔架構，執行行為尚未驗證。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/m/Microsoft/Copilot/158.0.4370.45/Microsoft.Copilot.installer.yaml",
+          "title": "winget manifest 158.0.4370.45: CopilotStableEnterpriseARM64.msi",
+          "type": "release",
+          "checked": "2026-11-27"
+        }
+      ],
+      "addedAt": "2026-11-27",
+      "verifiedAt": "2026-11-27",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
       "id": "microsoft-edge",
       "name": "Microsoft Edge",
       "vendor": "Microsoft",
@@ -5451,7 +5647,7 @@
       "scope": "windows-on-arm",
       "maturity": "stable",
       "confidence": "medium",
-      "version": "2610.28",
+      "version": "2611.19",
       "homepage": "https://devblogs.microsoft.com/pix/",
       "summary": {
         "en": "DirectX 12 graphics debugging and profiling tool with an ARM64 installer.",
@@ -5465,14 +5661,14 @@
       ],
       "evidence": [
         {
-          "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/m/Microsoft/PIX/2610.28/Microsoft.PIX.installer.yaml",
-          "title": "winget manifest 2610.28: PIX-2610.28-Installer-ARM64.exe",
+          "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/m/Microsoft/PIX/2611.19/Microsoft.PIX.installer.yaml",
+          "title": "winget manifest 2611.19: arm64 installer PIX-2611.19-Installer-ARM64.exe",
           "type": "release",
-          "checked": "2026-11-13"
+          "checked": "2026-11-27"
         }
       ],
       "addedAt": "2026-11-13",
-      "verifiedAt": "2026-11-13",
+      "verifiedAt": "2026-11-27",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -5819,11 +6015,11 @@
           "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/o/OSCHINA/MothX/1.3.107/OSCHINA.MothX.installer.yaml",
           "title": "winget manifest 1.3.107: mothx-1.3.107-windows-arm64.zip",
           "type": "release",
-          "checked": "2026-11-13"
+          "checked": "2026-11-27"
         }
       ],
       "addedAt": "2026-11-13",
-      "verifiedAt": "2026-11-13",
+      "verifiedAt": "2026-11-27",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -6300,6 +6496,44 @@
       "hasConflict": false
     },
     {
+      "id": "nushell",
+      "name": "Nushell",
+      "vendor": "Nushell Project",
+      "category": "developer",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "medium",
+      "version": "0.117.0+",
+      "homepage": "https://www.nushell.sh",
+      "summary": {
+        "en": "Structured-data shell; 0.117.0 ships an aarch64-pc-windows-msvc MSI.",
+        "zh-TW": "以結構化資料為核心的命令列殼層，0.117.0 版提供 aarch64-pc-windows-msvc MSI。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        },
+        {
+          "en": "Only the installer architecture in the winget manifest was confirmed; runtime behavior is untested.",
+          "zh-TW": "只確認了 winget 資訊清單中的安裝檔架構，執行行為尚未驗證。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/n/Nushell/Nushell/0.117.0/Nushell.Nushell.installer.yaml",
+          "title": "winget manifest 0.117.0: nu-0.117.0-aarch64-pc-windows-msvc.msi",
+          "type": "release",
+          "checked": "2026-11-27"
+        }
+      ],
+      "addedAt": "2026-11-27",
+      "verifiedAt": "2026-11-27",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
       "id": "nvidia-broadcast",
       "name": "NVIDIA Broadcast",
       "vendor": "NVIDIA",
@@ -6364,6 +6598,44 @@
       ],
       "addedAt": "2026-11-14",
       "verifiedAt": "2026-11-14",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "nymvpn",
+      "name": "NymVPN",
+      "vendor": "Nym Technologies",
+      "category": "utility",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "medium",
+      "version": "2026.15.0+",
+      "homepage": "https://nym.com",
+      "summary": {
+        "en": "Mixnet-based VPN client; 2026.15.0 ships an arm64 setup installer.",
+        "zh-TW": "以混合網路為基礎的 VPN 用戶端，2026.15.0 版提供 arm64 安裝程式。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        },
+        {
+          "en": "Only the installer architecture in the winget manifest was confirmed; runtime behavior is untested.",
+          "zh-TW": "只確認了 winget 資訊清單中的安裝檔架構，執行行為尚未驗證。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/n/NymTech/NymVPNClient/2026.15.0/NymTech.NymVPNClient.installer.yaml",
+          "title": "winget manifest 2026.15.0: NymVPN_2026.15.0_arm64-setup.exe",
+          "type": "release",
+          "checked": "2026-11-27"
+        }
+      ],
+      "addedAt": "2026-11-27",
+      "verifiedAt": "2026-11-27",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -6484,11 +6756,11 @@
           "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/t/Tencent/Octop/1.0.3b4/Tencent.Octop.installer.yaml",
           "title": "winget manifest 1.0.3b4: Octop-desktop-windows-arm64-1.0.3b4.exe",
           "type": "release",
-          "checked": "2026-11-13"
+          "checked": "2026-11-27"
         }
       ],
       "addedAt": "2026-11-13",
-      "verifiedAt": "2026-11-13",
+      "verifiedAt": "2026-11-27",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -6563,6 +6835,44 @@
       "hasConflict": false
     },
     {
+      "id": "open-code-review",
+      "name": "Open Code Review",
+      "vendor": "Alibaba",
+      "category": "developer",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "medium",
+      "version": "1.14.3+",
+      "homepage": "https://github.com/alibaba/open-code-review",
+      "summary": {
+        "en": "Open source AI code review agent from Alibaba; v1.14.3 ships opencodereview-windows-arm64.exe.",
+        "zh-TW": "阿里巴巴開源的 AI 程式碼審查代理，v1.14.3 提供 opencodereview-windows-arm64.exe。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        },
+        {
+          "en": "Only the installer architecture in the winget manifest was confirmed; runtime behavior is untested.",
+          "zh-TW": "只確認了 winget 資訊清單中的安裝檔架構，執行行為尚未驗證。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/a/Alibaba/OpenCodeReview/1.14.3/Alibaba.OpenCodeReview.installer.yaml",
+          "title": "winget manifest 1.14.3: opencodereview-windows-arm64.exe",
+          "type": "release",
+          "checked": "2026-11-27"
+        }
+      ],
+      "addedAt": "2026-11-27",
+      "verifiedAt": "2026-11-27",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
       "id": "openai-cli",
       "name": "OpenAI CLI",
       "vendor": "OpenAI",
@@ -6571,7 +6881,7 @@
       "scope": "windows-on-arm",
       "maturity": "stable",
       "confidence": "medium",
-      "version": "1.51.5",
+      "version": "1.57.0",
       "homepage": "https://github.com/openai/openai-cli",
       "summary": {
         "en": "Command-line client for the OpenAI API, released with a windows_arm64 zip.",
@@ -6585,14 +6895,14 @@
       ],
       "evidence": [
         {
-          "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/o/OpenAI/OpenAICLI/1.51.5/OpenAI.OpenAICLI.installer.yaml",
-          "title": "winget manifest 1.51.5: openai_1.51.5_windows_arm64.zip",
+          "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/o/OpenAI/OpenAICLI/1.57.0/OpenAI.OpenAICLI.installer.yaml",
+          "title": "winget manifest 1.57.0: arm64 installer openai_1.57.0_windows_arm64.zip",
           "type": "release",
-          "checked": "2026-11-13"
+          "checked": "2026-11-27"
         }
       ],
       "addedAt": "2026-11-13",
-      "verifiedAt": "2026-11-13",
+      "verifiedAt": "2026-11-27",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -6656,6 +6966,44 @@
       ],
       "addedAt": "2026-11-07",
       "verifiedAt": "2026-11-19",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "openssl",
+      "name": "OpenSSL (Win64 ARM installer)",
+      "vendor": "Shining Light Productions",
+      "category": "developer",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "community",
+      "confidence": "medium",
+      "version": "4.1.0+",
+      "homepage": "https://slproweb.com/products/Win32OpenSSL.html",
+      "summary": {
+        "en": "Third-party OpenSSL binary installers for Windows; 4.1.0 includes a Win64ARM build.",
+        "zh-TW": "Shining Light Productions 提供的 Windows 版 OpenSSL 安裝檔，4.1.0 版包含 Win64ARM 建置。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        },
+        {
+          "en": "Only the installer architecture in the winget manifest was confirmed; runtime behavior is untested.",
+          "zh-TW": "只確認了 winget 資訊清單中的安裝檔架構，執行行為尚未驗證。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/s/ShiningLight/OpenSSL/Light/4.1.0/ShiningLight.OpenSSL.Light.installer.yaml",
+          "title": "winget manifest 4.1.0: Win64ARMOpenSSL_Light-4_1_0.msi",
+          "type": "release",
+          "checked": "2026-11-27"
+        }
+      ],
+      "addedAt": "2026-11-27",
+      "verifiedAt": "2026-11-27",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -6987,11 +7335,11 @@
           "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/t/TrackerSoftware/PDF-XChangePRO/11.1.2.0/TrackerSoftware.PDF-XChangePRO.installer.yaml",
           "title": "winget manifest 11.1.2.0: ProV11.ARM64.msi",
           "type": "release",
-          "checked": "2026-11-13"
+          "checked": "2026-11-27"
         }
       ],
       "addedAt": "2026-11-13",
-      "verifiedAt": "2026-11-13",
+      "verifiedAt": "2026-11-27",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -7118,11 +7466,11 @@
       "scope": "windows-on-arm",
       "maturity": "stable",
       "confidence": "medium",
-      "version": "5.8.9",
+      "version": "5.8.10",
       "homepage": "https://podman.io",
       "summary": {
-        "en": "Container engine with a windows-arm64 installer in the 5.8.9 release.",
-        "zh-TW": "容器引擎，5.8.9 版提供 windows-arm64 安裝程式。"
+        "en": "Container engine with a windows-arm64 installer in the 5.8.10 release.",
+        "zh-TW": "容器引擎，5.8.10 版提供 windows-arm64 安裝程式。"
       },
       "caveats": [
         {
@@ -7136,14 +7484,14 @@
       ],
       "evidence": [
         {
-          "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/r/RedHat/Podman/5.8.9/RedHat.Podman.installer.yaml",
-          "title": "winget manifest 5.8.9: podman-installer-windows-arm64.exe",
+          "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/r/RedHat/Podman/5.8.10/RedHat.Podman.installer.yaml",
+          "title": "winget manifest 5.8.10: arm64 installer podman-installer-windows-arm64.exe",
           "type": "release",
-          "checked": "2026-11-13"
+          "checked": "2026-11-27"
         }
       ],
       "addedAt": "2026-11-13",
-      "verifiedAt": "2026-11-13",
+      "verifiedAt": "2026-11-27",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -7633,6 +7981,44 @@
       "hasConflict": false
     },
     {
+      "id": "qoder-cli-cn",
+      "name": "Qoder CLI (China edition)",
+      "vendor": "Alibaba",
+      "category": "developer",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "medium",
+      "version": "1.1.97+",
+      "homepage": "https://qoder.com.cn",
+      "summary": {
+        "en": "China edition of Alibaba's terminal AI coding assistant; 1.1.97 ships a qoderclicn-windows-arm64 zip.",
+        "zh-TW": "阿里巴巴終端機 AI 編碼助手的中國版，1.1.97 版提供 qoderclicn-windows-arm64 壓縮檔。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        },
+        {
+          "en": "Only the installer architecture in the winget manifest was confirmed; runtime behavior is untested.",
+          "zh-TW": "只確認了 winget 資訊清單中的安裝檔架構，執行行為尚未驗證。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/a/Alibaba/QoderCLI/CN/1.1.97/Alibaba.QoderCLI.CN.installer.yaml",
+          "title": "winget manifest 1.1.97: qoderclicn-windows-arm64.zip",
+          "type": "release",
+          "checked": "2026-11-27"
+        }
+      ],
+      "addedAt": "2026-11-27",
+      "verifiedAt": "2026-11-27",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
       "id": "tencent-qq",
       "name": "QQ",
       "vendor": "Tencent",
@@ -7784,7 +8170,7 @@
       "status": "native",
       "maturity": "beta",
       "confidence": "medium",
-      "version": "7.84",
+      "version": "7.86",
       "homepage": "https://www.reaper.fm",
       "summary": {
         "en": "Digital audio workstation with an ARM64EC beta installer for Windows 11.",
@@ -7792,10 +8178,10 @@
       },
       "evidence": [
         {
-          "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/c/Cockos/REAPER/7.84/Cockos.REAPER.installer.yaml",
-          "title": "winget manifest 7.84: reaper784_win11_arm64ec_beta-install.exe",
+          "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/c/Cockos/REAPER/7.86/Cockos.REAPER.installer.yaml",
+          "title": "winget manifest 7.86: arm64 installer reaper786_win11_arm64ec_beta-install.exe",
           "type": "release",
-          "checked": "2026-11-13"
+          "checked": "2026-11-27"
         }
       ],
       "caveats": [
@@ -7810,7 +8196,7 @@
       ],
       "scope": "windows-on-arm",
       "addedAt": "2026-11-05",
-      "verifiedAt": "2026-11-13",
+      "verifiedAt": "2026-11-27",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -8081,6 +8467,44 @@
       ],
       "addedAt": "2026-11-11",
       "verifiedAt": "2026-11-25",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "scrcpy",
+      "name": "scrcpy",
+      "vendor": "Genymobile",
+      "category": "utility",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "medium",
+      "version": "5.0+",
+      "homepage": "https://github.com/Genymobile/scrcpy",
+      "summary": {
+        "en": "Android screen mirroring and control tool; v5.0 ships a scrcpy-winarm64 zip.",
+        "zh-TW": "Android 螢幕鏡像與控制工具，v5.0 提供 scrcpy-winarm64 壓縮檔。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        },
+        {
+          "en": "Only the installer architecture in the winget manifest was confirmed; runtime behavior is untested.",
+          "zh-TW": "只確認了 winget 資訊清單中的安裝檔架構，執行行為尚未驗證。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/g/Genymobile/scrcpy/5.0/Genymobile.scrcpy.installer.yaml",
+          "title": "winget manifest 5.0: scrcpy-winarm64-v5.0.zip",
+          "type": "release",
+          "checked": "2026-11-27"
+        }
+      ],
+      "addedAt": "2026-11-27",
+      "verifiedAt": "2026-11-27",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -9896,6 +10320,44 @@
       "hasConflict": false
     },
     {
+      "id": "vscodium",
+      "name": "VSCodium",
+      "vendor": "VSCodium",
+      "category": "developer",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "community",
+      "confidence": "medium",
+      "version": "1.143.17232+",
+      "homepage": "https://vscodium.com",
+      "summary": {
+        "en": "Community build of VS Code without Microsoft telemetry; the 1.143.17232 release ships arm64 installers.",
+        "zh-TW": "不含微軟遙測的 VS Code 社群建置版，1.143.17232 版提供 arm64 安裝檔。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        },
+        {
+          "en": "Only the installer architecture in the winget manifest was confirmed; runtime behavior is untested.",
+          "zh-TW": "只確認了 winget 資訊清單中的安裝檔架構，執行行為尚未驗證。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/v/VSCodium/VSCodium/1.143.17232/VSCodium.VSCodium.installer.yaml",
+          "title": "winget manifest 1.143.17232: VSCodiumSetup-arm64-1.143.17232.exe",
+          "type": "release",
+          "checked": "2026-11-27"
+        }
+      ],
+      "addedAt": "2026-11-27",
+      "verifiedAt": "2026-11-27",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
       "id": "warp-terminal",
       "name": "Warp",
       "vendor": "Warp",
@@ -10513,6 +10975,44 @@
       "hasConflict": false
     },
     {
+      "id": "yq",
+      "name": "yq",
+      "vendor": "Mike Farah",
+      "category": "developer",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "medium",
+      "version": "4.54.2+",
+      "homepage": "https://github.com/mikefarah/yq",
+      "summary": {
+        "en": "Command-line YAML, JSON and XML processor; 4.54.2 ships yq_windows_arm64.exe.",
+        "zh-TW": "命令列 YAML、JSON、XML 處理工具，4.54.2 版提供 yq_windows_arm64.exe。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        },
+        {
+          "en": "Only the installer architecture in the winget manifest was confirmed; runtime behavior is untested.",
+          "zh-TW": "只確認了 winget 資訊清單中的安裝檔架構，執行行為尚未驗證。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/m/MikeFarah/yq/4.54.2/MikeFarah.yq.installer.yaml",
+          "title": "winget manifest 4.54.2: yq_windows_arm64.exe",
+          "type": "release",
+          "checked": "2026-11-27"
+        }
+      ],
+      "addedAt": "2026-11-27",
+      "verifiedAt": "2026-11-27",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
       "id": "yt-dlp",
       "name": "yt-dlp",
       "vendor": "yt-dlp contributors",
@@ -10581,6 +11081,44 @@
       ],
       "addedAt": "2026-11-25",
       "verifiedAt": "2026-11-25",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "yuview",
+      "name": "YUView",
+      "vendor": "IENT, RWTH Aachen",
+      "category": "creative",
+      "status": "native",
+      "scope": "windows-on-arm",
+      "maturity": "stable",
+      "confidence": "medium",
+      "version": "2.15+",
+      "homepage": "https://github.com/IENT/YUView",
+      "summary": {
+        "en": "YUV and video-bitstream analysis viewer; v2.15 ships a Windows ARM zip.",
+        "zh-TW": "YUV 與視訊位元串流分析檢視器，v2.15 提供 Windows ARM 壓縮檔。"
+      },
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        },
+        {
+          "en": "Only the installer architecture in the winget manifest was confirmed; runtime behavior is untested.",
+          "zh-TW": "只確認了 winget 資訊清單中的安裝檔架構，執行行為尚未驗證。"
+        }
+      ],
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/i/IENT/YUView/2.15/IENT.YUView.installer.yaml",
+          "title": "winget manifest 2.15: YUView-windows-11-vs2026-arm.zip",
+          "type": "release",
+          "checked": "2026-11-27"
+        }
+      ],
+      "addedAt": "2026-11-27",
+      "verifiedAt": "2026-11-27",
       "reportCount": 0,
       "hasConflict": false
     },
