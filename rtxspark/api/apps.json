@@ -1,6 +1,6 @@
 {
   "license": "CC-BY-4.0",
-  "updated": "2026-11-27",
+  "updated": "2026-11-28",
   "apps": [
     {
       "id": "2345-browser",
@@ -401,11 +401,11 @@
           "url": "https://nvidianews.nvidia.com/news/nvidia-rtx-spark-pcs-available-today-a-new-beginning-for-windows-pcs",
           "title": "NVIDIA: RTX Spark PCs available today",
           "type": "vendor",
-          "checked": "2026-11-13"
+          "checked": "2026-11-28"
         }
       ],
       "addedAt": "2026-10-31",
-      "verifiedAt": "2026-11-13",
+      "verifiedAt": "2026-11-28",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -1479,17 +1479,17 @@
           "url": "https://www.notebookcheck.net/Asus-ProArt-P16-RTX-Spark-Laptop-Review-The-future-of-multimedia-laptops.1422366.0.html",
           "title": "Notebookcheck: ASUS ProArt P16 review",
           "type": "review",
-          "checked": "2026-11-12"
+          "checked": "2026-11-28"
         },
         {
           "url": "https://www.nvidia.com/en-us/geforce/news/rtx-spark-dlss-reflex-ray-tracing-games/",
           "title": "NVIDIA: RTX Spark games",
           "type": "vendor",
-          "checked": "2026-11-12"
+          "checked": "2026-11-28"
         }
       ],
       "addedAt": "2026-10-31",
-      "verifiedAt": "2026-11-12",
+      "verifiedAt": "2026-11-28",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -2500,7 +2500,7 @@
       "scope": "rtx-spark",
       "maturity": "stable",
       "confidence": "medium",
-      "version": "21.1",
+      "version": "21.2",
       "homepage": "https://www.blackmagicdesign.com/products/davinciresolve",
       "aliases": [
         "Resolve"
@@ -2516,11 +2516,11 @@
           "url": "https://davinciresolveclub.com/davinci-resolve-windows-x86-vs-arm/",
           "title": "DaVinci Resolve Club: Windows x86 vs Arm",
           "type": "community",
-          "checked": "2026-11-12"
+          "checked": "2026-11-28"
         }
       ],
       "addedAt": "2026-10-31",
-      "verifiedAt": "2026-11-12",
+      "verifiedAt": "2026-11-28",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -2597,6 +2597,40 @@
       ],
       "addedAt": "2026-11-21",
       "verifiedAt": "2026-11-21",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "dell-optimizer",
+      "name": "Dell Optimizer",
+      "vendor": "Dell",
+      "category": "utility",
+      "status": "native",
+      "maturity": "stable",
+      "confidence": "medium",
+      "version": "6.3.7.0",
+      "homepage": "https://www.dell.com",
+      "summary": {
+        "en": "Dell's system tuning application with a dedicated WINARM64 installer.",
+        "zh-TW": "戴爾系統調校應用程式，提供專屬 WINARM64 安裝程式。"
+      },
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/d/Dell/Optimizer/6.3.7.0/Dell.Optimizer.installer.yaml",
+          "title": "winget manifest 6.3.7.0: arm64 installer Dell-Optimizer-Application_FC6CC_WINARM64_6.3.7.0_A00.EXE",
+          "type": "release",
+          "checked": "2026-11-28"
+        }
+      ],
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        }
+      ],
+      "scope": "windows-on-arm",
+      "addedAt": "2026-11-28",
+      "verifiedAt": "2026-11-28",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -3017,13 +3051,13 @@
           "url": "https://www.ea.com/games/ea-sports-fc/news/pitch-notes-fc26-pc-deep-dive",
           "title": "EA: FC 26 PC deep dive, protected by EA Javelin Anticheat",
           "type": "vendor",
-          "checked": "2026-11-12"
+          "checked": "2026-11-28"
         },
         {
           "url": "https://www.nvidia.com/en-us/geforce/news/rtx-spark-dlss-reflex-ray-tracing-games/",
           "title": "NVIDIA: RTX Spark launch games and anti-cheat roadmap (Oct 13, 2026)",
           "type": "vendor",
-          "checked": "2026-11-12"
+          "checked": "2026-11-28"
         },
         {
           "url": "https://www.xda-developers.com/nvidia-rtx-spark-passed-most-anti-cheat-tests-valorant-and-call-of-duty-still-wont-run/",
@@ -3033,7 +3067,7 @@
         }
       ],
       "addedAt": "2026-11-03",
-      "verifiedAt": "2026-11-12",
+      "verifiedAt": "2026-11-28",
       "aliases": [
         "FC 26",
         "EA FC 26"
@@ -3320,6 +3354,40 @@
       "hasConflict": false
     },
     {
+      "id": "everything",
+      "name": "Everything",
+      "vendor": "voidtools",
+      "category": "utility",
+      "status": "native",
+      "maturity": "stable",
+      "confidence": "medium",
+      "version": "1.4.1.1024",
+      "homepage": "https://www.voidtools.com",
+      "summary": {
+        "en": "Instant file-name search tool; Linaro lists it as native Arm64.",
+        "zh-TW": "極速檔案名稱搜尋工具；Linaro 列為原生 Arm64。"
+      },
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/Linaro/works-on-woa/staging/src/data/content/projects.json",
+          "title": "Linaro Works on WoA record: Everything, native, from 1.4.1.1024",
+          "type": "aggregator",
+          "checked": "2026-11-28"
+        }
+      ],
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general (validated on Qualcomm hardware, last updated 2026-03-02); RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm（於 Qualcomm 硬體驗證，最後更新 2026-03-02），未針對 RTX Spark 測試。"
+        }
+      ],
+      "scope": "windows-on-arm",
+      "addedAt": "2026-11-28",
+      "verifiedAt": "2026-11-28",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
       "id": "ezpdf-editor",
       "name": "ezPDF Editor 3.0",
       "vendor": "Unidocs",
@@ -3381,11 +3449,11 @@
           "url": "https://www.notebookcheck.net/Asus-ProArt-P16-RTX-Spark-Laptop-Review-The-future-of-multimedia-laptops.1422366.0.html",
           "title": "Notebookcheck: ASUS ProArt P16 review",
           "type": "review",
-          "checked": "2026-11-12"
+          "checked": "2026-11-28"
         }
       ],
       "addedAt": "2026-10-31",
-      "verifiedAt": "2026-11-12",
+      "verifiedAt": "2026-11-28",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -3765,11 +3833,11 @@
           "url": "https://www.nvidia.com/en-us/geforce/news/rtx-spark-dlss-reflex-ray-tracing-games/",
           "title": "NVIDIA: RTX Spark games",
           "type": "vendor",
-          "checked": "2026-11-11"
+          "checked": "2026-11-28"
         }
       ],
       "addedAt": "2026-10-31",
-      "verifiedAt": "2026-11-11",
+      "verifiedAt": "2026-11-28",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -4920,11 +4988,11 @@
           "url": "https://www.nvidia.com/en-us/geforce/news/rtx-spark-dlss-reflex-ray-tracing-games/",
           "title": "NVIDIA: RTX Spark games",
           "type": "vendor",
-          "checked": "2026-11-11"
+          "checked": "2026-11-28"
         }
       ],
       "addedAt": "2026-10-31",
-      "verifiedAt": "2026-11-11",
+      "verifiedAt": "2026-11-28",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -5274,17 +5342,17 @@
           "url": "https://www.notebookcheck.net/Battlefield-6-and-Madden-NFL-to-come-to-SteamOS-and-ARM-PCs.1243276.0.html",
           "title": "Notebookcheck: Javelin requires x86 Windows; Battlefield, EA Sports, Madden use it",
           "type": "review",
-          "checked": "2026-11-12"
+          "checked": "2026-11-28"
         },
         {
           "url": "https://www.nvidia.com/en-us/geforce/news/rtx-spark-dlss-reflex-ray-tracing-games/",
           "title": "NVIDIA: RTX Spark launch games and anti-cheat roadmap (Oct 13, 2026)",
           "type": "vendor",
-          "checked": "2026-11-12"
+          "checked": "2026-11-28"
         }
       ],
       "addedAt": "2026-11-03",
-      "verifiedAt": "2026-11-12",
+      "verifiedAt": "2026-11-28",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -6020,6 +6088,40 @@
       ],
       "addedAt": "2026-11-13",
       "verifiedAt": "2026-11-27",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "motrix",
+      "name": "Motrix",
+      "vendor": "Motrix (agalwood)",
+      "category": "utility",
+      "status": "native",
+      "maturity": "stable",
+      "confidence": "medium",
+      "version": "2.4.7",
+      "homepage": "https://motrix.app",
+      "summary": {
+        "en": "Download manager with a separate arm64 installer.",
+        "zh-TW": "下載管理工具，提供獨立的 arm64 安裝程式。"
+      },
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/a/agalwood/Motrix/2.4.7/agalwood.Motrix.installer.yaml",
+          "title": "winget manifest 2.4.7: arm64 installer Motrix-Setup-2.4.7-arm64.exe",
+          "type": "release",
+          "checked": "2026-11-28"
+        }
+      ],
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        }
+      ],
+      "scope": "windows-on-arm",
+      "addedAt": "2026-11-28",
+      "verifiedAt": "2026-11-28",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -7008,6 +7110,40 @@
       "hasConflict": false
     },
     {
+      "id": "opentofu",
+      "name": "OpenTofu",
+      "vendor": "OpenTofu",
+      "category": "developer",
+      "status": "native",
+      "maturity": "stable",
+      "confidence": "medium",
+      "version": "1.13.10",
+      "homepage": "https://opentofu.org",
+      "summary": {
+        "en": "Infrastructure-as-code CLI with a windows_arm64 release build.",
+        "zh-TW": "基礎架構即程式碼（IaC）命令列工具，提供 windows_arm64 發行版本。"
+      },
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/o/OpenTofu/Tofu/1.13.10/OpenTofu.Tofu.installer.yaml",
+          "title": "winget manifest 1.13.10: arm64 installer tofu_1.13.10_windows_arm64.zip",
+          "type": "release",
+          "checked": "2026-11-28"
+        }
+      ],
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        }
+      ],
+      "scope": "windows-on-arm",
+      "addedAt": "2026-11-28",
+      "verifiedAt": "2026-11-28",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
       "id": "openvpn",
       "name": "OpenVPN Community",
       "vendor": "OpenVPN Inc.",
@@ -7767,7 +7903,7 @@
           "url": "https://www.nvidia.com/en-us/geforce/news/rtx-spark-dlss-reflex-ray-tracing-games/",
           "title": "NVIDIA: RTX Spark launch games and anti-cheat roadmap (Oct 13, 2026)",
           "type": "vendor",
-          "checked": "2026-11-11"
+          "checked": "2026-11-28"
         },
         {
           "url": "https://www.xda-developers.com/nvidia-rtx-spark-passed-most-anti-cheat-tests-valorant-and-call-of-duty-still-wont-run/",
@@ -7777,7 +7913,7 @@
         }
       ],
       "addedAt": "2026-11-03",
-      "verifiedAt": "2026-11-11",
+      "verifiedAt": "2026-11-28",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -8645,13 +8781,13 @@
           "url": "https://www.ea.com/news/ea-javelin-anticheat-2026-update",
           "title": "EA: Javelin Anticheat 2026 update, native ARM64 support 'in the near future'",
           "type": "vendor",
-          "checked": "2026-11-12"
+          "checked": "2026-11-28"
         },
         {
           "url": "https://www.nvidia.com/en-us/geforce/news/rtx-spark-dlss-reflex-ray-tracing-games/",
           "title": "NVIDIA: RTX Spark launch games and anti-cheat roadmap (Oct 13, 2026)",
           "type": "vendor",
-          "checked": "2026-11-12"
+          "checked": "2026-11-28"
         },
         {
           "url": "https://www.xda-developers.com/nvidia-rtx-spark-passed-most-anti-cheat-tests-valorant-and-call-of-duty-still-wont-run/",
@@ -8661,7 +8797,7 @@
         }
       ],
       "addedAt": "2026-11-03",
-      "verifiedAt": "2026-11-12",
+      "verifiedAt": "2026-11-28",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -9586,6 +9722,40 @@
       "hasConflict": false
     },
     {
+      "id": "tencent-app-store",
+      "name": "Tencent App Store (Yingyongbao)",
+      "vendor": "Tencent",
+      "category": "utility",
+      "status": "native",
+      "maturity": "stable",
+      "confidence": "medium",
+      "version": "5.20.17.10",
+      "homepage": "https://sj.qq.com/download",
+      "summary": {
+        "en": "Tencent's Windows app store client (應用寶); Linaro lists it as native Arm64.",
+        "zh-TW": "騰訊應用寶 Windows 用戶端；Linaro 列為原生 Arm64。"
+      },
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/Linaro/works-on-woa/staging/src/data/content/projects.json",
+          "title": "Linaro Works on WoA record: 腾讯应用宝 (Tencent App Store), native, from 5.20.17.10",
+          "type": "aggregator",
+          "checked": "2026-11-28"
+        }
+      ],
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general (validated on Qualcomm hardware, last updated 2026-03-02); RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm（於 Qualcomm 硬體驗證，最後更新 2026-03-02），未針對 RTX Spark 測試。"
+        }
+      ],
+      "scope": "windows-on-arm",
+      "addedAt": "2026-11-28",
+      "verifiedAt": "2026-11-28",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
       "id": "tencent-meeting",
       "name": "Tencent Meeting",
       "vendor": "Tencent",
@@ -9625,6 +9795,40 @@
       ],
       "addedAt": "2026-11-17",
       "verifiedAt": "2026-11-17",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "tencent-video",
+      "name": "Tencent Video",
+      "vendor": "Tencent",
+      "category": "utility",
+      "status": "native",
+      "maturity": "stable",
+      "confidence": "medium",
+      "version": "11.113.2730.0",
+      "homepage": "https://v.qq.com/download.html",
+      "summary": {
+        "en": "Video streaming client (騰訊視頻); Linaro lists it as native Arm64.",
+        "zh-TW": "騰訊視頻串流用戶端；Linaro 列為原生 Arm64。"
+      },
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/Linaro/works-on-woa/staging/src/data/content/projects.json",
+          "title": "Linaro Works on WoA record: 腾讯视频 (Tencent Video), native, from 11.113.2730.0",
+          "type": "aggregator",
+          "checked": "2026-11-28"
+        }
+      ],
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general (validated on Qualcomm hardware, last updated 2026-03-02); RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm（於 Qualcomm 硬體驗證，最後更新 2026-03-02），未針對 RTX Spark 測試。"
+        }
+      ],
+      "scope": "windows-on-arm",
+      "addedAt": "2026-11-28",
+      "verifiedAt": "2026-11-28",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -10057,6 +10261,40 @@
       ],
       "addedAt": "2026-10-31",
       "verifiedAt": "2026-11-20",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "vscode-cli",
+      "name": "Visual Studio Code CLI",
+      "vendor": "Microsoft",
+      "category": "developer",
+      "status": "native",
+      "maturity": "stable",
+      "confidence": "medium",
+      "version": "1.148.0",
+      "homepage": "https://code.visualstudio.com",
+      "summary": {
+        "en": "Standalone VS Code CLI (tunnels, extension management) with an arm64 build.",
+        "zh-TW": "獨立的 VS Code 命令列工具（通道、延伸模組管理），提供 arm64 版本。"
+      },
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/m/Microsoft/VisualStudioCode/CLI/1.148.0/Microsoft.VisualStudioCode.CLI.installer.yaml",
+          "title": "winget manifest 1.148.0: arm64 installer vscode_cli_win32_arm64_cli.zip",
+          "type": "release",
+          "checked": "2026-11-28"
+        }
+      ],
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        }
+      ],
+      "scope": "windows-on-arm",
+      "addedAt": "2026-11-28",
+      "verifiedAt": "2026-11-28",
       "reportCount": 0,
       "hasConflict": false
     },
@@ -10975,6 +11213,74 @@
       "hasConflict": false
     },
     {
+      "id": "youdao-note",
+      "name": "Youdao Note",
+      "vendor": "NetEase",
+      "category": "productivity",
+      "status": "native",
+      "maturity": "stable",
+      "confidence": "medium",
+      "version": "8.1.91",
+      "homepage": "https://note.youdao.com/",
+      "summary": {
+        "en": "Note-taking app (有道雲筆記) from NetEase; Linaro lists it as native Arm64.",
+        "zh-TW": "網易有道雲筆記；Linaro 列為原生 Arm64。"
+      },
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/Linaro/works-on-woa/staging/src/data/content/projects.json",
+          "title": "Linaro Works on WoA record: 有道云笔记 (Youdao Note), native, from 8.1.91",
+          "type": "aggregator",
+          "checked": "2026-11-28"
+        }
+      ],
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general (validated on Qualcomm hardware, last updated 2026-03-02); RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm（於 Qualcomm 硬體驗證，最後更新 2026-03-02），未針對 RTX Spark 測試。"
+        }
+      ],
+      "scope": "windows-on-arm",
+      "addedAt": "2026-11-28",
+      "verifiedAt": "2026-11-28",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "youdao-translator",
+      "name": "Youdao Translator",
+      "vendor": "NetEase Youdao",
+      "category": "productivity",
+      "status": "native",
+      "maturity": "stable",
+      "confidence": "medium",
+      "version": "10.1.2",
+      "homepage": "https://apps.microsoft.com/detail/xpfnzlnh748xd2",
+      "summary": {
+        "en": "Translation app (有道翻譯) with an arm64 build in the Microsoft Store; Linaro lists it as native Arm64.",
+        "zh-TW": "有道翻譯，Microsoft Store 提供 arm64 版本；Linaro 列為原生 Arm64。"
+      },
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/Linaro/works-on-woa/staging/src/data/content/projects.json",
+          "title": "Linaro Works on WoA record: 网易有道翻译(arm64), native, from 10.1.2",
+          "type": "aggregator",
+          "checked": "2026-11-28"
+        }
+      ],
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general (validated on Qualcomm hardware, last updated 2026-03-02); RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm（於 Qualcomm 硬體驗證，最後更新 2026-03-02），未針對 RTX Spark 測試。"
+        }
+      ],
+      "scope": "windows-on-arm",
+      "addedAt": "2026-11-28",
+      "verifiedAt": "2026-11-28",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
       "id": "yq",
       "name": "yq",
       "vendor": "Mike Farah",
@@ -11157,6 +11463,40 @@
       "hasConflict": false
     },
     {
+      "id": "z3-theorem-prover",
+      "name": "Z3 Theorem Prover",
+      "vendor": "Microsoft",
+      "category": "developer",
+      "status": "native",
+      "maturity": "stable",
+      "confidence": "medium",
+      "version": "5.1.0",
+      "homepage": "https://github.com/Z3Prover/z3",
+      "summary": {
+        "en": "SMT solver with an arm64 Windows release build.",
+        "zh-TW": "SMT 求解器，提供 arm64 Windows 發行版本。"
+      },
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/m/Microsoft/Z3/5.1.0/Microsoft.Z3.installer.yaml",
+          "title": "winget manifest 5.1.0: arm64 installer z3-5.1.0-arm64-win.zip",
+          "type": "release",
+          "checked": "2026-11-28"
+        }
+      ],
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        }
+      ],
+      "scope": "windows-on-arm",
+      "addedAt": "2026-11-28",
+      "verifiedAt": "2026-11-28",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
       "id": "zeal",
       "name": "Zeal",
       "vendor": "Zeal contributors",
@@ -11328,6 +11668,40 @@
       ],
       "addedAt": "2026-11-04",
       "verifiedAt": "2026-11-23",
+      "reportCount": 0,
+      "hasConflict": false
+    },
+    {
+      "id": "zstandard",
+      "name": "Zstandard",
+      "vendor": "Meta",
+      "category": "utility",
+      "status": "native",
+      "maturity": "stable",
+      "confidence": "medium",
+      "version": "1.6.0",
+      "homepage": "https://facebook.github.io/zstd/",
+      "summary": {
+        "en": "Compression tool with a win-arm64 release zip.",
+        "zh-TW": "壓縮工具，提供 win-arm64 發行壓縮檔。"
+      },
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/manifests/m/Meta/Zstandard/1.6.0/Meta.Zstandard.installer.yaml",
+          "title": "winget manifest 1.6.0: arm64 installer zstd-v1.6.0-win-arm64.zip",
+          "type": "release",
+          "checked": "2026-11-28"
+        }
+      ],
+      "caveats": [
+        {
+          "en": "Source covers Windows on Arm in general; RTX Spark was not tested.",
+          "zh-TW": "來源涵蓋一般 Windows on Arm，未針對 RTX Spark 測試。"
+        }
+      ],
+      "scope": "windows-on-arm",
+      "addedAt": "2026-11-28",
+      "verifiedAt": "2026-11-28",
       "reportCount": 0,
       "hasConflict": false
     },
